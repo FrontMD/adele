@@ -1,9 +1,7 @@
 .m-columns {
     display: flex;
     align-items: flex-start;
-    gap: 34px;
-    padding: 20px 28px;
-    border-top: 1px solid $c-border;
+    gap: 86px;
 
     @include max(laptop) {
         flex-direction: column;
@@ -38,7 +36,7 @@
     }
 
     &__header {
-        flex: 0 0 500px;
+        flex: 0 0 calc(50% - 86px);
         display: flex;
         flex-direction: column;
         align-self: stretch;
@@ -50,7 +48,7 @@
 
     &__main {
         flex: 1 1 auto;
-        max-width: calc(100% - 413px - 34px);
+        max-width: 50%;
 
         @include max(laptop) {
             width: 100%;
@@ -102,31 +100,6 @@
 
         @include max(mobile) {
             font-size: 14px;
-        }
-    }
-
-    &.m-columns--no-plpr {
-        padding-left: 0;
-        padding-right: 0;
-
-        @include min(large) {
-            .m-columns__header {
-                flex: 0 0 690px;
-
-                p,
-                ul {
-                    max-width: 500px;
-                }
-
-                h2,
-                h3 {
-                    max-width: 600px;
-                }
-            }
-        }
-
-        .m-columns__main {
-            max-width: 1215px;
         }
     }
 

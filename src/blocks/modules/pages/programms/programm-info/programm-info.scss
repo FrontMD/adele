@@ -1,6 +1,6 @@
 .programm-info {
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 
     @include max(tablet) {
         padding-bottom: 40px;
@@ -13,7 +13,7 @@
     &__container {
         display: flex;
         align-items: flex-start;
-        gap: 40px;
+        gap: 86px;
 
         @include max(laptop) {
             flex-direction: column;
@@ -25,7 +25,7 @@
     }
 
     &__left {
-        flex: 0 0 calc((100% - 20px) / 2);
+        flex: 0 0 calc(50% - 86px);
 
         @include max(laptop) {
             display: contents;
@@ -105,7 +105,10 @@
 
 
     &__right {
-        flex: 0 0 calc((100% - 20px) / 2);
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
 
         @include max(laptop) {
             display: contents;
@@ -113,9 +116,7 @@
     }
 
     &__block {
-        max-width: 680px;
-        padding: 30px 0 30px;
-        border-top: 1px solid $c-border-op;
+        max-width: 92%;
 
         @include max(laptop) {
             max-width: 100%;
@@ -130,31 +131,4 @@
         }
     }
 
-}
-
-.programm-faq {
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 40px;
-        color: $c-accent;
-    }
-
-    &__btn {
-        padding: 16.5px 40px;
-        flex-shrink: 0;
-        font-size: 14px;
-    }
-
-    &__accordion {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        margin-top: 20px;
-    }
-
-    &__more {
-        margin-top: 20px;
-    }
 }

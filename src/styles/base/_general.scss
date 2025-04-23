@@ -347,11 +347,12 @@ iframe {
 
 	h2,
 	h1 {
-		margin-bottom: 20px;
-		font-size: 32px;
+		margin-bottom: 30px;
+		font-size: 36px;
 		font-weight: 500;
-		line-height: 1.02em;
-		color: $c-accent-middle;
+		line-height: 1.1em;
+		letter-spacing: 0.01em;
+		color: $c-accent;
 
 		@include max(laptop) {
 			font-size: 28px;
@@ -396,7 +397,7 @@ iframe {
 	}
 
 	p,
-	a {
+	a:not(.btn) {
 		display: block;
 		margin-bottom: 20px;
 		font-size: 16px;
@@ -422,8 +423,8 @@ iframe {
 		color: $c-accent-light;
 	}
 
-	a,
-	a>* {
+	a:not(.btn),
+	a:not(.btn)>* {
 		transition: color $tr-time;
 	}
 

@@ -1,3 +1,7 @@
+@import "i-intro/i-intro";
+@import "i-questions/i-questions";
+@import "info-slider/info-slider";
+
 @import "header/header";
 @import "footer/footer";
 @import "main-burger/main-burger";
@@ -5,7 +9,6 @@
 @import "page-intro/page-intro";
 @import "m-columns/m-columns";
 @import "m-table/m-table";
-@import "i-intro/i-intro";
 @import "callback-form/callback-form";
 @import "quest-form/quest-form";
 @import "c-map/c-map";
@@ -14,7 +17,6 @@
 @import "s-skills/s-skills";
 @import "s-vacancy/s-vacancy";
 @import "s-partners/s-partners";
-@import "info-slider/info-slider";
 
 // Страницы
 @import "pages/home/home-intro/home-intro";

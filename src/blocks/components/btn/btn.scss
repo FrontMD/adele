@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
     gap: 10px;
     font-size: 16px;
     font-weight: 500;
@@ -32,11 +33,28 @@
     &--green {
         color: $c-white;
         background-color: $c-accent;
-        transition: all $tr-time;
+        transition: all $tr;
 
         &:hover {
             background-color: $c-accent-dark;
         }
+    }
+
+    &--bordered {
+        color: $c-accent;
+        background-color: $c-white;
+        transition: all $tr;
+        border: solid 1px $c-border-2;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white;
+            border-color: $c-accent;
+        }
+    }
+
+    &--full {
+        width: 100%;
     }
 
     /*&--lightGreen {

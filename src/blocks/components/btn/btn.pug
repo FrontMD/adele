@@ -3,6 +3,7 @@
         classes: '',
         name: 'Кнопка',
         cMode: 'green',
+        sMode: '',
         type: 'link',
         link: '#',
         buttonType: 'button',
@@ -15,6 +16,7 @@ mixin btn(props = defaultBtnProps)
             classes: props.classes ? props.classes : defaultBtnProps.classes,
             name: props.name ? props.name : defaultBtnProps.name,
             cMode: props.cMode ? props.cMode : defaultBtnProps.cMode,
+            sMode: props.sMode ? props.sMode : defaultBtnProps.sMode,
             type: props.type ? props.type : defaultBtnProps.type,
             link: props.link ? props.link : defaultBtnProps.link,
             buttonType: props.buttonType ? props.buttonType : defaultBtnProps.buttonType,
@@ -22,15 +24,16 @@ mixin btn(props = defaultBtnProps)
         }
 
         let colorClass = ` btn--${checkProps.cMode}`
+        let sizeClass = checkProps.sMode ? ` btn--${checkProps.sMode}` : ''
 
     - if(checkProps.type == 'link')
-        a.btn(class=checkProps.classes + colorClass href= checkProps.link)&attributes(attributes)!= checkProps.name
+        a.btn(class=checkProps.classes + colorClass + sizeClass href= checkProps.link)&attributes(attributes)!= checkProps.name
             if(checkProps.icon.length > 0)
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
 
     - else if(checkProps.type == 'button')
-        button.btn(class=checkProps.classes + colorClass type= checkProps.buttonType)&attributes(attributes)!= checkProps.name
+        button.btn(class=checkProps.classes + colorClass + sizeClass type= checkProps.buttonType)&attributes(attributes)!= checkProps.name
             if(checkProps.icon.length > 0)
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)

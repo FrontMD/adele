@@ -1,33 +1,37 @@
 .s-skills {
-    padding-top: 35px;
-    padding-bottom: 30px;
-    background-color: $c-accent-light;
+    padding-top: 100px;
+    padding-bottom: 50px;
 
     &__title {
-        color: $c-white;
+        color: $c-accent;
+        text-align: center;
+        max-width: 650px;
+        margin: 0 auto;
     }
 
     &__cards {
-        margin-top: 60px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 10px;
+
 
         @include max(mobile) {
             margin-top: 20px
         }
     }
 
-    .swiper-wrapper {
-        align-items: stretch;
-    }
-
     &__card {
-        min-height: 335px;
+        aspect-ratio: 1 / 0.776;
         height: auto;
-        width: 333px;
+        width: calc((100% - 20px) / 3);
         display: flex;
         flex-direction: column;
-        padding: 20px 30px 25px;
-        background-color: rgba(255, 255, 255, 0.1);
-        color: $c-white;
+        justify-content: space-between;
+        background-color: $c-accent-2;
+        color: $c-accent;
+        border-radius: 32px;
 
         @include max(laptop) {
             min-height: 270px;
@@ -40,9 +44,8 @@
     }
 
     &__icon {
-        width: 65px;
-        height: 65px;
-        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
 
         @include max(mobile) {
             margin-bottom: 35px;
@@ -57,8 +60,10 @@
 
     &__text {
         margin-top: auto;
-        line-height: 1.02em;
+        line-height: 1.2em;
         font-size: 16px;
         font-weight: 500;
+        letter-spacing: -0.01em;
+        padding: 30px;
     }
 }

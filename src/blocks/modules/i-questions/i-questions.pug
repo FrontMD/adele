@@ -1,0 +1,50 @@
+-
+    const defaultIQuestionsProps = {
+        classes: '',
+        title: '',
+
+    }
+
+mixin i-questions(props = defaultMQuestionsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMQuestionsProps.classes,
+            title: props.title ? props.title : defaultMQuestionsProps.title,
+        }
+
+    section.i-questions(class= checkProps.classes)
+        .m-container
+            .i-questions__container
+                +m-columns({
+                    title: `<div class="title title--h2 i-questions__title">Вопросы о программе</div>
+                    <a class="btn btn--green" href="#">Задать вопрос<svg><use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use></svg></a>`
+                    })
+                    .i-questions__accordion(data-js="accordion")
+                        +spoiler({
+                            title: 'Есть ли записи уроков?',
+                            text: '<p><b>Все уроки есть в записи, и мы высылаем их ученикам по запросу. Например пропуск по уважительной причине или для повторения материала.</a></b></p>'
+                        })
+                        +spoiler({
+                            title: 'Можно ли зачислиться после начала учебного года?',
+                            text: '<p><b>Все уроки есть в записи, и мы высылаем их ученикам по запросу. Например пропуск по уважительной причине или для повторения материала.</a></b></p>'
+                        })
+                        +spoiler({
+                            title: 'Вы выдаете аттестат государственного образца?',
+                            text: '<p><b>Все уроки есть в записи, и мы высылаем их ученикам по запросу. Например пропуск по уважительной причине или для повторения материала.</a></b></p>'
+                        })
+                        +spoiler({
+                            title: 'Есть ли ускоренная программа?',
+                            text: '<p><b>Все уроки есть в записи, и мы высылаем их ученикам по запросу. Например пропуск по уважительной причине или для повторения материала.</a></b></p>'
+                        })
+                        +spoiler({
+                            title: 'Есть ли тьютор?',
+                            text: '<p><b>Все уроки есть в записи, и мы высылаем их ученикам по запросу. Например пропуск по уважительной причине или для повторения материала.</a></b></p>'
+                        })
+                    +btn({
+                        classes: 'i-questions__more',
+                        name: 'Показать еще',
+                        icon: 'arrow_down',
+                        sMode: 'full',
+                        cMode: 'bordered'
+                    })
+
