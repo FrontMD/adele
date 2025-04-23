@@ -1,0 +1,100 @@
+.abiturientam-promo {
+    padding-top: 30px;
+
+    @include max(mobile) {
+        padding-top: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__content {
+        position: relative;
+        min-height: calc(100vh - 250px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        overflow: hidden;
+
+        @include max(mobile) {
+            padding: 15px;
+            min-height: 440px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.3;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    &__title {
+        position: relative;
+        color: $c-white;
+        margin-bottom: 30px;
+        max-width: 520px;
+        line-height: 1.16em;
+        letter-spacing: -0.03em;
+
+        @include max(laptop) {
+            max-width: 450px;
+        }
+
+        @include max(tablet) {
+            max-width: 410px;
+        }
+
+        @include max(mobile) {
+            max-width: 330px;
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__slide {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 85px;
+        width: 335px;
+        min-height: 228px;
+        padding: 20px;
+        background-color: $c-accent;
+        color: $c-white;
+        transition: background-color $tr-time linear;
+
+        &:hover {
+            background-color: $c-accent-dark;
+        }
+
+        @include max(mobile) {
+            min-height: 200px;
+        }
+    }
+
+    &__num {
+        opacity: 0.2;
+    }
+}

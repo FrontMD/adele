@@ -1,0 +1,54 @@
+-
+    const defaultMQuestionsProps = {
+        classes: '',
+        title: '',
+        filters: [
+            'Общие',
+            'Общежитие',
+            'Приемная комиссия',
+        ]
+    }
+
+mixin m-questions(props = defaultMQuestionsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMQuestionsProps.classes,
+            title: props.title ? props.title : defaultMQuestionsProps.title,
+            filters: props.filters ? props.filters : defaultMQuestionsProps.filters,
+        }
+
+    section.m-questions(class= checkProps.classes)
+        .m-container.m-questions__container 
+            - if (checkProps.title.length > 0)
+                .h2.m-questions__title!= checkProps.title 
+            +news-filter({
+                items: checkProps.filters
+            })
+            +m-columns({
+                classes: "m-columns--no-plpr",
+                title: `<h3>Мы объединили здесь всю необходимую информацию, чтобы избавить Вас от необходимости искать ее по разным источникам.</h3>
+                <a href="#" class="title-link title-link--plus" data-modal="#questionModal"><span class="title-link__icon"><svg><use xlink:href=img/sprites/sprite.svg#plus></use></svg></span><span class="title-link__text">Задать вопрос</span></a>`
+                })
+                .m-questions__accordion(data-js="accordion")
+                    +spoiler({
+                        title: 'В соответствии с какими нормативными документами составлено распоряжение о практиках?',
+                        text: '<p><b>Приказ Министерства образования и науки РФ от 27 ноября 2015 г. <a href="#">№ 1383 “Об утверждении Положения о практике обучающихся, осваивающих основные профессиональные образовательные программы высшего образования”</a></b></p>'
+                    })
+                    +spoiler({
+                        title: 'Как должны соотноситься сроки прививки от коронавируса и от энцефалита?',
+                        text: '<p><b>Приказ Министерства образования и науки РФ от 27 ноября 2015 г. <a href="#">№ 1383 “Об утверждении Положения о практике обучающихся, осваивающих основные профессиональные образовательные программы высшего образования”</a></b></p>'
+                    })
+                    +spoiler({
+                        title: 'Что нужно делать для онлайн-практики? Нужно ли делать прививку и в целом проходить медосмотр? ',
+                        text: '<p><b>Приказ Министерства образования и науки РФ от 27 ноября 2015 г. <a href="#">№ 1383 “Об утверждении Положения о практике обучающихся, осваивающих основные профессиональные образовательные программы высшего образования”</a></b></p>'
+                    })
+                    +spoiler({
+                        title: 'Есть ли ускоренная программа?',
+                        text: '<p><b>Приказ Министерства образования и науки РФ от 27 ноября 2015 г. <a href="#">№ 1383 “Об утверждении Положения о практике обучающихся, осваивающих основные профессиональные образовательные программы высшего образования”</a></b></p>'
+                    })
+                    +spoiler({
+                        title: 'Есть ли льготы для общежития для победителей в конкурсах по менеджменту?',
+                        text: '<p><b>Приказ Министерства образования и науки РФ от 27 ноября 2015 г. <a href="#">№ 1383 “Об утверждении Положения о практике обучающихся, осваивающих основные профессиональные образовательные программы высшего образования”</a></b></p>'
+                    })
+                +pagination
+

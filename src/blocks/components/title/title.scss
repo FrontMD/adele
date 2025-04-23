@@ -1,0 +1,79 @@
+.title {
+    //базовый размер заголовка h1, остальные размеры пропорциональны.
+    font-size: 74px;
+    color: $c-accent;
+
+    @include max(laptop) {
+        font-size: 52px;
+    }
+
+    @include max(tablet) {
+        font-size: 40px;
+    }
+
+    @include max(mobile) {
+        font-size: 24px;
+    }
+
+    &--light {
+        color: $c-white;
+    }
+
+    span {
+        color: $c-accent-title;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        font-weight: inherit;
+        text-wrap: inherit;
+    }
+
+    &--h1 {
+        font-size: 74px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: -0.027em;
+    }
+
+    &--h2 {
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: -0.03125em;
+    }
+
+    &--h3 {
+        font-size: 0.6875em;
+        font-weight: 700;
+        line-height: 1.2em;
+    }
+
+    &--h4 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.1em;
+        letter-spacing: -0.02em;
+    }
+
+    &--h5 {
+        font-size: 0.4792em;
+        font-weight: 700;
+        line-height: 1.2em;
+    }
+
+    &--h6 {
+        font-size: 0.3958em;
+        font-weight: 700;
+        line-height: 1.2em;
+    }
+
+}

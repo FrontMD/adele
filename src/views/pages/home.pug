@@ -1,0 +1,58 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Главная"
+
+block content
+    .page
+        .page-layout
+            section.page-intro.white-bg
+                span
+                .page-intro__content
+                    +title({
+                        tag: 'h1',
+                        text: '<span>Херсонский</span> <br>аграрный университет'
+                    })
+
+            +home-intro
+            +info-slider({
+                hasHeader: true,
+                items: [
+                    {
+                        num: '01',
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Картография и геоинформатика',
+                        text: ''
+                    },
+                    {
+                        num: '02',
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Гидрометеорология',
+                        text: ''
+                    },
+                    {
+                        num: '03',
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Дизайн архитектурной среды',
+                        text: ''
+                    },
+                    {
+                        num: '04',
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Биотехнология',
+                        text: ''
+                    },
+                    {
+                        num: '05',
+                        icon: 'img/abiturientam/abiturientam_info_6.svg',
+                        subtitle: 'Продукты питания из растительного сырья',
+                        text: ''
+                    }
+                ]
+            })
+            +home-materials
+            +home-activity
+            +home-info
+            +home-news
+            +home-structure
+            +home-open

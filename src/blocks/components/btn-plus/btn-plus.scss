@@ -1,0 +1,65 @@
+.btn-plus {
+    display: flex !important;
+    align-items: center;
+    width: fit-content;
+    gap: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.02em;
+    color: $c-accent;
+
+    @include max(laptop) {
+        gap: 16px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 53px;
+        height: 53px;
+        border: 1px solid rgba(4, 65, 43, 0.2);
+        border-color: rgba(4, 65, 43, 0.2);
+        background-color: transparent;
+        border-radius: 100%;
+        transition: all $tr-time;
+
+
+        @include max(laptop) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+
+            @include max(laptop) {
+                width: 10.566px;
+                height: 10.566px;
+            }
+        }
+    }
+
+    &:hover &__icon {
+        color: $c-white;
+        background-color: $c-accent;
+        border-color: $c-accent;
+    }
+}
+
+.btn-plus {
+    &--white {
+        color: $c-white;
+    }
+
+    &--white &__icon {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &--white:hover &__icon {
+        border-color: $c-white;
+        background-color: $c-white;
+        color: $c-accent;
+    }
+}

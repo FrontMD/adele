@@ -1,0 +1,118 @@
+.s-partners {
+    padding-top: 25px;
+    padding-bottom: 90px;
+
+    @include max(laptop) {
+        padding-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: stretch;
+
+        @include max(mobile) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__slider {
+        flex: 1 0 66%;
+        overflow: hidden;
+
+        @include max(laptop) {
+            flex: 1 0 50%;
+        }
+
+        @include max(mobile) {
+            flex-basis: auto;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px;
+        background-color: $c-white;
+        border-right: 1px solid $c-border-op;
+
+        @include max(tablet) {
+            padding: 30px;
+        }
+
+        @include max(mobile) {
+            border: none;
+            height: auto;
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        flex: 0 0 34%;
+        max-width: 605px;
+        min-height: 475px;
+        padding: 32px 35px 40px;
+        background-color: $c-accent;
+        color: $c-white;
+
+        @include max(laptop) {
+            flex: 0 0 50%;
+            min-height: 380px;
+        }
+
+        @include max(tablet) {
+            padding: 20px 15px;
+            min-height: 340px;
+        }
+
+        @include max(mobile) {
+            min-height: auto;
+        }
+    }
+
+    &__text {
+        max-width: 420px;
+    }
+
+    &__btns {
+        margin-top: auto;
+        padding-top: 10px;
+    }
+
+}
+
+.slider-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    color: $c-white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    cursor: pointer;
+
+    svg {
+        width: 9px;
+        height: 12px;
+    }
+
+    &--prev {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -1,0 +1,356 @@
+.m-table {
+    overflow-x: auto;
+    margin-top: 34px;
+    margin-bottom: 50px;
+
+    @include max(mobile) {
+        margin-right: -15px;
+        margin-top: 20px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 9px;
+        height: 9px;
+
+        @include max(tablet) {
+            width: 5px;
+            height: 5px;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $c-accent-middle;
+        border-radius: 21px;
+    }
+
+    table {
+        min-width: 100%;
+
+        @include max(mobile) {
+            margin-right: 15px;
+        }
+    }
+
+    th,
+    td {
+        padding: 23px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        color: $c-accent;
+        vertical-align: top;
+
+        @include max(large) {
+            min-width: 120px;
+        }
+
+        @include max(laptop) {
+            padding: 15px;
+        }
+
+        @include max(mobile) {
+            padding: 5px 10px;
+            font-size: 12px;
+            min-width: 85px;
+        }
+
+        a {
+            transition: color $tr-time;
+            font-size: 16px;
+            margin: 0;
+            line-height: 1.02em;
+            font-weight: 500;
+            color: $c-accent-light;
+
+            @include max(mobile) {
+                font-size: 12px;
+            }
+
+        }
+
+        a:hover {
+            color: $c-accent-middle;
+        }
+    }
+
+    tr th:first-child,
+    tr td:first-child {
+        min-width: auto !important;
+    }
+
+
+    &__subtitle {
+        text-align: center !important;
+    }
+
+    thead,
+    thead tr {
+        background-color: $c-accent-middle;
+    }
+
+    thead tr+tr {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    thead tr+tr>th {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    thead tr+tr>th:last-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th._subtitle {
+        text-align: center !important;
+        background-color: #01462D;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th._subtitle:last-of-type {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    td._rowtitle {
+        vertical-align: middle;
+    }
+
+    &--haslinks {
+        tr td {
+            vertical-align: middle;
+        }
+    }
+
+    th {
+        background-color: $c-accent-middle;
+        color: $c-white;
+    }
+
+    .m-table-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        align-self: flex-start;
+        gap: 13px;
+        min-height: 54px;
+        min-width: 136px;
+
+        @include max(mobile) {
+            min-width: 94px;
+            min-height: 30px;
+        }
+
+        &--download {
+            min-width: 212px;
+
+            @include max(mobile) {
+                min-width: 152px;
+            }
+        }
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 42px;
+
+            @include max(mobile) {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;
+            }
+        }
+
+        &__text,
+        &__name {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.02em;
+            color: $c-accent;
+
+            @include max(mobile) {
+                font-size: 12px;
+            }
+        }
+
+        &__text {
+            white-space: nowrap;
+        }
+
+        &__name {
+            min-width: 120px;
+            text-align: end;
+        }
+
+        &__icon {
+            flex: 0 0 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $c-accent-dark;
+            border: 1px solid $c-accent;
+            border-radius: 100%;
+            color: $c-white;
+
+            @include max(mobile) {
+                flex-basis: 30px;
+                height: 30px;
+            }
+
+            svg {
+                max-width: 17.52px;
+                max-height: 17.59px;
+                width: 100%;
+                height: 100%;
+
+                @include max(mobile) {
+                    max-width: 9.81px;
+                    max-height: 9.84px;
+                }
+            }
+        }
+
+    }
+
+    tbody tr:nth-child(odd) td {
+        background-color: $c-bg-main;
+    }
+
+    &__cell-content {
+        overflow: hidden;
+        transition: max-height $tr-time;
+    }
+
+    .collapsed &__cell-content {
+        -webkit-line-clamp: $m-table-max-rows;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+
+    &__showmore {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        min-height: 44px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: left;
+        color: $c-accent;
+        cursor: pointer;
+
+        .show-more {
+            display: none;
+        }
+
+        .show-less {
+            display: block;
+        }
+
+        svg {
+            margin-top: 3px;
+            flex: 0 0 10px;
+            transform: rotate(-90deg);
+        }
+    }
+
+    .collapsed &__showmore {
+        .show-more {
+            display: block;
+        }
+
+        .show-less {
+            display: none;
+        }
+
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.m-table.m-table--rows {
+    overflow: hidden;
+
+    table {
+        display: flex;
+        align-items: stretch;
+        max-width: 100%;
+
+        @include max(mobile) {
+            margin-right: 0;
+        }
+    }
+
+    thead {
+        display: grid;
+        grid-auto-rows: 1fr;
+    }
+
+    tbody {
+        display: flex;
+        overflow-x: auto;
+        align-items: stretch;
+
+        @include max(mobile) {
+            padding-right: 15px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 9px;
+            height: 9px;
+
+            @include max(tablet) {
+                width: 5px;
+                height: 5px;
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-middle;
+            border-radius: 21px;
+        }
+    }
+
+    th,
+    td {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    th {
+        min-width: auto;
+    }
+
+    td {
+        min-width: 380px;
+
+        @include max(mobile) {
+            min-width: 180px;
+        }
+    }
+
+    tr {
+        display: grid;
+        grid-auto-rows: 1fr;
+    }
+
+    tbody tr:nth-child(odd) td {
+        background-color: $c-white;
+    }
+
+    tbody tr td:nth-child(odd) {
+        background-color: $c-bg-main;
+    }
+}

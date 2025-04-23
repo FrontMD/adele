@@ -1,0 +1,104 @@
+.modal.hystmodal {
+    .hystmodal__window {
+        transition: all 0.3s linear;
+        transform: scale(0);
+        opacity: 0;
+        width: auto;
+        background-color: transparent;
+    }
+}
+
+.modal.hystmodal--active {
+    .hystmodal__window {
+        margin: 0;
+        transition: all 0.3s linear;
+        transform: scale(1);
+        opacity: 1;
+
+        @include max(tablet) {
+            margin: 0;
+        }
+    }
+}
+
+.modal {
+    box-sizing: border-box;
+
+    &__close {
+        position: absolute;
+        right: -60px;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+        min-width: auto;
+        cursor: pointer;
+        z-index: 20;
+        color: $c-accent;
+        transition: color $tr-time;
+        width: 52px;
+        height: 52px;
+        background: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        &:hover {
+            color: $c-accent-light;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @include max(mobile) {
+            right: 0;
+            top: 0;
+            background: transparent;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background: $c-white;
+        width: 100%;
+        max-width: 736px;
+        z-index: 9999;
+        padding: 40px;
+        max-height: 95vh;
+
+        @include max(tablet) {
+            width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+
+        @include max(mobile) {
+            padding: 40px 15px 15px;
+        }
+    }
+
+    &__inner {
+        max-height: 100%;
+        overflow-y: auto;
+        margin-right: -10px;
+        padding-right: 10px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-middle;
+            border-radius: 8px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.people-list {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    &__search{
+        margin-bottom: 130px;
+        display: flex;
+        align-items: flex-start;
+        @include max(large){
+            margin-bottom: 80px;
+        }
+        @include max(mobile){
+            margin-bottom: 50px;
+        }
+        input{
+            min-width: 100px;
+            flex: 1 1 auto;
+            font-size: 24px;
+            line-height: 28px;
+            padding: 38px;
+            background: #fff;
+            &::placeholder{
+                color:#CCDDD7;
+            }
+            @include max(large){
+                padding:30px 25px;
+            }
+            @include max(laptop){
+                font-size: 22px;
+                line-height: 25px;
+            }
+            @include max(tablet){
+                font-size: 20px;
+                line-height: 23px;
+            }
+            @include max(mobile){
+                font-size: 16px;
+                line-height: 21px;
+                padding:25px 20px;
+            }
+        }
+        button{
+            flex: 0 0 366px;
+            background: $c-accent;
+            font-size: 24px;
+            line-height: 28px;
+            padding: 38px;
+            cursor: pointer;
+            color: $c-white;
+            @include max(large){
+                padding:30px 25px;
+            }
+            @include max(laptop){
+                font-size: 22px;
+                line-height: 25px;
+                flex: 0 0 300px;
+            }
+            @include max(tablet){
+                font-size: 20px;
+                line-height: 23px;
+            }
+            @include max(mobile){
+                font-size: 16px;
+                line-height: 21px;
+                padding:25px 20px;
+                flex: 0 0 50px;
+            }
+        }
+    }
+
+}

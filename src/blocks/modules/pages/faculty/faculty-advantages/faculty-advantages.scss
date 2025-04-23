@@ -1,0 +1,54 @@
+.faculty-advantages {
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+    &__title {
+        color: $c-accent-middle;
+    }
+
+    &__cards {
+        margin-top: 40px;
+
+        @include max(mobile) {
+            margin-top: 20px
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__card {
+        min-height: 335px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px 20px;
+        background-color: $c-accent;
+        color: $c-white;
+
+        @include max(laptop) {
+            min-height: 270px;
+        }
+
+        @include max(mobile) {
+            min-height: auto;
+            width: 300px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 60px;
+
+        @include max(mobile) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__text {
+        margin-top: auto;
+        opacity: 0.45;
+        line-height: 1.34em;
+        font-size: 16px;
+    }
+}

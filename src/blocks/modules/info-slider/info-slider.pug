@@ -1,0 +1,77 @@
+-
+    const defaultInfoSliderProps = {
+        classes: '',
+        hasHeader: false,
+        items: [
+            {
+                num: '',
+                icon: 'img/abiturientam/abiturientam_info_1.svg',
+                subtitle: 'Структура, план приема',
+                text: 'Направления подготовки для бакалавриата и магистратуры, стоимость обучения по контракту'
+            },
+            {
+                num: '',
+                icon: 'img/abiturientam/abiturientam_info_2.svg',
+                subtitle: 'Приемная комиссия',
+                text: 'Состав приемной комиссии, расписание и часы работы'
+            },
+            {
+                num: '',
+                icon: 'img/abiturientam/abiturientam_info_3.svg',
+                subtitle: 'Результаты вступительных испытаний',
+                text: 'Состав приемной комиссии, расписание и часы работы'
+            },
+            {
+                num: '',
+                icon: 'img/abiturientam/abiturientam_info_4.svg',
+                subtitle: 'Иностранным абитуриентам',
+                text: 'Состав приемной комиссии, расписание и часы работы'
+            },
+            {
+                num: '',
+                icon: 'img/abiturientam/abiturientam_info_5.svg',
+                subtitle: 'Результаты вступительных испытаний',
+                text: 'Состав приемной комиссии, расписание и часы работы'
+            }
+        ]
+    }
+
+mixin info-slider(props = defaultInfoSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultInfoSliderProps.classes,
+            hasHeader: props.hasHeader ? props.hasHeader : defaultInfoSliderProps.hasHeader,
+            items: props.items ? props.items : defaultInfoSliderProps.items,
+        }
+
+    section.info-slider
+        .m-container.info-slider__container
+            -if(checkProps.hasHeader === true)
+                .info-slider__header
+                    +section-tag({text: 'Кому подойдет'})
+                    .title.title--h2.info-slider__title <span>Для кого</span> наша гимназия?
+            .info-slider__slider(data-js="infoSlider")
+                .swiper-wrapper
+                    - let itemsCount = 0
+                    - while (itemsCount < checkProps.items.length)
+                        a.info-slider__slide.swiper-slide(href="#")
+                            if(checkProps.items[itemsCount].num.length > 0)
+                                span.info-slider__num!= checkProps.items[itemsCount].num
+                            span.info-slider__icon
+                                img(src=checkProps.items[itemsCount].icon alt='')
+                            span.h3.info-slider__subtitle!= checkProps.items[itemsCount].subtitle
+                            if(checkProps.items[itemsCount].text.length > 0)
+                                span.info-slider__text.text-editor!= checkProps.items[itemsCount].text
+
+                        - itemsCount++
+
+            -if(checkProps.hasHeader === true)
+                +btn({
+                    classes: 'info-slider__all',
+                    name: 'Все направления',
+                    cMode: 'green'
+                })
+
+
+
+

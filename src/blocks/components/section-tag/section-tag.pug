@@ -1,0 +1,18 @@
+-
+    const defaultSectionTagProps = {
+        classes: '',
+        text: '',
+    }
+
+mixin section-tag(props = defaultSectionTagProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSectionTagProps.classes,
+            text: props.text ? props.text : defaultSectionTagProps.text,
+        }
+
+    .section-tag(class=checkProps.classes)&attributes(attributes)
+        != checkProps.text
+
+
+

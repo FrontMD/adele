@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Программа обучения</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <!-- лучше добавлять только на те страницы где есть блок с картой-->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
+  </head>
+  <body>
+    <header class="site-header" data-js="siteHeader">
+      <div class="section site-header__section">
+        <div class="site-header__container"><a class="site-header__logo" href="/"><img src="img/full_logo.svg" alt=""></a>
+              <div class="socials socials--header"><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#vk"></use>
+                  </svg></a><a class="socials__item" href="#">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#rutube"></use>
+                  </svg></a></div>
+          <nav class="site-header__nav"><a class="nav-link" href="" data-js="headerMenuBtn" data-menu="0"><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Университет</span></a><a class="nav-link" href="" data-js="headerMenuBtn" data-menu="1"><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Абитуриентам</span></a><a class="nav-link" href="" data-js="headerMenuBtn" data-menu="2"><span class="nav-link__icon">
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                </svg></span><span class="nav-link__text">Студентам</span></a></nav>
+        </div>
+      </div>
+      <div class="site-header__menu" data-js="siteHeaderMenu">
+            <div class="multi-menu  multi-menu--header" data-js="multiMenu" data-id="0">
+              <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим 1-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+            </div>
+            <div class="multi-menu  multi-menu--header" data-js="multiMenu" data-id="1">
+              <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим 1-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle">                       </use>
+                      </svg></span></a></div>
+              </div>
+            </div>
+            <div class="multi-menu  multi-menu--header" data-js="multiMenu" data-id="2">
+              <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим 1-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                <div class="multi-menu__back" data-js="multiMenuBack">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                  </svg>Назад
+                </div>
+                <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg></span></a></div>
+              </div>
+            </div>
+      </div>
+    </header>
+    <main class="site-main">
+      <div class="page">
+        <div class="page-layout">
+              <section class="i-intro">
+                <div class="m-container">
+                  <div class="i-intro__container">
+                    <div class="i-intro__img"><img src="img/programms/programm_intro.webp" alt=""></div>
+                    <div class="i-intro__left">
+                          <div class="breadcrumbs  breadcrumbs--light">
+                            <ul class="breadcrumbs__list">
+                              <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator">/</span>
+                              </li>
+                              <li class="breadcrumbs__item"><a href="javascript:void(0);">Программы</a><span class="breadcrumbs__separator">/</span>
+                              </li>
+                              <li class="breadcrumbs__item breadcrumbs__item--current"><span>10 ступень</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="title title--h1 i-intro__title title--light">
+                            <h1>10 ступень</h1>
+                          </div>
+                    </div>
+                    <div class="i-intro__right">
+                      <div class="i-intro__corner"><a class="btn  btn--green" href="#">Записаться на консультацию
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                              </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="programm-info">
+                <div class="m-container programm-info__container">
+                  <div class="programm-info__left">
+                    <div class="programm-info__info">
+                      <div class="title title--h4 programm-info__title">Информация об образовательной программе</div>
+                      <div class="programm-info__table">
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Предметы</div>
+                          <div class="programm-info__value">
+                            Русский язык<br>Литература
+<br>Иностранный язык
+<br>Алгебра
+<br>Геометрия
+<br>Информатика и ИКТ
+<br>История
+<br>Обществознание
+<br>География
+<br>Физика
+<br>Химия
+<br>Биология
+<br>Физическая культура
+                          </div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Вместимость группы, чел</div>
+                          <div class="programm-info__value">10</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Разделение на подгруппы</div>
+                          <div class="programm-info__value">50/50</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Стоимость:</div>
+                          <div class="programm-info__value">месяц - 8 000 ₽ (на 2025 год) <br>год - 70 000 ₽ (на 2025 год)</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Срок обучения:</div>
+                          <div class="programm-info__value">1 учебный год (1 сентября - 26 мая)</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Количество преподавателей</div>
+                          <div class="programm-info__value">30</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Прием иностранных граждан</div>
+                          <div class="programm-info__value">Возможен</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Профориентация по выбору профиля</div>
+                          <div class="programm-info__value">Есть</div>
+                        </div>
+                        <div class="programm-info__row">
+                          <div class="programm-info__param">Расширенная подготовка к ЕГЭ</div>
+                          <div class="programm-info__value">
+                            Математика<br>Физика
+<br>Русский язык
+<br>Информатика
+<br>Английский язык
+<br>География
+<br>Обществознание
+                          </div>
+                        </div>
+                      </div>
+                          <div class="link-block  link-block--note link-block--download">
+                            <div class="link-block__desc">Учебный план</div><a class="link-block__link" href="javascript:void(0)" target="_blank"><span class="link-block__icon">
+                                <svg> 
+                                  <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                </svg></span><span class="link-block__text">Скачать документ</span></a>
+                          </div>
+                    </div>
+                    <div class="programm-info__faq programm-faq">
+                      <div class="programm-faq__header">
+                        <div class="h2 programm-faq__title">Вопросы о программе</div><a class="btn btn--darkGreen programm-faq__btn btn--green" href="#" data-modal="#questionModal">Задать вопрос</a>
+                      </div>
+                      <div class="programm-faq__accordion" data-js="accordion">
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Смогу ли я поступить на направление подготовки «Менеджмент», если сдавал ЕГЭ по математике базового уровня?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor"><p><b>Для поступления на направление 38.03.02 «Менеджмент» необходимо сдавать экзамен по математике профильного уровня.</b></p></div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Какие сдавать экзамены, чтобы поступить на направление подготовки «Менеджмент»?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor"><p><b>Для поступления на направление 38.03.02 «Менеджмент» необходимо сдавать экзамен по математике профильного уровня.</b></p></div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Могу ли переводится с технической специальности на гуманитарную?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor"><p><b>Для поступления на направление 38.03.02 «Менеджмент» необходимо сдавать экзамен по математике профильного уровня.</b></p></div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Есть ли ускоренная программа?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor"><p><b>Для поступления на направление 38.03.02 «Менеджмент» необходимо сдавать экзамен по математике профильного уровня.</b></p></div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Есть ли льготы для общежития для победителей в конкурсах по менеджменту?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor"><p><b>Для поступления на направление 38.03.02 «Менеджмент» необходимо сдавать экзамен по математике профильного уровня.</b></p></div>
+                              </div>
+                            </div>
+                      </div><a class="btn programm-faq__more btn--lightGreen" href="#">Загрузить еще</a>
+                    </div>
+                  </div>
+                  <div class="programm-info__right">
+                    <div class="programm-info__block text-editor">
+                      <h2>О программе</h2>
+                      <p> <b>Динамичность современного бизнеса, меняющиеся цели и обстоятельства делают профессию менеджера самой востребованной, высокооплачиваемой и актуальной на рынке труда.</b></p>
+                      <p> <b>Мы знаем, что ждёт нас в будущем, и кто может стать эффективным менеджером. Всё больше профессионалов будут работать удалённо, вкладывая свою энергию параллельно в несколько проектов. Задачей менеджеров будущего станет поиск механизмов формирования и координации рассредоточенных в пространстве креативных и мобильных команд для конкретных проектов.</b></p>
+                      <p> <b>Самая быстрорастущая область управления – управление бизнес-процессами, выпускники программы будут обладать компетенциями в области качественного анализа, управления бизнес-процессами, учёта и аудита бизнес-процессов.</b></p>
+                    </div>
+                    <div class="programm-info__block text-editor">
+                      <H2>Обучение</H2>
+                      <P> <b>В университете накоплен большой опыт подготовки управленческих кадров. В процессе обучения студенты приобретают управленческие компетенции, учатся командной работе, приобретают лидерские и организаторские качества. Это дает конкурентные преимущества: способность успешно работать в меняющихся условиях и условиях нестабильности; в мобильных и проектных организациях и коллективах.</b></P>
+                    </div>
+                    <div class="programm-info__block text-editor">
+                      <H2>Наши преимущества:</H2>
+                      <P> <b>Сбалансированность программы и успешное формирование профессиональных компетенций в рамках изучаемых учебных дисциплин:</b></P>
+                      <ul>
+                        <li> <b>управление развитием организации;</b></li>
+                        <li> <b>информационные технологии в менеджменте;</b></li>
+                        <li> <b>управление технологиями создания проектов;</b></li>
+                        <li> <b>стартап-менеджмент;</b></li>
+                        <li> <b>управление малым бизнесом;</b></li>
+                        <li> <b>международный менеджмент.</b></li>
+                      </ul>
+                      <p> <b>Профессиональный коллектив, включающий научно-педагогические кадры и представителей бизнес-сообщества.</b></p>
+                      <p> <b>Ориентация на профессии будущих управленцев, востребованных в высокотехнологичных компаниях.</b></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="s-skills">
+                <div class="m-container">
+                  <div class="h2 s-skills__title">Навыки, которые вы получите</div>
+                  <div class="s-skills__cards" data-js="sSkillsSlider">
+                    <div class="swiper-wrapper">
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_1.webp" alt=""></div>
+                        <div class="s-skills__text">планирование и анализ на предприятии</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_2.webp" alt=""></div>
+                        <div class="s-skills__text">разработка и реализация управленческих решений, делового общения, переговоров и служебной переписки</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_3.webp" alt=""></div>
+                        <div class="s-skills__text">владения различными управленческими технологиями</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_4.webp" alt=""></div>
+                        <div class="s-skills__text">применение методов и инструментов управления бизнес-процессами</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_5.webp" alt=""></div>
+                        <div class="s-skills__text">обработка и анализ управленческой информации</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_1.webp" alt=""></div>
+                        <div class="s-skills__text">планирование и анализ на предприятии</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_2.webp" alt=""></div>
+                        <div class="s-skills__text">разработка и реализация управленческих решений, делового общения, переговоров и служебной переписки</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_3.webp" alt=""></div>
+                        <div class="s-skills__text">владения различными управленческими технологиями</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_4.webp" alt=""></div>
+                        <div class="s-skills__text">применение методов и инструментов управления бизнес-процессами</div>
+                      </div>
+                      <div class="s-skills__card swiper-slide">
+                        <div class="s-skills__icon"><img src="img/programms/skills_5.webp" alt=""></div>
+                        <div class="s-skills__text">обработка и анализ управленческой информации</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="s-vacancy">
+                <div class="m-container">
+                  <div class="h2 s-vacancy__title">Карьера после <br>обучения</div>
+                  <div class="s-vacancy__cards" data-js="sVacancySlider">
+                    <div class="swiper-wrapper">
+                      <div class="s-vacancy__card s-vacancy-card swiper-slide"> <a class="s-vacancy-card__link" href="#"></a>
+                        <div class="s-vacancy-card__top">
+                          <div class="h3 s-vacancy-card__title">Менеджер по бизнес-процессам</div>
+                              <div class="salary">
+                                <div class="salary__text">Зарплата</div>
+                                <div class="salary__title">от 80 000р</div>
+                              </div>
+                        </div>
+                        <div class="s-vacancy-card__bottom">
+                          <div class="s-vacancy-card__block">
+                            <div class="s-vacancy-card__subtitle">Обязанности:</div>
+                            <div class="s-vacancy-card__resp">проведение аудита бизнес-процессов на соответствие стратегическим целям и задачам, а так же текущей операционной деятельности, осуществление оперативного контроля функционирования</div>
+                          </div>
+                          <div class="s-vacancy-card__icon">
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="s-vacancy__card s-vacancy-card swiper-slide"> <a class="s-vacancy-card__link" href="#"></a>
+                        <div class="s-vacancy-card__top">
+                          <div class="h3 s-vacancy-card__title">Аналитик бизнес-процессов</div>
+                              <div class="salary">
+                                <div class="salary__text">Зарплата</div>
+                                <div class="salary__title">от 140 000р</div>
+                              </div>
+                        </div>
+                        <div class="s-vacancy-card__bottom">
+                          <div class="s-vacancy-card__block">
+                            <div class="s-vacancy-card__subtitle">Обязанности:</div>
+                            <div class="s-vacancy-card__resp">автоматизация бизнес-процессов полиграфического и упаковочного производства; анализ показателей выработки, прибыльности, ресурсов, перспектив предприятия</div>
+                          </div>
+                          <div class="s-vacancy-card__icon">
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="s-vacancy__card s-vacancy-card swiper-slide"> <a class="s-vacancy-card__link" href="#"></a>
+                        <div class="s-vacancy-card__top">
+                          <div class="h3 s-vacancy-card__title">Специалист по бизнес-процессам</div>
+                              <div class="salary">
+                                <div class="salary__text">Зарплата</div>
+                                <div class="salary__title">от 80 000р</div>
+                              </div>
+                        </div>
+                        <div class="s-vacancy-card__bottom">
+                          <div class="s-vacancy-card__block">
+                            <div class="s-vacancy-card__subtitle">Обязанности:</div>
+                            <div class="s-vacancy-card__resp">проведение аудита бизнес-процессов на соответствие стратегическим целям и задачам, а так же текущей операционной деятельности, осуществление</div>
+                          </div>
+                          <div class="s-vacancy-card__icon">
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="s-vacancy__card s-vacancy-card swiper-slide"> <a class="s-vacancy-card__link" href="#"></a>
+                        <div class="s-vacancy-card__top">
+                          <div class="h3 s-vacancy-card__title">Менеджер по бизнес-процессам</div>
+                              <div class="salary">
+                                <div class="salary__text">Зарплата</div>
+                                <div class="salary__title">от 80 000р</div>
+                              </div>
+                        </div>
+                        <div class="s-vacancy-card__bottom">
+                          <div class="s-vacancy-card__block">
+                            <div class="s-vacancy-card__subtitle">Обязанности:</div>
+                            <div class="s-vacancy-card__resp">проведение аудита бизнес-процессов на соответствие стратегическим целям и задачам, а так же текущей операционной деятельности, осуществление оперативного контроля функционирования системы бизнес-процессов и проведение необходимой коррекции для повышения эффективности и результативности бизнес-процессов.</div>
+                          </div>
+                          <div class="s-vacancy-card__icon">
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="s-partners" data-js="sPartners">
+                <div class="m-container s-partners__container">
+                  <div class="s-partners__slider" data-js="sPartnersSlider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide s-partners__slide"><img src="img/partners/partner_1.webp" alt=""></div>
+                      <div class="swiper-slide s-partners__slide"><img src="img/partners/partner_2.webp" alt=""></div>
+                      <div class="swiper-slide s-partners__slide"><img src="img/partners/partner_3.webp" alt=""></div>
+                      <div class="swiper-slide s-partners__slide"><img src="img/partners/partner_4.webp" alt=""></div>
+                      <div class="swiper-slide s-partners__slide"><img src="img/partners/partner_5.webp" alt=""></div>
+                      <div class="swiper-slide s-partners__slide"><img src="img/partners/partner_6.webp" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="s-partners__info">
+                    <div class="s-partners__title">Партнеры-работодатели</div>
+                    <div class="h3 s-partners__text">Мы работаем с некоммерческими, корпоративными и общественными организациями. <br><br>Студенты с лучшими результатами могут быть трудоустроены к нашим партнерам после окончания Университета.</div>
+                    <div class="slider-btns s-partners__btns">
+                      <div class="slider-btn slider-btn--prev" data-js="sliderPrevBtn">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>
+                      </div>
+                      <div class="slider-btn slider-btn--next" data-js="sliderNextBtn">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="programms-list  programms-list--rows" data-js="programmsList">
+                <div class="m-container">
+                  <div class="programms-list__header"> 
+                    <div class="h2 programms-list__title">Другие <br>программы     </div>
+                        <div class="visual-toggle" data-js="programmsListToggle"><a class="visual-toggle__btn" href="#" data-js="visualToggleBtn" data-mode="cards">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#cards_mode"></use>
+                            </svg></a><a class="visual-toggle__btn active" href="#" data-js="visualToggleBtn" data-mode="rows">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#rows_mode"></use>
+                            </svg></a></div>
+                  </div>
+                  <div class="programms-list__list">
+                        <div class="programm-card  programm-card--row" data-js="programmCard">
+                          <div class="programm-card__header">
+                            <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                            <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                          </div>
+                          <div class="programm-card__items">
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Стоимость</div>
+                              <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Проходной балл:</div>
+                              <div class="h3 programm-card__val">400</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Срок обучения:</div>
+                              <div class="h3 programm-card__val">4 года</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Бюджетных мест:</div>
+                              <div class="h3 programm-card__val">26</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="programm-card  programm-card--row" data-js="programmCard">
+                          <div class="programm-card__header">
+                            <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                            <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                          </div>
+                          <div class="programm-card__items">
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Стоимость</div>
+                              <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Проходной балл:</div>
+                              <div class="h3 programm-card__val">400</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Срок обучения:</div>
+                              <div class="h3 programm-card__val">4 года</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Бюджетных мест:</div>
+                              <div class="h3 programm-card__val">26</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="programm-card  programm-card--row" data-js="programmCard">
+                          <div class="programm-card__header">
+                            <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                            <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                          </div>
+                          <div class="programm-card__items">
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Стоимость</div>
+                              <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Проходной балл:</div>
+                              <div class="h3 programm-card__val">400</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Срок обучения:</div>
+                              <div class="h3 programm-card__val">4 года</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Бюджетных мест:</div>
+                              <div class="h3 programm-card__val">26</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="programm-card  programm-card--row" data-js="programmCard">
+                          <div class="programm-card__header">
+                            <div class="programm-card__suptitle">Факультет экономики и управления</div>
+                            <div class="h3 programm-card__title"><a href="#">Управление бизнес-процессами (Менеджмент)</a></div>
+                          </div>
+                          <div class="programm-card__items">
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Стоимость</div>
+                              <div class="h3 programm-card__val">321.8 тыс. (2024)</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Проходной балл:</div>
+                              <div class="h3 programm-card__val">400</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Срок обучения:</div>
+                              <div class="h3 programm-card__val">4 года</div>
+                            </div>
+                            <div class="programm-card__item">
+                              <div class="programm-card__param">Бюджетных мест:</div>
+                              <div class="h3 programm-card__val">26</div>
+                            </div>
+                          </div>
+                        </div>
+                  </div><a class="btn programm-list__more btn--lightGreen" href="#">Загрузить еще</a>
+                </div>
+              </section>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="section">
+        <div class="m-container site-footer__container">
+          <div class="site-footer__row">
+            <div class="site-footer__col site-footer__col--first">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Главный корпус</div>
+                <div class="site-footer__textblock">
+                  <p>273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</p><a href="#">все адреса корпусов</a>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">Контакт-центр:</div>
+                <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a>
+                  <p>
+                    Часы работы:<br>Пн. — Чт.: 9:00 - 21:00
+<br>Пт: 9:00 - 20:00
+<br>Сб. — Вс.: 9:30 - 17:15
+                  </p>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">Общие вопросы <br>(кроме вопросов о поступлении):</div>
+                <div class="site-footer__textblock"><a href="mailto:info@khay.ru">info@khay.ru</a></div>
+              </div>
+            </div>
+            <div class="site-footer__col">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Приемная комиссия</div>
+                <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a></div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title">График работы:</div>
+                <div class="site-footer__textblock">
+                  <p>
+                    Пн. — Пт.: 10:30 - 18:00<br> Сб.: 10:30 - 15:00
+<br> Вс.: приём онлайн
+                  </p><a href="mailto:priem@khay.ru">priem@khay.ru</a>
+                </div>
+              </div>
+              <div class="site-footer__block">
+                <div class="site-footer__title"> <a href="#">Прием документов</a></div>
+              </div>
+            </div>
+            <div class="site-footer__col">
+              <div class="site-footer__block">
+                <div class="site-footer__title">Пресс-служба</div>
+                <div class="site-footer__textblock"><a href="tel:+74921112222">+7 (492)111-22-22</a></div>
+                <div class="site-footer__subtitle">СМИ и новости:</div>
+                <div class="site-footer__textblock"><a href="mailto:+press@khay.ru">press@khay.ru</a></div>
+                <div class="site-footer__subtitle">Обновление сайта <br>(добавить/исправить):</div>
+                <div class="site-footer__textblock"><a href="mailto:+press@khay.ru">press@khay.ru							</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="site-footer__row site-footer__row--mid">
+            <div class="site-footer__links"><a class="site-footer__link" href="#">ПОСТУПАЮЩИМ</a><a class="site-footer__link" href="#">ОБУЧАЮЩИМСЯ</a><a class="site-footer__link" href="#">СТРУКТУРА</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">ОБ УНИВЕРСИТЕТЕ</a><a class="site-footer__link" href="#">КАФЕДРЫ</a><a class="site-footer__link" href="#">ДОВУЗОВСКОЕ ОБРАЗОВАНИЕ</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">НАУКА</a><a class="site-footer__link" href="#">МЕЖДУНАРОДНАЯ ДЕЯТЕЛЬНОСТЬ</a><a class="site-footer__link" href="#">ОБЩИЕ СВЕДЕНИЯ</a></div>
+            <div class="site-footer__links"><a class="site-footer__link" href="#">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</a><a class="site-footer__link" href="#">ПРОТИВОДЕЙСТВИЕ КОРРУПЦИИ</a><a class="site-footer__link" href="#">НОВОСТИ</a></div>
+          </div>
+          <div class="site-footer__copyright">© 2024 Федеральное государственное автономное образовательное учреждение высшего образования Херсонский Аграрный Университет</div>
+        </div>
+      </div>
+    </footer>
+    <div class="main-burger">
+      <div class="main-burger__menu" data-js="mainBurgerMenu">
+        <div class="main-burger__content">
+          <div class="main-burger__header">
+            <div class="main-burger__left">
+              <div class="main-burger__close" data-js="mainBurgerClose">
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#close"></use>
+                </svg>Закрыть
+              </div>
+            </div>
+            <div class="main-burger__right">
+                  <div class="socials socials--burger"><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                      </svg></a><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#vk"></use>
+                      </svg></a><a class="socials__item" href="#">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#rutube"></use>
+                      </svg></a></div>
+              <div class="main-burger__contacts">Приемная комиссия<a href="tel:+74921112222">+7 (492)111-22-22</a></div>
+            </div>
+          </div>
+          <div class="main-burger__main">
+                <div class="multi-menu" data-js="multiMenu">
+                  <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Поступающим</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"><span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"><span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"><span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"><span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"><span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"><span class="multi-menu__text">Уровень 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="14"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="15"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="16"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="17"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="18"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="19"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="20"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="21"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="22"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="23"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="24"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 2-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4"> <span class="multi-menu__text">Об университете</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5"> <span class="multi-menu__text">Кафедры</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6"> <span class="multi-menu__text">Довузовское образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7"> <span class="multi-menu__text">Наука</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8"> <span class="multi-menu__text">Международная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> <span class="multi-menu__text">Общие сведения</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> <span class="multi-menu__text">Сведения об образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> <span class="multi-menu__text">Противодействие коррупции</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> <span class="multi-menu__text">Новости</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="1">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="2">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                  <div class="multi-menu__list multi-menu__list--3" data-js="multiMenuList" data-level="3" data-index="13">
+                    <div class="multi-menu__back" data-js="multiMenuBack">
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                      </svg>Назад
+                    </div>
+                    <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1"><span class="multi-menu__text">Уровень 3-13</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> <span class="multi-menu__text">Обучающимся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> <span class="multi-menu__text">Структура</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                          </svg></span></a></div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-burger__line">
+        <div class="main-burger__open" data-js="mainBurgerOpen">
+          <svg> 
+            <use xlink:href="img/sprites/sprite.svg#main_burger"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <noindex>
+      <div>
+        <!-- код модалок сюда-->
+            <div class="modal hystmodal c-map-modal" id="cMapAddressModal" aria-hidden="true" data-js="cMapAddressModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal open-doors-modal" id="openDoorsModal" aria-hidden="true" data-js="openDoorsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner"><div class="open-doors-block__container text-editor">
+<div class="open-doors-block__left">
+<h3>Онлайн мероприятие 04 декабря 2024 в 13:00</h3>
+<p><b>10 октября 2024</b></p>
+</div>
+<div class="open-doors-block__right">
+<p><b>Поделиться</b></p>
+<div class="socials">
+<a class="socials__item" href="#">
+<svg>
+<use xlink:href="img/sprites/sprite.svg#telegram"></use>
+</svg>
+</a>
+<a class="socials__item" href="#">
+<svg>
+<use xlink:href="img/sprites/sprite.svg#vk"></use>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="open-doors-block__format text-editor">
+<div class="open-doors-block__left">
+                      <h3>Встреча в Zoom</h3></div>
+<div class="open-doors-block__right">
+<a class="btn-plus" href="#">
+<span class="btn-plus__text">Перейти</span>
+<span class="btn-plus__icon"> 
+<svg>
+<use xlink:href="img/sprites/sprite.svg#link"></use>
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="open-doors-block__format text-editor">
+<div class="open-doors-block__left">
+                      <h3>Адрес:</h3></div>
+<div class="open-doors-block__right">
+                      <p> <b>Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23</b></p></div>
+</div> 
+<div class="open-doors-block__modal text-editor"><img src="img/open-doors/open-doors-2.webp"><br>
+                      <p>Что нужно сделать перед посещением университета:<br>Спланируйте маршрут до вуза, чтобы не опоздать. Оцените, удобно ли вам будет ездить.</p>
+                      <h3>Правила посещения</h3>
+                      <ul>
+                        <li>Прослушайте официальную часть. Мы рекомендуем приходить к самому началу мероприятия. Так вы не упустите нужную информацию. Возможно, на выступлении ректора вы получите ответы на большую часть своих вопросов. Все важные моменты записывайте в блокнот. Приветственное слово будет говорит заведующий кафедры “Менеджмент”.</li>
+                        <li>Поговорите с представителями приемной комиссии. Ответы конспектируйте в блокнот. Мы подготовили перечень важных вопросов, которые можно выяснить в приемной комиссии: Есть ли у вуза действующая аккредитация по выбранному вами направлению? Где проходит практика? Помогает ли вуз с трудоустройством?Дают ли баллы за золотую медаль и дипломы призеров олимпиад? Каких? Можно ли перевестись на другое направление, если не понравится учиться там, куда поступил? Как и когда это делается? По какому принципу распределяются места в общежитие? За какой период надо вносить оплату? За какой период надо вносить оплату, если поступите на платное?</li>
+                        <li>Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.</li>
+                      </ul></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="questionModal" aria-hidden="true" data-js="questionModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Задать вопрос</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текст вопроса" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Задать вопрос
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="vacancyRespModal" aria-hidden="true" data-js="vacancyRespModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Отправить резюме</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field-file" data-js="formField" data-placeholder="Прикрепить резюме"><span class="field-file__fakeinput"><span data-js="fileName">Прикрепить резюме</span><span class="icon-empty">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                                          </svg></span><span class="icon-full" data-js="iconFull">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                                          </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                                      <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Отправить резюме
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваше резюме отправлено.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="seminarModal" aria-hidden="true" data-js="seminarModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate data-js="seminarForm">
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Запрос на участие</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Название семинара" required="" data-js="saminarName"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Дата" required="" data-v-name="date" data-type="date" data-js="saminarDate"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field   field--greenSelect  " data-js="formField">
+                                        <select class="field__select" placeholder="Формат участия" data-js="formSelect" required="">
+                                          <option></option>
+                                          <option value="Очно">Очно</option>
+                                          <option value="Онлайн">Онлайн</option>
+                                        </select><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Список участников" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Название компании / учреждения" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="ФИО руководителя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Должность руководителя" required=""><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Юридический адрес" required=""><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Почтовый адрес" required=""><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="ИНН" required="" data-v-name="inn" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="КПП" required="" data-v-name="kpp" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Расчётный счёт" required="" data-v-name="account" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="БИК" required="" data-v-name="bik" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Кор. счёт" required="" data-v-name="account" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Наименование банка" required=""><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Комментарий"></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Отправить запрос
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваш запрос отправлен.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="submitDocsModal" aria-hidden="true" data-js="submitDocsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate data-js="submitDocsForm">
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Отправить документы</div>
+                              <div class="form__fields">
+                                <div class="form__radios">
+                                  <div class="form__radios-title">Вы гражданин Российской Федерации?</div>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Да</span>
+                                        <input class="field__input" type="radio" placeholder="" checked="" name="citizenship" value="Да" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Нет</span>
+                                        <input class="field__input" type="radio" placeholder="" name="citizenship" value="Нет" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                </div>
+                                <div class="form__radios">
+                                  <div class="form__radios-title">Вы поступаете в магистратуру/аспирантуру?</div>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Да</span>
+                                        <input class="field__input" type="radio" placeholder="" checked="" name="level-education" value="Да" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                      <label class="field    field--radio " data-js="formField"><span class="field__title">Нет</span>
+                                        <input class="field__input" type="radio" placeholder="" name="level-education" value="Нет" data-js="radioTab"><span class="fake-radio"></span>
+                                      </label>
+                                </div>
+                                <div class="form__block" data-js="formBlock" data-condition="ifLevelNo">
+                                  <div class="form__note text-editor">
+                                    <h3>Внимание!</h3>
+                                    <p> <b>Дистанционная подача документов поступающими на программы бакалавриата, специалитета, программы среднего профессионального образования осуществляется через портал Госуслуг <a href="https://www.gosuslugi.ru/">https://www.gosuslugi.ru/</a></b></p>
+                                  </div>
+                                </div>
+                                <div class="form__block" data-js="formBlock" data-condition="ifLevelYes">
+                                  <div class="form__block" data-js="formBlock" data-condition="ifCitizenshipYes">
+                                        <label class="field   field--greenSelect  " data-js="formField">
+                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect" required="">
+                                            <option></option>
+                                            <option value="Паспорт гражданина РФ">Паспорт гражданина РФ</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                  <div class="form__block" data-js="formBlock" data-condition="ifCitizenshipNo">
+                                        <label class="field   field--greenSelect  " data-js="formField">
+                                          <select class="field__select" placeholder="Тип документа" data-js="formSelect" required="">
+                                            <option></option>
+                                            <option value="Иностранный паспорт">Иностранный паспорт</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                  <div class="form__flex">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Серия документа" required=""><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Номер документа" required=""><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                      <label class="field     field--checkbox" data-js="formField"><span class="field__title">Имею СНИЛС</span>
+                                        <input class="field__input" type="checkbox" placeholder="" data-js="snils-tab"><span class="fake-checkbox"></span><span class="field__error" data-js="fieldError">Нужно обязательно ознакомиться и согласиться</span>
+                                      </label>
+                                  <div class="form__block" data-js="formBlock" data-condition="ifSnils">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="СНИЛС" required=""><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                  <div class="form__note text-editor">
+                                    <h3>Внимание!</h3>
+                                    <ul>
+                                      <li><b>Бланк заполняется от руки!</b></li>
+                                      <li><b>Личная подпись ставится<br>- на первой странице (в таблице)<br>- на последней странице</b></li>
+                                    </ul>
+                                  </div>
+                                  <div class="form__links"><a href="#" target="_blank">Согласие на обработку персональных данных (18+ лет)</a><a href="#" target="_blank">Согласие на обработку персональных данных (до 18 лет)</a><a href="#" target="_blank">Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения (18+ лет)</a><a href="#" target="_blank">Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения (до 18 лет)</a></div>
+                                      <label class="field-file" data-js="formField" data-placeholder="Согласие на обработку персональных данных"><span class="field-file__fakeinput"><span data-js="fileName">Согласие на обработку персональных данных</span><span class="icon-empty">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                                            </svg></span><span class="icon-full" data-js="iconFull">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                                            </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                                        <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                      </label>
+                                      <label class="field-file" data-js="formField" data-placeholder="Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения"><span class="field-file__fakeinput"><span data-js="fileName">Согласие на обработку персональных данных, разешенных субъектом персональных данных для распространения</span><span class="icon-empty">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                                            </svg></span><span class="icon-full" data-js="iconFull">
+                                            <svg>
+                                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                                            </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                                        <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                      </label>
+                                </div>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Отправить документы
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваши документы отправлены.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="sectionModal" aria-hidden="true" data-js="sectionModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="h2 form__title">Оставить заявку</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                <div class="form__flex">
+                                      <label class="field     " data-js="formField">
+                                        <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                      <label class="field   field--greenSelect  " data-js="formField">
+                                        <select class="field__select" placeholder="Специальность" data-js="formSelect" required="">
+                                          <option></option>
+                                          <option value="Менеджмент">Менеджмент</option>
+                                          <option value="Прикладная математика и информатика">Прикладная математика и информатика</option>
+                                          <option value="Картография и геоинформатика">Картография и геоинформатика</option>
+                                        </select><span class="field__error" data-js="fieldError"></span>
+                                      </label>
+                                </div>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="название секции/кружка" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текущие навыки"></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Ожидания от секции"></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green" type="submit">Оставить заявку
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <label>
+                                  <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#success"></use>
+                                </svg>
+                              </div>
+                              <div class="h2 form__title">Ваша заявка отправлена.</div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal form-projects-modal" id="projectsModal" aria-hidden="true" data-js="projectsModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                      <form class="form" action="#" data-validate novalidate data-js="projectsForm">
+                        <div class="form__content" data-js="form-content">
+                          <div class="h2 form__title">Предложить проект</div>
+                          <div class="form__step active" data-js="formStep" data-name="desc" data-id="0">
+                            <div class="form__fields">
+                              <div class="text-editor form-text-editor">
+                                <p><b>Данная форма предназначена для сбора проектных инициатив для реализации проектов в рамках дисциплины "Проектная деятельность" в 2024-2025 учебном году.</b></p>
+                                <p> <b>Термины и определения:</b></p>
+                                <p><b>Проект</b> – комплекс взаимосвязанных мероприятий, направленный на создание уникального продукта и/или услуги в условиях временных и ресурсных ограничений.</p>
+                                <p><b>Проектная команда</b> – группа обучающихся, объединенных для реализации проекта.</p>
+                                <p><b>Заказчик</b> – лицо, инициирующее проект, заинтересованное в осуществлении проекта и достижении его целей, осуществляющее контроль его реализации и принимающее результаты после его окончания.</p>
+                                <p><b>Партнер</b> – это лицо либо организация оказывающее содействие в реализации проекта.</p>
+                                <p><b>Инициативные проекты</b> – персональные проекты обучающихся, сотрудников Университета или внешних инициаторов, направленные на создание новых продуктов, имеющих предпринимательский потенциал и претендующие на коммерциализацию результатов.</p>
+                                <p>Перед подачей заявки необходимо ознакомиться с Регламентом: <a href="">ссылка</a></p>
+                              </div>
+                                  <label class="field form-projects-modal__agreement    field--checkbox" data-js="formProjectsModalAgreement"><span class="field__title">Я ознакомлен и согласен *<span>*</span></span>
+                                    <input class="field__input" type="checkbox" placeholder="" required="" value="Да"><span class="fake-checkbox"></span><span class="field__error" data-js="fieldError">Нужно обязательно ознакомиться и согласиться</span>
+                                  </label>
+                              <div class="text-editor form-text-editor">
+                                <p>В соответствии с пунктом 2.7 Регламента, администрация ЦПД оставляет за собой право отклонить заявку при несоответствии требований, к проектам и реализации</p>
+                              </div>
+                            </div>
+                            <div class="form__btns">
+                                  <button class="btn form-projects-modal__next btn--green" type="button" data-js="formNextStep">Дальше
+                                  </button>
+                            </div>
+                          </div>
+                          <div class="form__step" data-js="formStep" data-name="partner" data-id="1">
+                            <div class="form__fields">
+                              <div class="form__radios">
+                                <div class="form__radios-title">Есть ли у проекта партнер/заказчик?</div>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Есть партнер</span>
+                                      <input class="field__input" type="radio" placeholder="" checked="" name="project-partner" value="Партнер" data-js="projectPartnerTab"><span class="fake-radio"></span>
+                                    </label>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Есть заказчик</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-partner" value="Заказчик" data-js="projectPartnerTab"><span class="fake-radio"></span>
+                                    </label>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Нет, проект инициативный</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-partner" value="Нет" data-js="projectPartnerTab"><span class="fake-radio"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifProjectHasPartner">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Кто является партнером/заказчиком" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО представителя партнера/заказчика" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон представителя" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                            </div>
+                            <div class="form__btns">
+                                  <button class="btn form-projects-modal__prev btn--lightGreen" type="button" data-js="formPrevStep">Назад
+                                  </button>
+                                  <button class="btn form-projects-modal__next btn--green" type="button" data-js="formNextStep">Дальше
+                                  </button>
+                            </div>
+                          </div>
+                          <div class="form__step" data-js="formStep" data-name="project" data-id="2">
+                            <div class="form__fields">
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="text" placeholder="Название проекта" required=""><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="text" placeholder="Предварительный бюджет проекта, руб." required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Проблема, которую решает проект" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Цель проекта" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Актуальность проекта" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Ключевые задачи проекта" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <textarea class="field__textarea" rows="7" placeholder="Ожидаемый продуктовый результат" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field   field--greenSelect  " data-js="formField">
+                                    <select class="field__select" placeholder="Направление проекта" data-js="formSelect" required="">
+                                      <option></option>
+                                      <option value="Вариант 1">Вариант 1</option>
+                                      <option value="Вариант 2">Вариант 2</option>
+                                      <option value="Вариант 3">Вариант 3</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field-file" data-js="formField" data-placeholder="Дополнительные материалы к заявке"><span class="field-file__fakeinput"><span data-js="fileName">Дополнительные материалы к заявке</span><span class="icon-empty">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                                        </svg></span><span class="icon-full" data-js="iconFull">
+                                        <svg>
+                                          <use xlink:href="img/sprites/sprite.svg#close"></use>
+                                        </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                                    <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                  </label>
+                              <div class="form__radios">
+                                <div class="form__radios-title">Срок реализации проекта</div>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">1 учебный год</span>
+                                      <input class="field__input" type="radio" placeholder="" checked="" name="project-term" value="1 учебный год"><span class="fake-radio"></span>
+                                    </label>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">1 учебный год с продолжением</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-term" value="1 учебный год с продолжением"><span class="fake-radio"></span>
+                                    </label>
+                              </div>
+                              <div class="form__radios">
+                                <div class="form__radios-title">Проект уже реализуется в рамках проектной деятельности?</div>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Да</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-in-progress" value="Да" data-js="projectProgressTab"><span class="fake-radio"></span>
+                                    </label>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Нет</span>
+                                      <input class="field__input" type="radio" placeholder="" checked="" name="project-in-progress" value="Нет" data-js="projectProgressTab"><span class="fake-radio"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifProjectInProgress" style="display: flex;">
+                                <div class="text-editor form-text-editor">
+                                  <p> <b>Введите в поле ниже не более 5 студентов с указанием группы для закрепления их за проектом</b></p>
+                                </div>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Список студентов" required=""></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                            </div>
+                            <div class="form__btns">
+                                  <button class="btn form-projects-modal__prev btn--lightGreen" type="button" data-js="formPrevStep">Назад
+                                  </button>
+                                  <button class="btn form-projects-modal__next btn--green" type="button" data-js="formNextStep">Дальше
+                                  </button>
+                            </div>
+                          </div>
+                          <div class="form__step" data-js="formStep" data-name="contacts" data-id="3">
+                            <div class="form__fields">
+                              <div class="form__radios">
+                                <div class="form__radios-title">Ваш статус</div>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Сотрудник внешней организации</span>
+                                      <input class="field__input" type="radio" placeholder="" checked="" name="project-proposer-status" value="Сотрудник внешней организации" data-js="porposeStatusTab"><span class="fake-radio"></span>
+                                    </label>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Сотрудник университета</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Сотрудник университета" data-js="porposeStatusTab"><span class="fake-radio"></span>
+                                    </label>
+                                    <label class="field    field--radio " data-js="formField"><span class="field__title">Обучающийся университета</span>
+                                      <input class="field__input" type="radio" placeholder="" name="project-proposer-status" value="Обучающийся университета" data-js="porposeStatusTab"><span class="fake-radio"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifIsEmployee">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Должность" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifIsStudent">
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Специальность" data-js="formSelect" required="">
+                                        <option></option>
+                                        <option value="Менеджмент">Менеджмент</option>
+                                        <option value="Прикладная математика и информатика">Прикладная математика и информатика</option>
+                                        <option value="Картография и геоинформатика">Картография и геоинформатика</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Группа" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Уровень образования" data-js="formSelect" required="" data-tab="courseTab">
+                                        <option></option>
+                                        <option value="Бакалавриат">Бакалавриат</option>
+                                        <option value="Специалитет">Специалитет</option>
+                                        <option value="Магистратура">Магистратура</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__block" data-js="formBlock" data-condition="ifUndergraduate">
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Курс" data-js="formSelect" required="">
+                                        <option></option>
+                                        <option value="1 курс">1 курс</option>
+                                        <option value="2 курс">2 курс</option>
+                                        <option value="3 курс">3 курс</option>
+                                        <option value="4 курс">4 курс</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="text" placeholder="ФИО" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                  <label class="field     " data-js="formField">
+                                    <input class="field__input" type="text" placeholder="Откуда вы узнали о проектной деятельности в ХАУ?"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                            </div>
+                            <div class="form__privacy form-privacy" data-js="formField">
+                              <label>
+                                <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                              </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span>
+                            </div>
+                            <div class="form__btns">
+                                  <button class="btn form-projects-modal__prev btn--lightGreen" type="button" data-js="formPrevStep">Назад
+                                  </button>
+                                  <button class="btn form__submit form-projects-modal__next btn--green" type="submit">Отправить на рассмотрение
+                                  </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form__thanks" data-js="form-thanks">
+                          <div class="form__image-success">
+                            <svg></svg>
+                            <use xlink:href="img/sprites/sprite.svg#success"></use>
+                          </div>
+                          <div class="h2 form__title">Ваше предложение отправлено.</div>
+                          <div class="form__text">С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.                     </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </noindex>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

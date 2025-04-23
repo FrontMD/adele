@@ -1,0 +1,52 @@
+:root {
+    --m-table-max-rows: 5;
+    --c-accent: #04412B;
+    --c-accent-light: #EDFAEC;
+}
+
+// шрифты
+$ff-main: 'Suisse Intl', sans-serif;
+$ff-second: 'Manrope', sans-serif;
+
+// media
+$media-list: (
+    'xs': 500,
+    'mobile': 768,
+    'tablet': 1023,
+    'laptop': 1340,
+    'large': 1800,
+);
+
+// Цвета
+$c-white: #fff;
+$c-accent: var(--c-accent);
+$c-accent-middle: #D5F0D3;
+$c-accent-light: var(--c-accent-light);
+$c-accent-dark: #073423;
+$c-accent-title: #6CC765;
+$c-accent-text: #4C9E50;
+$c-accent-btn: #C5F0C2;
+$c-accent-2: #FBF9F0;
+$c-accent-3: #E2ECF9;
+$c-bg-main: #fff;
+$c-border: #EAEDEC;
+$c-border-2: #CAD3D0;
+
+
+
+
+$c-text-light: #9BB3AA;
+$c-bg-menu: #0B5A3D;
+$c-bg-light: #E6F0EC;
+$c-footer-text: #688D80;
+$c-text-grey: #D9D9D9;
+$c-input-bg: #1D5440;
+$c-error: #bb0000;
+$c-border-op: rgba(0, 0, 0, 0.2);
+
+// переходы
+$tr-time: .3s;
+
+
+// другое
+$m-table-max-rows: var(--m-table-max-rows);

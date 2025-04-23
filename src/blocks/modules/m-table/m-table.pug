@@ -1,0 +1,97 @@
+-
+    const defaultMTableProps = {
+        classes: '',
+        vMode: 'columns',
+        hasLinks: 'false',
+        header: [
+            '№',
+            'Наименование объекта',
+            'Вид помещения',
+            'Адрес местонахождения',
+            'Количество посадочных мест',
+            'Общая площадь (кв.м.)',
+            'График работы'
+        ],
+        rows: [
+            [
+                '1',
+                'Буфет',
+                'Объект питания',
+                'Сретенская ул., 23, Херсон',
+                '10',
+                '19,8',
+                'пн.-сб. 8:00-17:00'
+            ],
+            [
+                '2',
+                'Столовая',
+                'Объект питания',
+                'Сретенская ул., 23, Херсон',
+                '45',
+                '86,5',
+                'пн.-пт. 9:00-17:00'
+            ]
+        ]
+    }
+
+mixin m-table(props= defaultMTableProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMTableProps.classes,
+            header: props.header ? props.header : defaultMTableProps.header,
+            rows:  props.rows ? props.rows : defaultMTableProps.rows,
+            vMode: props.vMode ? props.vMode : defaultMTableProps.vMode,
+            hasLinks: props.hasLinks ? props.hasLinks : defaultMTableProps.hasLinks
+        }
+
+    - let hasLinksClass = checkProps.hasLinks === 'true' ? ' m-table--haslinks' : ''
+
+    .m-table(class= checkProps.classes + ' ' + `m-table--${checkProps.vMode}` + hasLinksClass data-js="mTable")&attributes(attributes)
+        table
+            thead
+                tr
+                    - let countHeader = 0 
+                    - while (countHeader < checkProps.header.length)
+                        th!= checkProps.header[countHeader]
+
+                        - countHeader += 1;
+            tbody
+                - let countRows = 0 
+                - while (countRows < checkProps.rows.length)
+                    tr
+                        - let countCell = 0 
+                        - while (countCell < checkProps.rows[countRows].length)
+                            - if(checkProps.rows[countRows][countCell] === 'Перейти (ссылка)')
+                                td
+                                    .m-table-link__wrap
+                                        a.m-table-link(href="javascript:void(0)" target="_blank")
+                                            span.m-table-link__text Перейти
+                                            span.m-table-link__icon
+                                                svg 
+                                                    use(xlink:href=`img/sprites/sprite.svg#link`)
+
+                            - else if(checkProps.rows[countRows][countCell].includes('Скачать документ (ссылка)'))
+                                -let docName = checkProps.rows[countRows][countCell].replace('Скачать документ (ссылка)', '').trim()
+
+                                td
+                                    .m-table-link__wrap
+                                        - if(docName.length > 0)
+                                            span.m-table-link__name!= docName
+                                        a.m-table-link.m-table-link--download(href="javascript:void(0)" target="_blank")
+                                            span.m-table-link__text Скачать документ
+                                            span.m-table-link__icon
+                                                svg 
+                                                    use(xlink:href=`img/sprites/sprite.svg#download`)
+
+                            - else
+                                - if(checkProps.rows[countRows].length === 1)
+                                    td.m-table__subtitle(colspan=checkProps.header.length)!= checkProps.rows[countRows][countCell]
+                                - else
+                                    td!= checkProps.rows[countRows][countCell]
+
+                            - countCell += 1;
+
+                        - countRows += 1;
+
+
+

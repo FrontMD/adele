@@ -1,0 +1,90 @@
+.pagination {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+
+    @include max(mobile) {
+        justify-content: center;
+    }
+
+    &__page {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 49px;
+        height: 49px;
+        background-color: transparent;
+        border: 1px solid $c-bg-light;
+        color: $c-accent;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1em;
+        transition: 0.3s;
+        text-decoration: none;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+        }
+
+        &.active,
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white !important;
+        }
+    }
+
+    &__btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 49px;
+        height: 49px;
+        background-color: #C1D3C9;
+        color: $c-accent;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+        }
+
+        svg {
+            width: 5px;
+            height: 9px;
+        }
+
+        &.active,
+        &:hover {
+            background-color: $c-accent;
+
+            svg {
+                color: $c-white !important;
+            }
+        }
+    }
+
+    &__btn--next {
+        transform: rotate(180deg);
+    }
+
+    &__separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6px;
+        font-size: 14px;
+        padding: 0 10px;
+        font-weight: 700;
+        line-height: 1;
+        color: $c-accent;
+    }
+}

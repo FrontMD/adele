@@ -1,0 +1,93 @@
+.hystmodal__shadow.hystmodal__shadow--show {
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.form-modal {
+
+    .modal__content {
+        background-color: $c-accent;
+    }
+
+    .modal__inner {
+        max-height: 80vh;
+        max-width: 100%;
+        overflow: auto;
+        margin-right: -8px;
+        padding-right: 5px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(255, 255, 255, 0.1);
+        }
+    }
+
+    .form {
+        padding: 0;
+
+        &--sent {
+            min-height: auto !important;
+        }
+
+        @include max(mobile) {
+            padding: 0;
+        }
+    }
+
+    .form__title+.form__fields,
+    .form__text+.form__fields,
+    .form__fields+.form__fields {
+        margin-top: 30px;
+    }
+
+    .field__input,
+    .field__textarea,
+    .field-file__fakeinput,
+    .btn {
+        padding: 25px 20px;
+    }
+
+    .field--checkbox,
+    .field--radio {
+        .field__title {
+            font-size: 16px;
+        }
+    }
+
+    .field--greenSelect .select2 {
+        padding: 20px;
+    }
+
+    .modal__close {
+        @include max(mobile) {
+            color: $c-white;
+        }
+    }
+}
+
+.form-projects-modal {
+    .modal__content {
+        width: 800px;
+    }
+
+    .modal__inner {
+        min-height: 80vh;
+    }
+
+    &__next {
+        margin-left: auto;
+        padding: 20px;
+    }
+
+    &__prev {
+        padding: 20px;
+    }
+}

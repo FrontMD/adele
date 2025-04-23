@@ -1,0 +1,97 @@
+.home-materials {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 35px;
+
+    @include max(mobile) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        max-width: 646px;
+        padding: 35px 50px 10px;
+        background-color: $c-white;
+
+        @include max(tablet) {
+            padding: 25px 25px 10px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 15px 10px;
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        color: $c-accent;
+    }
+
+    &__text {
+        margin-top: 30px;
+
+        @include max(tablet) {
+            margin-top: 10px;
+        }
+    }
+
+    &__links {
+        margin-top: 60px;
+        max-height: 350px;
+        overflow-y: auto;
+        margin-right: -25px;
+        padding-right: 25px;
+
+        @include max(tablet) {
+            margin-top: 25px;
+        }
+
+        @include max(mobile) {
+            max-height: 275px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0 25px;
+        border-top: 1px solid $c-border;
+        font-family: $ff-second;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5em;
+        color: $c-accent;
+        opacity: 0.2;
+        transition: opacity $tr-time;
+
+        svg {
+            width: 9px;
+            height: 12px;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @include max(mobile) {
+            padding: 15px;
+        }
+    }
+}

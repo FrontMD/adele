@@ -1,0 +1,63 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: -0.01em;
+    color: $c-accent;
+    padding: 18px 21px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+
+    @include max(mobile) {}
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /*&--transparent {
+        padding: 5px;
+        transition: all $tr-time;
+
+        &:hover {
+            color: $c-accent-light;
+        }
+    }*/
+
+    &--green {
+        color: $c-white;
+        background-color: $c-accent;
+        transition: all $tr-time;
+
+        &:hover {
+            background-color: $c-accent-dark;
+        }
+    }
+
+    /*&--lightGreen {
+        color: $c-accent-btn;
+        background-color: #D8E8DE;
+        transition: all $tr-time;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white !important;
+        }
+    }
+
+    &--darkGreen {
+        color: $c-white;
+        background-color: $c-accent;
+        transition: all $tr-time;
+
+        &:hover {
+            background-color: $c-accent-dark;
+            color: $c-white !important;
+        }
+    }*/
+}

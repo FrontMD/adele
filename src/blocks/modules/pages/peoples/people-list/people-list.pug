@@ -1,0 +1,45 @@
+-
+    const defaultPeopleListProps = {
+    classes: ''
+    }
+
+mixin people-list(props = defaultPeopleListProps)
+    -
+        const checkProps = {
+        classes: props.classes ? props.classes : defaultPeopleListProps.classes
+        }
+
+    section.people-list(class=checkProps.classes)
+        form.people-list__search(action="#")
+            input(placeholder="Начните набирать имя")
+            button(type='submit') Поиск
+        +link-unit({
+            classes:'link-unit--people-list',
+            title: 'Мищенко Сергей Сергеевич',
+            numberTitle: 'профессор, заведующий кафедрой экономики '
+        })
+        +link-unit({
+            classes: 'link-unit--people-list',
+            title: 'Мищенко Сергей Сергеевич',
+            numberTitle: 'профессор, заведующий кафедрой экономики '
+        })
+        +link-unit({
+            classes: 'link-unit--people-list',
+            title: 'Мищенко Сергей Сергеевич',
+            numberTitle: 'профессор, заведующий кафедрой экономики '
+        })
+        +link-unit({
+            classes: 'link-unit--people-list',
+            title: 'Мищенко Сергей Сергеевич',
+            numberTitle: 'профессор, заведующий кафедрой экономики '
+        })
+        +link-unit({
+            classes: 'link-unit--people-list',
+            title: 'Мищенко Сергей Сергеевич',
+            numberTitle: 'профессор, заведующий кафедрой экономики '
+        })
+        +link-unit({
+            classes: 'link-unit--people-list',
+            title: 'Мищенко Сергей Сергеевич',
+            numberTitle: 'профессор, заведующий кафедрой экономики '
+        })

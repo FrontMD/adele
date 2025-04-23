@@ -1,0 +1,405 @@
+.main-burger {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+
+    &__line {
+        background-color: $c-accent;
+        padding: 40px 35px;
+        width: 100px;
+        height: 100vh;
+
+        @include max(laptop) {
+            padding: 25px 20px;
+            width: 70px;
+        }
+
+        @include max(tablet) {
+            height: 72px;
+        }
+
+        @include max(mobile) {
+            height: 64px;
+            padding: 20px;
+        }
+    }
+
+    &__open {
+        cursor: pointer;
+        color: $c-white;
+
+        svg {
+            width: 29px;
+            height: 21.82px;
+        }
+    }
+
+    &__content {
+        height: 100%;
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        padding: 16px 30px 16px 38px;
+        z-index: 3;
+
+        @include max(laptop) {
+            padding: 16px 20px;
+        }
+
+        @include max(mobile) {
+            padding: 15px;
+        }
+
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        flex: 0 0 calc(100vw / 3 - 38px);
+        z-index: 3;
+
+        @include max(laptop) {
+            flex: 0 0 calc(100vw / 3 - 20px);
+        }
+
+        @include max(mobile) {
+            flex: 0 0 calc(100vw / 3 - 15px);
+        }
+
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 18px;
+        flex: 0 0 calc(100vw / 3 * 2 - 30px);
+
+        @include max(laptop) {
+            flex: 0 0 calc(100vw / 3 * 2 - 20px);
+        }
+
+        @include max(mobile) {
+            flex: 0 0 calc(100vw / 3 * 2 - 15px);
+        }
+    }
+
+    &__main {
+        position: relative;
+        height: calc(100% - 86px);
+        padding: 0 30px 20px 38px;
+        z-index: 3;
+
+        @include max(laptop) {
+            padding: 0 20px 20px;
+            height: calc(100% - 78px);
+        }
+
+        @include max(mobile) {
+            padding: 0 15px 20px;
+            height: calc(100% - 76px);
+        }
+    }
+
+    &__contacts {
+        margin-left: auto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: right;
+        color: $c-accent-light;
+
+        @include max(mobile) {
+            font-size: 14px;
+        }
+
+        a {
+            display: block;
+            margin-top: 9px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.02em;
+            color: $c-white;
+            transition: color $tr-time;
+
+            @include max(laptop) {
+                font-size: 20px;
+            }
+
+            @include max(mobile) {
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: $c-accent-light;
+            }
+        }
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: $c-white;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.02em;
+        text-align: left;
+        cursor: pointer;
+        transition: color $tr-time;
+
+        svg {
+            width: 23.33px;
+            height: 23.33px;
+        }
+
+        &:hover {
+            color: $c-accent-light;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        left: -100vw;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        transition: left 0.6s;
+        background-color: $c-bg-menu;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: (100% / 3);
+            height: 100vh;
+            background-color: $c-accent;
+            z-index: 1;
+
+            @include max(mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__menu.active {
+        left: 0;
+    }
+
+}
+
+.main-burger {
+    &--header &__menu {
+        position: relative;
+        left: auto;
+        height: 90%;
+        width: 1086px;
+        max-width: calc(100% - 100px);
+    }
+
+    &--header &__menu:after {
+        width: 50%;
+    }
+
+    &--header &__main {
+        height: 100%;
+        padding: 0;
+    }
+
+
+    &--header .burger-menu {
+        border-top: 0;
+
+        &__level {
+            flex: 0 0 50%;
+            padding: 30px 30px 25px;
+        }
+
+        .menu-list {
+            top: 30px;
+            left: 30px;
+            width: calc(100% - 60px);
+            height: calc(100% - 55px);
+        }
+    }
+}
+
+.burger-menu {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    @include max(mobile) {
+        position: relative;
+        overflow: hidden;
+        padding-top: 15px;
+    }
+
+    &__back {
+        display: none;
+
+        @include max(mobile) {
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            gap: 10px;
+            color: $c-white;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.02em;
+
+            svg {
+                width: 15px;
+                height: 15px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__level {
+        position: relative;
+        flex: 0 0 calc((100vw - (100vw / 3) - 30px) / 2);
+        padding-top: 15px;
+        padding-right: 33px;
+        padding-left: 30px;
+
+        @include max(laptop) {
+            padding-right: 20px;
+            padding-left: 20px;
+            flex: 0 0 calc((100vw - (100vw / 3) - 20px) / 2);
+        }
+
+        @include max(tablet) {
+            padding-right: 10px;
+            padding-left: 10px;
+            flex: 0 0 calc((100vw - (100vw / 3) - 10px) / 2);
+        }
+
+        @include max(mobile) {
+            position: absolute;
+            left: -100%;
+            height: calc(100% - 15px);
+            width: 100%;
+            transition: left $tr-time;
+            padding-right: 0;
+            padding-left: 0;
+            padding-top: 10px;
+            z-index: 1;
+            background-color: $c-accent;
+
+            &.active {
+                left: 0;
+                z-index: 5;
+            }
+        }
+
+        .menu-list {
+            left: 30px;
+            top: 15px;
+            width: calc(100% - 33px - 30px);
+            height: calc(100% - 15px);
+            transition: opacity 0.2s;
+
+            @include max(laptop) {
+                width: calc(100% - 20px - 20px);
+                left: 20px;
+            }
+
+            @include max(tablet) {
+                width: calc(100% - 10px - 10px);
+                left: 10px;
+            }
+
+            @include max(mobile) {
+                width: 100%;
+                height: calc(100% - 50px);
+                left: 0;
+                top: 50px;
+            }
+        }
+
+        &--1 {
+            flex: 0 0 calc(100vw / 3 - 38px);
+            padding-left: 0;
+
+            @include max(laptop) {
+                padding-left: 0;
+                flex: 0 0 calc(100vw / 3 - 20px);
+            }
+
+            @include max(tablet) {
+                padding-left: 0;
+                flex: 0 0 calc(100vw / 3 - 15px);
+            }
+
+            @include max(mobile) {
+                padding-top: 0;
+            }
+
+            .menu-list {
+                width: calc(100% - 33px);
+                left: 0;
+
+                @include max(laptop) {
+                    width: calc(100% - 20px);
+                    left: 0;
+                }
+
+                @include max(tablet) {
+                    width: calc(100% - 10px);
+                    left: 0;
+                }
+
+                @include max(mobile) {
+                    height: 100%;
+                    top: 0;
+                }
+            }
+
+        }
+
+        &--2 {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+            @include max(mobile) {
+                border-right: none;
+            }
+        }
+
+        &--3 {
+            padding-right: 0;
+
+            @include max(laptop) {
+                padding-right: 0;
+            }
+
+            @include max(tablet) {
+                padding-right: 0;
+            }
+
+            .menu-list {
+                width: calc(100% - 30px);
+
+                @include max(laptop) {
+                    width: calc(100% - 20px);
+                }
+
+                @include max(tablet) {
+                    width: calc(100% - 10px);
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,44 @@
+-
+    const defaultLinkUnitProps = {
+        classes: '',
+        title: 'Служба охраны труда',
+        phone: '',
+        email: '',
+        employeesNumber: '',
+        numberTitle: 'Сотрудников'
+    }
+
+mixin link-unit(props= defaultLinkUnitProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultLinkUnitProps.classes,
+            title: props.title ? props.title : defaultLinkUnitProps.title,
+            phone: props.phone ? props.phone : defaultLinkUnitProps.phone,
+            email: props.email ? props.email : defaultLinkUnitProps.email,
+            employeesNumber: props.employeesNumber ? props.employeesNumber : defaultLinkUnitProps.employeesNumber,
+            numberTitle: props.numberTitle ? props.numberTitle : defaultLinkUnitProps.numberTitle
+        }
+
+    .link-unit(class= checkProps.classes)&attributes(attributes)
+        .h3.link-unit__title
+            a(href="#")!= checkProps.title
+        -if(checkProps.phone.length > 0)
+            .link-unit__phone
+                .link-unit__param Телефон
+                .link-unit__val
+                    a(href=`tel:+79999999999`)!= checkProps.phone
+        -if(checkProps.email.length > 0)
+            .link-unit__email
+                .link-unit__param Почта
+                .link-unit__val
+                    a(href=`mailto:${checkProps.email}`)!= checkProps.email
+        .link-unit__number
+            .link-unit__param!= checkProps.numberTitle
+            -if(checkProps.employeesNumber.length > 0)
+                .link-unit__val!= checkProps.employeesNumber
+        a.link-unit__link(href="javascript:void(0)" target="_blank")
+            svg 
+                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+
+
+
