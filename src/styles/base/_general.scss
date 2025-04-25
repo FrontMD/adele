@@ -110,7 +110,6 @@ body {
 	font-family: $ff-main;
 	font-size: 16px;
 	line-height: 1.02em;
-	background-color: $c-bg-main;
 }
 
 body.no-scroll {
@@ -173,7 +172,6 @@ html {
 	overflow: hidden;
 }
 
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -206,10 +204,6 @@ table {
 
 	@include max(mobile) {
 		padding: 65px 0 0;
-	}
-
-	&--white {
-		background: #fff;
 	}
 }
 
@@ -260,7 +254,7 @@ iframe {
 	color: rgba(1, 50, 32, 0.4);
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.55em;
+	line-height: 1.2em;
 
 	@include max(tablet) {
 		font-size: 14px;
@@ -389,7 +383,7 @@ iframe {
 		margin-bottom: 20px;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.55em;
+		line-height: 1.2em;
 
 		@include max(tablet) {
 			font-size: 14px;
@@ -430,7 +424,7 @@ iframe {
 		position: relative;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.55em;
+		line-height: 1.2em;
 
 		@include max(tablet) {
 			font-size: 14px;
@@ -465,7 +459,7 @@ iframe {
 		color: $c-accent;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 1.55em;
+		line-height: 1.2em;
 
 		@include max(tablet) {
 			font-size: 14px;

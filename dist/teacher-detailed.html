@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>Умаров Малик Мусаевич</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -78,145 +78,97 @@
       </div>
     </header>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding: 237px 0 60px;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__subtitle {
-            margin-top: 60px;
-            font-size: 32px !important;
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: var(--c-accent);
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
-        }
-        
-        .pages-list__link:hover {
-            color: #4C9E50;
-        }
-        
-        @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-            .pages-list {
-                padding: 180px 0 50px 70px;
-            }
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
       <div class="page">
-        <section class="section pages-list">
-          <div class="m-container">
-                <div class="title title--h1 pages-list__title title--dark">
-                  <h1>Страницы</h1>
+        <div class="page-layout">
+              <div class="people-intro">
+                <div class="m-container">
+                  <div class="people-intro__container">
+                    <div class="people-intro__flex">
+                      <div class="people-intro__intro">
+                        <div class="people-intro__img" data-js="peopleDetailImg"><img src="img/peoples/people.webp"></div>
+                        <div class="people-intro__info"><a class="btn  btn--bordered btn--full" href="#">Приветственное слово преподавателя
+                                <svg> 
+                                  <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                                </svg></a>
+                          <div class="people-intro__details">
+                            <div class="text-editor">
+                              <p><b>Предметы</b></p>
+                            </div>
+                            <div class="text-editor">
+                              <ul>
+                                <li> <b>Арабский язык </b></li>
+                                <li> <b>Английский язык </b></li>
+                                <li> <b>Курс “Компьютерная грамотность”</b></li>
+                              </ul>
+                            </div>
+                          </div><a class="btn  btn--green btn--full" href="#">Иду по рекомендации
+                                <svg> 
+                                  <use xlink:href="img/sprites/sprite.svg#hand_break"></use>
+                                </svg></a>
+                        </div>
+                      </div>
+                      <div class="people-intro__content" data-js="peopleDetailContent">
+                        <div class="title title--h2 people-intro__title" data-js="peopleDetailTitle">
+                          <h1><span>Умаров</span><br>Малик Мусаевич</h1>
+                        </div>
+                        <div class="people-intro__items" data-js="peopleDetailInfo">
+                          <div class="people-intro__item">                       
+                            <div class="people-intro__param">Должность</div>
+                            <div class="people-intro__val">Учитель арабского языка</div>
+                          </div>
+                          <div class="people-intro__item">
+                            <div class="people-intro__param">Опыт работы</div>
+                            <div class="people-intro__val">6 лет</div>
+                          </div>
+                          <div class="people-intro__item">
+                            <div class="people-intro__param">Образование: СПО</div>
+                            <div class="people-intro__val">ГБПОУ «Чеченский государственный колледж»</div>
+                          </div>
+                          <div class="people-intro__item">
+                            <div class="people-intro__param">Специальность</div>
+                            <div class="people-intro__val">Мастер по обработке цифровой информации</div>
+                          </div>
+                          <div class="people-intro__item">
+                            <div class="people-intro__param">Образование: Высшее</div>
+                            <div class="people-intro__val">ФГБОУ ВО «Чеченский государственный педагогический университет»</div>
+                          </div>
+                          <div class="people-intro__item">
+                            <div class="people-intro__param">Специальность</div>
+                            <div class="people-intro__val">Информатика в экономике</div>
+                          </div>
+                          <div class="people-intro__item">
+                            <div class="people-intro__param">Переподготовка / Повышение квалификации</div>
+                            <div class="people-intro__val">Педагог дополнительного образования</div>
+                          </div>
+                        </div>
+                        <div class="people-intro__desc text-editor">
+                          <h2>Достижения</h2>
+                          <ul>
+                            <li> <b>Победитель регионального этапа Всероссийского конкурса профессионального мастерства работников сферы дополнительного образования "Сердце отдаю детям"</b></li>
+                            <li> <b>Победитель в номинации "Профессиональный дебют" в дополнительном образовании регионального этапа Всероссийского конкурса профессионального мастерства работников сферы дополнительного образования "Сердце отдаю детям"</b></li>
+                            <li> <b>Лауреат регионального этапа "Сердце отдаю детям"</b></li>
+                            <li> <b>Победитель конкурса "Сердце отдаю детям" по версии Telegram-канала "Дневник Педагога"</b></li>
+                            <li> <b>Победитель проектного акселератора "Ваша успешная заявка на грант: упаковка проекта"</b></li>
+                            <li> <b>Победитель республиканском конкурсе за лучший проект на тему "Здесь моя Родина" посвященный Дню народного единства в номинации "Big Data"</b></li>
+                            <li> <b>Победител в республиканском конкурсе 24-BIT в номинации "VR - Разработка"</b></li>
+                            <li> <b>Победитель в республиканском конкурсе INGENIUM в номинации "IT - технологии"</b></li>
+                            <li> <b>Лауреат Всероссийского конкурса «Педагогический дебют" – 2023</b></li>
+                          </ul>
+                        </div>
+                        <div class="people-intro__desc text-editor">
+                          <h2>Методы и технологии преподавания</h2>
+                          <ul>
+                            <li> <b>Интерактивные уроки: Включение элементов интерактивности, таких как обсуждения в группе, игры, кейс-методы или использование технологий для обратной связи и участия студентов.</b></li>
+                            <li> <b>Дифференцированный подход: Адаптация учебного материала для разных типов обучающихся, включая аудиовизуальные методы, чтение, обсуждения, практические задания и т. д.</b></li>
+                            <li> <b>Проектная работа: Организация проектов, которые требуют сотрудничества, исследования и применения знаний в реальных ситуациях.</b></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--postponed" href="home.html" target="_blank">Главная</a><a class="pages-list__link pages-list__link--check" href="programs-detailed.html" target="_blank">Программа (детальная)</a><a class="pages-list__link pages-list__link--work" href="teacher-detailed.html" target="_blank">Преподаватель (детальная)</a></div>
-          </div>
-        </section>
+              </div>
+        </div>
       </div>
     </main>
     <footer class="site-footer">

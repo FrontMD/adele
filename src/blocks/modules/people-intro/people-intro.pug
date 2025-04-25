@@ -1,0 +1,54 @@
+-
+    const defaultPeopleIntroProps = {
+        classes: '',
+        abbreviated: false,
+        breadcrumbs: {},
+    }
+
+mixin people-intro(props = defaultPeopleIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPeopleIntroProps.classes,
+            abbreviated: props.abbreviated ? props.abbreviated : defaultPeopleIntroProps.abbreviated,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPeopleIntroProps.breadcrumbs
+        }
+
+    .people-intro(class=checkProps.classes)&attributes(attributes)
+        .m-container
+            .people-intro__container
+                if(checkProps.breadcrumbs.length > 0)
+                    +breadcrumbs(checkProps.breadcrumbs)
+                .people-intro__flex
+                    .people-intro__intro
+                        .people-intro__img(data-js='peopleDetailImg')
+                            img(src="img/peoples/people.webp")
+                        .people-intro__info
+                            +btn({
+                                cMode: 'bordered',
+                                icon: 'arrow_up_right',
+                                name: 'Приветственное слово преподавателя',
+                                sMode: 'full'
+                            })
+                            .people-intro__details
+                                .text-editor
+                                    p
+                                        b Предметы
+                                .text-editor
+                                    ul
+                                        li 
+                                            b Арабский язык 
+                                        li 
+                                            b Английский язык 
+                                        li 
+                                            b Курс “Компьютерная грамотность”
+
+                            +btn({
+                                cMode: 'green',
+                                icon: 'hand_break',
+                                name: 'Иду по рекомендации',
+                                sMode: 'full'
+                            })
+                    .people-intro__content(data-js='peopleDetailContent')
+                        .title.title--h2.people-intro__title(data-js='peopleDetailTitle')
+                            h1 <span>Умаров</span><br>Малик Мусаевич
+                        block

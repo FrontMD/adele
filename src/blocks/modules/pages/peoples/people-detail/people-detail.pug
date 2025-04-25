@@ -59,8 +59,8 @@ mixin people-detail(props = defaultPeopleDetailProps)
             img(src="img/peoples/people.webp")
         .people-detail__content(data-js='peopleDetailContent')
             .title.title--dark(data-js='peopleDetailTitle')
-                .title__h1
-                    h1 <span>Мищенко</span><br> Сергей Сергеевич
+                .title.title--h1
+                    h1 <span>Умаров</span><br>Малик Мусаевич
             .people-detail__info(data-js='peopleDetailInfo')
                 - let itemsCount = 0
                 - while(itemsCount < checkProps.items.length)

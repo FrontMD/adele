@@ -141,6 +141,7 @@
             justify-content: space-between;
             color: $c-accent;
             transition: all $tr;
+            cursor: pointer;
 
             &::after {
                 display: none;
