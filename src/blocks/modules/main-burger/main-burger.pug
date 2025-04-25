@@ -1,22 +1,6 @@
-.main-burger
-    .main-burger__menu(data-js='mainBurgerMenu')
-        .main-burger__content
-            .main-burger__header
-                .main-burger__left
-                    .main-burger__close(data-js='mainBurgerClose')
-                        svg 
-                            use(xlink:href=`img/sprites/sprite.svg#close`)
-                        | Закрыть
-                .main-burger__right
-                    +socials({
-                        mode: 'burger'
-                    })
-                    .main-burger__contacts
-                        | Приемная комиссия
-                        a(href="tel:+74921112222") +7 (492)111-22-22
-            .main-burger__main
-                +multi-menu
-    .main-burger__line
-        .main-burger__open(data-js='mainBurgerOpen')
-            svg 
-                use(xlink:href=`img/sprites/sprite.svg#main_burger`)
+.main-burger(data-js='mainBurger')
+    .main-burger__overlay(data-js="mainBurgerClose")
+    .main-burger__content
+        .main-burger__close(data-js="mainBurgerClose")
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#close`)

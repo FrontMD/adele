@@ -200,11 +200,13 @@ table {
 .page-layout {
 	padding: 100px 0 0;
 
-	@include max(laptop) {}
+	@include max(laptop) {
+		padding: 90px 0 0;
+	}
 
-	@include max(tablet) {}
-
-	@include max(mobile) {}
+	@include max(mobile) {
+		padding: 65px 0 0;
+	}
 
 	&--white {
 		background: #fff;

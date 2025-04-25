@@ -51,6 +51,10 @@
         height: auto;
         margin-top: auto;
         margin-bottom: auto;
+
+        &.centered {
+            justify-content: center;
+        }
     }
 
     &__info {

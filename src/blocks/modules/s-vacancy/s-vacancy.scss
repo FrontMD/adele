@@ -40,7 +40,7 @@
 .s-vacancy-card {
     position: relative;
     height: auto;
-    width: 326px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -48,6 +48,10 @@
     background-color: $c-accent-light;
     color: $c-accent;
     border-radius: 32px;
+
+    @include max(large) {
+        width: 326px;
+    }
 
     @include max(mobile) {
         min-height: auto;

@@ -22,6 +22,7 @@
         flex-direction: column;
         gap: 25px;
         margin-top: 80px;
+        max-width: 1600px;
 
         @include max(large) {
             margin-top: 50px;

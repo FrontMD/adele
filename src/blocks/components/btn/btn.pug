@@ -27,13 +27,17 @@ mixin btn(props = defaultBtnProps)
         let sizeClass = checkProps.sMode ? ` btn--${checkProps.sMode}` : ''
 
     - if(checkProps.type == 'link')
-        a.btn(class=checkProps.classes + colorClass + sizeClass href= checkProps.link)&attributes(attributes)!= checkProps.name
+        a.btn(class=checkProps.classes + colorClass + sizeClass href= checkProps.link)&attributes(attributes)
+            if(checkProps.sMode !== 'icon')
+                != checkProps.name
             if(checkProps.icon.length > 0)
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
 
     - else if(checkProps.type == 'button')
-        button.btn(class=checkProps.classes + colorClass + sizeClass type= checkProps.buttonType)&attributes(attributes)!= checkProps.name
+        button.btn(class=checkProps.classes + colorClass + sizeClass type= checkProps.buttonType)&attributes(attributes)
+            if(checkProps.sMode !== 'icon')
+                != checkProps.name
             if(checkProps.icon.length > 0)
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)

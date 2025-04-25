@@ -5,22 +5,47 @@ header.site-header(data-js="siteHeader")
                 a.site-header__logo(href="/")
                     img(src="img/full_logo.svg" alt="")
 
-                nav.site-header__nav
-                    a.nav-link(href="javascript:void(0)")
-                        span.nav-link__text О гимназии
-                        span.nav-link__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
-                    a.nav-link(href="javascript:void(0)")
-                        span.nav-link__text Учащимся
-                        span.nav-link__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
-                    a.nav-link(href="javascript:void(0)")
-                        span.nav-link__text Будущим ученикам и их родителям
-                        span.nav-link__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+                .site-header__burger(data-js='mainBurgerOpen')
+                    svg 
+                        use(xlink:href=`img/sprites/sprite.svg#main_burger`)
 
-        .site-header__side
+                nav.site-header__nav
+                    .nav-link
+                        .nav-link__header
+                            span.nav-link__text О гимназии
+                            span.nav-link__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+                        .nav-link__list
+                            a.nav-link__item(href="javascript:void(0)") Ссылка 1
+                            a.nav-link__item(href="javascript:void(0)") Ссылка 2
+                            a.nav-link__item(href="javascript:void(0)") Ссылка с длинным названием
+                    .nav-link
+                        .nav-link__header
+                            span.nav-link__text Учащимся
+                            span.nav-link__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+                        .nav-link__list
+                            a.nav-link__item(href="javascript:void(0)") Ссылка 1
+                            a.nav-link__item(href="javascript:void(0)") Ссылка 2
+                            a.nav-link__item(href="javascript:void(0)") Ссылка с длинным названием
+                    .nav-link
+                        .nav-link__header
+                            span.nav-link__text Будущим ученикам и их родителям
+                            span.nav-link__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+                        .nav-link__list
+                            a.nav-link__item(href="javascript:void(0)") Ссылка 1
+                            a.nav-link__item(href="javascript:void(0)") Ссылка 2
+                            a.nav-link__item(href="javascript:void(0)") Ссылка с длинным названием
+            +btn({
+                classes: 'site-header__vvi',
+                icon: 'eye',
+                sMode: 'icon',
+                cMode: 'bordered'
+            })
+
+        .site-header__side.site-header__side--right
             +socials

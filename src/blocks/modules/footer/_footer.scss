@@ -2,7 +2,6 @@
     position: relative;
     color: $c-white;
 
-
     a {
         transition: all $tr;
     }
@@ -26,10 +25,18 @@
         border-radius: 42px 42px 0 0;
         overflow: hidden;
 
+        @include max(mobile) {
+            border-radius: 0;
+        }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @include max(tablet) {
+                opacity: 0.3;
+            }
         }
     }
 
@@ -40,9 +47,24 @@
         align-items: stretch;
         justify-content: space-between;
         gap: 64px;
-        min-height: calc(100dvh - 70px);
+        min-height: calc(100dvh - 90px);
         padding: 10px;
         z-index: 2;
+
+        @include max(laptop) {
+            min-height: calc(100dvh - 80px);
+            gap: 32px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 10px;
+            gap: 20px;
+        }
     }
 
     &__left {
@@ -51,6 +73,14 @@
         justify-content: space-between;
         padding: 40px 0 40px 50px;
         flex: 0 0 auto;
+
+        @include max(laptop) {
+            padding: 30px 0 30px 20px;
+        }
+
+        @include max(tablet) {
+            display: contents;
+        }
     }
 
     &__right {
@@ -60,6 +90,16 @@
         background-color: $c-accent;
         border-radius: 32px;
         max-width: 940px;
+
+        @include max(laptop) {
+            border-radius: 24px;
+        }
+
+        @include max(tablet) {
+            background-color: transparent;
+            display: contents;
+        }
+
     }
 
     &__logo {
@@ -88,12 +128,28 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         padding: 40px;
         gap: 29px;
+
+        @include max(laptop) {
+            padding: 24px;
+        }
+
+        @include max(tablet) {
+            padding: 24px 0;
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 
     &__col {
         display: flex;
         flex-direction: column;
         gap: 60px;
+
+        @include max(tablet) {
+            gap: 40px;
+        }
 
         @include max(mobile) {
             gap: 30px;
@@ -116,6 +172,10 @@
         text-transform: uppercase;
         opacity: 0.4;
         color: $c-white;
+
+        @include max(laptop) {
+            font-size: 14px;
+        }
     }
 
     &__textblock {
@@ -136,12 +196,8 @@
             margin-top: 40px;
         }
 
-        @include max(large) {
-            font-size: 22px;
-        }
-
         @include max(laptop) {
-            font-size: 18px;
+            font-size: 16px;
             gap: 15px;
             margin-top: 15px;
         }
@@ -158,7 +214,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 32px;
+        flex-wrap: wrap;
+        gap: 16px 32px;
         padding: 24px 31px;
         font-family: $ff-second;
         font-size: 18px;
@@ -175,9 +232,14 @@
             max-width: 720px;
         }
 
+        @include max(tablet) {
+            order: 3;
+            padding: 20px 0;
+            max-width: 100%;
+        }
+
         @include max(mobile) {
             font-size: 12px;
-            margin-top: 30px;
         }
     }
 
@@ -208,5 +270,9 @@
         @include max(laptop) {
             font-size: 12px;
         }
+    }
+
+    &__btn {
+        order: 2;
     }
 }

@@ -10,13 +10,30 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 20px 10px;
+        padding: 20px 20px;
         transition: all $tr;
         background-color: transparent;
+
+        @include max(mobile) {
+            padding: 10px;
+        }
     }
 
     &__side {
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include max(mobile) {
+            width: 100%;
+        }
+
+        &--right {
+            @include max(mobile) {
+                display: none;
+            }
+        }
     }
 
     &__left {
@@ -25,15 +42,62 @@
         gap: 40px;
         background-color: $c-white;
         border-radius: 50px;
-        padding: 11.5px 30px;
+        padding: 9.5px 30px;
         border: 1px solid #C9D4CA;
 
+        @include max(laptop) {
+            gap: 20px;
+            padding: 7.3px 20px;
+        }
+
+        @include max(mobile) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__burger {
+        display: none;
+        color: $c-accent;
+        transition: all $tr;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            color: $c-accent-dark;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @include max(mobile) {
+            display: flex;
+        }
+    }
+
+    &__vvi {
+        flex: 0 0 60px;
+
+        @include max(laptop) {
+            flex-basis: 45px;
+        }
     }
 
     &__logo {
         flex: 0 0 110px;
         max-width: 110px;
         transition: max-width $tr-time linear;
+
+        @include max(laptop) {
+            flex-basis: 80px;
+            max-width: 80px;
+        }
+
+        @include max(mobile) {
+            margin-right: auto;
+        }
 
         img {
             width: 100%;
@@ -46,13 +110,18 @@
         align-items: center;
         gap: 40px;
         flex: 0 0 auto;
+
+        @include max(laptop) {
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            display: none;
+        }
     }
 
     .nav-link {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         gap: 4px;
         color: $c-accent;
         font-size: 16px;
@@ -60,6 +129,29 @@
         letter-spacing: -0.01em;
         font-weight: 500;
         transition: all $tr;
+
+        @include max(laptop) {
+            font-size: 14px;
+        }
+
+        &__header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $c-accent;
+            transition: all $tr;
+
+            &::after {
+                display: none;
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 100%;
+                height: 11px;
+            }
+        }
 
         &__text {
             position: relative;
@@ -72,29 +164,70 @@
             align-items: center;
             justify-content: center;
             transition: margin-bottom $tr;
-            color: $c-accent;
             z-index: 3;
 
             svg {
                 width: 16px;
                 height: 16px;
                 transition: all $tr;
+                transform: translateY(-2px) rotate(0);
             }
         }
 
-        &.active,
-        &:hover {
-            color: $c-accent-dark;
+        &__list {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 0px);
+            min-width: 100%;
+            max-width: 200px;
+            width: max-content;
+            border-radius: 24px;
+            padding: 8px 16px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            opacity: 0;
+            visibility: hidden;
+            transition: all $tr;
+            box-shadow: 4px 4px 20px 5px rgba(0, 0, 0, 0.1);
         }
 
-        &.active .nav-link__icon svg {
-            transform: rotate(-45deg);
+        &__item {
+            display: block;
+            width: fit-content;
+            padding: 8px 0;
+            color: $c-accent;
+            transform: all $tr;
+
+            &:hover {
+                color: $c-accent-title;
+            }
+        }
+
+        &:hover .nav-link__list {
+            top: calc(100% + 10px);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover .nav-link__header {
+            color: $c-accent-title;
+        }
+
+        &:hover .nav-link__header::after {
+            display: block;
+        }
+
+        &:hover .nav-link__icon svg {
+            transform: translateY(2px) rotate(-180deg);
         }
 
     }
 
     &--small &__container {
         padding-top: 10px;
+        padding-bottom: 10px;
         background-color: $c-white;
     }
 }

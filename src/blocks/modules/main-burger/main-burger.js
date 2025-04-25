@@ -1,20 +1,24 @@
 function mainBurger() {
     const menuOpenBtn = document.querySelector('[data-js="mainBurgerOpen"]')
-    const menu = document.querySelector('[data-js="mainBurgerMenu"]')
+    const burger = document.querySelector('[data-js="mainBurger"]')
 
-    if(!menuOpenBtn || !menu) return
+    if(!menuOpenBtn || !burger) return
 
-    const menuCloseBtn = menu.querySelector('[data-js="mainBurgerClose"]')
+    const menuCloseBtns = burger.querySelectorAll('[data-js="mainBurgerClose"]')
 
     menuOpenBtn.addEventListener('click', () => {
-        menu.classList.add('active')
+        burger.classList.add('active')
         lockBody()
     })
 
-    if(menuCloseBtn) {
-        menuCloseBtn.addEventListener('click', () => {
-            menu.classList.remove('active')
-            unlockBody()
+    if(menuCloseBtns.length > 0) {
+        menuCloseBtns.forEach(menuCloseBtn => {
+            menuCloseBtn.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                burger.classList.remove('active')
+                unlockBody()
+            })
         })
     }
 }

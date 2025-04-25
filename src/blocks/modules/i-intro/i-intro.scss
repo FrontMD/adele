@@ -10,10 +10,6 @@
         overflow: hidden;
         background-color: $c-accent-light;
 
-        @include max(mobile) {
-            border-radius: 0;
-        }
-
         &::before {
             content: '';
             position: absolute;

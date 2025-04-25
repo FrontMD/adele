@@ -64,6 +64,32 @@
     &--big {
         font-size: 18px;
         padding: 48px 38px;
+
+        @include max(laptop) {
+            padding: 36px 28px;
+        }
+    }
+
+    &--icon {
+        padding: 10px;
+        width: 60px;
+        height: 60px;
+
+        @include max(laptop) {
+            width: 45px;
+            height: 45px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @include max(xs) {
+            padding: 5px;
+            width: 45px;
+            height: 45px;
+        }
     }
 
     &--lightGreen {
