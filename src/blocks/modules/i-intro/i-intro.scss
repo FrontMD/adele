@@ -10,6 +10,10 @@
         overflow: hidden;
         background-color: $c-accent-light;
 
+        @include max(mobile) {
+            border-radius: 0;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -35,25 +39,16 @@
         min-height: 400px;
         padding: 25px 0 0 30px;
 
-        @include max(large) {
-            min-height: 540px;
-        }
-
-        @include max(laptop) {
-            min-height: 560px;
-            padding-top: 20px;
-            padding-bottom: 45px;
-        }
-
-        @include max(tablet) {
-            min-height: 500px;
-            padding-top: 20px;
-            padding-bottom: 45px;
-        }
-
         @include max(tablet) {
             min-height: 250px;
-            padding-bottom: 30px;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+            padding: 0;
+            margin-left: -10px;
+            margin-right: -10px;
+            width: calc(100% + 20px);
         }
     }
 
@@ -67,7 +62,9 @@
         gap: 64px;
         padding-bottom: 25px;
 
-        @include max(mobile) {}
+        @include max(mobile) {
+            padding: 20px 0 0 20px;
+        }
     }
 
     &__right {
@@ -76,9 +73,9 @@
         display: flex;
         flex-direction: column;
 
-        @include max(tablet) {}
-
-        @include max(mobile) {}
+        @include max(mobile) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -91,6 +88,10 @@
         padding: 10px 0 0 10px;
         background-color: $c-white;
         border-top-left-radius: 32px;
+
+        @include max(mobile) {
+            padding: 10px;
+        }
 
         &::before {
             content: "";

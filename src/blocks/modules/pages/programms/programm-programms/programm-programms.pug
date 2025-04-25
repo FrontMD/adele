@@ -1,7 +1,75 @@
 -
     const defaultProgrammProgrammsProps = {
         classes: '',
-        vMode: 'rows'
+        vMode: 'rows',
+        cards: [
+            {
+                faculty: 'Основная программа',
+                name: 'Первая ступень',
+                params: [
+                    {
+                        name: 'Стоимость в месяц',
+                        value: '8 000 ₽'
+                    },
+                    {
+                        name: 'Стоимость в год',
+                        value: '70 000 ₽'
+                    },
+                    {
+                        name: 'Вместимость группы, чел',
+                        value: '10'
+                    },
+                    {
+                        name: 'Срок обучения',
+                        value: '1 год'
+                    }
+                ],
+            },
+            {
+                faculty: 'Основная программа',
+                name: 'Третья ступень',
+                params: [
+                    {
+                        name: 'Стоимость в месяц',
+                        value: '8 000 ₽'
+                    },
+                    {
+                        name: 'Стоимость в год',
+                        value: '70 000 ₽'
+                    },
+                    {
+                        name: 'Вместимость группы, чел',
+                        value: '10'
+                    },
+                    {
+                        name: 'Срок обучения',
+                        value: '1 год'
+                    }
+                ],
+            },
+            {
+                faculty: 'Основная программа',
+                name: 'Четвертая ступень',
+                params: [
+                    {
+                        name: 'Стоимость в месяц',
+                        value: '8 000 ₽'
+                    },
+                    {
+                        name: 'Стоимость в год',
+                        value: '70 000 ₽'
+                    },
+                    {
+                        name: 'Вместимость группы, чел',
+                        value: '10'
+                    },
+                    {
+                        name: 'Срок обучения',
+                        value: '1 год'
+                    }
+                ],
+            }
+        ]
 
     }
 
@@ -9,7 +77,8 @@ mixin programm-programms(props = defaultProgrammProgrammsProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultProgrammProgrammsProps.classes,
-            vMode: props.vMode ? props.vMode : defaultProgrammsListProps.vMode
+            vMode: props.vMode ? props.vMode : defaultProgrammsListProps.vMode,
+            cards: props.cards ? props.cards : defaultProgrammsListProps.cards,
         }
 
         let vModeClass = ' programms-list--' + checkProps.vMode
@@ -17,42 +86,27 @@ mixin programm-programms(props = defaultProgrammProgrammsProps)
     section.programms-list(class= checkProps.classes + vModeClass data-js="programmsList")
         .m-container
             .programms-list__header 
-                .h2.programms-list__title Другие <br>программы     
-                +visual-toggle({
+                .title.title--h2.programms-list__title Другие программы     
+                //-+visual-toggle({
                     active: checkProps.vMode
-                })(data-js="programmsListToggle")
+                //-})(data-js="programmsListToggle")
             .programms-list__list
                 - let cardsCount = 0
-                - while(cardsCount < 4)
+                - while(cardsCount < 3)
                     +programm-card({
                         classes: '',
-                            faculty: 'Факультет экономики и управления',
-                            name: 'Управление бизнес-процессами (Менеджмент)',
-                            params: [
-                                {
-                                    name: 'Стоимость',
-                                    value: '321.8 тыс. (2024)'
-                                },
-                                {
-                                    name: 'Проходной балл:',
-                                    value: '400'
-                                },
-                                {
-                                    name: 'Срок обучения:',
-                                    value: '4 года'
-                                },
-                                {
-                                    name: 'Бюджетных мест:',
-                                    value: '26'
-                                }
-                            ],
-                            isRow: checkProps.vMode === 'rows' ? true : false
+                        faculty: checkProps.cards[cardsCount].faculty,
+                        name: checkProps.cards[cardsCount].name,
+                        params: checkProps.cards[cardsCount].params,
+                        isRow: checkProps.vMode === 'rows' ? true : false
                     })
 
                     - cardsCount++
 
             +btn({
-                classes: 'programm-list__more',
-                name: 'Загрузить еще',
-                cMode: 'lightGreen',
+                classes: 'i-questions__more',
+                name: 'Показать еще',
+                icon: 'arrow_down',
+                sMode: 'full',
+                cMode: 'bordered'
             })

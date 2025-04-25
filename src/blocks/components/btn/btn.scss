@@ -14,7 +14,11 @@
     cursor: pointer;
     text-align: center;
 
-    @include max(mobile) {}
+    @include max(xs) {
+        font-size: 14px;
+        width: 100%;
+        padding: 15px 18px;
+    }
 
     svg {
         width: 24px;
@@ -57,10 +61,16 @@
         width: 100%;
     }
 
-    /*&--lightGreen {
-        color: $c-accent-btn;
-        background-color: #D8E8DE;
-        transition: all $tr-time;
+    &--big {
+        font-size: 18px;
+        padding: 48px 38px;
+    }
+
+    &--lightGreen {
+        color: $c-accent;
+        background-color: $c-accent-big-btn;
+        transition: all $tr;
+        border-radius: 32px;
 
         &:hover {
             background-color: $c-accent;
@@ -68,7 +78,7 @@
         }
     }
 
-    &--darkGreen {
+    /*&--darkGreen {
         color: $c-white;
         background-color: $c-accent;
         transition: all $tr-time;

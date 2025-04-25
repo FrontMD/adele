@@ -6,7 +6,9 @@
     padding: 0 30px;
     background-color: $c-white;
 
-    @include max(tablet) {}
+    @include max(mobile) {
+        padding: 0 16px;
+    }
 
     &__intro {
         position: relative;
@@ -31,10 +33,12 @@
         line-height: 1.2em;
         letter-spacing: -0.02em;
 
+        @include max(tablet) {
+            font-size: 20px;
+        }
 
         @include max(mobile) {
-            font-size: 14px;
-            max-width: none;
+            font-size: 18px;
         }
     }
 
@@ -74,8 +78,14 @@
         .text-editor>ul,
         .text-editor>li {
             font-size: 18px;
-        }
 
-        @include max(tablet) {}
+            @include max(tablet) {
+                font-size: 16px;
+            }
+
+            @include max(mobile) {
+                font-size: 14px;
+            }
+        }
     }
 }

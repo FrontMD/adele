@@ -1,26 +1,27 @@
 .s-partners {
-    padding-top: 25px;
-    padding-bottom: 90px;
-
-    @include max(laptop) {
-        padding-bottom: 40px;
-    }
 
     &__container {
         display: flex;
         align-items: stretch;
+        gap: 10px;
 
         @include max(mobile) {
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
     }
 
     &__slider {
-        flex: 1 0 66%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 calc((100% - 10px) / 2);
         overflow: hidden;
+        background-color: $c-accent-light;
+        border-radius: 32px;
+        padding: 33px 20px 23px;
 
-        @include max(laptop) {
-            flex: 1 0 50%;
+        @include max(tablet) {
+            padding: 25px 10px 20px;
         }
 
         @include max(mobile) {
@@ -32,44 +33,49 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 60px;
+        padding: 50px;
+        width: 280px;
+        aspect-ratio: 1 / 1;
         background-color: $c-white;
-        border-right: 1px solid $c-border-op;
+        border-radius: 40px;
 
         @include max(tablet) {
-            padding: 30px;
-        }
-
-        @include max(mobile) {
-            border: none;
-            height: auto;
+            width: 150px;
+            padding: 20px;
+            border-radius: 24px;
         }
     }
 
     .swiper-wrapper {
         align-items: stretch;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     &__info {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 20px;
         position: relative;
-        flex: 0 0 34%;
-        max-width: 605px;
-        min-height: 475px;
-        padding: 32px 35px 40px;
+        flex: 0 0 calc((100% - 10px) / 2);
+        max-width: 695px;
+        min-height: 600px;
+        padding: 30px 40px;
         background-color: $c-accent;
         color: $c-white;
+        border-radius: 32px;
+        overflow: hidden;
 
-        @include max(laptop) {
-            flex: 0 0 50%;
-            min-height: 380px;
+        .title {
+            position: relative;
+            z-index: 1;
         }
 
         @include max(tablet) {
-            padding: 20px 15px;
-            min-height: 340px;
+            padding: 20px;
+            min-height: 400px;
         }
 
         @include max(mobile) {
@@ -77,13 +83,23 @@
         }
     }
 
-    &__text {
-        max-width: 420px;
+    &__decor {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 48%;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__btns {
-        margin-top: auto;
-        padding-top: 10px;
+        margin-top: 24px;
+    }
+
+    &__tag {
+        margin: 0 auto 24px;
     }
 
 }
@@ -98,21 +114,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 53px;
-    height: 53px;
-    color: $c-white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    color: $c-accent;
+    border: 1px solid $c-border-2;
     border-radius: 100%;
     cursor: pointer;
+    transition: all $tr;
 
-    svg {
-        width: 9px;
-        height: 12px;
+    @include max(tablet) {
+        width: 40px;
+        height: 40px;
     }
 
-    &--prev {
+    svg {
+        width: 24px;
+        height: 24px;
+
+        @include max(tablet) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &--next {
         svg {
             transform: rotate(180deg);
         }
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+    }
+
+    &:hover {
+        color: $c-white;
+        background-color: $c-accent;
+        border-color: $c-accent;
     }
 }

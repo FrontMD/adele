@@ -1,16 +1,33 @@
 .s-vacancy {
-    padding-top: 30px;
-    padding-bottom: 25px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    @include max(mobile) {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 64px;
+    }
 
     &__title {
         color: $c-accent;
+        flex: 1 1 auto;
+    }
+
+    &__btns {
+        flex: 0 0 auto;
     }
 
     &__cards {
-        margin-top: 60px;
+        margin-top: 50px;
 
         @include max(mobile) {
-            margin-top: 20px
+            margin-top: 32px;
         }
     }
 
@@ -23,30 +40,20 @@
 .s-vacancy-card {
     position: relative;
     height: auto;
-    width: 490px;
+    width: 326px;
     display: flex;
     flex-direction: column;
-    padding: 25px 30px;
-    background-color: $c-white;
+    gap: 10px;
+    padding: 30px 10px 10px;
+    background-color: $c-accent-light;
     color: $c-accent;
-    border-left: 4px solid $c-accent-light;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.33em;
-
-    @include max(laptop) {
-        min-height: 270px;
-    }
-
-    @include max(tablet) {
-        padding: 15px;
-    }
+    border-radius: 32px;
 
     @include max(mobile) {
         min-height: auto;
         width: 300px;
-        font-size: 14px;
-        border-left-width: 2px;
+        padding: 20px 10px 10px;
+        border-radius: 24px;
     }
 
     &__link {
@@ -61,25 +68,27 @@
     &__top {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        min-height: 170px;
+        justify-content: space-between;
+        margin-top: 70px;
+        gap: 24px;
+        min-height: 130px;
         flex: 0 0 auto;
-        padding-bottom: 20px;
+        padding: 16px;
+        background-color: $c-white;
+        border-radius: 24px;
 
         @include max(tablet) {
-            min-height: 160px;
+            margin-top: 35px;
         }
 
         @include max(mobile) {
-            min-height: 130px;
+            margin-top: 24px;
+            padding: 10px;
+            border-radius: 16px;
+            min-height: 90px;
         }
     }
 
-    &__tag {
-        font-weight: 500;
-        line-height: 1.02em;
-        color: $c-accent-light
-    }
 
     &__title {
         margin-bottom: auto;
@@ -89,44 +98,40 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 20px;
-        flex: 1 1 auto;
-        padding-top: 10px;
-        border-top: 1px solid $c-border-op;
+        gap: 24px;
+        flex: 1 0 213px;
+        padding: 16px;
+        background-color: $c-white;
+        border-radius: 24px;
+
+        @include max(mobile) {
+            padding: 10px;
+            border-radius: 16px;
+            flex-basis: 130px;
+        }
     }
 
     &__subtitle {
-        margin-bottom: 10px;
         opacity: 0.4;
-        line-height: 1.02em;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2em;
+        letter-spacing: -0.01em;
     }
 
-    &__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-self: flex-end;
-        width: 53px;
-        height: 53px;
-        border: 1px solid $c-border-op;
-        border-color: $c-border-op;
-        color: $c-accent;
-        transition: all $tr-time;
-        border-radius: 100%;
+    &__resp {
+        -webkit-line-clamp: 6;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 7.2em;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2em;
+        letter-spacing: -0.01em;
 
-        @include max(tablet) {
-            width: 40px;
-            height: 40px;
+        @include max(mobile) {
+            font-size: 14px;
         }
-
-        svg {
-            width: 9px;
-            height: 12px;
-        }
-    }
-
-    &:hover &__icon {
-        background-color: $c-accent;
-        color: $c-white;
     }
 }

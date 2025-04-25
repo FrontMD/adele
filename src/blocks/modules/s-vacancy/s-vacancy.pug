@@ -4,11 +4,9 @@
         title: '',
         cards: [
             {
-                tag: '',
                 title: '',
                 salary: '',
                 resp: '',
-                employer: ''
             }
 
         ]
@@ -22,9 +20,17 @@ mixin s-vacancy(props = defaultSVacancyProps)
             cards: props.cards ? props.cards : defaultSVacancyProps.cards,
         }
 
-    section.s-vacancy
+    section.s-vacancy(data-js="sVacancy")
         .m-container
-            .h2.s-vacancy__title!= checkProps.title
+            .s-vacancy__header
+                .title.title--h2.s-vacancy__title!= checkProps.title
+                .slider-btns.s-vacancy__btns
+                    .slider-btn.slider-btn--prev(data-js="sliderPrevBtn")
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)
+                    .slider-btn.slider-btn--next(data-js="sliderNextBtn")
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)
             .s-vacancy__cards(data-js="sVacancySlider")
                 .swiper-wrapper
                     - let itemsCount = 0
@@ -33,28 +39,15 @@ mixin s-vacancy(props = defaultSVacancyProps)
 
                         .s-vacancy__card.s-vacancy-card.swiper-slide 
                             a.s-vacancy-card__link(href="#")
+                            - if(currentItem.title.length > 0)
+                                .title.title--h5.s-vacancy-card__title!= currentItem.title
                             .s-vacancy-card__top
-                                - if(currentItem.tag.length > 0)
-                                    .s-vacancy-card__tag!= currentItem.tag
-                                - if(currentItem.title.length > 0)
-                                    .h3.s-vacancy-card__title!= currentItem.title 
                                 - if(currentItem.salary.length > 0)
-                                    +salary({
-                                        text: 'Зарплата',
-                                        title: currentItem.salary
-                                    })    
+                                    .s-vacancy-card__subtitle Стоимость в месяц
+                                    .title.title--h5.s-vacancy-card__price!= currentItem.salary 
                             .s-vacancy-card__bottom
                                 - if(currentItem.resp.length > 0)
-                                    .s-vacancy-card__block
-                                        .s-vacancy-card__subtitle Обязанности:
-                                        .s-vacancy-card__resp!= currentItem.resp
-                                - if(currentItem.employer.length > 0)
-                                    .s-vacancy-card__block
-                                        .s-vacancy-card__subtitle Нанимает
-                                        .s-vacancy-card__employer!= currentItem.employer
-
-                                .s-vacancy-card__icon
-                                    svg 
-                                        use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                                    .s-vacancy-card__subtitle Обязанности
+                                    .s-vacancy-card__resp!= currentItem.resp
 
                         - itemsCount++

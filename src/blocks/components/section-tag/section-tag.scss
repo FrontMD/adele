@@ -1,1 +1,35 @@
-.section-tag {}
+.section-tag {
+    position: relative;
+    padding: 15.5px 15px 15.5px 33px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: $c-accent;
+    border: 1px solid $c-border-2;
+    border-radius: 50px;
+    width: fit-content;
+
+    @include max(mobile) {
+        font-size: 14px;
+        padding: 10px 12px 10px 30px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: $c-accent-title;
+
+        @include max(mobile) {
+            left: 12px;
+            width: 6px;
+            height: 6px;
+        }
+    }
+}

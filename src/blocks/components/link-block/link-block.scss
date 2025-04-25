@@ -11,7 +11,7 @@
 
     @include max(mobile) {
         gap: 10px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     &__desc {
@@ -46,8 +46,9 @@
 
         @include max(mobile) {
             font-size: 14px;
-            flex-basis: 30px;
-            min-height: 30px;
+            flex-basis: 40px;
+            min-height: 40px;
+            padding: 11px;
         }
 
     }
@@ -60,15 +61,18 @@
         justify-content: center;
 
         @include max(mobile) {
-            flex-basis: 30px;
-            height: 30px;
+            flex-basis: 16px;
+            height: 16px;
         }
 
         svg {
             width: 24px;
             height: 24px;
 
-            @include max(mobile) {}
+            @include max(mobile) {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 

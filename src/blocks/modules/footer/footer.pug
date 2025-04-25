@@ -1,70 +1,66 @@
 footer.site-footer
-	.section
-		.m-container.site-footer__container
-			.site-footer__row
-				.site-footer__col.site-footer__col--first
+	.site-footer__bg
+		img(src="img/footer_bg.svg" alt="")
+	.site-footer__container
+		.site-footer__left
+			.site-footer__logo
+				img(src="img/logo_footer.svg" alt="")
+				p онлайн-гимназия
+			+btn({
+				name: 'Попробовать бесплатно',
+				sMode: 'big',
+				cMode: 'lightGreen',
+				icon: 'arrow_up_right'
+			})
+
+		.site-footer__right
+			.site-footer__cols
+				.site-footer__col
 					.site-footer__block
-						.site-footer__title Главный корпус
-						.site-footer__textblock
-							p 273003, Херсонская Область, г.о. Херсонский, г. Херсон, ул. Сретенская, д. 23
-							a(href="#") все адреса корпусов
-					.site-footer__block
-						.site-footer__title Контакт-центр:
-						.site-footer__textblock
-							<a href="tel:+79900595039">+7 (990) 059 50 39</a>
-							p Часы работы:
-								<br>Пн. — Чт.: 9:00 - 21:00
-								<br>Пт: 9:00 - 20:00
-								<br>Сб. — Вс.: 9:30 - 17:15
-					.site-footer__block
-						.site-footer__title Общие вопросы <br>(кроме вопросов о поступлении):
-						.site-footer__textblock
-							<a href="mailto:info@khay.ru">info@khay.ru</a>
+						.title.title--h5.title--light.site-footer__title Главный корпус
+						.site-footer__textblock.site-footer__textblock--mt
+							a(href="javascript:void(0)").site-footer__subtitle ОБЩИЕ СВЕДЕНИЯ
+							a(href="javascript:void(0)").site-footer__subtitle ПРЕПОДАВАТЕЛИ
+							a(href="javascript:void(0)").site-footer__subtitle ДОГОВОР ОФЕРТЫ
+							a(href="javascript:void(0)").site-footer__subtitle ОСНОВНОЕ ОБРАЗОВАНИЕ
+							a(href="javascript:void(0)").site-footer__subtitle ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ
+							a(href="javascript:void(0)").site-footer__subtitle МЕТОДИКА ОБУЧЕНИЯ
+							a(href="javascript:void(0)").site-footer__subtitle ВОПРОСЫ И ОТВЕТЫ (FAQ)
+							a(href="javascript:void(0)").site-footer__subtitle КОНТАКТЫ
+							a(href="javascript:void(0)").site-footer__subtitle СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ
+							a(href="javascript:void(0)").site-footer__subtitle НОВОСТИ
 
 				.site-footer__col
 					.site-footer__block
-						.site-footer__title Приемная комиссия
+						.title.title--h5.title--light.site-footer__title Приемная комиссия
 						.site-footer__textblock
 							a(href="tel:+79900595039") +7 (990) 059 50 39
 					.site-footer__block
-						.site-footer__title График работы:
+						.title.title--h5.title--light.site-footer__title График работы:
 						.site-footer__textblock
 							p Пн. — Пт.: 10:30 - 18:00
 								<br> Сб.: 10:30 - 15:00
 								<br> Вс.: приём онлайн
-							<a href="mailto:priem@khay.ru">priem@khay.ru</a>
+							<a href="mailto:priem@adele.ru">priem@adele.ru</a>
 					.site-footer__block
-						.site-footer__title 
-							a(href="#") Прием документов
+						.title.title--h5.title--light.site-footer__title Общие вопросы <span>(кроме вопросов о поступлении)</span>
+						.site-footer__textblock
+							a(href="mailto:+info@adele.ru") info@adele.ru							
 
 				.site-footer__col
 					.site-footer__block
-						.site-footer__title Пресс-служба
+						.title.title--h5.title--light.site-footer__title Пресс-служба
 						.site-footer__textblock
-							a(href="tel:+74921112222") +7 (492)111-22-22
-						.site-footer__subtitle СМИ и новости:
+							a(href="tel:+79900595039") +7 (990) 059 50 39
+					.site-footer__block
+						.title.title--h5.title--light.site-footer__title СМИ и новости
 						.site-footer__textblock
-							a(href="mailto:+press@khay.ru") press@khay.ru
-						.site-footer__subtitle Обновление сайта <br>(добавить/исправить):
+							a(href="mailto:press@adele.ru") press@adele.ru
+					.site-footer__block
+						.title.title--h5.title--light.site-footer__title Для обратной связи по сайту
 						.site-footer__textblock
-							a(href="mailto:+press@khay.ru") press@khay.ru							
+							a(href="mailto:media@adele.ru") media@adele.ru
 
-			.site-footer__row.site-footer__row--mid
-				.site-footer__links
-					a(href="#").site-footer__link ПОСТУПАЮЩИМ
-					a(href="#").site-footer__link ОБУЧАЮЩИМСЯ
-					a(href="#").site-footer__link СТРУКТУРА
-				.site-footer__links
-					a(href="#").site-footer__link ОБ УНИВЕРСИТЕТЕ
-					a(href="#").site-footer__link КАФЕДРЫ
-					a(href="#").site-footer__link ДОВУЗОВСКОЕ ОБРАЗОВАНИЕ
-				.site-footer__links
-					a(href="#").site-footer__link НАУКА
-					a(href="#").site-footer__link МЕЖДУНАРОДНАЯ ДЕЯТЕЛЬНОСТЬ
-					a(href="#").site-footer__link ОБЩИЕ СВЕДЕНИЯ
-				.site-footer__links
-					a(href="#").site-footer__link СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ
-					a(href="#").site-footer__link ПРОТИВОДЕЙСТВИЕ КОРРУПЦИИ
-					a(href="#").site-footer__link НОВОСТИ
-
-			.site-footer__copyright © 2024 Федеральное государственное автономное образовательное учреждение высшего образования Херсонский Аграрный Университет
+			.site-footer__copyright 
+				a(href="javascript:void(0);") Политика обработки персональных данных
+				span © 2025 ООО «Онлайн-Гимназия Адель»

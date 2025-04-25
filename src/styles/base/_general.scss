@@ -144,6 +144,10 @@ body {
 		padding: 0 15px;
 	}
 
+	@include max(mobile) {
+		padding: 0 10px;
+	}
+
 }
 
 *:focus {
@@ -194,25 +198,13 @@ table {
 }
 
 .page-layout {
-	padding: 220px 0 0;
+	padding: 100px 0 0;
 
-	@include max(laptop) {
+	@include max(laptop) {}
 
-		padding: 159px 0 0;
+	@include max(tablet) {}
 
-	}
-
-	@include max(tablet) {
-
-		padding: 71px 0 0;
-
-	}
-
-	@include max(mobile) {
-
-		padding: 63px 0 0;
-
-	}
+	@include max(mobile) {}
 
 	&--white {
 		background: #fff;
@@ -268,7 +260,7 @@ iframe {
 	font-weight: 400;
 	line-height: 1.55em;
 
-	@include max(mobile) {
+	@include max(tablet) {
 		font-size: 14px;
 	}
 
@@ -287,7 +279,7 @@ iframe {
 	.info-tag {
 		margin-bottom: 25px;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			margin-bottom: 20px;
 		}
 	}
@@ -355,11 +347,8 @@ iframe {
 		color: $c-accent;
 
 		@include max(laptop) {
-			font-size: 28px;
-		}
-
-		@include max(tablet) {
-			font-size: 26px;
+			font-size: 24px;
+			margin-bottom: 20px;
 		}
 
 		@include max(mobile) {
@@ -375,10 +364,6 @@ iframe {
 		color: $c-accent-middle;
 
 		@include max(laptop) {
-			font-size: 22px;
-		}
-
-		@include max(tablet) {
 			font-size: 20px;
 		}
 
@@ -404,7 +389,7 @@ iframe {
 		font-weight: 400;
 		line-height: 1.55em;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			font-size: 14px;
 			margin-bottom: 18px;
 		}
@@ -433,7 +418,7 @@ iframe {
 		list-style: none;
 		margin-bottom: 20px;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			padding-left: 15px;
 			margin-bottom: 18px;
 		}
@@ -445,7 +430,7 @@ iframe {
 		font-weight: 400;
 		line-height: 1.55em;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			font-size: 14px;
 		}
 	}
@@ -461,7 +446,7 @@ iframe {
 		background-color: rgba(1, 50, 32, 0.4);
 		border-radius: 100%;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			width: 5px;
 			height: 5px;
 			left: -10px;
@@ -480,7 +465,7 @@ iframe {
 		font-weight: 400;
 		line-height: 1.55em;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			font-size: 14px;
 		}
 	}
@@ -489,7 +474,7 @@ iframe {
 		position: relative;
 		padding: 15px 20px 15px 60px;
 
-		@include max(mobile) {
+		@include max(tablet) {
 			padding: 10px 15px 10px 30px;
 		}
 

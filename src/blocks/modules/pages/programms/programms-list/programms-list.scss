@@ -1,16 +1,16 @@
 .programms-list {
-    padding: 0 0 100px;
-
-    @include max(laptop) {
-        padding: 0 0 50px;
-    }
+    padding: 100px 0;
 
     @include max(mobile) {
-        padding: 0 0 30px;
+        padding: 50px 0;
     }
 
     &__list {
-        padding: 20px 0;
+        margin-top: 50px;
+
+        @include max(mobile) {
+            margin-top: 32px;
+        }
     }
 
     &__header {
@@ -30,7 +30,7 @@
     &--rows &__list {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
 
         @include max(tablet) {
             display: grid;
@@ -59,5 +59,9 @@
         @include max(mobile) {
             grid-template-columns: minmax(0, 1fr);
         }
+    }
+
+    &__more {
+        margin-top: 30px;
     }
 }

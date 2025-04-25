@@ -2,6 +2,11 @@
     padding-top: 100px;
     padding-bottom: 50px;
 
+    @include max(mobile) {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
     &__title {
         color: $c-accent;
         text-align: center;
@@ -23,7 +28,6 @@
     }
 
     &__card {
-        aspect-ratio: 1 / 0.776;
         height: auto;
         width: calc((100% - 20px) / 3);
         display: flex;
@@ -33,13 +37,12 @@
         color: $c-accent;
         border-radius: 32px;
 
-        @include max(laptop) {
-            min-height: 270px;
+        @include max(tablet) {
+            width: calc((100% - 10px) / 2);
         }
 
-        @include max(mobile) {
-            min-height: auto;
-            width: 300px;
+        @include max(xs) {
+            width: 100%;
         }
     }
 
@@ -47,9 +50,7 @@
         width: 100%;
         height: auto;
 
-        @include max(mobile) {
-            margin-bottom: 35px;
-        }
+        @include max(mobile) {}
 
         img {
             width: 100%;
@@ -65,5 +66,10 @@
         font-weight: 500;
         letter-spacing: -0.01em;
         padding: 30px;
+
+        @include max(mobile) {
+            padding: 20px;
+            font-size: 14px;
+        }
     }
 }

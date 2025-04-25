@@ -3,55 +3,37 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: $c-white;
     z-index: 80;
-    border-bottom: 1px solid $c-border-op;
-
-
-    &__section {
-        padding-top: 12px;
-        padding-bottom: 12px;
-
-        @include max(mobile) {
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-    }
 
     &__container {
+        position: relative;
         display: flex;
-        align-items: stretch;
+        align-items: center;
         justify-content: space-between;
-        padding-left: 20px;
-
-        @include max(tablet) {
-            align-items: center;
-            padding-left: 85px;
-        }
-
-        @include max(xs) {
-            padding-right: 15px;
-            justify-content: flex-end;
-        }
+        padding: 20px 20px 10px;
+        transition: all $tr;
+        background-color: transparent;
     }
 
-    &--small {
-        box-shadow: 0px 5px 50px 25px rgba(0, 0, 0, 0.03);
+    &__side {
+        position: relative;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background-color: $c-white;
+        border-radius: 50px;
+        padding: 11.5px 30px;
+        border: 1px solid #C9D4CA;
+
     }
 
     &__logo {
-        flex: 0 0 236px;
-        padding-top: 10px;
-        max-width: 236px;
+        flex: 0 0 110px;
+        max-width: 110px;
         transition: max-width $tr-time linear;
-
-        @include max(laptop) {
-            flex-basis: 150px;
-        }
-
-        @include max(tablet) {
-            padding-top: 0;
-        }
 
         img {
             width: 100%;
@@ -59,114 +41,50 @@
         }
     }
 
-    &--small &__logo {
-        max-width: 192px;
-    }
-
     &__nav {
         display: flex;
-        align-items: stretch;
-        flex: 0 1 1065px;
-
-        @include max(laptop) {
-            flex: 0 1 730px;
-        }
-
-        @include max(tablet) {
-            display: none;
-        }
+        align-items: center;
+        gap: 40px;
+        flex: 0 0 auto;
     }
 
     .nav-link {
         position: relative;
         display: flex;
-        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        flex: 0 0 calc(100%/3);
-        padding: 3px 14px 11px 19px;
-        color: $c-accent-middle;
-        font-size: 24px;
+        gap: 4px;
+        color: $c-accent;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
         font-weight: 500;
-        border-left: 1px solid $c-border;
-        transition: all $tr-time;
-
-        @include max(laptop) {
-            padding: 3px 10px 11px;
-        }
-
-        @include max(laptop) {
-            font-size: 20px;
-        }
+        transition: all $tr;
 
         &__text {
             position: relative;
-            margin-top: 153px;
             transition: margin-top $tr-time linear;
             z-index: 3;
-
-            @include max(laptop) {
-                margin-top: 105px;
-            }
         }
 
         &__icon {
-            position: relative;
-            width: 53px;
-            height: 53px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 130px;
-            transition: margin-bottom $tr-time linear;
-            color: $c-accent-middle;
-            border: 1px solid $c-border;
-            border-radius: 100%;
-            background-color: $c-white;
+            transition: margin-bottom $tr;
+            color: $c-accent;
             z-index: 3;
 
-            @include max(laptop) {
-                width: 40px;
-                height: 40px;
-                margin-bottom: 81px;
-            }
-
             svg {
-                width: 14px;
-                height: 14px;
-                transition: all $tr-time;
-
-                @include max(laptop) {
-                    width: 10.5px;
-                    height: 10.5px;
-                }
+                width: 16px;
+                height: 16px;
+                transition: all $tr;
             }
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: -12px;
-            width: 100%;
-            height: calc(100% + 24px);
-            background-color: $c-accent;
-            z-index: 1;
-            opacity: 0;
-            transition: all $tr-time;
         }
 
         &.active,
         &:hover {
-            color: $c-white;
-        }
-
-        &:hover::after {
-            opacity: 0.9;
-        }
-
-        &.active::after {
-            opacity: 1;
+            color: $c-accent-dark;
         }
 
         &.active .nav-link__icon svg {
@@ -175,48 +93,8 @@
 
     }
 
-    &__menu {
-        display: flex;
-        position: absolute;
-        align-items: flex-start;
-        justify-content: flex-end;
-        left: 0;
-        top: 100%;
-        width: 100%;
-        height: 0;
-        background-color: rgba(0, 0, 0, 0.54);
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity $tr-time;
-
-        @include max(laptop) {
-            height: calc(100vh - 158px);
-        }
-
-        &.active {
-            height: calc(100vh - 220px);
-            visibility: visible;
-            opacity: 1;
-        }
+    &--small &__container {
+        padding-top: 10px;
+        background-color: $c-white;
     }
-
-    &--small .nav-link {
-
-        &__text {
-            margin-top: 0 !important;
-        }
-
-        &__icon {
-            margin-bottom: 0 !important;
-        }
-    }
-
-    &--small &__menu {
-        height: calc(100vh - 94px);
-
-        @include max(laptop) {
-            height: calc(100vh - 80px);
-        }
-    }
-
 }

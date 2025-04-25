@@ -1,12 +1,21 @@
 function sVacancySliders() {
-    const sVcancySliders = document.querySelectorAll('[data-js="sVacancySlider"]');
+    const sVacances = document.querySelectorAll('[data-js="sVacancy"]');
 
-    if(sVcancySliders.length < 1) return
+    if(sVacances.length < 1) return
 
-    sVcancySliders.forEach(sVcancySlider => {
-        let sVcancySliderEx = new Swiper(sVcancySlider, {
+    
+    sVacances.forEach(sVacancy => {
+        let sliderPrev = sVacancy.querySelector('[data-js="sliderPrevBtn"]');
+        let sliderNext = sVacancy.querySelector('[data-js="sliderNextBtn"]');
+        let sVacancySlider = sVacancy.querySelector('[data-js="sVacancySlider"]');
+
+        let sVacancySliderEx = new Swiper(sVacancySlider, {
             slidesPerView: 'auto',
-            spaceBetween: 20,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: sliderNext,
+                prevEl: sliderPrev,
+              },
         })
     })
 
