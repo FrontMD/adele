@@ -1,0 +1,60 @@
+-
+    const defaultCReviewProps = {
+        classes: '',
+        img: '',
+        title: 'Цалцаева Седа Рамзановна',
+        role: '',
+        date: '12.07.2023',
+        info: [
+            {
+                param: 'Ребенок учится',
+                value: '3 ступень'
+            },
+            {
+                param: 'Отзыв на предметы',
+                value: 'Русский язык<br>Математика'
+            },
+        ],
+        media: 'public/video/review.mp4',
+        iframe: false
+    }
+
+mixin c-review(props = defaultCReviewProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCReviewProps.classes,
+            img: props.img ? props.img : defaultCReviewProps.img,
+            title: props.title ? props.title : defaultCReviewProps.title,
+            role: props.role ? props.role : defaultCReviewProps.role,
+            date: props.date ? props.date : defaultCReviewProps.date,
+            info: props.info ? props.info : defaultCReviewProps.info,
+            media: props.media ? props.media : defaultCReviewProps.media,
+            iframe: props.iframe ? props.iframe : defaultCReviewProps.iframe,
+        }
+
+        let iframeAttr = checkProps.iframe === true ? "iframe" : ''
+
+    .c-review(class=checkProps.classes)&attributes(attributes)
+        .c-review__top
+            .c-review__photo
+                img(src=checkProps.img)
+            a.c-review__play(data-fancybox href=checkProps.media data-thumb=checkProps.img data-type=iframeAttr)
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#play`)
+        .c-review__bottom
+            .c-review__intro
+                .title.title--h5.c-review__title!= checkProps.title
+                .c-review__row
+                    .c-review__role!= checkProps.role
+                    .c-review__date!= checkProps.date
+            .c-review__info
+                - let infoCounter = 0
+                - let info = checkProps.info
+                - while(infoCounter < info.length)
+                    .text-editor!= info[infoCounter].param
+                    .text-editor!= info[infoCounter].value
+
+                    - infoCounter++
+
+
+

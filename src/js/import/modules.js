@@ -2,6 +2,7 @@
 @@include("../../blocks/modules/main-burger/main-burger.js")
 @@include("../../blocks/modules/info-slider/info-slider.js")
 @@include("../../blocks/modules/people-intro/people-intro.js")
+@@include("../../blocks/modules/auto-slider/auto-slider.js")
 
 @@include("../../blocks/modules/sidebar-layout/sidebar-layout.js")
 @@include("../../blocks/modules/m-table/m-table.js")
@@ -30,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
     infoSlider()
     peopleDetail()
     peopleIntro()
+    autoSliders()
 })

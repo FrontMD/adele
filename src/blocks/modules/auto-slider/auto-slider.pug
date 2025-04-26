@@ -1,0 +1,28 @@
+-
+    const defaultAutoSliderProps = {
+        classes: '',
+        title: '',
+
+    }
+
+mixin auto-slider(props = defaultAutoSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAutoSliderProps.classes,
+            title: props.title ? props.title : defaultAutoSliderProps.title,
+        }
+
+    section.auto-slider(data-js="autoSlider")
+        .m-container
+            .auto-slider__header
+                .title.title--h2.auto-slider__title!= checkProps.title
+                .slider-btns.auto-slider__btns
+                    .slider-btn.slider-btn--prev(data-js="sliderPrevBtn")
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)
+                    .slider-btn.slider-btn--next(data-js="sliderNextBtn")
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)
+            .auto-slider__slider(data-js="autoSliderSlider")
+                .swiper-wrapper
+                    block

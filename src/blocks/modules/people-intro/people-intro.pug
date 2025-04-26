@@ -2,7 +2,7 @@
     const defaultPeopleIntroProps = {
         classes: '',
         abbreviated: false,
-        breadcrumbs: {},
+        breadcrumbs: false,
     }
 
 mixin people-intro(props = defaultPeopleIntroProps)
@@ -16,7 +16,7 @@ mixin people-intro(props = defaultPeopleIntroProps)
     .people-intro(class=checkProps.classes)&attributes(attributes)
         .m-container
             .people-intro__container
-                if(checkProps.breadcrumbs.length > 0)
+                if(checkProps.breadcrumbs !== false)
                     +breadcrumbs(checkProps.breadcrumbs)
                 .people-intro__flex
                     .people-intro__intro

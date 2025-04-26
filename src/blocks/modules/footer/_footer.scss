@@ -224,8 +224,12 @@
         letter-spacing: -0.01em;
         color: $c-white;
         border-top: 1px solid $c-white;
-        opacity: 0.4;
         margin-top: auto;
+
+        >* {
+            transition: all $tr;
+            opacity: 0.4;
+        }
 
         @include max(laptop) {
             font-size: 14px;

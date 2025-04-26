@@ -657,6 +657,7 @@ iframe {
 			max-width: 1200px;
 			max-height: 800px;
 			overflow: hidden;
+			padding: 0;
 
 			@include max(tablet) {
 				max-width: 840px;

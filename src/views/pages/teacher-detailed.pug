@@ -8,17 +8,18 @@ block content
         .page-layout
             +people-intro({
                 breadcrumbs: {
+                    classes: 'people-intro__breadcrumbs',
                     items: [
                         {
                             name: 'Главная',
                             link: 'javascript:void(0);'
                         },
                         {
-                            name: 'Программы',
+                            name: 'Преподаватели',
                             link: 'javascript:void(0);'
                         },
                         {
-                            name: '10 ступень',
+                            name: 'Умаров Малик Мусаевич',
                             link: 'javascript:void(0);'
                         }
                     ],
@@ -78,3 +79,135 @@ block content
                             b Дифференцированный подход: Адаптация учебного материала для разных типов обучающихся, включая аудиовизуальные методы, чтение, обсуждения, практические задания и т. д.
                         li 
                             b Проектная работа: Организация проектов, которые требуют сотрудничества, исследования и применения знаний в реальных ситуациях.
+
+
+            +auto-slider({
+                title: 'Отзывы родителей и&nbsp;учеников'
+            })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ],
+                    media: 'https://vkvideo.ru/video_ext.php?oid=-159964892&id=456239574&hd=2&autoplay=1',
+                    iframe: true
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель'
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+
+            +news-list
