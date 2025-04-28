@@ -112,3 +112,14 @@
         }
     }
 }
+
+.home-intro {
+
+    .i-intro__container {
+        padding-top: 150px;
+    }
+
+    &__list {
+        max-width: 510px;
+    }
+}

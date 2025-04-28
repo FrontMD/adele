@@ -5,16 +5,29 @@ block variables
 
 block content
     .page
-        .page-layout
-            section.page-intro.white-bg
-                span
-                .page-intro__content
-                    +title({
-                        tag: 'h1',
-                        text: '<span>Херсонский</span> <br>аграрный университет'
+        .page-layout.page-layout--home
+            +i-intro({
+                classes: 'home-intro',
+                title: 'Онлайн-гимназия Адель',
+                desc: 'Современное онлайн-обучение для вашего ребенка с лицензией и качественным образованием',
+                img: 'img/home/home_intro.webp',
+            })
+                .i-intro__corner
+                    ul.home-intro__list
+                        li Полный возврат оплаты за обучение в первые 15 дней
+                        li Зачисление в любое время учебного года
+                        li Форма обучения: Семейное обучение 
+                        li Группы до 10 человек
+                        li Раздельные классы для мальчиков и девочек
+                        li Промежуточные аттестации проходят онлайн
+                        li Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах
+                    .home-intro__note *Аттестат государственного образца
+                    +btn({
+                        cMode: 'green',
+                        name: 'Получить консультацию'
                     })
 
-            +home-intro
+
             +info-slider({
                 hasHeader: true,
                 items: [

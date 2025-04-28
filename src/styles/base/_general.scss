@@ -205,6 +205,18 @@ table {
 	@include max(mobile) {
 		padding: 65px 0 0;
 	}
+
+	&--home {
+		padding: 10px 0 0;
+
+		@include max(laptop) {
+			padding: 10px 0 0;
+		}
+
+		@include max(mobile) {
+			padding: 10px 0 0;
+		}
+	}
 }
 
 iframe {

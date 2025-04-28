@@ -1,7 +1,7 @@
 -
     const defaultIIntroProps = {
         classes: '',
-        breadcrumbs: {},
+        breadcrumbs: false,
         img: '',
         title: '',
         date: '',
@@ -19,12 +19,14 @@ mixin i-intro(props = defaultIIntroProps)
         }
 
     section.i-intro(class= checkProps.classes)
+
         .m-container
             .i-intro__container
                 .i-intro__img
                     img(src=checkProps.img alt="")
                 .i-intro__left
-                    +breadcrumbs(checkProps.breadcrumbs)
+                    - if(checkProps.breadcrumbs !== false)
+                        +breadcrumbs(checkProps.breadcrumbs)
                     +title({
                         classes: 'i-intro__title',
                         tag: 'h1',

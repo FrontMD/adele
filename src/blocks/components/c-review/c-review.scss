@@ -4,6 +4,10 @@
     flex-direction: column;
     align-items: stretch;
 
+    @include max(mobile) {
+        width: 300px;
+    }
+
     &__top {
         position: relative;
         width: 100%;
@@ -41,9 +45,19 @@
         color: $c-accent;
         transition: all $tr;
 
+        @include max(mobile) {
+            width: 48px;
+            height: 48px;
+        }
+
         svg {
             width: 24px;
             height: 24px;
+
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &:hover {
@@ -59,6 +73,10 @@
         border-radius: 32px;
         padding: 20px 24px 30px;
         border: 1px solid $c-border;
+
+        @include max(mobile) {
+            padding: 16px 16px 24px;
+        }
     }
 
     &__row {
@@ -73,6 +91,10 @@
         margin-top: 9px;
     }
 
+    &__intro &__row {
+        align-items: center;
+    }
+
     &__role {
         padding: 10px;
         width: fit-content;
@@ -84,9 +106,12 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-
         margin-top: 40px;
         border-top: 1px solid $c-border-2;
+
+        @include max(mobile) {
+            margin-top: 24px;
+        }
     }
 
     &__param {

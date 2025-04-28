@@ -7,6 +7,10 @@
     gap: 8px;
     width: 100%;
 
+    @include max(mobile) {
+        gap: 4px;
+    }
+
     &__page,
     &__separator {
         display: flex !important;
@@ -27,8 +31,8 @@
         padding: 0 !important;
 
         @include max(mobile) {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             font-size: 12px;
         }
     }
@@ -58,13 +62,18 @@
         transition: all $tr;
 
         @include max(mobile) {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
 
         svg {
             width: 24px;
             height: 24px;
+
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &.active,
@@ -79,10 +88,18 @@
         &--next {
             margin-left: 22px !important;
             transform: rotate(180deg);
+
+            @include max(mobile) {
+                margin-left: 4px !important;
+            }
         }
 
         &--prev {
             margin-right: 22px !important;
+
+            @include max(mobile) {
+                margin-right: 4px !important;
+            }
         }
     }
 }
