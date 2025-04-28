@@ -210,20 +210,13 @@
 
     }
 
-    &__copyright {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 16px 32px;
-        padding: 24px 31px;
+    &__footer {
         font-family: $ff-second;
         font-size: 18px;
         font-weight: 400;
         line-height: 1.2em;
         letter-spacing: -0.01em;
         color: $c-white;
-        border-top: 1px solid $c-white;
         margin-top: auto;
 
         >* {
@@ -233,7 +226,6 @@
 
         @include max(laptop) {
             font-size: 14px;
-            max-width: 720px;
         }
 
         @include max(tablet) {
@@ -244,6 +236,62 @@
 
         @include max(mobile) {
             font-size: 12px;
+        }
+    }
+
+    &__privacy {
+        padding: 0 40px;
+
+        @include max(laptop) {
+            padding: 0 24px;
+        }
+
+        @include max(tablet) {
+            padding: 0;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-top: 1px solid $c-white;
+        padding: 24.5px 40px;
+        margin-top: 30px;
+        gap: 10px;
+
+        @include max(laptop) {
+            padding: 24px;
+
+        }
+
+        @include max(tablet) {
+            padding: 16px 0 0;
+            margin-top: 20px;
+        }
+    }
+
+    &__developer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+            line-height: 0;
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        svg {
+            width: 148px;
+            height: 31px;
+
+            @include max(laptop) {
+                width: 115px;
+                height: 24px;
+            }
         }
     }
 

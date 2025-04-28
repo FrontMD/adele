@@ -3,7 +3,7 @@
         classes: '',
         img: 'img/news/news_1.webp',
         title: 'Студентам университета рассказали о&nbsp;противодействии коррупции',
-        date: '04 сентября 2024',
+        date: '26 августа 2024',
         desc: ''
     }
 
@@ -21,9 +21,12 @@ mixin news-card(props = defaultNewsCardProps)
         .news-card__img 
             img(src=checkProps.img alt="")
         .news-card__content
-            a.h2.news-card__title(href="#")!= checkProps.title
+            a.title.title--h5.news-card__title(href="javascript:void(0);")!= checkProps.title
+            .news-card__desc.text-editor!= checkProps.desc
+        .news-card__btns
             .news-card__date!= checkProps.date
-            .news-card__footer
-                if(checkProps.desc.length > 0)
-                    .news-card__desc.text-editor!= checkProps.desc
-                +btn-plus
+            +btn({
+                cMode: 'bordered',
+                icon: 'arrow_up_right',
+                sMode: 'icon'
+            })

@@ -1,5 +1,8 @@
 .c-review {
     width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
     &__top {
         position: relative;
@@ -18,6 +21,10 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    &__title {
+        margin-bottom: auto;
     }
 
     &__play {
@@ -46,6 +53,7 @@
     }
 
     &__bottom {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         border-radius: 32px;
@@ -53,5 +61,39 @@
         border: 1px solid $c-border;
     }
 
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: #04412B;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        margin-top: 9px;
+    }
 
+    &__role {
+        padding: 10px;
+        width: fit-content;
+        background-color: $c-accent-light;
+        border-radius: 50px;
+    }
+
+    &__info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 40px;
+        border-top: 1px solid $c-border-2;
+    }
+
+    &__param {
+        opacity: 0.4;
+    }
+
+    &__value {
+        text-align: end;
+    }
 }

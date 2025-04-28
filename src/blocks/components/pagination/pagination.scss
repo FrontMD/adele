@@ -1,30 +1,28 @@
 .pagination {
     width: fit-content;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     width: 100%;
 
-    @include max(mobile) {
-        justify-content: center;
-    }
-
-    &__page {
+    &__page,
+    &__separator {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        width: 49px;
-        height: 49px;
-        background-color: transparent;
-        border: 1px solid $c-bg-light;
+        width: 60px;
+        height: 60px;
+        background-color: $c-white;
         color: $c-accent;
-        font-size: 14px;
         font-weight: 500;
-        line-height: 1em;
-        transition: 0.3s;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        text-align: center;
         text-decoration: none;
+        border-radius: 100%;
         margin: 0 !important;
         padding: 0 !important;
 
@@ -33,6 +31,10 @@
             height: 30px;
             font-size: 12px;
         }
+    }
+
+    &__page {
+        transition: all $tr;
 
         &.active,
         &:hover {
@@ -45,12 +47,15 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
-        width: 49px;
-        height: 49px;
-        background-color: #C1D3C9;
+        width: 60px;
+        height: 60px;
+        background-color: $c-white;
         color: $c-accent;
+        border: 1px solid $c-border-2;
+        border-radius: 100%;
         margin: 0 !important;
         padding: 0 !important;
+        transition: all $tr;
 
         @include max(mobile) {
             width: 30px;
@@ -58,8 +63,8 @@
         }
 
         svg {
-            width: 5px;
-            height: 9px;
+            width: 24px;
+            height: 24px;
         }
 
         &.active,
@@ -70,21 +75,14 @@
                 color: $c-white !important;
             }
         }
-    }
 
-    &__btn--next {
-        transform: rotate(180deg);
-    }
+        &--next {
+            margin-left: 22px !important;
+            transform: rotate(180deg);
+        }
 
-    &__separator {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 6px;
-        font-size: 14px;
-        padding: 0 10px;
-        font-weight: 700;
-        line-height: 1;
-        color: $c-accent;
+        &--prev {
+            margin-right: 22px !important;
+        }
     }
 }

@@ -51,8 +51,9 @@ mixin c-review(props = defaultCReviewProps)
                 - let infoCounter = 0
                 - let info = checkProps.info
                 - while(infoCounter < info.length)
-                    .text-editor!= info[infoCounter].param
-                    .text-editor!= info[infoCounter].value
+                    .c-review__row
+                        .c-review__param!= info[infoCounter].param
+                        .c-review__value!= info[infoCounter].value
 
                     - infoCounter++
 

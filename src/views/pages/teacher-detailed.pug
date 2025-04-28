@@ -2,6 +2,7 @@ extends ../layouts/default
 
 block variables
     - const title = "Умаров Малик Мусаевич"
+    - const greenBg = true
 
 block content
     .page
@@ -104,7 +105,7 @@ block content
                             value: 'Русский язык<br>Математика'
                         },
                     ],
-                    media: 'https://vkvideo.ru/video_ext.php?oid=-159964892&id=456239574&hd=2&autoplay=1',
+                    media: 'https://vkvideo.ru/video_ext.php?oid=55940171&id=456239498&hd=2&autoplay=1',
                     iframe: true
                 })
                 +c-review({
@@ -210,4 +211,6 @@ block content
                     ]
                 })
 
-            +news-list
+            +news-list({
+                titleMode: true
+            })

@@ -1,0 +1,55 @@
+-
+    const defaultNewsListProps = {
+        classes: '',
+        titleMode: false,
+        title: 'Статьи с упоминанием педагога',
+    }
+
+mixin news-list(props = defaultNewsListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsListProps.classes,
+            titleMode: props.titleMode ? props.titleMode : defaultNewsListProps.titleMode,
+            title: props.title ? props.title : defaultNewsListProps.title
+        }
+
+    section.news-list.green-bg(class=checkProps.classes)
+        .m-container
+            - if(checkProps.titleMode)
+                .news-list__header
+                    .title.title--h2.news-list__title
+                        h2!= checkProps.title
+                    //-+period-select
+            - else
+                //-+news-filter()        
+                    +period-select
+            .news-list__items
+                +news-card({
+                    title: "Студенты университета приняли участие в Молодежном семинаре-практикуме по профилактике распространения идеологии экстремизма и терроризма «Мир без террора»",
+                    desc: 'В рамках проекта юношей и девушек проинформировали о сущности терроризма, экстремизма, национализма и прочих проявлениях идеологии насилия.'
+                })
+                +news-card({
+                    classes: '',
+                    img: 'img/news/news_2.webp',
+                    title: 'Международный круглый стол на тему «Роль народной дипломатии в противодействии экстремизму, разрешении национальных, гражданских и вооруженных конфликтов»',
+                    date: '26 августа 2024',
+                    desc: 'Свои работы на конкурс прислали более 120 человек. Это школьники и студенты из разных стран мира: России, Китая, Белоруссии, Казахстана.'
+                })
+                +news-card({
+                    classes: '',
+                    img: 'img/news/news_3.webp',
+                    title: 'В университете обсудят формирование нетерпимого отношения к экстремизму и наказание за преступления в этой сфере',
+                    date: '26 августа 2024',
+                    desc: 'Для студентов и сотрудников в смешанном формате состоится профилактическая встреча «Формирование в обществе нетерпимого отношения к экстремизму, неотвратимость наказания за совершение правонарушений и преступлений».'
+                })
+                +news-card({
+                    classes: '',
+                    img: 'img/news/news_4.webp',
+                    title: 'Об ответственности за экстремизм',
+                    date: '26 августа 2024',
+                    desc: ''
+                })
+            +pagination({classes: 'news-list__pagination'})
+
+
+
