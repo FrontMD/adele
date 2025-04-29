@@ -1,0 +1,36 @@
+-
+    const defaultSNumbersProps = {
+        classes: '',
+        title: '',
+        cards: []
+    }
+
+mixin s-numbers(props = defaultSNumbersProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSNumbersProps.classes,
+            title: props.title ? props.title : defaultSNumbersProps.title,
+            cards: props.cards ? props.cards : defaultSNumbersProps.cards
+        }
+
+    section.s-numbers(class= checkProps.classes)&attributes(attributes)
+        .m-container
+            +m-columns({
+                title: checkProps.title
+            })
+                -let cards = checkProps.cards
+                -if(cards.length > 0)
+                    .s-numbers__cards
+                        -let cCount = 0
+                        -while(cCount < cards.length)
+                            -let imgClass = cards[cCount].img.length > 0 ? 's-numbers-card--img' : ''
+                            .s-numbers-card(class= imgClass)
+                                .s-numbers-card__bg
+                                    if(cards[cCount].img.length > 0)
+                                        img(src=cards[cCount].img)
+                                .s-numbers-card__content
+                                    .title.title--h2.s-numbers-card__num!= cards[cCount].num
+                                    .title.title--h5.s-numbers-card__text!= cards[cCount].text
+
+                            - cCount++
+

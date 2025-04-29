@@ -1,0 +1,52 @@
+.tooltip {
+    position: relative;
+    width: fit-content;
+
+    &__icon {
+        position: relative;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        &::after {
+            content: '';
+            left: 0;
+            width: 100%;
+            height: 12px;
+            position: absolute;
+            bottom: 100%;
+
+        }
+    }
+
+
+    &__tooltip {
+        padding: 12px;
+        border-radius: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $c-bg-dark;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $c-white;
+        width: max-content;
+        max-width: 200px;
+        transition: all $tr;
+        bottom: calc(100% + 0px);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &:hover &__tooltip {
+        bottom: calc(100% + 12px);
+        visibility: visible;
+        opacity: 1;
+    }
+}

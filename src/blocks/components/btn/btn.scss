@@ -70,6 +70,22 @@
         }
     }
 
+    &--small {
+        font-size: 14px;
+        padding: 11px 12px;
+
+        @include max(mobile) {
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+
+        @include max(xs) {
+            width: 100%;
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+    }
+
     &--icon {
         padding: 10px;
         width: 60px;

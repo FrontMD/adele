@@ -4,28 +4,62 @@ block variables
     - const title = "Главная"
 
 block content
-    .page
+    .page(data-js="page")
         .page-layout.page-layout--home
             +i-intro({
                 classes: 'home-intro',
                 title: 'Онлайн-гимназия Адель',
                 desc: 'Современное онлайн-обучение для вашего ребенка с лицензией и качественным образованием',
                 img: 'img/home/home_intro.webp',
+                isFull: true
             })
                 .i-intro__corner
-                    ul.home-intro__list
-                        li Полный возврат оплаты за обучение в первые 15 дней
-                        li Зачисление в любое время учебного года
-                        li Форма обучения: Семейное обучение 
-                        li Группы до 10 человек
-                        li Раздельные классы для мальчиков и девочек
-                        li Промежуточные аттестации проходят онлайн
-                        li Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах
-                    .home-intro__note *Аттестат государственного образца
+                    .home-intro__content
+                        ul.home-intro__list
+                            li.home-intro__item Полный возврат оплаты за обучение в первые 15 дней
+                            li.home-intro__item Зачисление в любое время учебного года
+                            li.home-intro__item Форма обучения: Семейное обучение 
+                            li.home-intro__item Группы до 10 человек
+                            li.home-intro__item Раздельные классы для мальчиков и девочек
+                            li.home-intro__item Промежуточные аттестации проходят онлайн
+                            li.home-intro__item Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах
+                        .home-intro__note *Аттестат государственного образца
+                            +tooltip
                     +btn({
                         cMode: 'green',
-                        name: 'Получить консультацию'
+                        name: 'Получить консультацию',
+                        sMode: 'full'
                     })
+
+            +s-numbers({
+                title: `<div class="section-tag">Факты и цифры</div>
+                    <div class="title title--h2 s-numbers__title"><span>Гимназия</span><br>сегодня</div>
+                    <a class="btn  btn--green" href="#">Подробнее о нас
+                        <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                        </svg>
+                    </a>
+                    `,
+                cards: [
+                    {
+                        img: 'img/numbers/numbers_1.webp',
+                        num: '5000+',
+                        text: 'Учеников по всему миру'
+                    },
+                    {
+                        img: '',
+                        num: '100+',
+                        text: 'Преподавателей в гимназии'
+                    },
+                    {
+                        img: '',
+                        num: '2022',
+                        text: 'Год основания'
+                    }
+                ]
+            })
+
+
 
 
             +info-slider({

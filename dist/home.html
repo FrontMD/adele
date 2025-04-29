@@ -27,6 +27,25 @@
   </head>
   <body>
     <header class="site-header" data-js="siteHeader">
+      <div class="header-banner" data-js="headerBanner">
+        <div class="header-banner__close" data-js="headerBannerClose">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <div class="header-banner__content">
+          <div class="header-banner__bg"><img src="img/banner_bg.svg"></div>
+          <div class="header-banner__left">
+            <div class="header-banner__title">Проведите майские с пользой: с нас — 12 занятий бонусом</div>
+            <div class="header-banner__item">
+              <div class="header-banner__text">+ подарки для учебы на</div>
+              <div class="header-banner__sticker">45 000 ₽</div>
+            </div>
+          </div>
+          <div class="header-banner__right"><a class="btn  btn--green btn--small" href="#">Получить</a>
+          </div>
+        </div>
+      </div>
       <div class="site-header__container">
         <div class="site-header__side">
           <div class="site-header__left"><a class="site-header__logo" href="/"><img src="img/full_logo.svg" alt=""></a>
@@ -78,9 +97,9 @@
       </div>
     </header>
     <main class="site-main">
-      <div class="page">
+      <div class="page" data-js="page">
         <div class="page-layout page-layout--home">
-              <section class="i-intro home-intro">
+              <section class="i-intro home-intro i-intro--full">
                 <div class="m-container">
                   <div class="i-intro__container">
                     <div class="i-intro__img"><img src="img/home/home_intro.webp" alt=""></div>
@@ -88,22 +107,76 @@
                           <div class="title title--h1 i-intro__title title--light">
                             <h1>Онлайн-гимназия Адель</h1>
                           </div>
+                      <div class="i-intro__desc">Современное онлайн-обучение для вашего ребенка с лицензией и качественным образованием</div>
                     </div>
                     <div class="i-intro__right">
                       <div class="i-intro__corner">
-                        <ul class="home-intro__list">
-                          <li>Полный возврат оплаты за обучение в первые 15 дней</li>
-                          <li>Зачисление в любое время учебного года</li>
-                          <li>Форма обучения: Семейное обучение </li>
-                          <li>Группы до 10 человек</li>
-                          <li>Раздельные классы для мальчиков и девочек</li>
-                          <li>Промежуточные аттестации проходят онлайн</li>
-                          <li>Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах</li>
-                        </ul>
-                        <div class="home-intro__note">*Аттестат государственного образца</div><a class="btn  btn--green" href="#">Получить консультацию</a>
+                        <div class="home-intro__content">
+                          <ul class="home-intro__list">
+                            <li class="home-intro__item">Полный возврат оплаты за обучение в первые 15 дней</li>
+                            <li class="home-intro__item">Зачисление в любое время учебного года</li>
+                            <li class="home-intro__item">Форма обучения: Семейное обучение </li>
+                            <li class="home-intro__item">Группы до 10 человек</li>
+                            <li class="home-intro__item">Раздельные классы для мальчиков и девочек</li>
+                            <li class="home-intro__item">Промежуточные аттестации проходят онлайн</li>
+                            <li class="home-intro__item">Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах</li>
+                          </ul>
+                          <div class="home-intro__note">*Аттестат государственного образца
+                                <div class="tooltip">
+                                  <div class="tooltip__tooltip">Аттестат выдает партнер гимназии</div>
+                                  <div class="tooltip__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#tooltip"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                          </div>
+                        </div><a class="btn  btn--green btn--full" href="#">Получить консультацию</a>
                       </div>
                     </div>
                   </div>
+                </div>
+              </section>
+              <section class="s-numbers">
+                <div class="m-container">
+                      <div class="m-columns   ">
+                        <div class="m-columns__header text-editor"><div class="section-tag">Факты и цифры</div>
+                    <div class="title title--h2 s-numbers__title"><span>Гимназия</span><br>сегодня</div>
+                    <a class="btn  btn--green" href="#">Подробнее о нас
+                        <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                        </svg>
+                    </a>
+                    </div>
+                        <div class="m-columns__main text-editor">
+                          <div class="s-numbers__cards">
+                            <div class="s-numbers-card s-numbers-card--img">
+                              <div class="s-numbers-card__bg"><img src="img/numbers/numbers_1.webp">
+                              </div>
+                              <div class="s-numbers-card__content">
+                                <div class="title title--h2 s-numbers-card__num">5000+</div>
+                                <div class="title title--h5 s-numbers-card__text">Учеников по всему миру</div>
+                              </div>
+                            </div>
+                            <div class="s-numbers-card">
+                              <div class="s-numbers-card__bg">
+                              </div>
+                              <div class="s-numbers-card__content">
+                                <div class="title title--h2 s-numbers-card__num">100+</div>
+                                <div class="title title--h5 s-numbers-card__text">Преподавателей в гимназии</div>
+                              </div>
+                            </div>
+                            <div class="s-numbers-card">
+                              <div class="s-numbers-card__bg">
+                              </div>
+                              <div class="s-numbers-card__content">
+                                <div class="title title--h2 s-numbers-card__num">2022</div>
+                                <div class="title title--h5 s-numbers-card__text">Год основания</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
               </section>
               <section class="info-slider">
@@ -127,7 +200,7 @@
                     <div class="home-materials__text text-editor"> 
                       <p>Университет обеспечен достаточно современной технической базой для подготовки студентов: имеется 1 корпус с оборудованными лекционными аудиториями, учебными и научными лабораториями, компьютерными классами, спортивными залами, научно-технической библиотекой, насчитывающей почти 2 миллиона книг, кафе и столовыми.</p>
                     </div>
-                    <div class="home-materials__links js-simplebar"><a class="home-materials__link" href=""><span>Адреса учебных корпусов</span>
+                    <div class="home-materials__links"><a class="home-materials__link" href=""><span>Адреса учебных корпусов</span>
                         <svg>
                           <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
                         </svg></a><a class="home-materials__link" href=""><span>Общежитие</span>
@@ -356,7 +429,7 @@
             <div class="site-footer__left">
               <div class="site-footer__logo"><img src="img/logo_footer.svg" alt="">
                 <p>онлайн-гимназия</p>
-              </div><a class="btn site-footer__btn btn--lightGreen btn--big" href="#">Попробовать бесплатно
+              </div><a class="btn site-footer__btn btn--lightGreen btn--big" href="#">Оставить заявку
                     <svg> 
                       <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
                     </svg></a>
