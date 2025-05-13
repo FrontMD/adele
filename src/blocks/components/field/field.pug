@@ -3,11 +3,8 @@
         classes: '',
         tag: 'input',
         type: 'text',
-        title: '',
         placeholder: '',
         inputAttr: {},
-        resetBtn: false,
-        isRequired: false,
         selectOptions: [
             "вариант 1",
             "вариант 2"
@@ -21,21 +18,13 @@ mixin field(props = defaultFieldProps)
             classes: props.classes ? props.classes : defaultFieldProps.classes,
             tag: props.tag ? props.tag : defaultFieldProps.tag,
             type: props.type ? props.type : defaultFieldProps.type,
-            title: props.title ? props.title : defaultFieldProps.title,
             placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
             inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
-            resetBtn: props.resetBtn ? props.resetBtn : defaultFieldProps.resetBtn,
-            isRequired: props.isRequired ? props.isRequired : defaultFieldProps.isRequired,
             selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
             selectGreen: props.selectGreen ? props.selectGreen : defaultFieldProps.selectGreen,
         }
 
     label.field(class= `${checkProps.classes} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.selectGreen === true ? 'field--greenSelect' : ''} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js='formField')&attributes(attributes)
-        - if(checkProps.title)
-            span.field__title
-                != checkProps.title
-                - if(checkProps.isRequired)
-                    span!= "*"
         - if(checkProps.tag === 'input')
             input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
             - if(checkProps.type === 'radio')
@@ -44,10 +33,6 @@ mixin field(props = defaultFieldProps)
                 span.fake-checkbox
                 span.field__error(data-js='fieldError') Нужно обязательно ознакомиться и согласиться
             - else
-                - if(checkProps.resetBtn)
-                    span.field__reset(data-js='fieldResetBtn')
-                        svg 
-                            use(xlink:href=`img/sprites/sprite.svg#close`)
                 span.field__error(data-js='fieldError')
         - if(checkProps.tag === 'textarea')
             textarea.field__textarea(rows="7" placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)

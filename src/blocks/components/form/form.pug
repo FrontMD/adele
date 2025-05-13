@@ -4,10 +4,11 @@
         title: '',
         text: '',
         btnText: '',
+        btnCMode: 'green',
         innerThanks: true,
-        privacyText: 'Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a>',
-        successTitle: 'Ваш вопрос отправлен.',
-        successText: 'С Вами свяжется ответственный сотрудник университета по&nbsp;указанным контактным данным.' 
+        privacyText: 'Согласен на обработку моих персональных данных <a href="#" target="_blank">в&nbsp;соответствии с&nbsp;Политикой в&nbsp;отношении обработки персональных данных</a>',
+        successTitle: 'Ваша заявка отправлена!',
+        successText: 'Менеджер свяжется с вами в ближайшее время'
     }
 
 mixin form(props = defaultFormProps)
@@ -17,6 +18,7 @@ mixin form(props = defaultFormProps)
             title: props.title ? props.title : defaultFormProps.title,
             text: props.text ? props.text : defaultFormProps.text,
             btnText: props.btnText ? props.btnText : defaultFormProps.btnText,
+            btnCMode: props.btnCMode ? props.btnCMode : defaultFormProps.btnCMode,
             innerThanks: props.innerThanks ? props.innerThanks : defaultFormProps.innerThanks,
             privacyText: props.privacyText ? props.privacyText : defaultFormProps.privacyText,
             successTitle: props.successTitle ? props.successTitle : defaultFormProps.successTitle,
@@ -26,7 +28,7 @@ mixin form(props = defaultFormProps)
     form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
         .form__content(data-js='form-content')
             - if(checkProps.title.length > 0)
-                .h2.form__title!= checkProps.title 
+                .form__title!= checkProps.title
             - if(checkProps.text.length > 0)
                 .form__text!= checkProps.text
             .form__fields
@@ -36,18 +38,20 @@ mixin form(props = defaultFormProps)
                 type: 'button',
                 buttonType: 'submit',
                 name: checkProps.btnText,
-                cMode: 'green',
+                cMode: checkProps.btnCMode,
+                icon: 'arrow_up_right',
+                sMode: 'full'
             })
             .form__privacy.form-privacy(data-js="formField")
-                label
-                    input(type="checkbox" data-v-name='checkbox' required)
-                    span.form-privacy__fake
-                span.form-privacy__text!= checkProps.privacyText
+                .form-privacy__flex
+                    label
+                        input(type="checkbox" data-v-name='checkbox' required)
+                        span.form-privacy__fake
+                    span.form-privacy__text!= checkProps.privacyText
                 span.field__error(data-js='fieldError')
         - if(checkProps.innerThanks === true)
             .form__thanks(data-js='form-thanks')
+                .form__title!= checkProps.successTitle
                 .form__image-success
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#success`)
-                .h2.form__title!= checkProps.successTitle
+                    img(src="img/success.png")
                 .form__text!= checkProps.successText

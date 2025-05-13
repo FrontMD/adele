@@ -5,13 +5,9 @@
 
 .form-modal {
 
-    .modal__content {
-        background-color: $c-accent;
-    }
-
     .modal__inner {
         max-height: 80vh;
-        max-width: 100%;
+        max-width: calc(100% + 8px);
         overflow: auto;
         margin-right: -8px;
         padding-right: 5px;
@@ -26,12 +22,34 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: rgb(255, 255, 255, 0.1);
+            background-color: #688D80;
+            border-radius: 2px;
         }
     }
 
     .form {
         padding: 0;
+        background-color: transparent;
+
+        &__title {
+            color: $c-accent;
+            text-align: center;
+            padding: 0 40px;
+            margin-bottom: 0;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.2em;
+            letter-spacing: -0.02em;
+            color: $c-accent;
+        }
+
+        &__thanks .form__title {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 1.1em;
+            letter-spacing: -0.02em;
+            max-width: 430px;
+        }
 
         &--sent {
             min-height: auto !important;
@@ -40,6 +58,10 @@
         @include max(mobile) {
             padding: 0;
         }
+    }
+
+    .form-privacy__text {
+        max-width: 360px;
     }
 
     .form__title+.form__fields,
@@ -52,7 +74,7 @@
     .field__textarea,
     .field-file__fakeinput,
     .btn {
-        padding: 25px 20px;
+        padding: 16px 20px;
     }
 
     .field--checkbox,
@@ -63,31 +85,6 @@
     }
 
     .field--greenSelect .select2 {
-        padding: 20px;
-    }
-
-    .modal__close {
-        @include max(mobile) {
-            color: $c-white;
-        }
-    }
-}
-
-.form-projects-modal {
-    .modal__content {
-        width: 800px;
-    }
-
-    .modal__inner {
-        min-height: 80vh;
-    }
-
-    &__next {
-        margin-left: auto;
-        padding: 20px;
-    }
-
-    &__prev {
         padding: 20px;
     }
 }

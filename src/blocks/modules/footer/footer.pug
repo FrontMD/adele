@@ -16,7 +16,7 @@ mixin footer(greenBg)
 					sMode: 'big',
 					cMode: 'lightGreen',
 					icon: 'arrow_up_right'
-				})
+				})(data-modal='#requestModal')
 
 			.site-footer__right
 				.site-footer__cols
@@ -72,6 +72,6 @@ mixin footer(greenBg)
 						.site-footer__copyright © 2025 ООО «Онлайн-Гимназия Адель»
 						.site-footer__developer
 							| Разработка сайта
-							a(href="https://itspace.group/")
+							a(href="https://itspace.group/" target="_blank")
 								svg
 									use(xlink:href=`img/sprites/sprite.svg#its`)

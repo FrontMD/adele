@@ -24,12 +24,15 @@
     }
 
     &__thanks {
-        gap: 20px;
+        gap: 30px;
         align-items: center;
         text-align: center;
         opacity: 0;
         height: 0;
         visibility: hidden;
+        background-color: $c-accent-light;
+        border-radius: 18px;
+        padding: 0px;
     }
 
     &__title {
@@ -39,12 +42,14 @@
     }
 
     &__text {
-        max-width: 640px;
+        max-width: 300px;
         font-size: 16px;
         font-weight: 400;
-        line-height: 1.875em;
-        color: $c-white;
+        line-height: 1.2em;
+        letter-spacing: -0.01em;
+        color: $c-accent;
         opacity: 0.4;
+        text-align: center;
 
         @include max(mobile) {
             font-size: 14px;
@@ -52,12 +57,10 @@
     }
 
     &__image-success {
-        width: 48px;
-        height: 48px;
-        color: $c-accent-light;
+        height: 191px;
+        max-width: 100%;
 
-        svg {
-            width: 100%;
+        img {
             height: 100%;
         }
     }
@@ -68,7 +71,7 @@
         margin-top: 50px;
     }
 
-    &__step {
+    /*&__step {
         display: none;
         padding-top: 20px;
 
@@ -83,12 +86,12 @@
         &.active {
             display: block;
         }
-    }
+    }*/
 
     &__fields {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         margin-bottom: 20px;
 
         @include max(tablet) {
@@ -128,7 +131,7 @@
         }
     }
 
-    &__links {
+    /*&__links {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -171,18 +174,17 @@
         letter-spacing: -0.03125em;
         margin-bottom: 10px;
         font-size: 16px;
-    }
+    }*/
 
     &__privacy {
-        margin-top: 14px;
+        margin-top: 20px;
     }
 
     .form-privacy {
         position: relative;
         display: flex;
-        align-items: flex-start;
-        gap: 9px;
-        margin-bottom: 15px;
+        flex-direction: column;
+        gap: 5px;
 
         input {
             position: absolute;
@@ -191,41 +193,58 @@
             opacity: 0;
         }
 
+        &__flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
         &__fake {
             display: block;
             position: relative;
-            width: 13px;
-            height: 13px;
-            background-color: $c-text-grey;
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
             flex-shrink: 0;
             flex-grow: 0;
             cursor: pointer;
+            margin-top: 2px;
+            border: 1px solid rgba(130, 160, 149, 0.3);
+            border-radius: 4px;
 
             &::after {
                 content: '';
+                background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.60039 3.2998L4.23075 8.6998L2.40039 6.85909' stroke='white' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
                 position: absolute;
-                width: 50%;
-                height: 50%;
+                width: 12px;
+                height: 12px;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                background-color: $c-white;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
             }
         }
 
-        input:checked+.form-privacy__fake::after {
-            background-color: $c-accent-light;
+        input:checked+.form-privacy__fake {
+            background-color: $c-accent-title;
+            border-color: $c-accent-title;
         }
 
         &__text {
-            max-width: 350px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 400;
-            line-height: 1em;
-            color: $c-white;
+            line-height: 1.2em;
+            letter-spacing: -0.01em;
+            color: $c-accent;
 
             a {
-                color: $c-accent-light;
+                opacity: 0.4;
+                transition: all $tr;
+            }
+
+            a:hover {
+                opacity: 1;
             }
         }
     }
@@ -233,8 +252,7 @@
     &__submit {
         margin-top: auto;
         width: 100%;
-
-        @include max(mobile) {}
+        min-height: 60px;
     }
 
 }
@@ -256,6 +274,7 @@
     }
 
     &--sent &__thanks {
+        padding: 20px;
         opacity: 1;
         height: auto;
         visibility: visible;

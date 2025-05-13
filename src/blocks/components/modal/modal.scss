@@ -26,8 +26,8 @@
 
     &__close {
         position: absolute;
-        right: -60px;
-        top: 0;
+        right: 30px;
+        top: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,26 +37,19 @@
         z-index: 20;
         color: $c-accent;
         transition: color $tr-time;
-        width: 52px;
-        height: 52px;
-        background: #fff;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
 
         &:hover {
-            color: $c-accent-light;
+            color: $c-accent-dark;
         }
 
         svg {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
         }
 
         @include max(mobile) {
-            right: 0;
-            top: 0;
-            background: transparent;
+            right: 15px;
+            top: 15px;
         }
     }
 
@@ -66,18 +59,24 @@
         position: relative;
         background: $c-white;
         width: 100%;
-        max-width: 736px;
+        max-width: 540px;
         z-index: 9999;
-        padding: 40px;
+        padding: 24px;
         max-height: 95vh;
+        border-radius: 24px;
+
+        &:has(.form--sent) {
+            padding: 78px 10px 10px;
+        }
 
         @include max(tablet) {
-            width: calc(100% - 40px);
+            width: calc(100% - 20px);
             margin: 0 auto;
         }
 
         @include max(mobile) {
-            padding: 40px 15px 15px;
+            padding: 10px;
+            border-radius: 16px;
         }
     }
 

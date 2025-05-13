@@ -1,9 +1,9 @@
 noindex
     div
-        // код модалок сюда
-        +modal({modalId:"cMapAddressModal", classes:"c-map-modal"})(data-js="cMapAddressModal")
+        //- код модалок сюда
+        //-+modal({modalId:"cMapAddressModal", classes:"c-map-modal"})(data-js="cMapAddressModal")
 
-        +modal({modalId:"openDoorsModal", classes:"open-doors-modal"})(data-js="openDoorsModal")
+        //-+modal({modalId:"openDoorsModal", classes:"open-doors-modal"})(data-js="openDoorsModal")
             <div class="open-doors-block__container text-editor">
                 <div class="open-doors-block__left">
                 <h3>Онлайн мероприятие 04 декабря 2024 в 13:00</h3>
@@ -63,37 +63,33 @@ noindex
                     li Изучите учебный корпус. Прогуляйтесь по вузу, посмотрите в каком состоянии аудитории и столовая.
             </div>
 
-        +modal({modalId:"questionModal", classes:"form-modal"})(data-js="questionModal")
+        +modal({modalId:"requestModal", classes:"form-modal"})(data-js="requestModal")
             +form({
                 classes: '',
-                title: 'Задать вопрос',
+                title: 'Форма заявки',
                 text: '',
-                btnText: 'Задать вопрос',
+                btnText: 'Отправить',
                 })
                     +field({
                         classes: '',
                         type: 'text',
                         title: '',
-                        placeholder: 'Имя',
+                        placeholder: 'ФИО контактного лица*',
                         inputAttr: {
                             'required': '',
                             'data-type': 'letters'
                         },
-                        resetBtn: false,
-                        isRequired: true
                     })
                     +field({
                         classes: '',
                         type: 'tel',
                         title: '',
-                        placeholder: '+7 (___) ___-__-__',
+                        placeholder: 'Телефон*',
                         inputAttr: {
                             'data-type': 'phoneNumber',
                             'required': '',
                             'data-v-name': 'phone'
                         },
-                        resetBtn: false,
-                        isRequired: true
                     })
                     +field({
                         classes: '',
@@ -101,24 +97,28 @@ noindex
                         title: '',
                         placeholder: 'Email',
                         inputAttr: {
-                            'required': '',
-                            'data-v-name': 'email'
+                            'data-v-name': 'email',
+                            'required': ''
                         },
-                        resetBtn: false,
-                        isRequired: true
                     }) 
 
                     +field({
                         classes: '',
                         tag: 'textarea',
                         title: '',
-                        placeholder: 'Текст вопроса',
+                        placeholder: 'Текст обращения',
+                    })
+
+                    +field-file({
+                        placeholder: 'Прикрепить файл',
                         inputAttr: {
-                            'required': ''
+                            'data-v-name': 'file',
+                            'data-size': '10485760',
+                            'accept': 'image/*, text/plain, .docx, .pdf'
                         },
                     })
 
-        +modal({modalId:"vacancyRespModal", classes:"form-modal"})(data-js="vacancyRespModal")
+        //-+modal({modalId:"vacancyRespModal", classes:"form-modal"})(data-js="vacancyRespModal")
             +form({
                 classes: '',
                 title: 'Отправить резюме',
@@ -182,7 +182,7 @@ noindex
                         isRequired: true
                     })
 
-        +modal({modalId:"seminarModal", classes:"form-modal"})(data-js="seminarModal")
+        //-+modal({modalId:"seminarModal", classes:"form-modal"})(data-js="seminarModal")
             +form({
                 classes: '',
                 title: 'Запрос на участие',
@@ -438,7 +438,7 @@ noindex
                         placeholder: 'Комментарий',
                     })
 
-        +modal({modalId:"submitDocsModal", classes:"form-modal"})(data-js="submitDocsModal")
+        //-+modal({modalId:"submitDocsModal", classes:"form-modal"})(data-js="submitDocsModal")
             +form({
                 classes: '',
                 title: 'Отправить документы',
@@ -623,7 +623,7 @@ noindex
                             isRequired: true
                         })
 
-        +modal({modalId:"sectionModal", classes:"form-modal"})(data-js="sectionModal")
+        //-+modal({modalId:"sectionModal", classes:"form-modal"})(data-js="sectionModal")
             +form({
                 classes: '',
                 title: 'Оставить заявку',
@@ -724,7 +724,7 @@ noindex
                         placeholder: 'Ожидания от секции',
                     })
 
-        +modal({modalId:"projectsModal", classes:"form-modal form-projects-modal"})(data-js="projectsModal")
+        //-+modal({modalId:"projectsModal", classes:"form-modal form-projects-modal"})(data-js="projectsModal")
             form.form(action="#" data-validate novalidate data-js="projectsForm")
                 .form__content(data-js='form-content')
                     .h2.form__title Предложить проект
