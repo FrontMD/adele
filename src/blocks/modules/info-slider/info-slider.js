@@ -4,7 +4,12 @@ function infoSlider() {
     if(infoSliders.length < 1) return
 
     infoSliders.forEach(infoSlider => {
-        let infoSliderEx = new Swiper(infoSlider, {
+
+        let sliderPrev = infoSlider.querySelector('[data-js="sliderPrevBtn"]');
+        let sliderNext = infoSlider.querySelector('[data-js="sliderNextBtn"]');
+        let infoSliderSlider = infoSlider.querySelector('[data-js="infoSliderSlider"]');
+
+        let infoSliderEx = new Swiper(infoSliderSlider, {
             slidesPerView: 1.2,
             spaceBetween: 10,
             breakpoints: {
@@ -12,7 +17,11 @@ function infoSlider() {
                     slidesPerView: 'auto',
                     spaceBetween: 20,
                 }
-            }
+            },
+            navigation: {
+                nextEl: sliderNext,
+                prevEl: sliderPrev,
+            },
         })
     })
 }

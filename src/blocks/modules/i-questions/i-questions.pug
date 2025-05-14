@@ -17,7 +17,7 @@ mixin i-questions(props = defaultMQuestionsProps)
             .i-questions__container
                 +m-columns({
                     title: `<div class="title title--h2 i-questions__title">Вопросы о программе</div>
-                    <a class="btn btn--green" href="#">Задать вопрос<svg><use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use></svg></a>`
+                    <a class="btn btn--green" href="#" data-modal="#questionModal">Задать вопрос<svg><use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use></svg></a>`
                     })
                     .i-questions__accordion(data-js="accordion")
                         +spoiler({

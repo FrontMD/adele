@@ -18,6 +18,7 @@ header.site-header(data-js="siteHeader")
                     sMode: 'small'
                 })
     .site-header__container
+        .site-header__overlay(data-js="headerOverlay")
         .site-header__side
             .site-header__left
                 a.site-header__logo(href="/")
@@ -28,36 +29,29 @@ header.site-header(data-js="siteHeader")
                         use(xlink:href=`img/sprites/sprite.svg#main_burger`)
 
                 nav.site-header__nav
-                    .nav-link
-                        .nav-link__header
-                            span.nav-link__text О гимназии
-                            span.nav-link__icon
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
-                        .nav-link__list
-                            a.nav-link__item(href="javascript:void(0)") Ссылка 1
-                            a.nav-link__item(href="javascript:void(0)") Ссылка 2
-                            a.nav-link__item(href="javascript:void(0)") Ссылка с длинным названием
-                    .nav-link
-                        .nav-link__header
-                            span.nav-link__text Учащимся
-                            span.nav-link__icon
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
-                        .nav-link__list
-                            a.nav-link__item(href="javascript:void(0)") Ссылка 1
-                            a.nav-link__item(href="javascript:void(0)") Ссылка 2
-                            a.nav-link__item(href="javascript:void(0)") Ссылка с длинным названием
-                    .nav-link
-                        .nav-link__header
-                            span.nav-link__text Будущим ученикам и их родителям
-                            span.nav-link__icon
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
-                        .nav-link__list
-                            a.nav-link__item(href="javascript:void(0)") Ссылка 1
-                            a.nav-link__item(href="javascript:void(0)") Ссылка 2
-                            a.nav-link__item(href="javascript:void(0)") Ссылка с длинным названием
+                    a.nav-link(href="" data-js="headerMenuBtn" data-menu="0")
+                        span.nav-link__text О гимназии
+                        span.nav-link__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+
+                    a.nav-link(href="" data-js="headerMenuBtn" data-menu="1")
+                        span.nav-link__text Учащимся
+                        span.nav-link__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+
+                    a.nav-link(href="" data-js="headerMenuBtn" data-menu="2")
+                        span.nav-link__text Будущим ученикам и их родителям
+                        span.nav-link__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#chevron_down`)
+
+                .site-header__menu(data-js="siteHeaderMenu")
+                    +multi-menu({
+                        isHeader: true
+                    })
+
             +btn({
                 classes: 'site-header__vvi',
                 icon: 'eye',

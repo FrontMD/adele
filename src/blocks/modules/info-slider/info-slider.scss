@@ -15,17 +15,24 @@
         margin-top: 30px;
     }
 
+    &__slider {
+        margin-right: -20px;
+        padding-right: 20px;
+        overflow: hidden;
+    }
+
     &__slide {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        align-items: stretch;
+        gap: 22px;
         width: 300px;
-        min-height: 440px;
         height: auto;
         padding: 26px 30px 30px;
         color: $c-accent;
         background-color: $c-accent-2;
         border-radius: 32px;
+        margin-bottom: 0;
 
         @include max(mobile) {
             width: auto;
@@ -39,52 +46,51 @@
         align-items: stretch;
     }
 
-    &__num {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.02em;
-        color: $c-accent;
-        align-self: flex-end;
-    }
-
     &__btns {
         margin-top: auto;
     }
 
     &__icon {
         align-self: center;
-        width: 163px;
-        height: 163px;
+        width: 132px;
+        height: 132px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 100%;
-        border: 1px solid $c-border-op;
-        margin-top: 40px;
+        margin-top: 22px;
 
         img {
-            width: 74px;
-            height: 74px;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
-
-            @include max(mobile) {
-                width: 55px;
-                height: 55px;
-            }
         }
 
-        @include max(mobile) {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 30px;
-        }
+        @include max(mobile) {}
     }
 
     &__subtitle {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.1em;
+        letter-spacing: -0.0357em;
+
+    }
+
+    &__text {
         margin-top: auto;
     }
 
-    &__all {
-        margin-top: 20px;
+    .text-editor {
+
+        ol,
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        li:before {
+            background-color: $c-accent-title;
+        }
     }
 }

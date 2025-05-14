@@ -118,6 +118,108 @@ noindex
                         },
                     })
 
+        +modal({modalId:"consultPModal", classes:"form-modal"})(data-js="consultPModal")
+            +form({
+                classes: '',
+                title: 'Запись на консультацию',
+                text: '',
+                btnText: 'Отправить',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: '',
+                        inputAttr: {
+                            'disabled': '',
+                            'value': 'Ступень 10'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'ФИО контактного лица*',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон*',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'data-v-name': 'email',
+                            'required': ''
+                        },
+                    }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Текст обращения',
+                    })
+
+        +modal({modalId:"questionModal", classes:"form-modal"})(data-js="questionModal")
+            +form({
+                classes: '',
+                title: 'Задать вопрос',
+                text: '',
+                btnText: 'Отправить',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'ФИО контактного лица*',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон*',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'data-v-name': 'email',
+                            'required': ''
+                        },
+                    }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Текст вопроса',
+                    })
+
         //-+modal({modalId:"vacancyRespModal", classes:"form-modal"})(data-js="vacancyRespModal")
             +form({
                 classes: '',

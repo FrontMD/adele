@@ -47,6 +47,7 @@
         </div>
       </div>
       <div class="site-header__container">
+        <div class="site-header__overlay" data-js="headerOverlay"></div>
         <div class="site-header__side">
           <div class="site-header__left"><a class="site-header__logo" href="/"><img src="img/full_logo.svg" alt=""></a>
             <div class="site-header__burger" data-js="mainBurgerOpen">
@@ -54,29 +55,609 @@
                 <use xlink:href="img/sprites/sprite.svg#main_burger"></use>
               </svg>
             </div>
-            <nav class="site-header__nav">
-              <div class="nav-link">
-                <div class="nav-link__header"><span class="nav-link__text">О гимназии</span><span class="nav-link__icon">
-                    <svg> 
-                      <use xlink:href="img/sprites/sprite.svg#chevron_down"></use>
-                    </svg></span></div>
-                <div class="nav-link__list"><a class="nav-link__item" href="javascript:void(0)">Ссылка 1</a><a class="nav-link__item" href="javascript:void(0)">Ссылка 2</a><a class="nav-link__item" href="javascript:void(0)">Ссылка с длинным названием</a></div>
-              </div>
-              <div class="nav-link">
-                <div class="nav-link__header"><span class="nav-link__text">Учащимся</span><span class="nav-link__icon">
-                    <svg> 
-                      <use xlink:href="img/sprites/sprite.svg#chevron_down"></use>
-                    </svg></span></div>
-                <div class="nav-link__list"><a class="nav-link__item" href="javascript:void(0)">Ссылка 1</a><a class="nav-link__item" href="javascript:void(0)">Ссылка 2</a><a class="nav-link__item" href="javascript:void(0)">Ссылка с длинным названием</a></div>
-              </div>
-              <div class="nav-link">
-                <div class="nav-link__header"><span class="nav-link__text">Будущим ученикам и их родителям</span><span class="nav-link__icon">
-                    <svg> 
-                      <use xlink:href="img/sprites/sprite.svg#chevron_down"></use>
-                    </svg></span></div>
-                <div class="nav-link__list"><a class="nav-link__item" href="javascript:void(0)">Ссылка 1</a><a class="nav-link__item" href="javascript:void(0)">Ссылка 2</a><a class="nav-link__item" href="javascript:void(0)">Ссылка с длинным названием</a></div>
-              </div>
-            </nav>
+            <nav class="site-header__nav"><a class="nav-link" href="" data-js="headerMenuBtn" data-menu="0"><span class="nav-link__text">О гимназии</span><span class="nav-link__icon">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#chevron_down"></use>
+                  </svg></span></a><a class="nav-link" href="" data-js="headerMenuBtn" data-menu="1"><span class="nav-link__text">Учащимся</span><span class="nav-link__icon">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#chevron_down"></use>
+                  </svg></span></a><a class="nav-link" href="" data-js="headerMenuBtn" data-menu="2"><span class="nav-link__text">Будущим ученикам и их родителям</span><span class="nav-link__icon">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#chevron_down"></use>
+                  </svg></span></a></nav>
+            <div class="site-header__menu" data-js="siteHeaderMenu">
+                  <div class="multi-menu  multi-menu--header" data-js="multiMenu" data-id="0">
+                    <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 1-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 1-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                  </div>
+                  <div class="multi-menu  multi-menu--header" data-js="multiMenu" data-id="1">
+                    <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 2-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 2-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                  </div>
+                  <div class="multi-menu  multi-menu--header" data-js="multiMenu" data-id="2">
+                    <div class="multi-menu__list multi-menu__list--1 active" data-js="multiMenuList" data-level="1">
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="1">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="2"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="3"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="4">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="5">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="6">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="7">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="8">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="9"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="10"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="11"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="12"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem" data-index="13"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="1">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 3-1</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="2">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 3-2</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                    <div class="multi-menu__list multi-menu__list--2" data-js="multiMenuList" data-level="2" data-index="3">
+                      <div class="multi-menu__back" data-js="multiMenuBack">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#link_angle"></use>
+                        </svg>Назад
+                      </div>
+                      <div class="multi-menu__items"><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Основные сведения 3-3</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Структура и органы управления образовательной организацией</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Документы</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Образование</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Руководство. Педагогический состав</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Материально-техническое обеспечение и оснащенность образовательного процесса</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Доступная среда</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Платные образовательные услуги</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem"> 
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Финансово-хозяйственная деятельность</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Вакантные места для приема (перевода) обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Стипендии и меры поддержки обучающихся</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Международное сотрудничество</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a><a class="multi-menu__item" href="index.html" data-js="multiMenuItem">
+                          <div class="multi-menu__inner"><span class="multi-menu__text">Организация питания в образовательной организации</span><span class="multi-menu__icon" data-js="multiMenuIcon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                              </svg></span></div></a></div>
+                    </div>
+                  </div>
+            </div>
           </div><a class="btn site-header__vvi btn--bordered btn--icon" href="#">
                 <svg> 
                   <use xlink:href="img/sprites/sprite.svg#eye"></use>
@@ -130,7 +711,7 @@
                                 <li> <b>Курс “Компьютерная грамотность”</b></li>
                               </ul>
                             </div>
-                          </div><a class="btn  btn--green btn--full" href="#">Иду по рекомендации
+                          </div><a class="btn  btn--green btn--full" href="#" data-modal="#requestModal">Иду по рекомендации
                                 <svg> 
                                   <use xlink:href="img/sprites/sprite.svg#hand_break"></use>
                                 </svg></a>
@@ -726,6 +1307,111 @@
                                             <use xlink:href="img/sprites/sprite.svg#close"></use>
                                           </svg></span><span data-js="fileName">Прикрепить файл</span></span><span class="field-file__error" data-js="fieldError"></span>
                                       <input class="field-file__input" type="file" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green btn--full" type="submit">Отправить
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                                    </svg>
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Согласен на обработку моих персональных данных <a href="#" target="_blank">в&nbsp;соответствии с&nbsp;Политикой в&nbsp;отношении обработки персональных данных</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="consultPModal" aria-hidden="true" data-js="consultPModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__title">Запись на консультацию</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="" disabled="" value="Ступень 10"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО контактного лица*" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон*" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текст обращения"></textarea><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                                  <button class="btn form__submit btn--green btn--full" type="submit">Отправить
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use>
+                                    </svg>
+                                  </button>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Согласен на обработку моих персональных данных <a href="#" target="_blank">в&nbsp;соответствии с&nbsp;Политикой в&nbsp;отношении обработки персональных данных</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal form-modal" id="questionModal" aria-hidden="true" data-js="questionModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__title">Задать вопрос</div>
+                              <div class="form__fields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО контактного лица*" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон*" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="7" placeholder="Текст вопроса"></textarea><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                                   <button class="btn form__submit btn--green btn--full" type="submit">Отправить

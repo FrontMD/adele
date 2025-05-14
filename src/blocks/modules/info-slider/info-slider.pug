@@ -6,37 +6,37 @@
                 num: '',
                 icon: 'img/abiturientam/abiturientam_info_1.svg',
                 subtitle: 'Не подходит обычная школа',
-                text: '<ul><li>Не устраивает качество образования</li><li>Конфликты с одноклассниками</li></ul>'
+                text: '<ul><li><b>Не устраивает качество образования</li><li>Конфликты с одноклассниками</b></li></ul>'
             },
             {
                 num: '',
                 icon: 'img/abiturientam/abiturientam_info_2.svg',
                 subtitle: 'Не можете учиться офлайн',
-                text: '<ul><li>Часто болеете, из-за чего многое пропускаете</li><li>Сложно даются темы, но в школе никто не ждет (класс идет вперед)</li></ul>'
+                text: '<ul><li><b>Часто болеете, из-за чего многое пропускаете</b></li><li><b>Сложно даются темы, но в школе никто не ждет (класс идет вперед)</b></li></ul>'
             },
             {
                 num: '',
                 icon: 'img/abiturientam/abiturientam_info_3.svg',
                 subtitle: 'Живете за рубежом',
-                text: '<ul><li>Допускаете, что можете вернуться и продолжить обучение в обычной школе</li></ul>'
+                text: '<ul><li><b>Допускаете, что можете вернуться и продолжить обучение в обычной школе</b></li></ul>'
             },
             {
                 num: '',
                 icon: 'img/abiturientam/abiturientam_info_1.svg',
                 subtitle: 'Не подходит обычная школа',
-                text: '<ul><li>Не устраивает качество образования</li><li>Конфликты с одноклассниками</li></ul>'
+                text: '<ul><li><b>Не устраивает качество образования</b></li><li><b>Конфликты с одноклассниками</b></li></ul>'
             },
             {
                 num: '',
                 icon: 'img/abiturientam/abiturientam_info_2.svg',
                 subtitle: 'Не можете учиться офлайн',
-                text: '<ul><li>Часто болеете, из-за чего многое пропускаете</li><li>Сложно даются темы, но в школе никто не ждет (класс идет вперед)</li></ul>'
+                text: '<ul><li><b>Часто болеете, из-за чего многое пропускаете</b></li><li><b>Сложно даются темы, но в школе никто не ждет (класс идет вперед)</b></li></ul>'
             },
             {
                 num: '',
                 icon: 'img/abiturientam/abiturientam_info_3.svg',
                 subtitle: 'Живете за рубежом',
-                text: '<ul><li>Допускаете, что можете вернуться и продолжить обучение в обычной школе</li></ul>'
+                text: '<ul><li><b>Допускаете, что можете вернуться и продолжить обучение в обычной школе</b></li></ul>'
             },
         ]
     }
@@ -48,36 +48,34 @@ mixin info-slider(props = defaultInfoSliderProps)
             items: props.items ? props.items : defaultInfoSliderProps.items,
         }
 
-    section.info-slider
+    section.info-slider(data-js="infoSlider")
         .m-container
             +m-columns({
                 title: `<div class="section-tag">Кому подойдет</div>
                     <div class="title title--h2 info-slider__title"><span>Для кого</span> наша гимназия?</div>
                     <div class="slider-btns info-slider__btns">
-                        <div class="slider-btn slider-btn--prev">
+                        <div class="slider-btn slider-btn--prev" data-js="sliderPrevBtn">
                             <svg> 
                                 <use xlink:href="img/sprites/sprite.svg#slider_arrow"></use>
                             </svg>
                         </div>
-                        <div class="slider-btn slider-btn--next">
+                        <div class="slider-btn slider-btn--next" data-js="sliderNextBtn">
                             <svg> 
                                 <use xlink:href="img/sprites/sprite.svg#slider_arrow"></use>
                             </svg>
                         </div>
                     </div>`
             })
-                .info-slider__slider(data-js="infoSlider")
+                .info-slider__slider(data-js="infoSliderSlider")
                     .swiper-wrapper
                         - let itemsCount = 0
                         - while (itemsCount < checkProps.items.length)
-                            a.info-slider__slide.swiper-slide(href="#")
-                                if(checkProps.items[itemsCount].num.length > 0)
-                                    span.info-slider__num!= checkProps.items[itemsCount].num
-                                span.info-slider__icon
-                                    img(src=checkProps.items[itemsCount].icon alt='')
-                                span.h3.info-slider__subtitle!= checkProps.items[itemsCount].subtitle
+                            .info-slider__slide.swiper-slide
+                                .info-slider__subtitle!= checkProps.items[itemsCount].subtitle
+                                .info-slider__icon
+                                    img(src=checkProps.items[itemsCount].icon)
                                 if(checkProps.items[itemsCount].text.length > 0)
-                                    span.info-slider__text.text-editor!= checkProps.items[itemsCount].text
+                                    .info-slider__text.text-editor!= checkProps.items[itemsCount].text
 
                             - itemsCount++
 

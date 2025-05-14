@@ -23,6 +23,9 @@ function headerMenu() {
 
     if(!siteHeaderMenu || headerMenuBtns.length < 1) return
 
+    const headerOverlay = document.querySelector('[data-js="headerOverlay"]')
+    const siteHeaderMenuItems = siteHeaderMenu.querySelectorAll('[data-js="multiMenu"]')
+
     
     headerMenuBtns.forEach(headerMenuBtn => {
         headerMenuBtn.addEventListener('click', (e) => {
@@ -31,16 +34,17 @@ function headerMenu() {
             e.stopPropagation()
 
             let clickedBtn = e.target.closest('[data-js="headerMenuBtn"]')
-            const siteHeaderMenuItems = siteHeaderMenu.querySelectorAll('[data-js="multiMenu"]')
 
             if(clickedBtn.classList.contains('active')) {
                 unlockBody()
                 clickedBtn.classList.remove('active');
                 siteHeaderMenu.classList.remove('active');
+                headerOverlay.classList.remove('active')
 
                 siteHeaderMenuItems.forEach(item => {
                     item.classList.remove('active')
                 })
+
             } else {
                 let targetMenuItem = siteHeaderMenu.querySelector(`[data-js="multiMenu"][data-id="${clickedBtn.dataset.menu}"]`)
 
@@ -60,8 +64,23 @@ function headerMenu() {
 
                 targetMenuItem.classList.add('active');
                 siteHeaderMenu.classList.add('active');
+                headerOverlay.classList.add('active')
             }
 
+        })
+    })
+
+    headerOverlay.addEventListener('click', () => {
+        unlockBody()
+        siteHeaderMenu.classList.remove('active');
+        headerOverlay.classList.remove('active')
+
+        siteHeaderMenuItems.forEach(item => {
+            item.classList.remove('active')
+        })
+
+        headerMenuBtns.forEach(item => {
+            item.classList.remove('active')
         })
     })
 }

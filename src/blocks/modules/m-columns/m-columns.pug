@@ -4,7 +4,8 @@
         title: '<h3>Сведения о&nbsp;наличии оборудованных учебных кабинетов, объектов для&nbsp;проведения практических занятий</h3>',
         titlePosLeft: 'true',
         subtitle: '',
-        noContent: false
+        noContent: false,
+        mainIsText: false
     }
 
 mixin m-columns(props= defaultMColumnsProps)
@@ -15,17 +16,19 @@ mixin m-columns(props= defaultMColumnsProps)
             titlePosLeft: props.titlePosLeft ? props.titlePosLeft : defaultMColumnsProps.titlePosLeft,
             subtitle: props.subtitle ? props.subtitle : defaultMColumnsProps.subtitle,
             noContent: props.noContent ? props.noContent : defaultMColumnsProps.noContent,
+            mainIsText: props.mainIsText ? props.mainIsText : defaultMColumnsProps.mainIsText,
         }
 
         let columnDirClass = checkProps.titlePosLeft == 'true' ? '' : ' m-columns--column'
         let subtitleClass =  checkProps.subtitle.length < 1 ? '' : ' m-columns--subtitle'
+        let mainIsTextClass = checkProps.mainIsText === true ? 'text-editor' : ''
 
     .m-columns(class= `${checkProps.classes} ${columnDirClass} ${subtitleClass}`)&attributes(attributes)
         - if(checkProps.subtitle.length > 0)
             .m-columns__subtitle!= checkProps.subtitle
         .m-columns__header.text-editor!= checkProps.title
         - if(checkProps.noContent !== true)
-            .m-columns__main.text-editor
+            .m-columns__main(class = mainIsTextClass)
                 block
 
 
