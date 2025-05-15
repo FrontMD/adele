@@ -1,0 +1,33 @@
+-
+    const defaultHomeInfoProps = {
+        classes: '',
+    }
+
+mixin home-info(props = defaultHomeInfoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeInfoProps.classes
+        }
+
+    section.home-info
+        .m-container
+            .home-info__container
+                .home-info__bg 
+                    img(src="img/home/home_info.webp" alt="")
+                .home-info__title.title.title--h2.title--light Современное онлайн-обучение для вашего ребенка 
+                .home-info__items
+                    .home-info__item
+                        .home-info__num.title.title--h5 01
+                        .home-info__subtitle.title.title--h5 Группа разделена на&nbsp;подгруппы
+
+                    .home-info__item
+                        .home-info__num.title.title--h5 02
+                        .home-info__subtitle.title.title--h5 Регулярные срезы знаний
+
+                    .home-info__item
+                        .home-info__num.title.title--h5 03
+                        .home-info__subtitle.title.title--h5 Персональные тьюторы
+
+                    .home-info__item
+                        .home-info__num.title.title--h5 04
+                        .home-info__subtitle.title.title--h5 Арабский язык<br>Английский язык

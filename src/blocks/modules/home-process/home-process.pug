@@ -10,51 +10,36 @@ mixin home-process(props = defaultHomeProcessProps)
         }
 
     section.home-process
-        .home-process__bg 
-            img(src="img/home/home_process.webp" alt="")
         .m-container
-            .home-process__content
-                .h2.home-process__title Всё для обучения и практики
-                .home-process__text.text-editor 
-                    p Университет обеспечен достаточно современной технической базой для подготовки студентов: имеется 1 корпус с оборудованными лекционными аудиториями, учебными и научными лабораториями, компьютерными классами, спортивными залами, научно-технической библиотекой, насчитывающей почти 2 миллиона книг, кафе и столовыми.
-                .home-process__links
-                    a.home-process__link(href="")
-                        span Адреса учебных корпусов
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Общежитие
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Библиотеки
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Спортзалы
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Проектная деятельность
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Адреса учебных корпусов
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Общежитие
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Библиотеки
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Спортзалы
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
-                    a.home-process__link(href="")
-                        span Проектная деятельность
-                        svg
-                            use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+            +section-tag({
+                classes: 'home-process__tag',
+                text: 'О наших программах',
+            })
+            .home-process__title.title.title--h2 <span>Как проходит</span><br>обучение
+            .home-process__cols
+                .home-process__content
+                    .home-process__text.text-editor 
+                        p Занятия в онлайн-гимназии «Адель» расширяют образовательные горизонты, не дублируя обязательные предметы, утвержденные в рамках Федеральных государственных образовательных стандартов (ФГОС).
+                        p Мы предлагаем углубленное изучение тем и направлений, которые помогают детям раскрыть свои способности и добиться высоких академических результатов.
+                        p Наша деятельность не заменяет официальные программы государственных школ. Мы стремимся дополнить их, помогая ученикам глубже понять изучаемые дисциплины и развить новые навыки.
+
+                    .home-process__links
+                        a.home-process__link(href="javascript:void(0)")
+                            span 1-4 классы
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        a.home-process__link(href="javascript:void(0)")
+                            span 5-7 классы
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        a.home-process__link(href="javascript:void(0)")
+                            span 8-9 классы
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        a.home-process__link(href="javascript:void(0)")
+                            span 10-11 классы
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                .home-process__img
+                    img(src="img/home/home_process.webp" alt="")

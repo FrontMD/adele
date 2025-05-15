@@ -1,5 +1,5 @@
 -
-    const defaultProgrammProgrammsProps = {
+    const defaultProgrammsListProps = {
         classes: '',
         vMode: 'rows',
         cards: [
@@ -73,10 +73,10 @@
 
     }
 
-mixin programm-programms(props = defaultProgrammProgrammsProps)
+mixin programms-list(props = defaultProgrammsListProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultProgrammProgrammsProps.classes,
+            classes: props.classes ? props.classes : defaultProgrammsListProps.classes,
             vMode: props.vMode ? props.vMode : defaultProgrammsListProps.vMode,
             cards: props.cards ? props.cards : defaultProgrammsListProps.cards,
         }

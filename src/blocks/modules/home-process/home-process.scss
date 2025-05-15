@@ -1,21 +1,39 @@
 .home-process {
     position: relative;
-    padding-top: 25px;
-    padding-bottom: 35px;
+    padding-top: 50px;
+    padding-bottom: 10px;
 
     @include max(mobile) {
         padding-top: 20px;
         padding-bottom: 20px;
     }
 
-    &__bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+    &__cols {
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    &__tag {
+        margin: 0 auto 30px;
+    }
+
+    &__title {
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+
+    &__img {
+        position: relative;
+        flex: 0 1 50%;
+        border-radius: 32px;
+        overflow: hidden;
 
         img {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -23,75 +41,89 @@
     }
 
     &__content {
+        flex: 0 1 50%;
         position: relative;
         width: 100%;
-        max-width: 646px;
-        padding: 35px 50px 10px;
-        background-color: $c-white;
+        padding: 26px 10px 10px;
+        background-color: $c-accent-light;
+        border-radius: 32px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
 
-        @include max(tablet) {
-            padding: 25px 25px 10px;
-        }
+        @include max(tablet) {}
 
-        @include max(mobile) {
-            padding: 20px 15px 10px;
-            max-width: 100%;
-        }
-    }
-
-    &__title {
-        color: $c-accent;
+        @include max(mobile) {}
     }
 
     &__text {
-        margin-top: 30px;
+        max-width: 88%;
+        padding: 0 20px;
+        flex: 0 0 auto;
 
-        @include max(tablet) {
-            margin-top: 10px;
+        p,
+        li,
+        ul,
+        a {
+            font-size: 20px;
         }
+
+
+        @include max(tablet) {}
     }
 
     &__links {
-        margin-top: 60px;
-        max-height: 350px;
+        flex: 0 1 auto;
         overflow-y: auto;
-        margin-right: -25px;
-        padding-right: 25px;
+        background-color: #fff;
+        border-radius: 24px;
+        padding-right: 4px;
 
-        @include max(tablet) {
-            margin-top: 25px;
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+            height: 80%;
         }
 
-        @include max(mobile) {
-            max-height: 275px;
+        &::-webkit-scrollbar-track {
+            background-color: #EAEDEC;
+            border-radius: 32px;
         }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #CAD3D0;
+            border-radius: 32px;
+        }
+
     }
 
     &__link {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0 25px;
-        border-top: 1px solid $c-border;
+        padding: 25px 20px;
+        border-top: 1px solid rgba(4, 65, 43, 0.2);
         font-family: $ff-second;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.5em;
-        color: $c-accent;
-        opacity: 0.2;
-        transition: opacity $tr-time;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        color: rgba(4, 65, 43, 0.4);
+        transition: color $tr;
 
         svg {
-            width: 9px;
-            height: 12px;
+            width: 24px;
+            height: 24px;
         }
 
         &:hover {
-            opacity: 1;
+            color: $c-accent;
         }
 
-        @include max(mobile) {
-            padding: 15px;
+        &:first-child {
+            border-top: none;
         }
+
+        @include max(mobile) {}
     }
 }
