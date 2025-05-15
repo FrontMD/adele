@@ -44,6 +44,17 @@
         }
     }
 
+    &--white {
+        color: $c-accent;
+        background-color: $c-white;
+        transition: all $tr;
+
+        &:hover {
+            background-color: $c-accent-dark;
+            color: $c-white;
+        }
+    }
+
     &--bordered {
         color: $c-accent;
         background-color: $c-white;

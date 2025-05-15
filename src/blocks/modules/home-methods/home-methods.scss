@@ -1,0 +1,50 @@
+.home-methods {
+    padding-bottom: 50px;
+
+    &__title {
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+
+    &__side {
+        background-color: $c-accent-light;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__top {
+        max-width: 95%;
+        padding: 26px 28px 0;
+
+        &.text-editor>p,
+        &.text-editor>ul,
+        &.text-editor>ol {
+            max-width: 82.5%;
+        }
+
+        &.text-editor p,
+        &.text-editor li,
+        &.text-editor a {
+            font-size: 20px;
+        }
+    }
+
+    &__bottom {
+        margin-top: auto;
+        padding-bottom: 20px;
+
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__note {
+        margin: 0 20px 0;
+        padding: 38px 11.6%;
+        border-radius: 26px;
+        background-color: $c-accent-middle;
+        text-align: center;
+    }
+}

@@ -62,8 +62,230 @@ block content
             +info-slider
             +home-process
             +home-info
-            +programms-list
+            +programms-list({
+                vMode: 'cards',
+                title: '<span>Программы</span><br>обучения',
+                hasMoreBtn: true,
+                hasFilters: true,
+                cards: [
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Первая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Вторая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Третья ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Четвертая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    }
+                ]
+            })
 
+            +home-methods
+            +home-conditions
+
+            +auto-slider({
+                title: 'Отзывы родителей и&nbsp;учеников'
+            })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ],
+                    media: 'https://vkvideo.ru/video_ext.php?oid=55940171&id=456239498&hd=2&autoplay=1',
+                    iframe: true
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель'
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
 
             //-
                 +home-activity

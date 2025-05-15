@@ -11,7 +11,6 @@
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
-@@include("../../blocks/modules/pages/programms/programms-list/programms-list.js")
 @@include("../../blocks/modules/pages/abiturientam/abiturientam-promo/abiturientam-promo.js")
 @@include("../../blocks/modules/pages/peoples/people-detail/people-detail.js")
 
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     facultyAdvantagesSliders()
     sVacancySliders()
     sPartners()
-    programmsList()
     abiturientamPromo()
     infoSlider()
     peopleDetail()

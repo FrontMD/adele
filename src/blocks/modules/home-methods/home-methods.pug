@@ -1,0 +1,32 @@
+-
+    const defaultHomeMethodsProps = {
+        classes: '',
+    }
+
+mixin home-methods(props = defaultHomeMethodsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeMethodsProps.classes
+        }
+
+    section.home-methods
+        .m-container
+            .title.title--h2.home-methods__title Наша методика
+            .section-flex
+                .section-flex__side.home-methods__side
+                    .home-methods__top.text-editor
+                        h2 Проводим собеседование учеников и распределяем в равноуровневые классы
+                        ul
+                            li ученикам проще учится;
+                            li если ученик выше/ниже по уровню освоения материала, то его переводят в другую группу для сохранения баланса; 
+                            li если у ученика возникают точечные проблемы с освоением материала, то ему назначается Тьютор
+                    .home-methods__bottom
+                        img(src="img/home/home_methods.webp")
+
+                .section-flex__side.home-methods__side
+                    .home-methods__top.text-editor
+                        h2 Особое внимание уделяется общему % освоения материала
+                        p Если на промежуточных срезах у 20% учеников низкие оценки, то преподаватель проводит занятие по проблемной теме еще раз
+                    .home-methods__bottom
+                        .home-methods__note.title.title--h5 После этого проводится еще один срез знаний и если % соотношение снизилось, группа переходит к освоению новой темы, а к остальным ученикам прикрепляется Тьютор для индивидуальных занятий
+

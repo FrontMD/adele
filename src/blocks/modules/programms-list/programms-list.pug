@@ -2,6 +2,9 @@
     const defaultProgrammsListProps = {
         classes: '',
         vMode: 'rows',
+        title: 'Другие программы',
+        hasMoreBtn: false,
+        hasFilters: false,
         cards: [
             {
                 faculty: 'Основная программа',
@@ -9,19 +12,23 @@
                 params: [
                     {
                         name: 'Стоимость в месяц',
-                        value: '8 000 ₽'
+                        value: '8 000 ₽',
+                        isFull: false
                     },
                     {
                         name: 'Стоимость в год',
-                        value: '70 000 ₽'
+                        value: '70 000 ₽',
+                        isFull: false
                     },
                     {
                         name: 'Вместимость группы, чел',
-                        value: '10'
+                        value: '10',
+                        isFull: false
                     },
                     {
                         name: 'Срок обучения',
-                        value: '1 год'
+                        value: '1 год',
+                        isFull: false
                     }
                 ],
             },
@@ -31,19 +38,23 @@
                 params: [
                     {
                         name: 'Стоимость в месяц',
-                        value: '8 000 ₽'
+                        value: '8 000 ₽',
+                        isFull: false
                     },
                     {
                         name: 'Стоимость в год',
-                        value: '70 000 ₽'
+                        value: '70 000 ₽',
+                        isFull: false
                     },
                     {
                         name: 'Вместимость группы, чел',
-                        value: '10'
+                        value: '10',
+                        isFull: false
                     },
                     {
                         name: 'Срок обучения',
-                        value: '1 год'
+                        value: '1 год',
+                        isFull: false
                     }
                 ],
             },
@@ -53,19 +64,23 @@
                 params: [
                     {
                         name: 'Стоимость в месяц',
-                        value: '8 000 ₽'
+                        value: '8 000 ₽',
+                        isFull: false
                     },
                     {
                         name: 'Стоимость в год',
-                        value: '70 000 ₽'
+                        value: '70 000 ₽',
+                        isFull: false
                     },
                     {
                         name: 'Вместимость группы, чел',
-                        value: '10'
+                        value: '10',
+                        isFull: false
                     },
                     {
                         name: 'Срок обучения',
-                        value: '1 год'
+                        value: '1 год',
+                        isFull: false
                     }
                 ],
             }
@@ -79,6 +94,9 @@ mixin programms-list(props = defaultProgrammsListProps)
             classes: props.classes ? props.classes : defaultProgrammsListProps.classes,
             vMode: props.vMode ? props.vMode : defaultProgrammsListProps.vMode,
             cards: props.cards ? props.cards : defaultProgrammsListProps.cards,
+            title: props.title ? props.title : defaultProgrammsListProps.title,
+            hasMoreBtn: props.hasMoreBtn ? props.hasMoreBtn : defaultProgrammsListProps.hasMoreBtn,
+            hasFilters: props.hasFilters ? props.hasFilters : defaultProgrammsListProps.hasFilters,
         }
 
         let vModeClass = ' programms-list--' + checkProps.vMode
@@ -86,13 +104,18 @@ mixin programms-list(props = defaultProgrammsListProps)
     section.programms-list(class= checkProps.classes + vModeClass data-js="programmsList")
         .m-container
             .programms-list__header 
-                .title.title--h2.programms-list__title Другие программы     
+                .title.title--h2.programms-list__title!= checkProps.title
                 //-+visual-toggle({
                     active: checkProps.vMode
                 //-})(data-js="programmsListToggle")
+
+            if(checkProps.hasFilters === true)
+                .programms-list__filter
+                    +s-filter
+
             .programms-list__list
                 - let cardsCount = 0
-                - while(cardsCount < 3)
+                - while(cardsCount < checkProps.cards.length)
                     +programm-card({
                         classes: '',
                         faculty: checkProps.cards[cardsCount].faculty,
@@ -103,10 +126,11 @@ mixin programms-list(props = defaultProgrammsListProps)
 
                     - cardsCount++
 
-            //-+btn({
-                classes: 'i-questions__more',
-                name: 'Показать еще',
-                icon: 'arrow_down',
-                sMode: 'full',
-                cMode: 'bordered'
-            //-})
+            if(checkProps.hasMoreBtn === true)
+                +btn({
+                    classes: 'programms-list__more',
+                    name: 'Подробнее',
+                    icon: 'arrow_up_right',
+                    sMode: 'content',
+                    cMode: 'green'
+                })

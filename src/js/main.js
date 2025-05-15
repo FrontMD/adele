@@ -4,7 +4,7 @@
 
 //libs
 @@include("./libs/jquery-3.7.0.min.js")
-@@include("./libs/air-datepicker.js")
+// include("./libs/air-datepicker.js")
 @@include("./libs/fancybox.umd.min.js")
 @@include("./libs/swiper-bundle.min.js")
 @@include("./libs/inputmask.min.js")

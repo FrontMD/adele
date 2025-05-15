@@ -1,0 +1,24 @@
+-
+    const defaultSFilterProps = {
+        classes: '',
+        items: [
+            '1 — 4 ступень',
+            '5 — 7 ступень',
+            '8 — 9 ступень',
+            '10 — 11 ступень',
+            'Дошкольная подготовка "ПЕСОЧНИЦА"',
+            'Репетиторство, подготовка ОГЭ/ЕГЭ'
+        ]
+    }
+
+mixin s-filter(props = defaultSFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSFilterProps.classes,
+            items: props.items ? props.items : defaultSFilterProps.items
+        }
+
+    .s-filter(class=checkProps.classes)
+        ul.s-filter__list
+            each val, index in checkProps.items
+                li.s-filter__item(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val

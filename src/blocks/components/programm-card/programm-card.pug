@@ -6,7 +6,8 @@
         params: [
             {
                 name: 'Название параметра',
-                value: 'Значение параметра'
+                value: 'Значение параметра',
+                isFull: true
             }
         ],
         isRow: false,
@@ -24,20 +25,21 @@ mixin programm-card(props= defaultProgrammCardProps)
             vMode: props.vMode ? props.vMode : defaultProgrammCardProps.vMode
         }
 
-        isRowClass = checkProps.isRow === true ? ' programm-card--row' : ''
-        vModeClass = checkProps.vMode.length > 0 ? ' programm-card--' + checkProps.vMode : ''
+        isRowClass = checkProps.isRow === true ? ' programm-card--row' : '';
+        vModeClass = checkProps.vMode.length > 0 ? ' programm-card--' + checkProps.vMode : '';
 
     .programm-card(class= checkProps.classes + isRowClass + vModeClass data-js="programmCard")&attributes(attributes)
         .programm-card__header
-            .title.title--h5.programm-card__title
-                a(href="#")!= checkProps.name
             - if(checkProps.faculty.length > 0)
                 .programm-card__suptitle!= checkProps.faculty
+            .title.title--h5.programm-card__title
+                a(href="#")!= checkProps.name
 
         .programm-card__items
             - let paramsCount = 0
             - while(paramsCount < checkProps.params.length)
-                .programm-card__item
+                - let itemClass = checkProps.params[paramsCount].isFull === true ? 'programm-card__item--full' : ''
+                .programm-card__item(class= itemClass)
                     .programm-card__param!= checkProps.params[paramsCount].name
                     .title.title--h5.programm-card__val!= checkProps.params[paramsCount].value
 

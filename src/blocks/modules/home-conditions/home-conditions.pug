@@ -1,0 +1,63 @@
+-
+	const defaultHomeConditionsProps = {
+		classes: '',
+	}
+
+mixin home-conditions(props = defaultHomeConditionsProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultHomeConditionsProps.classes
+		}
+
+	section.home-conditions
+		.m-container
+			.title.title--h2.home-conditions__title Создаем все условия <br>для развития
+			.section-flex
+				.section-flex__side.home-conditions__side
+					.section-flex__bg
+						img(src="img/home/home_conditions.webp")
+					.home-conditions__top.text-editor.text-editor--light
+						h2 Внеучебная<br>деятельность
+						p Насыщенная внеучебная деятельность позволит каждому найти занятие по душе
+					.home-conditions__links
+						+btn({
+							name: 'Творческие кружки',
+							cMode: 'white',
+							icon: 'arrow_up_right',
+						})
+
+						+btn({
+							name: 'Спортивные секции',
+							cMode: 'white',
+							icon: 'arrow_up_right',
+						})
+
+						+btn({
+							name: 'Разговорный клуб по английскому языку',
+							cMode: 'white',
+							icon: 'arrow_up_right',
+						})
+
+				.section-flex__side.home-conditions__side
+					.section-flex__decor
+						img(src="img/home/home_conditions_decor.webp")
+					.home-conditions__top.text-editor
+						h2 Дополнительное<br>образование
+					.home-conditions__links
+						+btn({
+							name: 'Дошкольная подготовка "ПЕСОЧНИЦА"',
+							cMode: 'green',
+							icon: 'arrow_up_right',
+						})
+
+						+btn({
+							name: 'Репетиторство, подготовка ОГЭ/ЕГЭ',
+							cMode: 'green',
+							icon: 'arrow_up_right',
+						})
+
+						+btn({
+							name: 'IT-подготовка',
+							cMode: 'green',
+							icon: 'arrow_up_right',
+						})
