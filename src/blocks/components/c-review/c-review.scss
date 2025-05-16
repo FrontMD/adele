@@ -73,6 +73,7 @@
         border-radius: 32px;
         padding: 20px 24px 30px;
         border: 1px solid $c-border;
+        background-color: $c-white;
 
         @include max(mobile) {
             padding: 16px 16px 24px;

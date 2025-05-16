@@ -105,7 +105,7 @@ block content
                             },
                             {
                                 name: 'Стоимость в месяц',
-                                value: '8 000 ₽',
+                                value: '9 900 ₽',
                                 isFull: true
                             },
                         ],
@@ -126,7 +126,7 @@ block content
                             },
                             {
                                 name: 'Стоимость в месяц',
-                                value: '8 000 ₽',
+                                value: '12 000 ₽',
                                 isFull: true
                             },
                         ],
@@ -147,7 +147,7 @@ block content
                             },
                             {
                                 name: 'Стоимость в месяц',
-                                value: '8 000 ₽',
+                                value: '14 000 ₽',
                                 isFull: true
                             },
                         ],
@@ -157,9 +157,13 @@ block content
 
             +home-methods
             +home-conditions
+            +home-about({
+                classes:'green-bg-top'
+            })
 
             +auto-slider({
-                title: 'Отзывы родителей и&nbsp;учеников'
+                title: 'Отзывы родителей <br>и&nbsp;учеников',
+                classes: 'green-bg'
             })
                 +c-review({
                     classes: 'swiper-slide',
@@ -285,6 +289,18 @@ block content
                             value: 'Русский язык<br>Математика'
                         },
                     ]
+                })
+
+            +s-distribution({
+                classes: 'green-bg-bottom'
+            })
+
+            +s-img
+                +btn({
+                    name: 'Скачать pdf <span>3.2мб</span>',
+                    icon: 'download',
+                    iconleft: true,
+
                 })
 
             //-

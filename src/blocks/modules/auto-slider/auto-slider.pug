@@ -12,7 +12,7 @@ mixin auto-slider(props = defaultAutoSliderProps)
             title: props.title ? props.title : defaultAutoSliderProps.title,
         }
 
-    section.auto-slider(data-js="autoSlider")
+    section.auto-slider(class= checkProps.classes data-js="autoSlider")
         .m-container
             .auto-slider__header
                 .title.title--h2.auto-slider__title!= checkProps.title

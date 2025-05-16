@@ -570,6 +570,12 @@ iframe {
 		width: 100%;
 		height: 100%;
 
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
 	}
 
 	&__decor {
@@ -583,6 +589,14 @@ iframe {
 
 .green-bg {
 	background: $c-accent-light;
+}
+
+.green-bg-top {
+	background: linear-gradient(180deg, #FFFFFF 0%, #EDFAEC 10%, #EDFAEC 100%);
+}
+
+.green-bg-bottom {
+	background: linear-gradient(180deg, #EDFAEC 0%, #EDFAEC 92.96%, #FFFFFF 100%);
 }
 
 .gost-section {

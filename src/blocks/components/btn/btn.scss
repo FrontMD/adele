@@ -25,6 +25,10 @@
         height: 24px;
     }
 
+    span span {
+        opacity: 0.4;
+    }
+
     /*&--transparent {
         padding: 5px;
         transition: all $tr-time;
@@ -129,6 +133,10 @@
             background-color: $c-accent;
             color: $c-white !important;
         }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
     }
 
     /*&--darkGreen {

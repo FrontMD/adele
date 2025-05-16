@@ -1,12 +1,21 @@
+@import "header/header";
+@import "footer/footer";
 @import "i-intro/i-intro";
 @import "i-questions/i-questions";
 @import "info-slider/info-slider";
 @import "people-intro/people-intro";
 @import "news-list/news-list";
 @import "s-numbers/s-numbers";
+@import "home-process/home-process";
+@import "home-methods/home-methods";
+@import "home-conditions/home-conditions";
+@import "home-info/home-info";
+@import "programms-list/programms-list";
+@import "home-about/home-about";
+@import "auto-slider/auto-slider";
+@import "s-distribution/s-distribution";
+@import "s-img/s-img";
 
-@import "header/header";
-@import "footer/footer";
 @import "main-burger/main-burger";
 @import "sidebar-layout/sidebar-layout";
 @import "page-intro/page-intro";
@@ -19,13 +28,7 @@
 @import "m-questions/m-questions";
 @import "s-skills/s-skills";
 @import "s-vacancy/s-vacancy";
-@import "auto-slider/auto-slider";
 @import "s-partners/s-partners";
-@import "home-process/home-process";
-@import "home-methods/home-methods";
-@import "home-conditions/home-conditions";
-@import "home-info/home-info";
-@import "programms-list/programms-list";
 
 // Страницы
 @import "pages/home/home-intro/home-intro";
@@ -48,7 +51,6 @@
 @import "pages/vacancy/vacancy-detailed/vacancy-detailed";
 @import "pages/programms/programm-info/programm-info";
 @import "pages/preparatory-courses/preparatory/preparatory";
-@import "pages/abiturientam/abiturientam-promo/abiturientam-promo";
 @import "pages/abiturientam/abiturientam-important/abiturientam-important";
 @import "pages/abiturientam/abiturientam-news/abiturientam-news";
 @import "pages/abiturientam/abiturientam-steps/abiturientam-steps";

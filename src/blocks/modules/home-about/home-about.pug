@@ -1,0 +1,26 @@
+-
+	const defaultHomeAboutProps = {
+		classes: '',
+	}
+
+mixin home-about(props = defaultHomeAboutProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultHomeAboutProps.classes
+		}
+
+	section.home-about(class=checkProps.classes)&attributes(attributes)
+		.m-container
+			.home-about__container
+				.home-about__bg
+					img(src="img/home/home_about.webp" alt="")
+				.home-about__content
+					.home-about__left
+						.title.title--h2.title--light.home-about__title Рассказываем<br>о&nbsp;гимназии<br>в&nbsp;соц&nbsp;сетях
+						.home-about__text Амбассадор гимназии рассказывает о нашем подходе к обучению
+					+btn({
+						name: 'Смотреть видео',
+						link: 'public/video/review.mp4',
+						icon: 'play',
+						cMode: 'white'
+					})(data-fancybox)

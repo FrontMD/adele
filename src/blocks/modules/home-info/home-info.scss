@@ -39,24 +39,18 @@
         padding: 34px 10px 10px;
         height: 100%;
         border-radius: 32px;
+        gap: 50px;
         overflow: hidden;
 
         @include max(tablet) {
-            min-height: calc(100vh - 300px);
+            min-height: auto;
+            gap: 210px;
         }
     }
 
-    &__items {
-        display: flex;
-        align-items: stretch;
-        gap: 10px;
+    &__slider {
         position: relative;
         width: 100%;
-
-        @include max(mobile) {
-            flex-direction: column;
-            align-items: flex-start;
-        }
     }
 
     &__item {
@@ -64,7 +58,6 @@
         flex-direction: column;
         justify-content: space-between;
         background-color: $c-accent-light;
-        flex: calc(100% / 4);
         color: $c-accent;
         padding: 35px;
         aspect-ratio: 1 / 0.568;

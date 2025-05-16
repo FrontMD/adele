@@ -3,6 +3,7 @@
 @@include("../../blocks/modules/info-slider/info-slider.js")
 @@include("../../blocks/modules/people-intro/people-intro.js")
 @@include("../../blocks/modules/auto-slider/auto-slider.js")
+@@include("../../blocks/modules/home-info/home-info.js")
 
 @@include("../../blocks/modules/sidebar-layout/sidebar-layout.js")
 @@include("../../blocks/modules/m-table/m-table.js")
@@ -11,7 +12,6 @@
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
-@@include("../../blocks/modules/pages/abiturientam/abiturientam-promo/abiturientam-promo.js")
 @@include("../../blocks/modules/pages/peoples/people-detail/people-detail.js")
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     facultyAdvantagesSliders()
     sVacancySliders()
     sPartners()
-    abiturientamPromo()
+    homeInfo()
     infoSlider()
     peopleDetail()
     peopleIntro()
