@@ -1,8 +1,16 @@
 .programms-list {
     padding: 100px 0;
 
+    @include max(mobile) {
+        padding: 50px 0;
+    }
+
     &__filter {
         margin-top: 50px;
+
+        @include max(mobile) {
+            margin-top: 24px;
+        }
     }
 
     &__list {

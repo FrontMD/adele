@@ -1,11 +1,6 @@
 .home-info {
     position: relative;
 
-    @include max(mobile) {
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-
     &__bg {
         position: absolute;
         left: 0;
@@ -46,6 +41,13 @@
             min-height: auto;
             gap: 210px;
         }
+
+        @include max(mobile) {
+            min-height: auto;
+            gap: 80px;
+            border-radius: 24px;
+            padding: 24px 10px 10px;
+        }
     }
 
     &__slider {
@@ -63,15 +65,24 @@
         aspect-ratio: 1 / 0.568;
         border-radius: 26px;
 
-        @include max(tablet) {}
-
-        @include max(mobile) {}
+        @include max(mobile) {
+            padding: 20px;
+            border-radius: 24px;
+        }
     }
 
     &__title {
         max-width: 690px;
         margin-left: 30px;
         position: relative;
+
+        @include max(mobile) {
+            margin-left: 14px;
+        }
+
+        @include max(xs) {
+            margin-left: 6px;
+        }
     }
 
     &__subtitle {

@@ -1,9 +1,17 @@
 .home-conditions {
     padding-bottom: 50px;
 
+    @include max(mobile) {
+        padding-bottom: 25px;
+    }
+
     &__title {
         margin: 0 auto 50px;
         text-align: center;
+
+        @include max(mobile) {
+            margin-bottom: 32px;
+        }
     }
 
     &__side {
@@ -11,22 +19,42 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        @include max(mobile) {
+            gap: 32px;
+        }
     }
 
     &__top {
         max-width: 95%;
         padding: 26px 30px 0;
 
+        @include max(mobile) {
+            padding: 20px 20px 0;
+        }
+
         &.text-editor>p,
         &.text-editor>ul,
         &.text-editor>ol {
             max-width: 82.5%;
+
+            @include max(mobile) {
+                max-width: 100%;
+            }
         }
 
         &.text-editor p,
         &.text-editor li,
         &.text-editor a {
             font-size: 20px;
+
+            @include max(tablet) {
+                font-size: 16px;
+            }
+
+            @include max(mobile) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -37,5 +65,11 @@
         gap: 20px;
         padding: 0 30px 30px;
         margin-top: auto;
+
+        @include max(mobile) {
+            padding: 0 20px 20px;
+            gap: 10px;
+        }
+
     }
 }

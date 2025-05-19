@@ -1,0 +1,17 @@
+.lp-section {
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    @include max(mobile) {
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+    &--top {
+        padding-top: 0;
+
+        @include max(mobile) {
+            padding-top: 0;
+        }
+    }
+}

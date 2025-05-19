@@ -4,6 +4,7 @@
         breadcrumbs: false,
         img: '',
         title: '',
+        titleMode: '',
         desc: '',
         isFull: false
     }
@@ -15,6 +16,7 @@ mixin i-intro(props = defaultIIntroProps)
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultIIntroProps.breadcrumbs,
             img: props.img ? props.img : defaultIIntroProps.img,
             title: props.title ? props.title : defaultIIntroProps.title,
+            titleMode: props.titleMode ? props.titleMode : defaultIIntroProps.titleMode,
             desc: props.desc ? props.desc : defaultIIntroProps.desc,
             isFull: props.isFull ? props.isFull : defaultIIntroProps.isFull
         }
@@ -25,7 +27,9 @@ mixin i-intro(props = defaultIIntroProps)
         .m-container
             .i-intro__container
                 .i-intro__img
-                    img(src=checkProps.img alt="")
+                    - if(checkProps.img.length > 0)
+                        .i-intro__overlay
+                        img(src=checkProps.img alt="")
                 .i-intro__left
                     - if(checkProps.breadcrumbs !== false)
                         +breadcrumbs(checkProps.breadcrumbs)
@@ -33,7 +37,7 @@ mixin i-intro(props = defaultIIntroProps)
                         classes: 'i-intro__title',
                         tag: 'h1',
                         text: checkProps.title,
-                        cMode: 'light',
+                        cMode: checkProps.titleMode,
                     })
                     - if(checkProps.desc.length > 0)
                         .i-intro__desc!= checkProps.desc

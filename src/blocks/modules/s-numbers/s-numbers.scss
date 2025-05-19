@@ -2,8 +2,21 @@
     padding-top: 100px;
     padding-bottom: 50px;
 
+    @include max(mobile) {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
     &__title {
         margin: 30px 0 143px;
+
+        @include max(laptop) {
+            margin: 32px 0;
+        }
+
+        @include max(mobile) {
+            margin: 24px 0;
+        }
     }
 
     &__cards {
@@ -11,8 +24,14 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 50%));
         gap: 10px;
-        /*max-width: 700px;
-        margin-left: auto;*/
+
+        @include max(laptop) {
+            grid-template-columns: repeat(3, minmax(0, 33%));
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 }
 
@@ -22,6 +41,11 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 32px;
+
+    @include max(mobile) {
+        aspect-ratio: 1 / 0.5;
+        border-radius: 24px;
+    }
 
     &__bg {
         position: absolute;
@@ -55,5 +79,9 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 26px 30px;
+
+        @include max(mobile) {
+            padding: 20px;
+        }
     }
 }

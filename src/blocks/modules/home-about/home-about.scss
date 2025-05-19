@@ -1,12 +1,22 @@
 .home-about {
     padding: 50px 0 0;
 
+    @include max(mobile) {
+        padding: 25px 0 0;
+    }
+
     &__container {
         position: relative;
         min-height: calc(100vh - 150px);
         border-radius: 32px;
         overflow: hidden;
         padding: 36px 40px;
+
+        @include max(mobile) {
+            min-height: auto;
+            padding: 20px;
+            border-radius: 24px;
+        }
     }
 
     &__bg {
@@ -29,10 +39,19 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 32px;
+        }
     }
 
     &__btn {
         margin-top: 4px;
+
+        @include max(mobile) {
+            margin-top: 0;
+        }
     }
 
     &__text {
@@ -43,5 +62,10 @@
         color: $c-white;
         margin-top: 30px;
         max-width: 340px;
+
+        @include max(mobile) {
+            font-size: 16px;
+            margin-top: 24px;
+        }
     }
 }

@@ -13,7 +13,7 @@ function infoSlider() {
             slidesPerView: 1.2,
             spaceBetween: 10,
             breakpoints: {
-                769: {
+                768: {
                     slidesPerView: 'auto',
                     spaceBetween: 20,
                 }

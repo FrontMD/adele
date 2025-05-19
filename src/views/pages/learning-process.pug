@@ -1,0 +1,216 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Как проходит обучение"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +i-intro({
+                classes: 'lp-intro',
+                title: '<span>Как проходит</span><br>обучение?',
+                img: '',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Как проходит обучение',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+                .i-intro__contacts
+                    .title.title--h4.i-intro__subtitle Получить консультацию
+                    .i-intro__contact
+                        .i-intro__param По телефону
+                        a.title.title--h5.i-intro__value(href="tel:+79900595039") +7 (990) 059 50 39
+                .i-intro__corner
+                    .home-intro__content
+                        ul.home-intro__list
+                            li.home-intro__item Полный возврат оплаты за обучение в первые 15 дней
+                            li.home-intro__item Зачисление в любое время учебного года
+                    +btn({
+                        cMode: 'green',
+                        name: 'Оставить заявку',
+                        sMode: 'full',
+                        icon: 'arrow_up_right'
+                    })(data-modal='#requestModal')
+
+            +lp-links
+
+            +lp-section({
+                classes: 'lp-section--top'
+            })
+                +m-columns({
+                    title: '<img src="img/lp/lp_sec_1.webp">'
+                })
+
+            +lp-section
+                +m-columns({
+                    title: '<img src="img/lp/lp_sec_2.webp">'
+                })
+
+            +lp-section
+                +m-columns({
+                    title: '<img src="img/lp/lp_sec_3.webp">'
+                })
+
+            +s-img
+                +btn({
+                    name: 'Скачать pdf <span>3.2мб</span>',
+                    icon: 'download',
+                    iconleft: true,
+
+                })
+
+            +lp-section
+                +m-columns({
+                    title: '<img src="img/lp/lp_sec_4.webp">'
+                })
+
+            +lp-section
+                +m-columns({
+                    title: '<img src="img/lp/lp_sec_5.webp">'
+                })
+
+            +lp-section
+                +m-columns({
+                    title: '<img src="img/lp/lp_sec_6.webp">'
+                })
+
+            +auto-slider({
+                title: 'Отзывы родителей <br>и&nbsp;учеников',
+                classes: 'green-bg'
+            })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ],
+                    media: 'https://vkvideo.ru/video_ext.php?oid=55940171&id=456239498&hd=2&autoplay=1',
+                    iframe: true
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель'
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_1.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_2.webp',
+                    role: 'Ученик',
+                    title: 'Цалцаева Алсу Рамзановна',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_3.webp',
+                    role: 'Родитель',
+                })
+                +c-review({
+                    classes: 'swiper-slide',
+                    img: 'img/reviews/review_4.webp',
+                    role: 'Ученик',
+                    info: [
+                        {
+                            param: 'Учится',
+                            value: '11 ступень'
+                        },
+                        {
+                            param: 'Отзыв на предметы',
+                            value: 'Русский язык<br>Математика'
+                        },
+                    ]
+                })
+
+
+

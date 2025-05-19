@@ -5,9 +5,13 @@ function homeInfo() {
 
     homeInfoSliders.forEach(homeInfoSlider => {
         let homeInfoSliderEx = new Swiper(homeInfoSlider, {
-            slidesPerView: 1.5,
+            slidesPerView: 1.2,
             spaceBetween: 10,
             breakpoints: {
+                501: {
+                    slidesPerView: 1.9,
+                },
+                
                 768: {
                     slidesPerView: 2.5,
                 },

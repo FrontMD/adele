@@ -47,7 +47,12 @@
         gap: 20px;
         background-color: $c-accent-light;
 
-        @include max(tablet) {}
+        @include max(mobile) {
+            display: flex;
+            align-items: stretch;
+            border-radius: 24;
+            gap: 16px;
+        }
     }
 
     &__item {
@@ -73,6 +78,12 @@
         @include max(laptop) {
             min-height: 50px;
             font-size: 14px;
+        }
+
+        @include max(mobile) {
+            width: fit-content;
+            min-width: auto;
+            min-height: 30px;
         }
 
         &:hover,

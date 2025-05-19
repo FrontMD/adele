@@ -1,0 +1,14 @@
+-
+	const defaultLpSectionProps = {
+		classes: '',
+	}
+
+mixin lp-section(props = defaultLpSectionProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultLpSectionProps.classes,
+		}
+
+	section.lp-section(class=checkProps.classes)&attributes(attributes)
+		.m-container
+			block

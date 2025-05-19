@@ -1,0 +1,46 @@
+-
+    const defaultHomeNewsProps = {
+        classes: '',
+    }
+
+mixin home-news(props = defaultHomeNewsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeNewsProps.classes
+        }
+
+    section.home-news
+        .m-container
+            .title.title--h2.home-news__title Новости
+            .home-news__cards
+                .home-news__list
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_13.webp" alt="")
+                        .home-news-card__content
+                            a.title.title--h5.home-news-card__title(href="javascript:void(0)") Что делать, если ученик не успевает за школьной программой?
+                            .home-news-card__date 26 августа 2024
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_14.webp" alt="")
+                        .home-news-card__content
+                            a.title.title--h5.home-news-card__title(href="javascript:void(0)") Можно ли прогулять онлайн-школу? Подробно об этом и о других попытках схитрить на дистанционке
+                            .home-news-card__date 26 августа 2024
+                    .home-news__card.home-news-card
+                        .home-news-card__img
+                            img(src="img/news/news_15.webp" alt="")
+                        .home-news-card__content
+                            a.title.title--h5.home-news-card__title(href="javascript:void(0)") Что купить ребёнку в 1-ый класс
+                            .home-news-card__date 26 августа 2024
+                .home-news__card.home-news-card.home-news-card--big
+                    .home-news-card__img
+                        img(src="img/news/news_17.webp" alt="")
+                    .home-news-card__content
+                        a.title.title--h5.home-news-card__title(href="javascript:void(0)") Ребёнок на семейном обучении: чего ожидать
+                        +btn({
+                            classes: 'home-news-card__btn',
+                            icon: 'arrow_up_right',
+                            sMode: 'icon',
+                            cMode: 'bordered'
+                        })
+                        .home-news-card__date 26 августа 2024

@@ -551,12 +551,22 @@ iframe {
 	align-items: stretch;
 	gap: 10px;
 
+	@include max(tablet) {
+		flex-direction: column;
+	}
+
 	&__side {
 		position: relative;
 		flex: 0 1 50%;
 		min-height: 600px;
 		border-radius: 32px;
 		overflow: hidden;
+
+		@include max(tablet) {
+			flex: 0 0 auto;
+			min-height: auto;
+			border-radius: 24px;
+		}
 
 		&>* {
 			position: relative;
