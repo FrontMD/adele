@@ -1,0 +1,202 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Программы обучения"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +i-intro({
+                title: '<span>Программы</span><br>обучения',
+                isSmall: true,
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Программы обучения',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+
+            })
+
+            +programms-list({
+                vMode: 'cards',
+                title: '',
+                hasMoreBtn: false,
+                hasFilters: true,
+                cards: [
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Первая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Вторая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '9 900 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Третья ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '12 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Четвертая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '14 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Первая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Вторая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '9 900 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Третья ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '12 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Основная программа',
+                        name: 'Четвертая ступень',
+                        params: [
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '14 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    }
+                ]
+            })

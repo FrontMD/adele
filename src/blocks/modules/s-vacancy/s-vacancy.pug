@@ -48,6 +48,6 @@ mixin s-vacancy(props = defaultSVacancyProps)
                             .s-vacancy-card__bottom
                                 - if(currentItem.resp.length > 0)
                                     .s-vacancy-card__subtitle Навыки после обучения
-                                    .s-vacancy-card__resp!= currentItem.resp
+                                    .s-vacancy-card__resp.text-editor!= currentItem.resp
 
                         - itemsCount++

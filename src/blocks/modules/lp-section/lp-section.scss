@@ -7,11 +7,95 @@
         padding-top: 25px;
     }
 
-    &--top {
-        padding-top: 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
 
         @include max(mobile) {
-            padding-top: 0;
+            gap: 50px;
+        }
+    }
+
+    &__desc {
+        max-width: 840px;
+
+        @include min(full) {
+            max-width: 94%;
+        }
+
+        &.text-editor p,
+        &.text-editor li,
+        &.text-editor a {
+            font-size: 18px;
+
+            @include max(tablet) {
+                font-size: 16px;
+            }
+
+            @include max(mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__media {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 0.599;
+        border-radius: 24px;
+        overflow: hidden;
+        background-color: $c-accent-light;
+
+        @include max(laptop) {
+            aspect-ratio: 1 / 0.5;
+        }
+
+        @include max(xs) {
+            aspect-ratio: 1 / 0.599;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__play {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        @include max(xs) {
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    .m-columns+.m-columns {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $c-border;
+
+            @include max(mobile) {
+                top: -25px;
+            }
+        }
+    }
+
+    .m-columns__header {
+        gap: 30px;
+
+        @include max(mobile) {
+            gap: 16px;
         }
     }
 }

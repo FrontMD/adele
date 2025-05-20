@@ -48,6 +48,20 @@
         }
     }
 
+    &--small &__container {
+        min-height: 280px;
+
+        @include max(tablet) {
+            min-height: 200px;
+        }
+    }
+
+    &--small &__left {
+        @include max(mobile) {
+            padding: 20px 0 20px 20px;
+        }
+    }
+
     &__left {
         flex: 1 1 auto;
         position: relative;
@@ -101,10 +115,21 @@
         margin-right: 10px;
         border-radius: 24px;
         padding: 20px 24px 10px;
+
+        @include max(mobile) {
+            min-height: 115px;
+            margin-left: 10px;
+            padding: 15px;
+        }
+
     }
 
     &__subtitle {
         margin-bottom: 50px;
+
+        @include max(mobile) {
+            margin-bottom: 32px;
+        }
     }
 
     &__contact {
@@ -169,7 +194,7 @@
         padding-top: 150px;
         flex-direction: column;
         gap: 15px;
-        min-height: calc(100dvh - 20px);
+        min-height: calc(100dvh - 130px);
 
         @include max(tablet) {
             min-height: auto;
@@ -276,5 +301,13 @@
 .lp-intro {
     .i-intro__right {
         max-width: 460px;
+
+        @include max(tablet) {
+            max-width: 380px;
+        }
+
+        @include max(mobile) {
+            max-width: 100%;
+        }
     }
 }

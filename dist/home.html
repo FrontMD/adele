@@ -714,7 +714,7 @@
                                   </div>
                                 </div>
                           </div>
-                        </div><a class="btn  btn--green btn--full" href="#"><span>Получить консультацию</span></a>
+                        </div><a class="btn  btn--green btn--full" href="#" data-modal="#requestModal"><span>Получить консультацию</span></a>
                       </div>
                     </div>
                   </div>
@@ -818,33 +818,84 @@
                       </div>
                 </div>
               </section>
-              <section class="home-process">
+              <section class="home-process" data-js="homeProcess">
                 <div class="m-container">
                       <div class="section-tag home-process__tag">О наших программах
                       </div>
                   <div class="home-process__title title title--h2"><span>Как проходит</span><br>обучение</div>
                   <div class="home-process__cols">
                     <div class="home-process__content">
-                      <div class="home-process__text text-editor"> 
-                        <p>Занятия в онлайн-гимназии «Адель» расширяют образовательные горизонты, не дублируя обязательные предметы, утвержденные в рамках Федеральных государственных образовательных стандартов (ФГОС).</p>
-                        <p>Мы предлагаем углубленное изучение тем и направлений, которые помогают детям раскрыть свои способности и добиться высоких академических результатов.</p>
-                        <p>Наша деятельность не заменяет официальные программы государственных школ. Мы стремимся дополнить их, помогая ученикам глубже понять изучаемые дисциплины и развить новые навыки.</p>
+                      <div class="home-process__slider" data-js="homeProcessSliderText">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="home-process__text text-editor"> 
+                              <p>Занятия в онлайн-гимназии «Адель» расширяют образовательные горизонты, не дублируя обязательные предметы, утвержденные в рамках Федеральных государственных образовательных стандартов (ФГОС).</p>
+                              <p>Мы предлагаем углубленное изучение тем и направлений, которые помогают детям раскрыть свои способности и добиться высоких академических результатов.</p>
+                              <p>Наша деятельность не заменяет официальные программы государственных школ. Мы стремимся дополнить их, помогая ученикам глубже понять изучаемые дисциплины и развить новые навыки.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="home-process__text text-editor"> 
+                              <p>Занятия в онлайн-гимназии «Адель» расширяют образовательные горизонты, не дублируя обязательные предметы, утвержденные в рамках Федеральных государственных образовательных стандартов (ФГОС).</p>
+                              <p>Мы предлагаем углубленное изучение тем и направлений, которые помогают детям раскрыть свои способности и добиться высоких академических результатов.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="home-process__text text-editor"> 
+                              <p>Занятия в онлайн-гимназии «Адель» расширяют образовательные горизонты, не дублируя обязательные предметы, утвержденные в рамках Федеральных государственных образовательных стандартов (ФГОС).</p>
+                              <p>Наша деятельность не заменяет официальные программы государственных школ. Мы стремимся дополнить их, помогая ученикам глубже понять изучаемые дисциплины и развить новые навыки.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="home-process__text text-editor"> 
+                              <p>Занятия в онлайн-гимназии «Адель» расширяют образовательные горизонты, не дублируя обязательные предметы, утвержденные в рамках Федеральных государственных образовательных стандартов (ФГОС).</p>
+                              <p>Мы предлагаем углубленное изучение тем и направлений, которые помогают детям раскрыть свои способности и добиться высоких академических результатов.</p>
+                              <p>Наша деятельность не заменяет официальные программы государственных школ. Мы стремимся дополнить их, помогая ученикам глубже понять изучаемые дисциплины и развить новые навыки.</p>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="home-process__text text-editor"> 
+                              <p>Мы предлагаем углубленное изучение тем и направлений, которые помогают детям раскрыть свои способности и добиться высоких академических результатов.</p>
+                              <p>Наша деятельность не заменяет официальные программы государственных школ. Мы стремимся дополнить их, помогая ученикам глубже понять изучаемые дисциплины и развить новые навыки.</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="home-process__links"><a class="home-process__link" href="javascript:void(0)"><span>1-4 классы</span>
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
-                          </svg></a><a class="home-process__link" href="javascript:void(0)"><span>5-7 классы</span>
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
-                          </svg></a><a class="home-process__link" href="javascript:void(0)"><span>8-9 классы</span>
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
-                          </svg></a><a class="home-process__link" href="javascript:void(0)"><span>10-11 классы</span>
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
-                          </svg></a></div>
+                      <div class="home-process__tabs" data-js="homeProcessTabs">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide home-process__tab home-process__tab--first"></div>
+                          <div class="swiper-slide home-process__tab"><span>1-4 классы</span>
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-slide home-process__tab"><span>5-7 классы</span>
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-slide home-process__tab"><span>8-9 классы</span>
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-slide home-process__tab"><span>10-11 классы</span>
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_right"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="home-process__img"><img src="img/home/home_process.webp" alt=""></div>
+                    <div class="home-process__images" data-js="homeProcessSliderImg">
+                      <div class="swiper-wrapper">
+                        <div class="home-process__img swiper-slide"><img src="img/home/home_process.webp" alt=""></div>
+                        <div class="home-process__img swiper-slide"><img src="img/home/home_conditions.webp" alt=""></div>
+                        <div class="home-process__img swiper-slide"><img src="img/home/home_process.webp" alt=""></div>
+                        <div class="home-process__img swiper-slide"><img src="img/home/home_info.webp" alt=""></div>
+                        <div class="home-process__img swiper-slide"><img src="img/home/home_process.webp" alt=""></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -878,9 +929,6 @@
               </section>
               <section class="programms-list  programms-list--cards" data-js="programmsList">
                 <div class="m-container">
-                  <div class="programms-list__header"> 
-                    <div class="title title--h2 programms-list__title"><span>Программы</span><br>обучения</div>
-                  </div>
                   <div class="programms-list__filter">
                         <div class="s-filter">
                           <ul class="s-filter__list">
@@ -1057,7 +1105,7 @@
                       <div class="home-about__left">
                         <div class="title title--h2 title--light home-about__title">Рассказываем<br>о&nbsp;гимназии<br>в&nbsp;соц&nbsp;сетях</div>
                         <div class="home-about__text">Амбассадор гимназии рассказывает о нашем подходе к обучению</div>
-                      </div><a class="btn  btn--white" href="public/video/review.mp4" data-fancybox><span>Смотреть видео</span>
+                      </div><a class="btn  btn--white" href="https://vkvideo.ru/video_ext.php?oid=-230301010&amp;id=456239162&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe"><span>Смотреть видео</span>
                             <svg> 
                               <use xlink:href="img/sprites/sprite.svg#play"></use>
                             </svg></a>
@@ -1465,7 +1513,7 @@
                     <div class="s-img__content">
                       <div class="s-img__title title title--h2">Бесплатно скачайте чек-лист для&nbsp;перехода на&nbsp;семейное образование</div>
                       <div class="s-img__text">В чек-листе более подробно представлен процесс перехода и сдача промежуточной аттестации</div>
-                      <div class="s-img__bottom"><a class="btn  btn--green" href="#"><span>Скачать pdf <span>3.2мб</span></span>
+                      <div class="s-img__bottom"><a class="btn btn--reverse btn--green" href="#"><span>Скачать pdf <span>3.2мб</span></span>
                               <svg> 
                                 <use xlink:href="img/sprites/sprite.svg#download"></use>
                               </svg></a>
@@ -1602,7 +1650,7 @@
                     <div class="modal__inner" data-js="modalInner">
                           <form class="form" action="#" data-validate novalidate>
                             <div class="form__content" data-js="form-content">
-                              <div class="form__title">Форма заявки</div>
+                              <div class="form__title">Оставить заявку</div>
                               <div class="form__fields">
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="ФИО контактного лица*" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>

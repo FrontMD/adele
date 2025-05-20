@@ -4,6 +4,7 @@
 @@include("../../blocks/modules/people-intro/people-intro.js")
 @@include("../../blocks/modules/auto-slider/auto-slider.js")
 @@include("../../blocks/modules/home-info/home-info.js")
+@@include("../../blocks/modules/home-process/home-process.js")
 
 @@include("../../blocks/modules/sidebar-layout/sidebar-layout.js")
 @@include("../../blocks/modules/m-table/m-table.js")
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sVacancySliders()
     sPartners()
     homeInfo()
+    homeProcess()
     infoSlider()
     peopleDetail()
     peopleIntro()

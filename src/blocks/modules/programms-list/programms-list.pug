@@ -103,8 +103,9 @@ mixin programms-list(props = defaultProgrammsListProps)
 
     section.programms-list(class= checkProps.classes + vModeClass data-js="programmsList")
         .m-container
-            .programms-list__header 
-                .title.title--h2.programms-list__title!= checkProps.title
+            if(checkProps.title.lenght > 0)
+                .programms-list__header
+                    .title.title--h2.programms-list__title!= checkProps.title
                 //-+visual-toggle({
                     active: checkProps.vMode
                 //-})(data-js="programmsListToggle")

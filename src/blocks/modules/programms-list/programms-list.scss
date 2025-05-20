@@ -5,7 +5,7 @@
         padding: 50px 0;
     }
 
-    &__filter {
+    &__header+&__filter {
         margin-top: 50px;
 
         @include max(mobile) {
@@ -15,7 +15,11 @@
 
     &__list {
         gap: 10px;
-        margin-top: 50px;
+        margin-top: 40px;
+
+        @include max(mobile) {
+            margin-top: 24px;
+        }
     }
 
     &--rows &__list {
@@ -36,6 +40,7 @@
     &--cards &__list {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 40px 10px;
 
         @include max(laptop) {
             grid-template-columns: repeat(2, minmax(0, 1fr));

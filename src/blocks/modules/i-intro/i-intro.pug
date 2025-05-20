@@ -6,7 +6,8 @@
         title: '',
         titleMode: '',
         desc: '',
-        isFull: false
+        isFull: false,
+        isSmall: false
     }
 
 mixin i-intro(props = defaultIIntroProps)
@@ -18,12 +19,14 @@ mixin i-intro(props = defaultIIntroProps)
             title: props.title ? props.title : defaultIIntroProps.title,
             titleMode: props.titleMode ? props.titleMode : defaultIIntroProps.titleMode,
             desc: props.desc ? props.desc : defaultIIntroProps.desc,
-            isFull: props.isFull ? props.isFull : defaultIIntroProps.isFull
+            isFull: props.isFull ? props.isFull : defaultIIntroProps.isFull,
+            isSmall: props.isSmall ? props.isSmall : defaultIIntroProps.isSmall,
         }
 
         let fullClass = checkProps.isFull === true ? ' i-intro--full' : ''
+        let smallClass = checkProps.isSmall === true ? ' i-intro--small' : ''
 
-    section.i-intro(class= checkProps.classes + fullClass)&attributes(attributes)
+    section.i-intro(class= checkProps.classes + fullClass + smallClass)&attributes(attributes)
         .m-container
             .i-intro__container
                 .i-intro__img
@@ -41,6 +44,6 @@ mixin i-intro(props = defaultIIntroProps)
                     })
                     - if(checkProps.desc.length > 0)
                         .i-intro__desc!= checkProps.desc
-
-                .i-intro__right
-                    block
+                if(checkProps.isSmall === false)
+                    .i-intro__right
+                        block

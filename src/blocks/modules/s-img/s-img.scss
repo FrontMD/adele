@@ -37,6 +37,10 @@
         min-height: calc(100vh - 150px);
         padding: 34px 40px;
 
+        @include min(full) {
+            min-height: 900px;
+        }
+
         @include max(mobile) {
             min-height: auto;
             padding: 20px;

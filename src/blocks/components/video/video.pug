@@ -18,7 +18,12 @@ mixin video(props = defaultVideoProps)
             .video__img(data-js='videoPoster')
                 img(src=checkProps.poster alt="")
             .video__frame(data-js='videoFrame' data-video=checkProps.video)
-        button.video__btn(type="button" data-js="videoBtnPlay")
-            svg
-                use(xlink:href=`img/sprites/sprite.svg#play`)
+        +btn({
+            classes: 'video__btn',
+            sMode: 'icon',
+            cMode: 'white',
+            type: 'button',
+            icon: 'play'
+
+        })(data-js="videoBtnPlay")
 

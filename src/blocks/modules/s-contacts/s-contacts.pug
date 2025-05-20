@@ -1,0 +1,17 @@
+-
+    const defaultSContactsProps = {
+        classes: ''
+    }
+
+mixin s-contacts(props= defaultSContactsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSContactsProps.classes
+        }
+
+    section.s-contacts(class= checkProps.classes)&attributes(attributes)
+        .m-container
+            .s-contacts__container
+                .title.title--h2 Контакты
+
+

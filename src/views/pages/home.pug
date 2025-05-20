@@ -30,7 +30,7 @@ block content
                         cMode: 'green',
                         name: 'Получить консультацию',
                         sMode: 'full'
-                    })
+                    })(data-modal='#requestModal')
 
             +s-numbers({
                 title: `<div class="section-tag">Факты и цифры</div>
@@ -298,6 +298,7 @@ block content
 
             +s-img
                 +btn({
+                    classes: 'btn--reverse',
                     name: 'Скачать pdf <span>3.2мб</span>',
                     icon: 'download',
                     iconleft: true,

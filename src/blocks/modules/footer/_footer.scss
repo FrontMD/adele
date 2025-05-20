@@ -51,6 +51,10 @@
         padding: 10px;
         z-index: 2;
 
+        @include min(full) {
+            min-height: calc(900px);
+        }
+
         @include max(laptop) {
             min-height: calc(100dvh - 80px);
             gap: 32px;

@@ -1,0 +1,20 @@
+-
+    const defaultTColumnsProps = {
+        classes: '',
+        title: '',
+    }
+
+mixin t-columns(props= defaultTColumnsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTColumnsProps.classes,
+            title: props.title ? props.title : defaultTColumnsProps.title,
+        }
+
+    section.t-columns(class= checkProps.classes)&attributes(attributes)
+        .m-container
+            .t-columns__title.title.title--h2!= checkProps.title
+            .t-columns__content
+                block
+
+

@@ -1,0 +1,22 @@
+.s-contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 50px;
+        border-radius: 40px;
+
+        @include max(tablet) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        @include max(mobile) {
+            margin-top: 32px;
+        }
+    }
+
+}

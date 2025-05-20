@@ -37,6 +37,10 @@
         gap: 50px;
         overflow: hidden;
 
+        @include min(full) {
+            min-height: 900px;
+        }
+
         @include max(tablet) {
             min-height: auto;
             gap: 210px;

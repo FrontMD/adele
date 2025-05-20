@@ -14,6 +14,11 @@
     cursor: pointer;
     text-align: center;
 
+    @include min(full) {
+        font-size: 20px;
+        padding: 24px 28px;
+    }
+
     @include max(xs) {
         font-size: 14px;
         width: 100%;
@@ -26,17 +31,9 @@
     }
 
     span span {
+        margin-left: 8px;
         opacity: 0.4;
     }
-
-    /*&--transparent {
-        padding: 5px;
-        transition: all $tr-time;
-
-        &:hover {
-            color: $c-accent-light;
-        }
-    }*/
 
     &--green {
         color: $c-white;
@@ -56,6 +53,18 @@
         &:hover {
             background-color: $c-accent-dark;
             color: $c-white;
+        }
+    }
+
+    &--lightGreen {
+        color: $c-accent;
+        background-color: $c-accent-big-btn;
+        transition: all $tr;
+        border-radius: 32px;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white !important;
         }
     }
 
@@ -80,6 +89,11 @@
         font-size: 18px;
         padding: 48px 38px;
 
+        @include min(full) {
+            font-size: 22px;
+            padding: 48px 38px;
+        }
+
         @include max(laptop) {
             padding: 36px 28px;
         }
@@ -88,6 +102,11 @@
     &--small {
         font-size: 14px;
         padding: 11px 12px;
+
+        @include min(full) {
+            font-size: 14px;
+            padding: 11px 12px;
+        }
 
         @include max(mobile) {
             font-size: 12px;
@@ -106,6 +125,10 @@
         width: 60px;
         height: 60px;
 
+        @include min(full) {
+            padding: 10px;
+        }
+
         @include max(laptop) {
             width: 45px;
             height: 45px;
@@ -123,30 +146,8 @@
         }
     }
 
-    &--lightGreen {
-        color: $c-accent;
-        background-color: $c-accent-big-btn;
-        transition: all $tr;
-        border-radius: 32px;
-
-        &:hover {
-            background-color: $c-accent;
-            color: $c-white !important;
-        }
-    }
-
     &--reverse {
         flex-direction: row-reverse;
     }
 
-    /*&--darkGreen {
-        color: $c-white;
-        background-color: $c-accent;
-        transition: all $tr-time;
-
-        &:hover {
-            background-color: $c-accent-dark;
-            color: $c-white !important;
-        }
-    }*/
 }

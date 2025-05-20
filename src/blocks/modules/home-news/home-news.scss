@@ -82,6 +82,10 @@
             border-radius: 24px;
             overflow: hidden;
 
+            @include min(full) {
+                width: 20%;
+            }
+
             @include max(mobile) {
                 width: 100%;
                 height: auto;
