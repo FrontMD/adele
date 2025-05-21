@@ -12,6 +12,66 @@ mixin s-contacts(props= defaultSContactsProps)
     section.s-contacts(class= checkProps.classes)&attributes(attributes)
         .m-container
             .s-contacts__container
-                .title.title--h2 Контакты
+                .s-contacts__block
+                    .title.title--h2 Контакты
+                    .s-contacts__list
+                        .title.title--h5.s-contacts__subtitle Контактные данные, реквизиты, карточка организации
+                        .s-contacts__item
+                            .s-contacts__contact
+                                .s-contacts__param Телефон
+                                a.s-contacts__value(href="tel:+74959328836" target="_blank") +7 (495) 932 88 36
+                        .s-contacts__item
+                            .s-contacts__contact
+                                .s-contacts__param Факс
+                                .s-contacts__value(href="tel:+74959328836" target="_blank") +7 (495) 932 88 36
+                        .s-contacts__item
+                            .s-contacts__contact
+                                .s-contacts__param
+                                .s-contacts__value(href="mailto:info@adele.ru" target="_blank") info@adele.ru
+                        .s-contacts__item
+                            .s-contacts__contact
+                                .s-contacts__param Telegram
+                                .s-contacts__value(href="https://t.me/adel" target="_blank") https://t.me/adel
+                        .s-contacts__item
+                            .s-contacts__contact
+                                .s-contacts__param Полное наименование
+                                .s-contacts__value Общество с ограниченной ответственностью «Онлайн-Гимназия Адель»
+                        .s-contacts__item
+                            .s-contacts__contact
+                                .s-contacts__param Для корреспонденции
+                                .s-contacts__value 140411, Московская Область, г.о. Коломна, г Коломна, ул Козлова, д. 105, помещ. 11
+                            .s-contacts__contact
+                                .s-contacts__param Юридический адрес
+                                .s-contacts__value 140411, Московская Область, г.о. Коломна, г Коломна, ул Козлова, д. 105, помещ. 11
+                        .s-contacts__item.s-contacts__item--big
+                            .s-contacts__text Реквизиты
+                            .s-contacts__contact.s-contacts__contact--row
+                                .s-contacts__row
+                                    .s-contacts__param Юридический адрес
+                                    .s-contacts__value
+                                .s-contacts__row
+                                    .s-contacts__param ИНН
+                                    .s-contacts__value 999999999999
+                                .s-contacts__row    
+                                    .s-contacts__param ОГРН
+                                    .s-contacts__value 999999999999
+                                .s-contacts__row    
+                                    .s-contacts__param КПП
+                                    .s-contacts__value 999999999999
+                                .s-contacts__row    
+                                    .s-contacts__param ОКПО
+                                    .s-contacts__value 999999999999
+                                .s-contacts__row    
+                                    .s-contacts__param Наименование банка
+                                    .s-contacts__value Центральный банк
+                                .s-contacts__row    
+                                    .s-contacts__param Расчетный счет
+                                    .s-contacts__value 999999999999
+                                .s-contacts__row    
+                                    .s-contacts__param Корр счет
+                                    .s-contacts__value 999999999999
+                                .s-contacts__row    
+                                    .s-contacts__param БИК
+                                    .s-contacts__value 999999999999
 
 
