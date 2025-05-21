@@ -1,4 +1,5 @@
 .programm-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     color: $c-accent;
@@ -9,6 +10,14 @@
 
     @include max(mobile) {
         min-height: 400px;
+    }
+
+    &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 
     &__header {

@@ -1,0 +1,47 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Дополнительное образование"
+    - const greenBg = true
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +i-intro({
+                classes: 'lp-intro',
+                title: '<span>Дополнительное</span><br>образование',
+                text: 'Повышение квалификации и профессиональная переподготовка',
+                img: '',
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Дополнительное образование',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+            })
+                .i-intro__contacts
+                    .title.title--h4.i-intro__subtitle Информацию о ближайшем наборе, можно получить
+                    .i-intro__contact
+                        .i-intro__param По телефону
+                        a.title.title--h5.i-intro__value(href="tel:+79900595039") +7 (990) 059 50 39
+                    .i-intro__contact
+                        .i-intro__param По email
+                        a.title.title--h5.i-intro__value(href="mailto:crpk@adele.ru") crpk@adele.ru
+                .i-intro__corner
+                    .home-intro__content
+                        ul.home-intro__list
+                            li.home-intro__item В короткие сроки освойте базовые, профессиональные и личностные компетенции
+                            li.home-intro__item Получите удостоверение о повышении квалификации
+                            li.home-intro__item Диплом о профессиональной переподготовке, свидетельство о профессии рабочего, должности служащего или сертификат об обучении
+                    +btn({
+                        cMode: 'green',
+                        name: 'Оставить заявку',
+                        sMode: 'full',
+                        icon: 'arrow_up_right'
+                    })(data-modal='#requestModal')

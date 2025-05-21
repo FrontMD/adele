@@ -29,11 +29,11 @@ mixin programm-card(props= defaultProgrammCardProps)
         vModeClass = checkProps.vMode.length > 0 ? ' programm-card--' + checkProps.vMode : '';
 
     .programm-card(class= checkProps.classes + isRowClass + vModeClass data-js="programmCard")&attributes(attributes)
+        a.programm-card__link(href="javascript:void(0);")
         .programm-card__header
             - if(checkProps.faculty.length > 0)
                 .programm-card__suptitle!= checkProps.faculty
-            .title.title--h5.programm-card__title
-                a(href="#")!= checkProps.name
+            .title.title--h5.programm-card__title!= checkProps.name
 
         .programm-card__items
             - let paramsCount = 0

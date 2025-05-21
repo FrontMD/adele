@@ -1,22 +1,145 @@
 .s-contacts {
-    padding-top: 50px;
     padding-bottom: 50px;
 
-    &__content {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 50px;
-        border-radius: 40px;
+    &__breadcrumbs {
+        @include max(mobile) {
+            margin-left: 15px;
+        }
+    }
+
+    &__container {
+        background-color: $c-accent-light;
+        border-radius: 32px;
+        padding: 25px 30px 30px;
 
         @include max(tablet) {
-            flex-direction: column;
-            align-items: stretch;
+            border-radius: 24px;
+            padding: 20px;
         }
 
         @include max(mobile) {
+            padding: 20px 10px;
+            width: calc(100% + 20px);
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+
+    &__block {
+        background-color: $c-white;
+        margin-top: 80px;
+        border-radius: 24px;
+
+        @include max(tablet) {
             margin-top: 32px;
         }
     }
 
+    &__title {
+        padding: 30px 40px;
+
+        @include max(tablet) {
+            padding: 20px 25px;
+        }
+
+        @include max(mobile) {
+            padding: 15px 10px;
+        }
+    }
+
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 1px solid $c-border;
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+
+            .s-contacts__contact+.s-contacts__contact {
+                border-top: 1px solid $c-border;
+            }
+        }
+
+        &--big {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            gap: 30px;
+
+            @include max(tablet) {
+                padding: 20px 25px;
+            }
+
+            @include max(tablet) {
+                padding: 15px 10px;
+            }
+        }
+    }
+
+    &__subtitle {
+        border-top: 1px solid $c-border;
+    }
+
+    &__contact,
+    &__subtitle {
+        width: 100%;
+        padding: 20px 40px;
+
+        @include max(tablet) {
+            padding: 20px 25px;
+        }
+
+        @include max(mobile) {
+            padding: 15px 10px;
+        }
+    }
+
+    &__contact,
+    &__text {
+        color: $c-accent;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @include max(mobile) {
+            gap: 10px;
+        }
+
+        &--row {
+            padding: 0;
+
+            @include max(tablet) {
+                padding: 0;
+            }
+
+            @include max(mobile) {
+                padding: 0;
+                gap: 20px;
+            }
+        }
+    }
+
+    &__row {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 50% calc(50% - 40px);
+
+        @include max(mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__param {
+        opacity: 0.4;
+    }
 }

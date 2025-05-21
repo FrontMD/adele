@@ -12,8 +12,21 @@ mixin s-contacts(props= defaultSContactsProps)
     section.s-contacts(class= checkProps.classes)&attributes(attributes)
         .m-container
             .s-contacts__container
+                +breadcrumbs({
+                    classes: 's-contacts__breadcrumbs',
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Контакты',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                })
                 .s-contacts__block
-                    .title.title--h2 Контакты
+                    .title.title--h2.s-contacts__title Контакты
                     .s-contacts__list
                         .title.title--h5.s-contacts__subtitle Контактные данные, реквизиты, карточка организации
                         .s-contacts__item
@@ -47,9 +60,6 @@ mixin s-contacts(props= defaultSContactsProps)
                             .s-contacts__text Реквизиты
                             .s-contacts__contact.s-contacts__contact--row
                                 .s-contacts__row
-                                    .s-contacts__param Юридический адрес
-                                    .s-contacts__value
-                                .s-contacts__row
                                     .s-contacts__param ИНН
                                     .s-contacts__value 999999999999
                                 .s-contacts__row    
@@ -74,4 +84,6 @@ mixin s-contacts(props= defaultSContactsProps)
                                     .s-contacts__param БИК
                                     .s-contacts__value 999999999999
 
-
+                +link-block({
+                    text: 'Учетная карточка организации'
+                })
