@@ -2,9 +2,11 @@
     const defaultProgrammsListProps = {
         classes: '',
         vMode: 'rows',
-        title: 'Другие программы',
+        title: '',
         hasMoreBtn: false,
+        hasPagination: false,
         hasFilters: false,
+        manyFilters: false,
         cards: [
             {
                 faculty: 'Основная программа',
@@ -96,23 +98,46 @@ mixin programms-list(props = defaultProgrammsListProps)
             cards: props.cards ? props.cards : defaultProgrammsListProps.cards,
             title: props.title ? props.title : defaultProgrammsListProps.title,
             hasMoreBtn: props.hasMoreBtn ? props.hasMoreBtn : defaultProgrammsListProps.hasMoreBtn,
+            hasPagination: props.hasPagination ? props.hasPagination : defaultProgrammsListProps.hasPagination,
             hasFilters: props.hasFilters ? props.hasFilters : defaultProgrammsListProps.hasFilters,
+            manyFilters: props.manyFilters ? props.manyFilters : defaultProgrammsListProps.manyFilters,
         }
 
         let vModeClass = ' programms-list--' + checkProps.vMode
 
     section.programms-list(class= checkProps.classes + vModeClass data-js="programmsList")
         .m-container
-            if(checkProps.title.lenght > 0)
+            - if(checkProps.title.length > 0)
                 .programms-list__header
                     .title.title--h2.programms-list__title!= checkProps.title
                 //-+visual-toggle({
                     active: checkProps.vMode
                 //-})(data-js="programmsListToggle")
 
-            if(checkProps.hasFilters === true)
+            - if(checkProps.hasFilters === true)
                 .programms-list__filter
-                    +s-filter
+                    - if(checkProps.manyFilters === true)
+                        .programms-list__grid
+                            +s-filter({
+                                title: 'Возрастная категория',
+                                items: [
+                                    'Все',
+                                    '6 — 8 лет',
+                                    '9 — 12 лет',
+                                    '13 — 15 лет',
+                                ]
+                            })
+                            +s-filter({
+                                title: 'Срок обучения',
+                                items: [
+                                    'Все',
+                                    '96 ак. часов',
+                                    '48 ак. часов',
+                                    '28 ак. часов',
+                                ]
+                            })
+                    - else
+                        +s-filter
 
             .programms-list__list
                 - let cardsCount = 0
@@ -135,3 +160,6 @@ mixin programms-list(props = defaultProgrammsListProps)
                     sMode: 'content',
                     cMode: 'green'
                 })
+
+            if(checkProps.hasPagination === true)
+                +pagination({classes: 'programms-list__pagination'})

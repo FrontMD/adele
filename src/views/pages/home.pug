@@ -33,6 +33,7 @@ block content
                     })(data-modal='#requestModal')
 
             +s-numbers({
+                classes: 'p-default pt-100',
                 title: `<div class="section-tag">Факты и цифры</div>
                     <div class="title title--h2 s-numbers__title"><span>Гимназия</span><br>сегодня</div>
                     <a class="btn  btn--green" href="#">Подробнее о нас
@@ -60,10 +61,15 @@ block content
                 ]
             })
 
-            +info-slider
-            +home-process
+            +info-slider({
+                classes: 'p-default',
+            })
+            +home-process({
+                classes: 'p-default',
+            })
             +home-info
             +programms-list({
+                classes: 'p-default',
                 vMode: 'cards',
                 title: '<span>Программы</span><br>обучения',
                 hasMoreBtn: true,
@@ -156,15 +162,19 @@ block content
                 ]
             })
 
-            +home-methods
-            +home-conditions
+            +home-methods({
+                classes: 'p-default'
+            })
+            +home-conditions({
+                classes: 'p-default'
+            })
             +home-about({
-                classes:'green-bg-top'
+                classes:'green-bg-top p-default'
             })
 
             +auto-slider({
                 title: 'Отзывы родителей <br>и&nbsp;учеников',
-                classes: 'green-bg'
+                classes: 'green-bg p-default'
             })
                 +c-review({
                     classes: 'swiper-slide',
@@ -293,10 +303,12 @@ block content
                 })
 
             +s-distribution({
-                classes: 'green-bg-bottom'
+                classes: 'green-bg-bottom p-default'
             })
 
-            +s-img
+            +s-img({
+                classes: 'p-default'
+            })
                 +btn({
                     classes: 'btn--reverse',
                     name: 'Скачать pdf <span>3.2мб</span>',
@@ -305,4 +317,6 @@ block content
 
                 })
 
-            +home-news
+            +home-news({
+                classes: 'p-default pb-100',
+            })

@@ -9,7 +9,7 @@ mixin home-process(props = defaultHomeProcessProps)
             classes: props.classes ? props.classes : defaultHomeProcessProps.classes
         }
 
-    section.home-process(data-js="homeProcess")
+    section.home-process(class= checkProps.classes data-js="homeProcess")
         .m-container
             +section-tag({
                 classes: 'home-process__tag',

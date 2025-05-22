@@ -10,7 +10,7 @@ mixin programm-info(props = defaultProgrammInfoProps)
             classes: props.classes ? props.classes : defaultProgrammInfoProps.classes,
         }
 
-    section.programm-info
+    section.programm-info(class=checkProps.classes)
         .m-container.programm-info__container
             .programm-info__left
                 .programm-info__info

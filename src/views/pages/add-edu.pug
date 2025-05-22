@@ -2,7 +2,6 @@ extends ../layouts/default
 
 block variables
     - const title = "Дополнительное образование"
-    - const greenBg = true
 
 block content
     .page(data-js="page")
@@ -10,7 +9,7 @@ block content
             +i-intro({
                 classes: 'lp-intro',
                 title: '<span>Дополнительное</span><br>образование',
-                text: 'Повышение квалификации и профессиональная переподготовка',
+                desc: 'Повышение квалификации и профессиональная переподготовка',
                 img: '',
                 breadcrumbs: {
                     items: [
@@ -45,3 +44,322 @@ block content
                         sMode: 'full',
                         icon: 'arrow_up_right'
                     })(data-modal='#requestModal')
+
+            section.programm-info.p-default
+                .m-container
+                    .title.title--h2.programm-info__gtitle О программах
+                    .programm-info__container
+                        .programm-info__left
+                            .programm-info__info
+                                .title.title--h4.programm-info__title Гимназия ведет набор на программы профессиональной переподготовки и повышения квалификации в областях
+                                .programm-info__table
+                                    .programm-info__row
+                                        .programm-info__param 1
+                                        .programm-info__value Промышленной, экологической и информационной безопасности
+                                    .programm-info__row
+                                        .programm-info__param 2
+                                        .programm-info__value Диагностики транспортных средств и безопасности дорожного движения
+                                    .programm-info__row
+                                        .programm-info__param 3
+                                        .programm-info__value Металлообработки
+                                    .programm-info__row
+                                        .programm-info__param 4
+                                        .programm-info__value Охраны труда
+                                    .programm-info__row
+                                        .programm-info__param 5
+                                        .programm-info__value Оценочной деятельности
+                                    .programm-info__row
+                                        .programm-info__param 6
+                                        .programm-info__value Экономики, управления
+                                    .programm-info__row
+                                        .programm-info__param 7
+                                        .programm-info__value Полиграфического производства
+                                    .programm-info__row
+                                        .programm-info__param 8
+                                        .programm-info__value Тары и упаковки
+                                    .programm-info__row
+                                        .programm-info__param 9
+                                        .programm-info__value Дизайна
+                                    .programm-info__row
+                                        .programm-info__param 10
+                                        .programm-info__value Цифровых технологий и программных продуктов
+                                    .programm-info__row
+                                        .programm-info__param 11
+                                        .programm-info__value Издательской, редакторской деятельности
+                                    .programm-info__row
+                                        .programm-info__param 12
+                                        .programm-info__value Рекламы, маркетинга и медиаиндустрии
+
+                        .programm-info__right
+                            .programm-info__block.text-editor
+                                h2 Программы повышения квалификации (до 250 часов)
+                                p Позволяют слушателям получить актуальные знания и навыки, сформировать наиболее востребованные работодателями компетенции в рамках имеющейся у обучающегося квалификации. По итогам успешного прохождения итоговой аттестации слушатели получают удостоверение о повышении квалификации.
+
+                            .programm-info__block.text-editor
+                                h2 Программы профессиональной переподготовки (от 250 часов)
+                                P Нацелены на получение новой квалификации (профессии). По итогам успешного прохождения итоговой аттестации слушатели программ профессиональной переподготовки получают диплом с присвоением квалификации.
+
+                            .programm-info__block.text-editor
+                                h2 Обучение по программам ДПО
+
+                                p Возможно в очной, очно-заочной, заочной форме с применением дистанционных образовательных технологий. 
+
+                                p Наши преподаватели – ведущие специалисты отрасли, имеющие практический опыт работы, готовые поделиться своими лучшими кейсами и разрабатывать актуальные производственные задачи слушателей 
+
+                                p Корпоративным клиентам университет предлагает индивидуальные условия обучения, гибкую систему скидок и персонализированные образовательные программы. Подробную информацию можно уточнить у сотрудников Центра ДПО.
+
+            +news-list({
+                titleMode: true,
+                title: 'Ближайшие курсы',
+                classes: 'p-default news-list--bordered',
+                newsList: [
+                    {
+                        img: 'img/news/news_18.webp',
+                        date: '',
+                        title: 'Иностранные языки: английский, французский, немецкий — набор на обучение в 2024-2025',
+                        desc: '<b>Все программы дают возможность существенно повысить уровень владения иностранным языком, а также формируют навыки общения в профессиональной среде.</b>'
+                    },
+                    {
+                        img: 'img/news/news_18.webp',
+                        date: '',
+                        title: 'Иностранные языки: английский, французский, немецкий — набор на обучение в 2024-2025',
+                        desc: '<b>Все программы дают возможность существенно повысить уровень владения иностранным языком, а также формируют навыки общения в профессиональной среде.</b>'
+                    },
+                    {
+                        img: 'img/news/news_18.webp',
+                        date: '',
+                        title: 'Иностранные языки: английский, французский, немецкий — набор на обучение в 2024-2025',
+                        desc: '<b>Все программы дают возможность существенно повысить уровень владения иностранным языком, а также формируют навыки общения в профессиональной среде.</b>'
+                    },
+                    {
+                        img: 'img/news/news_18.webp',
+                        date: '',
+                        title: 'Английский язык в IT',
+                        desc: ''
+                    },
+                ]
+            })
+
+            +programms-list({
+                classes: 'p-default',
+                vMode: 'cards',
+                title: '<span>Программы</span><br>курсов',
+                hasMoreBtn: false,
+                hasPagination: true,
+                hasFilters: true,
+                manyFilters: true,
+                cards: [
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: '«Бухгалтерский учёт, налогообложение и основы аудита (базовый уровень)»',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: '13-15 лет',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Охрана труда. Техносферная безопасность',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: '13-15 лет',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '12',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '2 месяца',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Охрана труда. Техносферная безопасность',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: '13-15 лет',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '8',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '3 месяца',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Контрактный менеджмент',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: '13-15 лет',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '12',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '4 месяца',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Право на английском / Legal English',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: 'Онлайн',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '10',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '1 год',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Руководитель службы мотивации и управления вознаграждением персонала ',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: '13-15 лет',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '12',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '2 месяца',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Медиация и психология личности в разрешении конфликтов',
+                        params: [
+                            {
+                                name: 'Возрастная группа',
+                                value: 'Онлайн',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '8',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '3 месяца',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    },
+                    {
+                        faculty: 'Дополнительное образование',
+                        name: 'Контрактный менеджмент',
+                        params: [
+                            {
+                                name: 'Переводчик в сфере профессиональной коммуникации (английский язык)',
+                                value: '13-15 лет',
+                                isFull: true
+                            },
+                            {
+                                name: 'Вместимость группы, чел',
+                                value: '12',
+                                isFull: false
+                            },
+                            {
+                                name: 'Срок обучения',
+                                value: '4 месяца',
+                                isFull: false
+                            },
+                            {
+                                name: 'Стоимость в месяц',
+                                value: '8 000 ₽',
+                                isFull: true
+                            },
+                        ],
+                    }
+                ]
+            })
+
+            +callback-form({
+                classes: 'p-default pb-100'
+            })

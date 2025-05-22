@@ -11,7 +11,7 @@ mixin s-partners(props = defaultSPartnersProps)
             type: props.type ? props.type : defaultSPartnersProps.type,
         }
 
-    section.s-partners(data-js="sPartners")
+    section.s-partners(class= checkProps.classes data-js="sPartners")
         .m-container.s-partners__container
             .s-partners__info
                 .title.title--h3.title--light.s-partners__title <span>Мы работаем</span> <br>с некоммерческими, корпоративными и общественными организациями

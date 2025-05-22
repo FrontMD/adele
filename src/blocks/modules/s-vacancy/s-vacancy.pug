@@ -20,7 +20,7 @@ mixin s-vacancy(props = defaultSVacancyProps)
             cards: props.cards ? props.cards : defaultSVacancyProps.cards,
         }
 
-    section.s-vacancy(data-js="sVacancy")
+    section.s-vacancy(class= checkProps.classes data-js="sVacancy")
         .m-container
             .s-vacancy__header
                 .title.title--h2.s-vacancy__title!= checkProps.title

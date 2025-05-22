@@ -1,12 +1,4 @@
 .s-skills {
-    padding-top: 100px;
-    padding-bottom: 50px;
-
-    @include max(mobile) {
-        padding-top: 50px;
-        padding-bottom: 25px;
-    }
-
     &__title {
         color: $c-accent;
         text-align: center;

@@ -1,9 +1,4 @@
 .s-distribution {
-    padding: 0 0 50px;
-
-    @include max(mobile) {
-        padding: 0 0 25px;
-    }
 
     &__right {
         display: grid;

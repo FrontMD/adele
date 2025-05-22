@@ -9,22 +9,21 @@ mixin callback-form(props = defaultCallbackFormProps)
             classes: props.classes ? props.classes : defaultCallbackFormProps.classes,
         }
 
-    section.callback-form
+    section.callback-form(class= checkProps.classes)
         .m-container
             .callback-form__content 
                 .callback-form__left
-                    .h2.callback-form__title <span>Обратная связь</span> для сообщений о&nbsp;фактах коррупции
-                    a.callback-form__link(href="#")
-                        | Обратная связь для сообщений о&nbsp;фактах коррупции в&nbsp;Минсельхоз России
-                        span.icon
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                    .title.title--h2.title--light.callback-form__title <span>Анкета-заявка</span><br> на курсы дополнительного профессионального образования
+                    .callback-form__text.text-editor.text-editor--light Заполните заявку на курсы
+                    .callback-form__bottom
+                        .callback-form__text.text-editor.text-editor--light Уточнить информацию вы можете <br>по телефонам: +7 (999) 900 90 90 <br>E-mail: cdo@adele.ru <br><br>Мы обязательно свяжемся с Вами!
 
                 +form({
                     classes: 'callback-form__form',
                     title: '',
-                    text: 'Здесь Вы можете сообщить об известных Вам фактах коррупции. Каждое сообщение будет тщательно проверено, поэтому мы рекомендуем оставлять контактную информацию. Конфиденциальность гарантируем. <br><br>Помните об уголовной ответственности за клевету!',
+                    text: '',
                     btnText: 'Отправить',
+                    btnCMode: 'lightTitle'
                 })
                     .form__flex
                         +field({

@@ -1,13 +1,14 @@
 -
     const defaultSFilterProps = {
         classes: '',
+        title: '',
         items: [
             '1 — 4 ступень',
             '5 — 7 ступень',
             '8 — 9 ступень',
             '10 — 11 ступень',
             'Дошкольная подготовка "ПЕСОЧНИЦА"',
-            'Репетиторство, подготовка ОГЭ/ЕГЭ'
+            'Репетиторство, подготовка ОГЭ/ЕГЭ',
         ]
     }
 
@@ -15,10 +16,14 @@ mixin s-filter(props = defaultSFilterProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultSFilterProps.classes,
+            title: props.title ? props.title : defaultSFilterProps.title,
             items: props.items ? props.items : defaultSFilterProps.items
         }
 
-    .s-filter(class=checkProps.classes)
-        ul.s-filter__list
-            each val, index in checkProps.items
-                li.s-filter__item(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val
+    .s-filter(class=checkProps.classes data-js="sFilter")
+        - if(checkProps.title.length > 0)
+            .title.title--h5.s-filter__title!= checkProps.title
+        .s-filter__list(data-js="sFilterSlider")
+            .swiper-wrapper
+                each val, index in checkProps.items
+                    .s-filter__item.swiper-slide(class= `${checkProps.classes} ${(index === 0) ? "active" : ""}`)!= val

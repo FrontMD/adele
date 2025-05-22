@@ -48,7 +48,7 @@ mixin info-slider(props = defaultInfoSliderProps)
             items: props.items ? props.items : defaultInfoSliderProps.items,
         }
 
-    section.info-slider(data-js="infoSlider")
+    section.info-slider(class=checkProps.classes data-js="infoSlider")
         .m-container
             +m-columns({
                 title: `<div class="section-tag">Кому подойдет</div>

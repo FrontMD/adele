@@ -1,10 +1,4 @@
 .s-img {
-    padding: 50px 0;
-
-    @include max(mobile) {
-        padding: 25px 0;
-    }
-
     &__container {
         position: relative;
         border-radius: 32px;

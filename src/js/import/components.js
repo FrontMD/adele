@@ -7,6 +7,7 @@
 @@include("../../blocks/components/video/video.js")
 @@include("../../blocks/components/select/select.js")
 @@include("../../blocks/components/spoiler/spoiler.js")
+@@include("../../blocks/components/s-filter/s-filter.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     tabsBlockInit()
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     videos()
     selects()
     spoilers()
+    sFilter()
 })

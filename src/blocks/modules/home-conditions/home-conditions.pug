@@ -9,7 +9,7 @@ mixin home-conditions(props = defaultHomeConditionsProps)
 			classes: props.classes ? props.classes : defaultHomeConditionsProps.classes,
 		}
 
-	section.home-conditions
+	section.home-conditions(class=checkProps.classes)
 		.m-container
 			.title.title--h2.home-conditions__title Создаем все условия <br>для развития
 			.section-flex

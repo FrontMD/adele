@@ -1,15 +1,43 @@
 .programms-list {
-    padding: 100px 0;
-
-    @include max(mobile) {
-        padding: 50px 0;
-    }
 
     &__header+&__filter {
         margin-top: 50px;
 
         @include max(mobile) {
             margin-top: 24px;
+        }
+    }
+
+    &__filter {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px 10px;
+        border-top: 1px solid $c-border;
+        padding-top: 20px;
+
+
+        @include max(tablet) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 24px;
+            padding-top: 16px;
+        }
+
+        &>* {
+            flex: 0 1 auto;
+            max-width: calc(50% - 5px);
+            width: auto;
+
+            @include max(tablet) {
+                flex: 0 0 auto;
+                width: fit-content;
+                max-width: 100%;
+            }
         }
     }
 
@@ -54,5 +82,9 @@
 
     &__more {
         margin: 30px auto 0;
+    }
+
+    &__pagination {
+        margin: 65px auto 0;
     }
 }

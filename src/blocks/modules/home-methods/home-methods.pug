@@ -9,7 +9,7 @@ mixin home-methods(props = defaultHomeMethodsProps)
             classes: props.classes ? props.classes : defaultHomeMethodsProps.classes
         }
 
-    section.home-methods
+    section.home-methods(class=checkProps.classes)
         .m-container
             .title.title--h2.home-methods__title Наша методика
             .section-flex

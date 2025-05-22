@@ -1,11 +1,4 @@
 .lp-links {
-    padding-bottom: 50px;
-    padding-top: 100px;
-
-    @include max(mobile) {
-        padding-bottom: 25px;
-        padding-top: 50px;
-    }
 
     &__side {
         background-color: $c-accent;

@@ -9,7 +9,7 @@ mixin home-news(props = defaultHomeNewsProps)
             classes: props.classes ? props.classes : defaultHomeNewsProps.classes
         }
 
-    section.home-news
+    section.home-news(class=checkProps.classes)
         .m-container
             .title.title--h2.home-news__title Новости
             .home-news__cards

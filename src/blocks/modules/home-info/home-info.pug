@@ -9,7 +9,7 @@ mixin home-info(props = defaultHomeInfoProps)
             classes: props.classes ? props.classes : defaultHomeInfoProps.classes
         }
 
-    section.home-info
+    section.home-info(class=checkProps.classes)
         .m-container
             .home-info__container
                 .home-info__bg 

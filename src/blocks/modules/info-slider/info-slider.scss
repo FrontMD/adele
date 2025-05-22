@@ -1,10 +1,4 @@
 .info-slider {
-    padding: 50px 0;
-
-    @include max(mobile) {
-        padding: 25px 0;
-    }
-
     &__title {
         color: $c-accent;
         max-width: 600px;

@@ -1,12 +1,4 @@
 .programm-info {
-    padding-top: 30px;
-    padding-bottom: 50px;
-
-    @include max(mobile) {
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-
     &__container {
         display: flex;
         align-items: flex-start;
@@ -45,6 +37,11 @@
             margin-left: -10px;
             margin-right: -10px;
         }
+    }
+
+    &__gtitle {
+
+        margin-bottom: 50px;
     }
 
     &__title {

@@ -1,10 +1,5 @@
 .t-columns {
     border-radius: 40px 40px 0 0;
-    padding-top: 50px;
-
-    @include max(mobile) {
-        padding-top: 25px;
-    }
 
     &__title {
         margin: 0 auto;

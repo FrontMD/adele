@@ -41,9 +41,13 @@ block content
                         icon: 'arrow_up_right'
                     })(data-modal='#requestModal')
 
-            +lp-links
+            +lp-links({
+                classes: 'p-default pt-100'
+            })
 
-            +lp-section
+            +lp-section({
+                classes: 'p-default'
+            })
                 +m-columns({
                     title: `<div class="lp-section__media"><img src="img/lp/lp_sec_1.webp"><a class="btn lp-section__play btn--white btn--icon" href="https://vkvideo.ru/video_ext.php?oid=-230301010&id=456239162&hd=2&autoplay=1" data-type="iframe" data-fancybox="">
                         <svg> 
@@ -108,14 +112,18 @@ block content
 
                         p После этого проводится еще один срез знаний и если % соотношение снизилось, группа переходит к освоению новой темы, а к остальным ученикам прикрепляется Тьютор для индивидуальных занятий.
 
-            +s-img
+            +s-img({
+                classes: 'p-default'
+            })
                 +btn({
                     classes: 'btn--reverse',
                     name: 'Скачать pdf <span>3.2мб</span>',
                     icon: 'download'
                 })
 
-            +lp-section
+            +lp-section({
+                classes: 'p-default'
+            })
                 +m-columns({
                     title: '<div class="lp-section__media"><img src="img/lp/lp_sec_4.webp"></div>'
                 })
@@ -150,7 +158,7 @@ block content
                         p На уроках физкультуры под руководством опытных тренеров, укрепляем здоровье, тренируем мышцы, корректируем осанку и поддерживаем тело в отличной физической форме. Подвижные игры, интересные занятия с различными снарядами (инвентарем), помогут отдохнуть от умственной работы и получить массу положительных эмоций.
 
             +t-columns({
-                classes: 'lp-process_tc green-bg',
+                classes: 'lp-process_tc green-bg p-default',
                 title: 'Технические требования для занятий'
             })
                 .t-columns__left.t-columns__side
@@ -182,7 +190,7 @@ block content
 
             +auto-slider({
                 title: 'Отзывы родителей <br>и&nbsp;учеников',
-                classes: 'green-bg'
+                classes: 'green-bg p-default pb-100'
             })
                 +c-review({
                     classes: 'swiper-slide',

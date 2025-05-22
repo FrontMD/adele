@@ -1,12 +1,4 @@
 .s-vacancy {
-    padding-top: 50px;
-    padding-bottom: 100px;
-
-    @include max(mobile) {
-        padding-top: 25px;
-        padding-bottom: 50px;
-    }
-
     &__header {
         display: flex;
         align-items: flex-end;

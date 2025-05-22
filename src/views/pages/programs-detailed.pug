@@ -35,10 +35,17 @@ block content
             icon: 'arrow_up_right'
           })(data-modal='#consultPModal')
 
-      +programm-info
-      +i-questions
-      +s-skills
+      +programm-info({
+        classes: 'p-default pb-0'
+      })
+      +i-questions({
+        classes: 'p-default'
+      })
+      +s-skills({
+        classes: 'p-default'
+      })
       +s-vacancy({
+        classes: 'p-default',
         title: 'Дополнительное <br>образование',
         cards: [
           {
@@ -111,5 +118,10 @@ block content
 
         ]
       })
-      +s-partners
-      +programms-list
+      +s-partners({
+        classes: 'p-default'
+      })
+      +programms-list({
+        classes: 'p-default pb-100',
+        title: 'Другие программы'
+      })

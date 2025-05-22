@@ -99,7 +99,9 @@
         font-size: 24px;
         line-height: 110%;
         letter-spacing: -0.04em;
-        color: $c-white;
+        color: $c-accent;
+        margin-bottom: auto;
+        max-width: 600px;
 
         @include max(mobile) {
             font-size: 16px;
@@ -222,6 +224,8 @@
 
     &--full &__desc {
         max-width: 380px;
+        color: $c-white;
+        margin-bottom: 0;
     }
 }
 

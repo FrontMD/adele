@@ -9,7 +9,7 @@ mixin s-skills(props = defaultSSkillsProps)
             classes: props.classes ? props.classes : defaultSSkillsProps.classes
         }
 
-    section.s-skills
+    section.s-skills(class=checkProps.classes)
         .m-container
             .title.title--h2.s-skills__title <span>Навыки,</span> которые вы получите
             .s-skills__cards

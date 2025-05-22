@@ -1,9 +1,4 @@
 .home-conditions {
-    padding-bottom: 50px;
-
-    @include max(mobile) {
-        padding-bottom: 25px;
-    }
 
     &__title {
         margin: 0 auto 50px;
