@@ -27,47 +27,87 @@ mixin callback-form(props = defaultCallbackFormProps)
                 })
                     .form__flex
                         +field({
-                            classes: '',
+                            classes: 'field--dark',
                             type: 'text',
                             title: '',
-                            placeholder: 'ФИО',
+                            placeholder: 'ФИО контактного лица*',
                             resetBtn: false,
                             inputAttr: {
-                                'data-v-name': 'letters'
+                                'data-v-name': 'letters',
+                                'required': ''
                             },
                         })
                         +field({
                             classes: '',
+                            tag: 'select',
+                            placeholder: 'Интересуют курсы подготовки',
+                            selectOptions: [
+                                "",
+                                "Очно",
+                                "Онлайн",
+                            ],
+                            inputAttr: {
+                                'required': ''
+                            },
+                            selectGreen: true
+                        })
+                    .form__flex    
+                        +field({
+                            classes: 'field--dark',
                             type: 'tel',
                             title: '',
-                            placeholder: '+7 (___) ___-__-__',
+                            placeholder: 'Телефон*',
                             inputAttr: {
                                 'data-type': 'phoneNumber',
-                                'data-v-name': 'phone'
+                                'data-v-name': 'phone',
+                                'required': ''
                             },
                             resetBtn: false
                         })
-                    .form__flex
                         +field({
                             classes: '',
+                            tag: 'select',
+                            placeholder: 'Вы планируете учиться',
+                            selectOptions: [
+                                "",
+                                "Очно",
+                                "Онлайн",
+                            ],
+                            inputAttr: {
+                                'required': ''
+                            },
+                            selectGreen: true
+                        })
+                    .form__flex
+                        +field({
+                            classes: 'field--dark',
                             type: 'email',
                             title: '',
                             placeholder: 'Email',
                             inputAttr: {
-                                'data-v-name': 'email'
+                                'data-v-name': 'email',
+                                'required': ''
                             },
                             resetBtn: false
                         })
                         +field({
                             classes: '',
-                            type: 'text',
-                            title: '',
-                            placeholder: 'Тема обращения',
-                            resetBtn: false
+                            tag: 'select',
+                            placeholder: 'Продолжительность курсов',
+                            selectOptions: [
+                                "",
+                                "2 месяца",
+                                "3 месяца",
+                                "4 месяца",
+                            ],
+                            inputAttr: {
+                                'required': ''
+                            },
+                            selectGreen: true
                         })
 
                     +field({
-                        classes: '',
+                        classes: 'field--dark',
                         tag: 'textarea',
                         title: '',
                         placeholder: 'Текст обращения',

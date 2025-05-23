@@ -130,3 +130,21 @@
     }
 
 }
+
+.programm-info {
+    &--ol &__row {
+        font-size: 16px;
+        gap: 16px;
+
+        @include max(mobile) {
+            flex-direction: row;
+            gap: 16px;
+        }
+    }
+
+    &--ol &__param {
+        flex-basis: 15px;
+    }
+
+
+}

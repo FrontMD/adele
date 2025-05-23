@@ -26,6 +26,15 @@
         outline: none;
         color: $c-accent;
         border: 1px solid rgba(130, 160, 149, 0.3);
+        transition: all $tr;
+
+        &:hover {
+            border: 1px solid rgba(130, 160, 149, 1);
+        }
+
+        &:focus {
+            border: 1px solid #6CC765;
+        }
 
         &::placeholder {
             color: $c-accent;
@@ -145,5 +154,26 @@
 
     &--checkbox input:checked+.fake-checkbox::after {
         background-color: $c-accent-light;
+    }
+}
+
+.field {
+
+    &--dark &__input,
+    &--dark &__textarea {
+        color: $c-white;
+        border: 1px solid rgba(130, 160, 149, 0.3);
+
+        &:hover {
+            border: 1px solid rgba(130, 160, 149, 1);
+        }
+
+        &:focus {
+            border: 1px solid #6CC765;
+        }
+
+        &::placeholder {
+            color: $c-white;
+        }
     }
 }

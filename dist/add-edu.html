@@ -725,7 +725,7 @@
                   </div>
                 </div>
               </section>
-          <section class="programm-info p-default">
+          <section class="programm-info programm-info--ol p-default">
             <div class="m-container">
               <div class="title title--h2 programm-info__gtitle">О программах</div>
               <div class="programm-info__container">
@@ -1133,22 +1133,43 @@
                           <div class="form__content" data-js="form-content">
                             <div class="form__fields">
                               <div class="form__flex">
-                                    <label class="field     " data-js="formField">
-                                      <input class="field__input" type="text" placeholder="ФИО" data-v-name="letters"><span class="field__error" data-js="fieldError"></span>
+                                    <label class="field field--dark    " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="ФИО контактного лица*" data-v-name="letters" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field     " data-js="formField">
-                                      <input class="field__input" type="tel" placeholder="+7 (___) ___-__-__" data-type="phoneNumber" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Интересуют курсы подготовки" data-js="formSelect" required="">
+                                        <option></option>
+                                        <option value="Очно">Очно</option>
+                                        <option value="Онлайн">Онлайн</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__flex">   
+                                    <label class="field field--dark    " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон*" data-type="phoneNumber" data-v-name="phone" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Вы планируете учиться" data-js="formSelect" required="">
+                                        <option></option>
+                                        <option value="Очно">Очно</option>
+                                        <option value="Онлайн">Онлайн</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                               <div class="form__flex">
-                                    <label class="field     " data-js="formField">
-                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    <label class="field field--dark    " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
-                                    <label class="field     " data-js="formField">
-                                      <input class="field__input" type="text" placeholder="Тема обращения"><span class="field__error" data-js="fieldError"></span>
+                                    <label class="field   field--greenSelect  " data-js="formField">
+                                      <select class="field__select" placeholder="Продолжительность курсов" data-js="formSelect" required="">
+                                        <option></option>
+                                        <option value="2 месяца">2 месяца</option>
+                                        <option value="3 месяца">3 месяца</option>
+                                        <option value="4 месяца">4 месяца</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
-                                  <label class="field     " data-js="formField">
+                                  <label class="field field--dark    " data-js="formField">
                                     <textarea class="field__textarea" rows="7" placeholder="Текст обращения"></textarea><span class="field__error" data-js="fieldError"></span>
                                   </label>
                             </div>
@@ -1190,8 +1211,14 @@
               <div class="site-footer__cols">
                 <div class="site-footer__col">
                   <div class="site-footer__block">
-                    <div class="title title--h5 title--light site-footer__title">Главный корпус</div>
-                    <div class="site-footer__textblock site-footer__textblock--mt"><a class="site-footer__subtitle" href="javascript:void(0)">ОБЩИЕ СВЕДЕНИЯ</a><a class="site-footer__subtitle" href="javascript:void(0)">ПРЕПОДАВАТЕЛИ</a><a class="site-footer__subtitle" href="javascript:void(0)">ДОГОВОР ОФЕРТЫ</a><a class="site-footer__subtitle" href="javascript:void(0)">ОСНОВНОЕ ОБРАЗОВАНИЕ</a><a class="site-footer__subtitle" href="javascript:void(0)">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a><a class="site-footer__subtitle" href="javascript:void(0)">МЕТОДИКА ОБУЧЕНИЯ</a><a class="site-footer__subtitle" href="javascript:void(0)">ВОПРОСЫ И ОТВЕТЫ (FAQ)</a><a class="site-footer__subtitle" href="javascript:void(0)">КОНТАКТЫ</a><a class="site-footer__subtitle" href="javascript:void(0)">СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</a><a class="site-footer__subtitle" href="javascript:void(0)">НОВОСТИ</a></div>
+                    <div class="title title--h5 title--light site-footer__title">Основная информация</div>
+                    <div class="site-footer__textblock site-footer__textblock--mt"><a href="javascript:void(0)">Сведения об образовательной организации</a><a href="javascript:void(0)">О гимназии</a><a href="javascript:void(0)">Как проходит обучение</a><a href="javascript:void(0)">Программы домашней гимназии</a><a href="javascript:void(0)">Дополнительное образование</a><a href="javascript:void(0)">Преподаватели</a><a href="javascript:void(0)">Вопросы и ответы (faq)</a><a href="javascript:void(0)">Контакты</a><a href="javascript:void(0)">Новости</a></div>
+                  </div>
+                </div>
+                <div class="site-footer__col">
+                  <div class="site-footer__block">
+                    <div class="title title--h5 title--light site-footer__title">Юриспруденция</div>
+                    <div class="site-footer__textblock site-footer__textblock--mt"><a href="javascript:void(0)">Согласие на получение рекламной рассылки</a><a href="javascript:void(0)">Согласие на получение информационной рассылки</a><a href="javascript:void(0)">Согласие на обработку файлов COOKKIES</a><a href="javascript:void(0)">Согласие на обработку персональных данных</a><a href="javascript:void(0)">Пользовательское соглашение</a><a href="javascript:void(0)">Политика в отношении обработки персональных данных</a><a href="javascript:void(0)">Оферта редакция 18.12.2023</a></div>
                   </div>
                 </div>
                 <div class="site-footer__col">
@@ -1210,17 +1237,7 @@
                   </div>
                   <div class="site-footer__block">
                     <div class="title title--h5 title--light site-footer__title">Общие вопросы <br><span>(кроме вопросов о поступлении)</span></div>
-                    <div class="site-footer__textblock"><a href="mailto:+info@adele.ru">info@adele.ru							</a></div>
-                  </div>
-                </div>
-                <div class="site-footer__col">
-                  <div class="site-footer__block">
-                    <div class="title title--h5 title--light site-footer__title">Пресс-служба</div>
-                    <div class="site-footer__textblock"><a href="tel:+79900595039">+7 (990) 059 50 39</a></div>
-                  </div>
-                  <div class="site-footer__block">
-                    <div class="title title--h5 title--light site-footer__title">СМИ и новости</div>
-                    <div class="site-footer__textblock"><a href="mailto:press@adele.ru">press@adele.ru</a></div>
+                    <div class="site-footer__textblock"><a href="mailto:+info@adele.ru">info@adele.ru</a></div>
                   </div>
                   <div class="site-footer__block">
                     <div class="title title--h5 title--light site-footer__title">Для обратной связи по сайту</div>
@@ -1228,9 +1245,9 @@
                   </div>
                 </div>
               </div>
-              <div class="site-footer__footer"><a class="site-footer__privacy" href="javascript:void(0);">Политика обработки персональных данных</a>
+              <div class="site-footer__footer">
                 <div class="site-footer__flex">
-                  <div class="site-footer__copyright">© 2025 ООО «Онлайн-Гимназия Адель»</div>
+                  <div class="site-footer__copyright">© 2025 ООО «Онлайн-Гимназия Адель»<span>ИНН 5022076651</span><span>ОГРН 1235000132344</span><span>Регистрационный номер лицензии: <br>№ Л035- 01255 -50/01640382 от 18.12.2024</span></div>
                   <div class="site-footer__developer">Разработка сайта<a href="https://itspace.group/" target="_blank">
                       <svg>
                         <use xlink:href="img/sprites/sprite.svg#its"></use>
