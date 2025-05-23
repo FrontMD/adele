@@ -136,6 +136,16 @@ mixin programms-list(props = defaultProgrammsListProps)
                                     '28 ак. часов',
                                 ]
                             })
+                            +s-filter({
+                                title: 'Стоимость обучения',
+                                items: [
+                                    'Все',
+                                    '8 000 ₽',
+                                    '20 000 ₽',
+                                    '50 000 ₽',
+                                    '100 000 ₽',
+                                ]
+                            })
                     - else
                         +s-filter
 
