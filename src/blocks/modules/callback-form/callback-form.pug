@@ -19,11 +19,12 @@ mixin callback-form(props = defaultCallbackFormProps)
                         .callback-form__text.text-editor.text-editor--light Уточнить информацию вы можете <br>по телефонам: +7 (999) 900 90 90 <br>E-mail: cdo@adele.ru <br><br>Мы обязательно свяжемся с Вами!
 
                 +form({
-                    classes: 'callback-form__form',
+                    classes: 'callback-form__form form--dark',
                     title: '',
                     text: '',
                     btnText: 'Отправить',
-                    btnCMode: 'lightTitle'
+                    btnCMode: 'lightTitle',
+                    privacyText: `Даю согласие на обработку своих персональных данных, <span>включая сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, распространение (в том числе передачу), обезличивание, блокирование и уничтожение персональных данных, в порядке, установленном Федеральным законом от 27 июля 2006 г. №152-ФЗ «О персональных данных».</span>`
                 })
                     .form__flex
                         +field({
@@ -33,8 +34,8 @@ mixin callback-form(props = defaultCallbackFormProps)
                             placeholder: 'ФИО контактного лица*',
                             resetBtn: false,
                             inputAttr: {
-                                'data-v-name': 'letters',
-                                'required': ''
+                                'required': '',
+                                'data-type':'letters'
                             },
                         })
                         +field({

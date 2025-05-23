@@ -256,12 +256,6 @@
         gap: 16px 10px;
         border-top: 1px solid $c-white;
 
-        &+.site-footer__flex {}
-
-        .full {
-            flex-basis: 100%;
-        }
-
         @include max(laptop) {
             padding: 24px;
 
@@ -278,6 +272,11 @@
         flex-direction: column;
         gap: 10px;
         max-width: 55%;
+
+        @include max(xs) {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
     }
 
     &__developer {

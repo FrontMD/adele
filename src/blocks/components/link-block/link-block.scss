@@ -8,6 +8,10 @@
     font-weight: 500;
     line-height: 1.2em;
     letter-spacing: -0.01em;
+    padding: 10px 10px 10px 24px;
+    margin-top: 10px;
+    border-radius: 16px;
+    background-color: $c-white;
 
     @include max(mobile) {
         gap: 10px;
@@ -26,7 +30,7 @@
         align-self: flex-start;
         padding: 18px 21px;
         gap: 10px;
-        flex: 0 0 219px;
+        flex: 0 0 auto;
         min-height: 60px;
         color: $c-accent;
         font-size: 16px;
@@ -76,16 +80,33 @@
         }
     }
 
+    /* Note */
     &--note {
         background-color: $c-bg-main;
-        padding: 10px 10px 10px 24px;
-        margin-top: 10px;
-        border-radius: 16px;
-        background-color: $c-white;
+        margin-top: 0;
+        border-radius: 40px;
 
         @include max(mobile) {
             padding: 10px;
         }
+    }
+
+    &--note &__desc {
+        padding: 10px;
+    }
+
+    /* Link */
+
+    &.link-block--arrow_up_right a.link-block__link {
+        flex-direction: row-reverse;
+        background-color: $c-white;
+
+        &:hover {
+            background-color: $c-accent;
+            border-color: $c-accent;
+            color: $c-white;
+        }
+
     }
 
 
@@ -128,22 +149,6 @@
 
     &--btn .link-block__desc {
         font-weight: 500;
-    }
-
-    &.link-block--link a.link-block__link {
-        flex: 0 0 137px;
-
-        @include max(mobile) {
-            flex-basis: 30px;
-        }
-    }
-
-    &.link-block--link .link-block__link {
-        flex: 0 0 54px;
-
-        @include max(mobile) {
-            flex-basis: 30px;
-        }
     }
 
     &.link-block--link_angle a.link-block__link {

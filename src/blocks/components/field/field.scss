@@ -27,6 +27,7 @@
         color: $c-accent;
         border: 1px solid rgba(130, 160, 149, 0.3);
         transition: all $tr;
+        min-height: 51px;
 
         &:hover {
             border: 1px solid rgba(130, 160, 149, 1);
@@ -163,6 +164,7 @@
     &--dark &__textarea {
         color: $c-white;
         border: 1px solid rgba(130, 160, 149, 0.3);
+        background-color: $c-accent;
 
         &:hover {
             border: 1px solid rgba(130, 160, 149, 1);

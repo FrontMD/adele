@@ -308,10 +308,17 @@
 
         @include max(tablet) {
             max-width: 380px;
+            flex-shrink: 1;
         }
 
         @include max(mobile) {
             max-width: 100%;
         }
+    }
+
+    .i-intro__container {
+
+        gap: 32px;
+
     }
 }

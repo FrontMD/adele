@@ -43,12 +43,20 @@
             color: $c-accent;
         }
 
+        &__thanks {
+            background-color: transparent;
+        }
+
         &__thanks .form__title {
             font-weight: 500;
             font-size: 36px;
             line-height: 1.1em;
             letter-spacing: -0.02em;
             max-width: 430px;
+        }
+
+        &__thanks .form__text {
+            color: $c-accent;
         }
 
         &--sent {
@@ -82,9 +90,5 @@
         .field__title {
             font-size: 16px;
         }
-    }
-
-    .field--greenSelect .select2 {
-        padding: 20px;
     }
 }

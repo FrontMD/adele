@@ -42,6 +42,10 @@
     &__gtitle {
 
         margin-bottom: 50px;
+
+        @include max(mobile) {
+            margin-bottom: 32px;
+        }
     }
 
     &__title {

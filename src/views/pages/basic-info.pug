@@ -1,0 +1,132 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Основные сведения"
+
+block content
+	.page(data-js="page")
+		.page-layout
+			+sidebar-layout(
+				{
+				items: [
+					{
+						name: 'Главная',
+						link: 'javascript:void(0);'
+					},
+					{
+						name: 'Основные сведения',
+						link: 'javascript:void(0);'
+					}
+				],
+				}
+			)
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h2 Основные сведения
+					.sidebar-layout__content
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Полное наименование образовательной организации
+							.sidebar-layout__right.text-editor
+								p Общество с ограниченной ответственностью «Онлайн-Гимназия Адель»
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Сокращенное наименование образовательной организации (при наличии)
+							.sidebar-layout__right.text-editor
+								p ООО «Онлайн-Гимназия Адель»
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Дата создания образовательной организации
+							.sidebar-layout__right.text-editor
+								p 20 октября 2023 г.
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h3 Учредитель (учредители) образовательной организации
+					.sidebar-layout__content
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Фамилия, имя, отчество учредителя (руководителя учредителя) (ей) образовательной организации
+							.sidebar-layout__right.text-editor
+								p Любимов Александр Алексеевич <br>Любимов Андрей Александрович <br>Хужахметова Рената Раисовна <br>Жане Назрет Аскеровна
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h3 Информация о месте нахождения образовательной организации
+					.sidebar-layout__content
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Юридический адрес
+							.sidebar-layout__right.text-editor
+								p 140411, Московская область, г Коломна, ул Козлова, д. 105, помещ. 11.
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Фактический адрес
+							.sidebar-layout__right.text-editor
+								p 140411, Московская область, г Коломна, ул Козлова, д. 105, помещ. 11.
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h3 Информация о режиме и графике работы образовательной организации
+					.sidebar-layout__content
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 График работы
+							.sidebar-layout__right.text-editor
+								p Понедельник-пятница с 08-00 до 18-00 <br>Суббота, воскресенье с 08-00 до 18-00
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h3 Информация о контактных телефонах образовательной организации, об адресах электронной почты образовательной организации
+					.sidebar-layout__content
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Контактные телефоны
+							.sidebar-layout__right.text-editor
+								a(href="tel:+79993339109") +79993339109
+						.sidebar-layout__item.sidebar-layout__item--grid
+							.sidebar-layout__left 
+								.title.title--h5 Адреса электронной почты
+							.sidebar-layout__right.text-editor
+								a(href="mailto:school@adeleschool.ru") school@adeleschool.ru
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h3 Информация о филиалах образовательной организации (в том числе находящихся за пределами Российской Федерации)
+					.sidebar-layout__content
+						.sidebar-layout__item.text-editor
+							p Организация не имеет представительств и филиалов, в том числе находящихся за пределами Российской Федерации
+
+							p Информация о представительствах образовательной организации (в том числе находящихся за пределами Российской Федерации)
+
+							p Организация не имеет представительств и филиалов, в том числе находящихся за пределами Российской Федерации
+
+							p Информация о местах осуществления образовательной деятельности, в том числе сведения об адресах мест осуществления образовательной деятельности, которые в соответствии с частью 4 статьи 91 Федерального закона от 29 декабря 2012 г. № 273-ФЗ "Об образовании в Российской Федерации" не включаются в соответствующую запись в реестре лицензий на осуществление образовательной деятельности
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h4 Места осуществления образовательной деятельности, которые включаются в соответствующую запись в реестре  лицензий на осуществление образовательной деятельности
+					.sidebar-layout__content
+						.sidebar-layout__item
+							+m-table({
+								header: [								
+									"№",
+									"Наименование объекта",
+									"Адрес места осуществления образовательной деятельности"
+								],
+
+								rows: [
+									[
+										"1",
+										"Учебно-административный корпус",
+										"140411, Московская область, г. Коломна, ул Козлова, д. 105, помещ. 11."
+									],
+								]
+							}) 
+
+				.sidebar-layout__block
+					.sidebar-layout__subtitle.title.title--h3 Документы
+					.sidebar-layout__content
+						.sidebar-layout__item.text-editor
+							.text-items-list
+								+link-block({
+									text: 'Организация ведет образовательную деятельность на основании лицензии на осуществление образовательной деятельности, выданной Министерством образования Московской области, регистрационный № Л035- 01255 -50/01640382, дата предоставления: 18.12.2024',
+									vMode: 'note',
+									type: 'arrow_up_right',
+									linkText: 'Открыть документ'
+								})
+							p Свидетельство о государственной аккредитации: не предусмотрено
+

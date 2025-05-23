@@ -1,31 +1,29 @@
 .sidebar-layout {
-    padding: 240px 0 40px 100px;
-
-    @include max(laptop) {
-        padding: 190px 0 40px 70px;
-    }
-
-    @include max(tablet) {
-        padding: 102px 0 40px;
-    }
-
-    @include max(mobile) {
-        padding: 63px 0 40px;
-    }
+    padding-bottom: 20px;
 
     &__container {
+        padding: 25px 30px 30px;
+        border-radius: 32px;
+        background-color: $c-accent-light;
+    }
+
+    &__flex {
+        margin-top: 80px;
         position: relative;
         display: flex;
-        align-items: stretch;
-        gap: 38px;
-
-        @include max(mobile) {
-            padding: 0;
-        }
+        align-items: flex-start;
+        gap: 30px;
     }
 
     &__sidebar {
-        flex: 0 0 408px;
+        flex: 0 0 430px;
+        background-color: $c-white;
+        border-radius: 32px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
 
         @include max(large) {
             position: absolute;
@@ -104,22 +102,56 @@
     }
 
     &__main {
-        background-color: $c-white;
         flex: 1 1 auto;
-        max-width: calc(100% - 408px - 38px);
+        max-width: calc(100% - 408px - 30px);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
         @include max(large) {
             padding-left: 50px;
             max-width: 100%;
         }
 
-        @include max(mobile) {
-            padding-left: 40px;
-            padding-top: 30px;
+    }
+
+    &__block {
+        background-color: $c-white;
+        border-radius: 32px;
+        width: 100%;
+
+        .text-editor,
+        .text-editor>p,
+        .text-editor>ul,
+        .text-editor>li {
+            font-size: 18px;
+
+            @include max(tablet) {
+                font-size: 16px;
+            }
+
+            @include max(mobile) {
+                font-size: 14px;
+            }
         }
     }
 
-    &__content {
+    &__subtitle {
+        padding: 35px 50px;
+    }
+
+    &__item {
+        padding: 35px 50px 50px;
+        border-top: 1px solid $c-border;
+
+        &--grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 50%));
+            gap: 50px;
+        }
+    }
+
+    /*&__content {
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -131,7 +163,7 @@
         @include max(mobile) {
             gap: 20px;
         }
-    }
+    }*/
 
     .side-menu {
         display: flex;
@@ -139,34 +171,58 @@
         list-style: none;
 
         &__item {
-            border-top: 1px solid $c-border;
+            padding: 10px 20px;
         }
 
         &__link {
-            display: block;
-            padding: 24px 22px 24px 16px;
-            margin: 0 -22px 0 -16px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 60px;
+            padding: 12px 30px;
+            border-radius: 32px;
             background-color: transparent;
             font-size: 16px;
             font-weight: 400;
-            line-height: 1.02em;
+            line-height: 1.2em;
+            letter-spacing: -0.01em;
             color: $c-accent;
-            transition: background-color $tr-time, color $tr-time;
+            transition: background-color $tr, color $tr;
 
-            @include max(large) {
-                margin: 0;
-            }
-
-            @include max(mobile) {
-                padding: 15px;
-                font-size: 14px;
+            svg {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+                opacity: 0.3;
+                transition: opacity $tr;
             }
 
             &:hover,
             &--active {
                 color: $c-white;
                 background-color: $c-accent;
+
+                svg {
+                    opacity: 1;
+                }
             }
+
+            &--active {
+                pointer-events: none;
+            }
+        }
+
+        &__item+.side-menu__item .side-menu__link::after {
+            position: absolute;
+            bottom: calc(100% + 9.5px);
+            left: -20px;
+            content: '';
+            height: 1px;
+            width: calc(100% + 40px);
+            background-color: $c-border;
+            transition: all $tr;
         }
     }
 
@@ -211,43 +267,6 @@
                 opacity: 0;
                 transition: opacity $tr-time;
             }
-        }
-    }
-}
-
-.sidebar-layout {
-    &--about &__main {
-        background-color: transparent;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 30px;
-    }
-
-    &--about &__block {
-        background-color: #fff;
-    }
-
-    &--about &__block-title {
-        padding: 30px 28px 80px;
-        max-width: 710px;
-        line-height: 0.91em;
-        letter-spacing: -0.044em;
-        color: $c-accent;
-
-        @include max(laptop) {
-            max-width: 670px;
-            padding: 30px 25px 70px;
-        }
-
-        @include max(tablet) {
-            max-width: 510px;
-            padding: 20px 25px 60px;
-        }
-
-        @include max(tablet) {
-            max-width: 100%;
-            padding: 20px 15px;
         }
     }
 }
