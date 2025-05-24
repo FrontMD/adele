@@ -10,7 +10,7 @@
         aspect-ratio: 1 / 0.5;
 
         @include max(mobile) {
-            gap: 32px;
+            gap: 24px;
             aspect-ratio: 1 / 0.6;
         }
     }
@@ -36,5 +36,30 @@
             gap: 10px;
         }
 
+    }
+
+    &__text {
+        padding: 0 30px 30px;
+        margin-top: auto;
+        max-width: 80%;
+
+        @include max(mobile) {
+            padding: 0 20px 20px;
+        }
+
+    }
+}
+
+.lp-links {
+    &--light &__side {
+        background-color: $c-accent-2;
+    }
+
+    &--small &__side {
+        aspect-ratio: 1 / 0.4;
+
+        @include max(mobile) {
+            aspect-ratio: 1 / 0.5;
+        }
     }
 }

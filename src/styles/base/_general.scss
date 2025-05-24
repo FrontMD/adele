@@ -335,7 +335,11 @@ iframe {
 	}
 
 	.text-items-list {
-		margin-bottom: 20px;
+		margin-bottom: 45px;
+
+		@include max(tablet) {
+			margin-bottom: 20px;
+		}
 
 		&>*:first-child {
 			margin-top: 0;
@@ -455,7 +459,7 @@ iframe {
 
 	a:hover,
 	a:hover>* {
-		color: $c-accent-light;
+		color: $c-accent-title;
 	}
 
 	a:not(.btn),
@@ -664,14 +668,22 @@ iframe {
 }
 
 .gost-section {
-	padding: 20px 28px;
+	padding: 35px 50px 50px;
 
-	&--bordered {
-		border-top: 1px solid $c-border;
+	@include max(laptop) {
+		padding: 24px 32px 32px;
+	}
+
+	@include max(tablet) {
+		padding: 20px;
 	}
 
 	@include max(mobile) {
-		padding: 20px 15px;
+		padding: 10px;
+	}
+
+	&--bordered {
+		border-top: 1px solid $c-border;
 	}
 
 	&__header {

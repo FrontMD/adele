@@ -5,6 +5,22 @@
         padding: 25px 30px 30px;
         border-radius: 32px;
         background-color: $c-accent-light;
+
+        @include max(laptop) {
+            padding: 25px 20px;
+        }
+
+        @include max(tablet) {
+            padding: 20px 15px;
+            border-radius: 24px;
+        }
+
+        @include max(mobile) {
+            padding: 15px 10px;
+            border-radius: 20px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
     }
 
     &__flex {
@@ -13,6 +29,14 @@
         display: flex;
         align-items: flex-start;
         gap: 30px;
+
+        @include max(tablet) {
+            margin-top: 32px;
+        }
+
+        @include max(mobile) {
+            margin-top: 74px;
+        }
     }
 
     &__sidebar {
@@ -28,43 +52,22 @@
         @include max(large) {
             position: absolute;
             top: 0;
-            left: 28px;
+            left: 0px;
             width: 50px;
-            background-color: $c-bg-main;
+            background-color: transparent;
             z-index: 5;
-            min-height: 100%;
+            border-radius: 24px;
             overflow: hidden;
-            transition: width $tr-time;
-        }
-
-        @include max(laptop) {
-            left: 20px;
-        }
-
-        @include max(tablet) {
-            left: 15px;
+            transition: width $tr;
+            padding: 0;
         }
 
         @include max(mobile) {
-            left: 0;
+            top: -50px;
             width: 40px;
-            max-width: 408px;
-            margin-top: 30px;
-            max-height: calc(100vh - 30px - 64px);
-
-            &::-webkit-scrollbar {
-                width: 5px;
-                height: 5px;
-            }
-
-            &::-webkit-scrollbar-track {
-                background-color: transparent;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background-color: $c-accent-middle;
-                border-radius: 8px;
-            }
+            max-width: 430px;
+            border-radius: 16px;
+            gap: 10px;
         }
 
         .side-menu {
@@ -76,13 +79,13 @@
 
         &--expanded {
             @include max(large) {
-                width: 408px;
+                width: 430px;
+                background-color: $c-white;
             }
 
             @include max(mobile) {
                 width: 100%;
                 min-height: auto;
-                overflow: auto;
             }
 
             .side-menu {
@@ -109,8 +112,17 @@
         gap: 20px;
 
         @include max(large) {
-            padding-left: 50px;
+            padding-left: 74px;
             max-width: 100%;
+        }
+
+        @include max(tablet) {
+            padding-left: 60px;
+            gap: 10px;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
         }
 
     }
@@ -119,6 +131,30 @@
         background-color: $c-white;
         border-radius: 32px;
         width: 100%;
+
+        @include max(tablet) {
+            border-radius: 24px;
+        }
+
+        @include max(mobile) {
+            border-radius: 20px;
+
+            .title--h2 {
+                font-size: 32px;
+            }
+
+            .title--h3 {
+                font-size: 20px;
+            }
+
+            .title--h4 {
+                font-size: 18px;
+            }
+
+            .title--h5 {
+                font-size: 16px;
+            }
+        }
 
         .text-editor,
         .text-editor>p,
@@ -136,34 +172,47 @@
         }
     }
 
-    &__subtitle {
+    &__block-title {
         padding: 35px 50px;
-    }
 
-    &__item {
-        padding: 35px 50px 50px;
-        border-top: 1px solid $c-border;
-
-        &--grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 50%));
-            gap: 50px;
+        @include max(laptop) {
+            padding: 24px 32px;
         }
-    }
-
-    /*&__content {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
 
         @include max(tablet) {
-            gap: 30px;
+            padding: 20px;
         }
 
         @include max(mobile) {
-            gap: 20px;
+            padding: 15px 10px;
         }
-    }*/
+
+    }
+
+    .m-columns {
+        padding: 35px 50px 50px;
+        border-top: 1px solid $c-border;
+        gap: 50px;
+
+        @include max(laptop) {
+            padding: 24px 32px 32px;
+            gap: 24px;
+        }
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 10px;
+            gap: 16px;
+        }
+
+        &__header,
+        &__main {
+            flex: 0 1 50%;
+        }
+    }
 
     .side-menu {
         display: flex;
@@ -172,6 +221,10 @@
 
         &__item {
             padding: 10px 20px;
+
+            @include max(mobile) {
+                padding: 5px 10px;
+            }
         }
 
         &__link {
@@ -191,6 +244,14 @@
             color: $c-accent;
             transition: background-color $tr, color $tr;
 
+            @include max(mobile) {
+                gap: 10px;
+                min-height: 54px;
+                padding: 10px 16px;
+                border-radius: 20px;
+                font-size: 14px;
+            }
+
             svg {
                 width: 16px;
                 height: 16px;
@@ -209,6 +270,30 @@
                 }
             }
 
+            &::before {
+                position: absolute;
+                top: calc(100% + 9px);
+                left: -20px;
+                content: '';
+                height: 3px;
+                width: calc(100% + 40px);
+                background-color: $c-white;
+                opacity: 0;
+                transition: all $tr;
+                z-index: 1;
+
+                @include max(mobile) {
+                    top: calc(100% + 4px);
+                    left: -10px;
+                    width: calc(100% + 42px);
+                }
+            }
+
+            &:hover::before,
+            &--active::before {
+                opacity: 1;
+            }
+
             &--active {
                 pointer-events: none;
             }
@@ -223,6 +308,17 @@
             width: calc(100% + 40px);
             background-color: $c-border;
             transition: all $tr;
+
+            @include max(mobile) {
+                bottom: calc(100% + 4.5px);
+                left: -10px;
+                width: calc(100% + 20px);
+            }
+        }
+
+        &__item+.side-menu__item .side-menu__link:hover::after,
+        &__item+.side-menu__item .side-menu__link--active::after {
+            background-color: transparent;
         }
     }
 
@@ -231,6 +327,8 @@
         position: relative;
         height: 50px;
         width: 50px;
+        background-color: $c-white;
+        border-radius: 100%;
 
         @include max(large) {
             display: block;
@@ -249,9 +347,14 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             color: $c-accent;
+
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
 
             svg {
                 width: 100%;

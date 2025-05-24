@@ -12,28 +12,4 @@ mixin lp-links(props = defaultLpLinksProps)
 	section.lp-links(class=checkProps.classes)&attributes(attributes)
 		.m-container
 			.section-flex
-				.section-flex__side.lp-links__side
-					.section-flex__bg
-						.section-flex__overlay
-						img(src="img/lp/lp_link_1.webp")
-					.lp-links__top
-						.lp-links__title.title.title--h2.title--light О гимназии
-					.lp-links__links
-						+btn({
-							name: 'Наша миссия, ценности и цели',
-							cMode: 'white',
-							icon: 'arrow_up_right',
-						})
-
-				.section-flex__side.lp-links__side
-					.section-flex__bg
-						.section-flex__overlay
-						img(src="img/lp/lp_link_2.svg")
-					.lp-links__top
-						.lp-links__title.title.title--h2.title--light Преподаватели
-					.lp-links__links
-						+btn({
-							name: 'Подробнее о преподавателях',
-							cMode: 'white',
-							icon: 'arrow_up_right',
-						})
+				block

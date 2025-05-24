@@ -1,21 +1,9 @@
 .m-table {
     overflow-x: auto;
-    margin-top: 34px;
-    margin-bottom: 50px;
-
-    @include max(mobile) {
-        margin-right: -15px;
-        margin-top: 20px;
-    }
 
     &::-webkit-scrollbar {
-        width: 9px;
-        height: 9px;
-
-        @include max(tablet) {
-            width: 5px;
-            height: 5px;
-        }
+        width: 3px;
+        height: 3px;
     }
 
     &::-webkit-scrollbar-track {
@@ -24,24 +12,23 @@
 
     &::-webkit-scrollbar-thumb {
         background-color: $c-accent-middle;
-        border-radius: 21px;
+        border-radius: 8px;
     }
 
     table {
         min-width: 100%;
-
-        @include max(mobile) {
-            margin-right: 15px;
-        }
+        border-radius: 20px;
+        overflow: hidden;
     }
 
     th,
     td {
-        padding: 23px;
+        padding: 10px;
         text-align: left;
         font-size: 16px;
-        font-weight: 500;
-        line-height: 1.02em;
+        font-weight: 400;
+        line-height: 1.2em;
+        letter-spacing: -0.01em;
         color: $c-accent;
         vertical-align: top;
 
@@ -81,6 +68,32 @@
     tr th:first-child,
     tr td:first-child {
         min-width: auto !important;
+        padding-left: 15px;
+    }
+
+    tr th:last-child,
+    tr td:last-child {
+        padding-right: 15px;
+    }
+
+    thead tr:first-child th,
+    thead tr:first-child td {
+        padding-top: 20px;
+    }
+
+    thead tr:last-child th,
+    thead tr:last-child td {
+        padding-bottom: 16px;
+    }
+
+    tbody tr:first-child th,
+    tbody tr:first-child td {
+        padding-top: 16px;
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+        padding-bottom: 20px;
     }
 
 
@@ -90,7 +103,7 @@
 
     thead,
     thead tr {
-        background-color: $c-accent-middle;
+        background-color: $c-table-header;
     }
 
     thead tr+tr {
@@ -126,8 +139,7 @@
     }
 
     th {
-        background-color: $c-accent-middle;
-        color: $c-white;
+        font-weight: 500;
     }
 
     .m-table-link {
@@ -218,7 +230,7 @@
     }
 
     tbody tr:nth-child(odd) td {
-        background-color: $c-bg-main;
+        background-color: $c-accent-light;
     }
 
     &__cell-content {
