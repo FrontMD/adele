@@ -526,28 +526,19 @@ iframe {
 
 	ol li {
 		position: relative;
-		padding: 15px 20px 15px 60px;
+		padding-left: 24px;
 
 		@include max(tablet) {
-			padding: 10px 15px 10px 30px;
-		}
-
-		&:nth-child(odd) {
-			background-color: $c-bg-main;
+			padding-left: 20px;
 		}
 
 		&::before {
-			content: counter(num) '';
+			content: counter(num) '.';
 			counter-increment: num;
 			position: absolute;
-			top: 15px;
-			left: 20px;
+			top: 1px;
+			left: 0;
 			font-weight: 500;
-
-			@include max(mobile) {
-				left: 10px;
-				top: 10px;
-			}
 		}
 	}
 

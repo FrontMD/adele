@@ -1,19 +1,21 @@
 -
     const defaultSImgProps = {
         classes: '',
+        img: 'img/checklist.webp'
     }
 
 mixin s-img(props = defaultSImgProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultSImgProps.classes
+            classes: props.classes ? props.classes : defaultSImgProps.classes,
+            img: props.img ? props.img : defaultSImgProps.img,
         }
 
     section.s-img(class= checkProps.classes)&attributes(attributes)
         .m-container
             .s-img__container
                 .s-img__bg
-                    img(src="img/home/checklist.webp")
+                    img(src= checkProps.img)
                 .s-img__content
                     .s-img__title.title.title--h2 Бесплатно скачайте чек-лист для&nbsp;перехода на&nbsp;семейное образование
                     .s-img__text В чек-листе более подробно представлен процесс перехода и сдача промежуточной аттестации

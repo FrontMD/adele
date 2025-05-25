@@ -31,6 +31,17 @@
         }
     }
 
+    &__title {
+        max-width: 650px;
+        margin: 0 auto 50px;
+        margin-bottom: 50px;
+        text-align: center;
+
+        @include max(mobile) {
+            margin: 0 auto 32px;
+        }
+    }
+
     &__flex {
         display: flex;
         align-items: flex-start;
@@ -121,6 +132,31 @@
         }
     }
 
+    &__contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 10px 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        color: $c-accent;
+
+        .left {
+            opacity: 0.4;
+        }
+
+        a {
+            transition: all $tr;
+        }
+
+        a:hover {
+            color: $c-accent-title;
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -128,11 +164,18 @@
         background-color: $c-white;
         border-radius: 16px;
 
-        @include max(mobile) {}
+        .text-editor {
 
+            ol,
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1.125em;
+            }
+        }
     }
 
-    &__title {
+    &__name {
         padding: 30px 40px;
 
         @include max(mobile) {
@@ -176,12 +219,6 @@
             padding: 20px 10px;
         }
 
-        ol,
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 1.125em;
-        }
     }
 
     /*&__showmore {
@@ -225,4 +262,40 @@
             transform: rotate(90deg);
         }
     }*/
+}
+
+.people-intro {
+    &--inner {
+        border-radius: 50px 50px 0 0;
+    }
+
+    &--inner &__container {
+        padding: 0;
+        border-radius: 0;
+
+        @include max(tablet) {
+            padding: 0;
+            border-radius: 0;
+        }
+
+        @include max(mobile) {
+            padding: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &--inner &__flex {
+        gap: 50px;
+    }
+
+    &--inner &__intro {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    &--inner &__content {
+        flex: 1 1 55%;
+        max-width: 55%;
+    }
 }

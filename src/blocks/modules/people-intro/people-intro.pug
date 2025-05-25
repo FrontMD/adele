@@ -1,51 +1,76 @@
 -
     const defaultPeopleIntroProps = {
         classes: '',
-        abbreviated: false,
+        inner: false,
         breadcrumbs: false,
+        title: false,
+        name: '<span>Умаров</span><br>Малик Мусаевич',
+        photo: 'img/peoples/people.webp'
     }
 
 mixin people-intro(props = defaultPeopleIntroProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultPeopleIntroProps.classes,
-            abbreviated: props.abbreviated ? props.abbreviated : defaultPeopleIntroProps.abbreviated,
-            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPeopleIntroProps.breadcrumbs
+            inner: props.inner ? props.inner : defaultPeopleIntroProps.inner,
+            breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPeopleIntroProps.breadcrumbs,
+            title: props.title ? props.title : defaultPeopleIntroProps.title,
+            name: props.name ? props.name : defaultPeopleIntroProps.name,
+            photo: props.photo ? props.photo : defaultPeopleIntroProps.photo,
         }
 
-    .people-intro(class=checkProps.classes)&attributes(attributes)
+        let innerClass = checkProps.inner === true ? ' people-intro--inner' : ''
+
+    .people-intro(class=checkProps.classes + innerClass)&attributes(attributes)
         .m-container
             .people-intro__container
-                if(checkProps.breadcrumbs !== false)
+                - if(checkProps.breadcrumbs !== false)
                     +breadcrumbs(checkProps.breadcrumbs)
+                - if(checkProps.title !== false)
+                    .title.title--h2.people-intro__title!= checkProps.title
                 .people-intro__flex
                     .people-intro__intro
                         .people-intro__img(data-js='peopleDetailImg')
-                            img(src="img/peoples/people.webp")
+                            img(src= checkProps.photo)
                         .people-intro__info
-                            +btn({
-                                cMode: 'bordered',
-                                icon: 'arrow_up_right',
-                                name: 'Приветственное слово преподавателя',
-                                sMode: 'full',
-                                link: 'public/video/review.mp4'
-                            })(data-fancybox)
-                            .people-intro__details
-                                .text-editor
-                                    p Предметы
-                                .text-editor
-                                    ul
-                                        li Арабский язык 
-                                        li Английский язык 
-                                        li Курс “Компьютерная грамотность”
+                            - if(checkProps.inner !== false)
+                                +btn({
+                                    cMode: 'bordered',
+                                    icon: 'arrow_up_right',
+                                    name: 'Приветственное слово директора',
+                                    sMode: 'full',
+                                    link: 'public/video/review.mp4'
+                                })(data-fancybox)
+                                .people-intro__contacts
+                                    .people-intro__contact
+                                        .left Телефон
+                                        a.right(href="tel:+74959395469") +7 (495) 939 54 69
+                                    .people-intro__contact
+                                        .left E-mail
+                                        a.right(href="mailto:sibol1954@bk.ru") sibol1954@bk.ru
+                            - else
+                                +btn({
+                                    cMode: 'bordered',
+                                    icon: 'arrow_up_right',
+                                    name: 'Приветственное слово преподавателя',
+                                    sMode: 'full',
+                                    link: 'public/video/review.mp4'
+                                })(data-fancybox)
+                                .people-intro__details
+                                    .text-editor
+                                        p Предметы
+                                    .text-editor
+                                        ul
+                                            li Арабский язык 
+                                            li Английский язык 
+                                            li Курс “Компьютерная грамотность”
+                                +btn({
+                                    cMode: 'green',
+                                    icon: 'hand_break',
+                                    name: 'Иду по рекомендации',
+                                    sMode: 'full'
+                                })(data-modal='#requestModal')
 
-                            +btn({
-                                cMode: 'green',
-                                icon: 'hand_break',
-                                name: 'Иду по рекомендации',
-                                sMode: 'full'
-                            })(data-modal='#requestModal')
                     .people-intro__content(data-js='peopleDetailContent')
-                        .title.title--h2.people-intro__title(data-js='peopleDetailTitle')
-                            h1 <span>Умаров</span><br>Малик Мусаевич
+                        .title.title--h2.people-intro__name(data-js='peopleDetailTitle')!= checkProps.name
                         block

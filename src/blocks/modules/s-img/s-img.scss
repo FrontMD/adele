@@ -72,3 +72,11 @@
         }
     }
 }
+
+.s-img {
+
+    &--light &__title,
+    &--light &__text {
+        color: $c-white;
+    }
+}
