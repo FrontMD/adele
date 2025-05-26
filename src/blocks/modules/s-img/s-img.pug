@@ -1,7 +1,9 @@
 -
     const defaultSImgProps = {
         classes: '',
-        img: 'img/checklist.webp'
+        img: 'img/checklist.webp',
+        title: 'Бесплатно скачайте чек-лист для&nbsp;перехода на&nbsp;семейное образование',
+        text: 'В&nbsp;чек-листе более подробно представлен процесс перехода и&nbsp;сдача промежуточной аттестации'
     }
 
 mixin s-img(props = defaultSImgProps)
@@ -9,6 +11,8 @@ mixin s-img(props = defaultSImgProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultSImgProps.classes,
             img: props.img ? props.img : defaultSImgProps.img,
+            title: props.title ? props.title : defaultSImgProps.title,
+            text: props.text ? props.text : defaultSImgProps.text,
         }
 
     section.s-img(class= checkProps.classes)&attributes(attributes)
@@ -17,7 +21,7 @@ mixin s-img(props = defaultSImgProps)
                 .s-img__bg
                     img(src= checkProps.img)
                 .s-img__content
-                    .s-img__title.title.title--h2 Бесплатно скачайте чек-лист для&nbsp;перехода на&nbsp;семейное образование
-                    .s-img__text В чек-листе более подробно представлен процесс перехода и сдача промежуточной аттестации
+                    .s-img__title.title.title--h2!= checkProps.title
+                    .s-img__text!= checkProps.text
                     .s-img__bottom
                         block

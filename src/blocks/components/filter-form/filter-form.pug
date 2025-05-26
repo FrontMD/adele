@@ -1,0 +1,103 @@
+-
+    const defaultFilterFormProps = {
+        classes: '',
+        blocks: [
+            {
+                title: 'Предметы',
+                name: 'subjects',
+                fields: [
+                    {
+                        text: 'Русский язык',
+                        num: '3'
+                    },
+                    {
+                        text: 'Математика',
+                        num: '6'
+                    },
+                    {
+                        text: 'Английский язык',
+                        num: '12',
+                    },
+                    {
+                        text: 'Физкультура',
+                        num: '2',
+                    },
+                    {
+                        text: 'Физика',
+                        num: '2',
+                    },
+                    {
+                        text: 'География',
+                        num: '2',
+                    },
+                    {
+                        text: 'Биология',
+                        num: '2',
+                    },
+                    {
+                        text: 'История',
+                        num: '2',
+                    },
+                    {
+                        text: 'Информатика и ИКТ',
+                        num: '3',
+                    },
+                    {
+                        text: 'Обществознание',
+                        num: '4',
+                },
+                ]
+            },
+            {
+                title: 'Звенья',
+                name: 'links',
+                fields: [
+                    {
+                        text: 'Начальное',
+                        num: '3'
+                    },
+                    {
+                        text: 'Среднее',
+                        num: '6'
+                    },
+                    {
+                        text: 'Старшее',
+                        num: '12',
+                    },
+                ]
+            },
+        ]
+    }
+
+mixin filter-form(props = defaultFilterFormProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFilterFormProps.classes,
+            blocks: props.blocks ? props.blocks : defaultFilterFormProps.blocks,
+        }
+
+    form.filter-form(class=checkProps.classes)&attributes(attributes)
+        - let fBlocks = checkProps.blocks
+        - let bCount = 0
+        - while(fBlocks.length > bCount)
+            .filter-form__block
+                .title.title--h5.filter-form__title!= fBlocks[bCount].title
+                .filter-form__fields
+                    - let fFields = fBlocks[bCount].fields
+                    - let fCount = 0
+                    - while(fFields.length > fCount)
+                        .filter-checkbox
+                            label.filter-checkbox__label
+                                input(type='checkbox' name=fBlocks[bCount].name value=fFields[fCount].text).filter-checkbox__input
+                                .filter-checkbox__fake
+                                    .filter-checkbox__text!= fFields[fCount].text
+                                    .filter-checkbox__num!= fFields[fCount].num
+                                    .filter-checkbox__reset
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+
+                        - fCount++
+
+            - bCount++
+
+

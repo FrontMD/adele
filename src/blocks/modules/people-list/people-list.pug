@@ -13,12 +13,120 @@ mixin people-list(props = defaultPeopleListProps)
         .m-container
             .sidebar-section__layout
                 .sidebar-section__sidebar
-                    .people-list__filter
+                    +filter-form
                 .sidebar-section__main
                     .people-list__list
-                        +link-unit()
-                        +link-unit()
-                        +link-unit()
-                        +link-unit()
-                        +link-unit()
-                        +link-unit()
+                        +link-unit
+                        +link-unit({
+                            photo: 'img/peoples/people_dm.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Арабский язык</li><li>Английский язык</li><li>Курс “Компьютерная грамотность”</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное', 'Среднее']
+                                }
+                            ]
+                        })
+                        +link-unit({
+                            title: 'Жане Назира Аскеровна',
+                            photo: 'img/peoples/people_df.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Арабский язык</li><li>Английский язык</li><li>Курс “Компьютерная грамотность”</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное', 'Среднее']
+                                }
+                            ]
+                        })
+                        +link-unit({
+                            title: 'Мингазева Айгуль Халиловна',
+                            photo: 'img/peoples/people_df.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Русский язык</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное']
+                                }
+                            ]
+                        })
+                        +link-unit({
+                            title: 'Гафиатуллин Руслан Айратович',
+                            photo: 'img/peoples/people_3.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Физика</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное', 'Среднее']
+                                }
+                            ]
+                        })
+                        +link-unit({
+                            title: 'Жане Назира Аскеровна',
+                            photo: 'img/peoples/people_df.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Арабский язык</li><li>Английский язык</li><li>Курс “Компьютерная грамотность”</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное', 'Среднее']
+                                }
+                            ]
+                        })
+                        +link-unit({
+                            photo: 'img/peoples/people_dm.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Арабский язык</li><li>Английский язык</li><li>Курс “Компьютерная грамотность”</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное', 'Среднее']
+                                }
+                            ]
+                        })
+                        +link-unit({
+                            title: 'Жане Назира Аскеровна',
+                            photo: 'img/peoples/people_df.webp',
+                            items: [
+                                {
+                                    title: 'Предметы',
+                                    text: '<ul><li>Арабский язык</li><li>Английский язык</li><li>Курс “Компьютерная грамотность”</li></ul>',
+                                    tags: []
+                                },
+                                {
+                                    title: 'Преподает в звеньях',
+                                    text: '',
+                                    tags: ['Начальное', 'Среднее']
+                                }
+                            ]
+                        })
+                        +link-unit
+
+                    +pagination({classes: 'news-list__pagination'})

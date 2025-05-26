@@ -646,6 +646,14 @@ iframe {
 	}
 }
 
+.sidebar-section {
+	&__layout {
+		display: grid;
+		grid-template-columns: 350px minmax(0, calc(100% - 360px));
+		gap: 10px;
+	}
+}
+
 .green-bg {
 	background: $c-accent-light;
 }
