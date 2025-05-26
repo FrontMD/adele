@@ -1,133 +1,37 @@
 .link-unit {
+    position: relative;
     display: flex;
-    align-items: center;
-    background-color: $c-white;
-    border-left: 4px solid $c-accent-light;
-    padding: 32px 26px 32px 40px;
-    margin-top: 20px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 24px;
+    background-color: $c-accent-light;
 
-    @include max(large) {
-        padding: 25px 15px 25px 25px;
-    }
-
-    @include max(mobile) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    a {
-        margin-bottom: 0;
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-        display: inherit;
-        color: inherit;
-
-        @include max(mobile) {
-            margin-bottom: 0;
-        }
-    }
-
-    &__title {
-        margin-right: auto;
-        color: $c-accent;
-    }
-
-    &__phone,
-    &__email,
-    &__number {
-        padding: 0 20px;
-        width: fit-content;
-        font-size: 16px;
-        line-height: 1.02em;
-        color: $c-accent;
-        font-weight: 400;
-
-        @include max(tablet) {
-            padding: 0 10px;
-        }
-
-        @include max(mobile) {
-            padding: 10px 0;
-            font-size: 14px;
-            max-width: calc(100% - 53px);
-        }
-
-    }
-
-    &__number {
-        font-weight: 500;
-        border-left: 1px solid $c-border-op;
-
-        @include max(mobile) {
-            border-left: none;
-        }
-    }
-
-    &__param {
-        opacity: 0.2;
-    }
-
-    &__val {
-        margin-top: 14px;
-    }
-
-    &__link {
+    &__icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 60px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 100px;
-        width: 53px;
-        height: 53px;
-        flex: 0 0 53px;
-        border-radius: 100%;
-        border: 1px solid $c-bg-light;
-        border-color: $c-bg-light;
-        transition: all $tr-time;
-        color: $c-accent;
-
-        @include max(large) {
-            margin-left: 0;
-        }
-
-        @include max(laptop) {
-            margin-left: 50px;
-        }
-
-        @include max(tablet) {
-            margin-left: 0;
-        }
-
-        @include max(mobile) {
-            width: 40px;
-            height: 40px;
-            flex-basis: auto;
-            align-self: flex-end;
-            margin-top: -40px;
-        }
 
         svg {
-            width: 7px;
-            height: 12px;
-            transition: color $tr-time;
-        }
-
-        &:hover {
-            background-color: $c-accent;
-            border-color: $c-accent;
-
-            svg {
-                color: $c-white;
-            }
+            width: 24px;
+            height: 24px;
         }
     }
 
-    &--people-list{
-        .link-unit__title{
-            margin-right: 32px;
-        }
-        .link-unit__number{
-            margin-right: auto;
+    &__photo {
+        width: 45%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: 16px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

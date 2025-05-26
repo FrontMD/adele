@@ -11,8 +11,6 @@
 @@include("../../blocks/modules/modals/modals.js")
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
-@@include("../../blocks/modules/pages/faculty/faculty-advantages/faculty-advantages.js")
-@@include("../../blocks/modules/pages/peoples/people-detail/people-detail.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -21,13 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     mTable()
     mainBurger()
     modalsInit()
-    facultyAdvantagesSliders()
     sVacancySliders()
     sPartners()
     homeInfo()
     homeProcess()
     infoSlider()
-    peopleDetail()
     peopleIntro()
     autoSliders()
 })

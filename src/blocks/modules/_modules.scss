@@ -20,7 +20,9 @@
 @import "lp-section/lp-section";
 @import "t-columns/t-columns";
 @import "s-contacts/s-contacts";
+@import "s-quote/s-quote";
 @import "programm-info/programm-info";
+@import "people-list/people-list";
 
 @import "main-burger/main-burger";
 @import "sidebar-layout/sidebar-layout";
@@ -36,24 +38,9 @@
 @import "s-partners/s-partners";
 
 // Страницы
-@import "pages/history/history-intro/history-intro";
 @import "pages/news/news-socials/news-socials";
-@import "pages/peoples/people-detail/people-detail";
-@import "pages/peoples/people-list/people-list";
 @import "pages/news/news-detailed/news-detailed";
 @import "pages/seminars/seminars-detailed/seminars-detailed";
 @import "pages/seminars/seminars-list/seminars-list";
 @import "pages/rectorate/rectorate-list/rectorate-list";
-@import "pages/faculty/faculty-programms/faculty-programms";
-@import "pages/faculty/faculty-advantages/faculty-advantages";
-@import "pages/faculty/faculty-video/faculty-video";
-@import "pages/vacancy/vacancy-category/vacancy-category";
-@import "pages/vacancy/vacancy-detailed/vacancy-detailed";
-@import "pages/preparatory-courses/preparatory/preparatory";
-@import "pages/abiturientam/abiturientam-important/abiturientam-important";
-@import "pages/abiturientam/abiturientam-news/abiturientam-news";
-@import "pages/abiturientam/abiturientam-steps/abiturientam-steps";
-@import "pages/abiturientam/abiturientam-admission/abiturientam-admission";
-@import "pages/bik/bik-news/bik-news";
 @import "pages/projects/projects-list/projects-list";
-@import "pages/sports/sports-news/sports-news";

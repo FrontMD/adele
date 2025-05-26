@@ -304,7 +304,11 @@
 
 .lp-intro {
     .i-intro__right {
-        max-width: 460px;
+        max-width: 630px;
+
+        @include max(laptop) {
+            max-width: 460px;
+        }
 
         @include max(tablet) {
             max-width: 380px;

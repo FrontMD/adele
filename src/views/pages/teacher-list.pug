@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Преподаватели"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +i-intro({
+                title: 'Преподаватели',
+                isSmall: true,
+                breadcrumbs: {
+                    items: [
+                        {
+                            name: 'Главная',
+                            link: 'javascript:void(0);'
+                        },
+                        {
+                            name: 'Преподаватели',
+                            link: 'javascript:void(0);'
+                        }
+                    ],
+                }
+
+            })
+
+            +people-list({
+                classes: 'p-default'
+            })
+

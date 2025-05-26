@@ -267,6 +267,10 @@
 .people-intro {
     &--inner {
         border-radius: 50px 50px 0 0;
+
+        @include max(tablet) {
+            border-radius: 32px 32px 0 0;
+        }
     }
 
     &--inner &__container {
@@ -282,6 +286,7 @@
             padding: 0;
             margin-left: 0;
             margin-right: 0;
+            width: 100%;
         }
     }
 
@@ -292,10 +297,28 @@
     &--inner &__intro {
         flex: 1 1 45%;
         max-width: 45%;
+
+        @include max(laptop) {
+            max-width: 100%;
+            flex-basis: auto;
+            width: 100%;
+        }
+    }
+
+    &--inner &__info {
+        @include max(laptop) {
+            justify-content: space-between;
+        }
     }
 
     &--inner &__content {
         flex: 1 1 55%;
         max-width: 55%;
+
+        @include max(laptop) {
+            max-width: 100%;
+            flex-basis: auto;
+            width: 100%;
+        }
     }
 }

@@ -79,4 +79,8 @@
     &--light &__text {
         color: $c-white;
     }
+
+    &--light &__bg {
+        background-color: $c-accent;
+    }
 }

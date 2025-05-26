@@ -46,6 +46,10 @@
 
     &__text {
         max-width: 80%;
+
+        @include max(mobile) {
+            max-width: 100%;
+        }
     }
 }
 
@@ -55,10 +59,19 @@
     }
 
     &--small &__side {
-        aspect-ratio: 1 / 0.4;
+        aspect-ratio: auto;
+        min-height: 350px;
 
-        @include max(mobile) {
-            aspect-ratio: 1 / 0.5;
+        @include max(laptop) {
+            min-height: calc((100vw - 50px) / 2 * 0.5);
+        }
+
+        @include max(tablet) {
+            min-height: calc((100vw - 30px) * 0.3);
+        }
+
+        @include max(xs) {
+            min-height: calc((100vw - 20px) * 0.5);
         }
     }
 }

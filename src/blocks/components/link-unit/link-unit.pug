@@ -1,11 +1,20 @@
 -
     const defaultLinkUnitProps = {
         classes: '',
-        title: 'Служба охраны труда',
-        phone: '',
-        email: '',
-        employeesNumber: '',
-        numberTitle: 'Сотрудников'
+        title: 'Умаров Малик Мусаевич',
+        photo: 'img/peoples/people.webp',
+        items: [
+            {
+                title: 'Предметы',
+                text: '<ul><li>Арабский язык</li><li>Английский язык</li></ul>',
+                tags: []
+            },
+            {
+                title: 'Преподает в звеньях',
+                text: '',
+                tags: ['Начальное', 'Среднее']
+            }
+        ]
     }
 
 mixin link-unit(props= defaultLinkUnitProps)
@@ -13,32 +22,35 @@ mixin link-unit(props= defaultLinkUnitProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultLinkUnitProps.classes,
             title: props.title ? props.title : defaultLinkUnitProps.title,
-            phone: props.phone ? props.phone : defaultLinkUnitProps.phone,
-            email: props.email ? props.email : defaultLinkUnitProps.email,
-            employeesNumber: props.employeesNumber ? props.employeesNumber : defaultLinkUnitProps.employeesNumber,
-            numberTitle: props.numberTitle ? props.numberTitle : defaultLinkUnitProps.numberTitle
+            photo: props.photo ? props.photo : defaultLinkUnitProps.photo,
+            items: props.items ? props.items : defaultLinkUnitProps.items
         }
 
     .link-unit(class= checkProps.classes)&attributes(attributes)
-        .h3.link-unit__title
-            a(href="#")!= checkProps.title
-        -if(checkProps.phone.length > 0)
-            .link-unit__phone
-                .link-unit__param Телефон
-                .link-unit__val
-                    a(href=`tel:+79999999999`)!= checkProps.phone
-        -if(checkProps.email.length > 0)
-            .link-unit__email
-                .link-unit__param Почта
-                .link-unit__val
-                    a(href=`mailto:${checkProps.email}`)!= checkProps.email
-        .link-unit__number
-            .link-unit__param!= checkProps.numberTitle
-            -if(checkProps.employeesNumber.length > 0)
-                .link-unit__val!= checkProps.employeesNumber
-        a.link-unit__link(href="javascript:void(0)" target="_blank")
+        a.link-unit__link(href="javascript:void(0)")
+        .link-unit__icon
             svg 
-                use(xlink:href=`img/sprites/sprite.svg#link_angle`)
+                use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+        .link-unit__photo
+            img(src= checkProps.photo)
+        .title.title--h5.link-unit__title!= checkProps.title
+        .link-unit__items
+            - let itemsCount = 0;
+            - let itemsList = checkProps.items 
+            - while(itemsCount < itemsList.length)
+                .link-unit__item
+                    .link-unit__subtitle!= itemsList[itemsCount].title
+                    - if(itemsList[itemsCount].text.length > 0)
+                        .link-unit__text.text-editor!= itemsList[itemsCount].text
+                    - if(itemsList[itemsCount].tags.length > 0)
+                        .link-unit__tags
+                            - let tagsCount = 0
+                            - let tagsList = itemsList[itemsCount].tags
+                            - while(tagsCount < tagsList.length)
+                                .link-unit__tag!= tagsList[tagsCount]
+                                - tagsCount++
+
+                - itemsCount++
 
 
 

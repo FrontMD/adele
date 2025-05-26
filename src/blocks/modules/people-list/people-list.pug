@@ -1,0 +1,24 @@
+-
+    const defaultPeopleListProps = {
+    classes: ''
+    }
+
+mixin people-list(props = defaultPeopleListProps)
+    -
+        const checkProps = {
+        classes: props.classes ? props.classes : defaultPeopleListProps.classes
+        }
+
+    section.people-list.sidebar-section(class=checkProps.classes)
+        .m-container
+            .sidebar-section__layout
+                .sidebar-section__sidebar
+                    .people-list__filter
+                .sidebar-section__main
+                    .people-list__list
+                        +link-unit()
+                        +link-unit()
+                        +link-unit()
+                        +link-unit()
+                        +link-unit()
+                        +link-unit()
