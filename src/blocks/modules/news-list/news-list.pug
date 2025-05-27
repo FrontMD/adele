@@ -46,10 +46,18 @@ mixin news-list(props = defaultNewsListProps)
                 .news-list__header
                     .title.title--h2.news-list__title
                         h2!= checkProps.title
-                    //-+period-select
             - else
-                //-+news-filter()        
-                    +period-select
+                +s-filter({
+                    cMode: 'white',
+                    items: [
+                        'Все новости',
+                        'Мероприятия',
+                        'Советы для родителей',
+                        'Дни открытых дверей',
+                        'PRO обучение',
+                        'Достижения учеников',
+                    ]
+                })
             .news-list__items
                 - let newsCount = 0;
                 - let newsList = checkProps.newsList;
@@ -63,7 +71,7 @@ mixin news-list(props = defaultNewsListProps)
                     })
                     - newsCount++
 
-            +pagination({classes: 'news-list__pagination'})
+            +pagination({classes: 'pagination--mt'})
 
 
 

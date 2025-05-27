@@ -1,0 +1,145 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Документы"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +sidebar-layout(
+                {
+                items: [
+                    {
+                        name: 'Главная',
+                        link: 'javascript:void(0);'
+                    },
+                    {
+                        name: 'Основные сведения',
+                        link: 'javascript:void(0);'
+                    }
+                ],
+                }
+            )
+                .sidebar-layout__block
+                    .sidebar-layout__block-title.title.title--h2 Документы
+                    .sidebar-layout__content
+                        .gost-section.gost-section--bordered.text-editor
+                            h2 Общие документы
+                            .text-items-list
+                                +link-block({
+                                    text: 'Устав',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Правила внутреннего распорядка обучающихся',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Правила внутреннего трудового распорядка',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке проведения самообследовании',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Коллективный договор',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Не предусмотрено',
+                                    noLink: true
+                                })
+                                +link-block({
+                                    text: 'Отчет о результатах самообследования: не подлежит оформлению за 2024 год',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Не предусмотрено',
+                                    noLink: true
+                                })
+                                +link-block({
+                                    text: 'Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, отсутствуют',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Не предусмотрено',
+                                    noLink: true
+                                })
+
+                .sidebar-layout__block
+                    .sidebar-layout__block-title.title.title--h4 Локальные нормативные акты образовательной организации по основным вопросам организации и осуществления образовательной деятельности, в том числе регламентирующие:
+                    .sidebar-layout__content
+                        .gost-section.gost-section--bordered.text-editor
+                            .text-items-list
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })
+                                +link-block({
+                                    text: 'Положение о порядке оказания платных образовательных услуг',
+                                    vMode: 'note',
+                                    type: 'arrow_up_right',
+                                    linkText: 'Открыть документ'
+                                })

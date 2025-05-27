@@ -6,6 +6,11 @@
     align-items: center;
     gap: 8px;
     width: 100%;
+    margin: 0 auto;
+
+    &--mt {
+        margin-top: 50px;
+    }
 
     @include max(mobile) {
         gap: 4px;

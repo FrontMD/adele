@@ -89,3 +89,14 @@
         }
     }
 }
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    overflow: hidden;
+
+    .spoiler+.spoiler {
+        border-top: 1px solid $c-border;
+    }
+}

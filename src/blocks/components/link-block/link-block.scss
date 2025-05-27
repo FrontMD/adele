@@ -23,15 +23,16 @@
         max-width: 775px;
     }
 
-    a.link-block__link {
+    &__link {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         align-self: flex-start;
-        padding: 18px 21px;
+        padding: 18px 20px;
         gap: 10px;
         flex: 0 0 auto;
         min-height: 60px;
+        min-width: 225px;
         color: $c-accent;
         font-size: 16px;
         font-weight: 500;
@@ -40,7 +41,26 @@
         margin-bottom: 0;
         border-radius: 50px;
         border: solid 1px $c-border-2;
+
+        @include max(mobile) {
+            font-size: 14px;
+            flex-basis: 40px;
+            min-height: 40px;
+            padding: 11px;
+            min-width: auto;
+        }
+
+    }
+
+    a.link-block__link {
         transition: all $tr;
+        display: flex;
+        margin-bottom: 0;
+
+        @include max(tablet) {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
 
         &:hover {
             background-color: $c-accent;
@@ -50,13 +70,6 @@
 
         &:hover>* {
             color: $c-white;
-        }
-
-        @include max(mobile) {
-            font-size: 14px;
-            flex-basis: 40px;
-            min-height: 40px;
-            padding: 11px;
         }
 
     }
@@ -117,6 +130,31 @@
             color: $c-white;
         }
 
+    }
+
+    &__link--nolink {
+
+        @include max(mobile) {
+            display: none;
+        }
+    }
+
+    &__link--nolink &__text {
+        opacity: 0.3;
+
+        @include max(mobile) {
+            display: block;
+        }
+    }
+
+    &__text {
+        display: block;
+        white-space: nowrap;
+        opacity: 1;
+
+        @include max(mobile) {
+            display: none;
+        }
     }
 
 
@@ -189,21 +227,6 @@
         svg {
             width: 9px;
             height: 12px;
-        }
-    }
-
-    &__link--nolink &__text {
-        @include max(mobile) {
-            display: block;
-        }
-    }
-
-    &__text {
-        display: block;
-        white-space: nowrap;
-
-        @include max(mobile) {
-            display: none;
         }
     }
 

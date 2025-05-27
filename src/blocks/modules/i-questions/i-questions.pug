@@ -5,11 +5,11 @@
 
     }
 
-mixin i-questions(props = defaultMQuestionsProps)
+mixin i-questions(props = defaultIQuestionsProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultMQuestionsProps.classes,
-            title: props.title ? props.title : defaultMQuestionsProps.title,
+            classes: props.classes ? props.classes : defaultIQuestionsProps.classes,
+            title: props.title ? props.title : defaultIQuestionsProps.title,
         }
 
     section.i-questions(class= checkProps.classes)
@@ -19,7 +19,7 @@ mixin i-questions(props = defaultMQuestionsProps)
                     title: `<div class="title title--h2 i-questions__title">Вопросы о программе</div>
                     <a class="btn btn--green" href="#" data-modal="#questionModal">Задать вопрос<svg><use xlink:href="img/sprites/sprite.svg#arrow_up_right"></use></svg></a>`
                     })
-                    .i-questions__accordion(data-js="accordion")
+                    .i-questions__accordion.accordion(data-js="accordion")
                         +spoiler({
                             title: 'Есть ли записи уроков?',
                             text: '<p>Все уроки есть в записи, и мы высылаем их ученикам по запросу. Например пропуск по уважительной причине или для повторения материала.</a></p>'

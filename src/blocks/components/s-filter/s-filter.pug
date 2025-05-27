@@ -2,6 +2,7 @@
     const defaultSFilterProps = {
         classes: '',
         title: '',
+        cMode: '',
         items: [
             'Домашняя гимназия. "Начало". Модули 1-4 ĸласс',
             'Домашняя гимназия. "Начало". Модули 5-8 ĸласс',
@@ -17,10 +18,13 @@ mixin s-filter(props = defaultSFilterProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultSFilterProps.classes,
             title: props.title ? props.title : defaultSFilterProps.title,
+            cMode: props.cMode ? props.cMode : defaultSFilterProps.cMode,
             items: props.items ? props.items : defaultSFilterProps.items
         }
 
-    .s-filter(class=checkProps.classes data-js="sFilter")
+        let cClass = checkProps.cMode.length > 0 ? ` s-filter--${checkProps.cMode}` : ''
+
+    .s-filter(class=checkProps.classes + cClass data-js="sFilter")
         - if(checkProps.title.length > 0)
             .title.title--h5.s-filter__title!= checkProps.title
         .s-filter__list(data-js="sFilterSlider")

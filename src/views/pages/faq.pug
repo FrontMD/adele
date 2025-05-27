@@ -1,13 +1,13 @@
 extends ../layouts/default
 
 block variables
-    - const title = "Преподаватели"
+    - const title = "Вопрос-ответ"
 
 block content
     .page(data-js="page")
         .page-layout
             +i-intro({
-                title: 'Преподаватели',
+                title: 'Вопрос-ответ',
                 isSmall: true,
                 breadcrumbs: {
                     items: [
@@ -16,7 +16,7 @@ block content
                             link: 'javascript:void(0);'
                         },
                         {
-                            name: 'Преподаватели',
+                            name: 'Вопрос-ответ',
                             link: 'javascript:void(0);'
                         }
                     ],
@@ -24,7 +24,7 @@ block content
 
             })
 
-            +people-list({
-                classes: 'p-default pb-100'
+            +m-questions({
+                classes: 'p-default green-bg m-alone'
             })
 

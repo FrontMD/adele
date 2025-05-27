@@ -1,7 +1,7 @@
 -
     const defaultLinkUnitProps = {
         classes: '',
-        title: 'Умаров Малик Мусаевич',
+        title: 'Умаров<br>Малик<br>Мусаевич',
         photo: 'img/peoples/people.webp',
         items: [
             {
@@ -29,6 +29,7 @@ mixin link-unit(props= defaultLinkUnitProps)
     .link-unit(class= checkProps.classes)&attributes(attributes)
         a.link-unit__link(href="javascript:void(0)")
         .link-unit__icon
+            span Подробнее
             svg 
                 use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
         .link-unit__photo

@@ -6,8 +6,20 @@
     border: 1px solid $c-border-2;
     border-radius: 24px;
 
+    @include max(laptop) {
+        padding: 3px 10px;
+    }
+
+    @include max(mobile) {
+        border-radius: 16px;
+    }
+
     &__block {
         padding: 16px 0;
+
+        @include max(laptop) {
+            padding: 12px 0;
+        }
     }
 
     &__block+&__block {
@@ -16,6 +28,10 @@
 
     &__title {
         margin-bottom: 20px;
+
+        @include max(laptop) {
+            margin-bottom: 12px;
+        }
     }
 
     &__fields {
@@ -23,6 +39,10 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 16px;
+
+        @include max(laptop) {
+            gap: 10px;
+        }
     }
 }
 
@@ -57,6 +77,18 @@
         letter-spacing: -0.01em;
         color: $c-accent;
         cursor: pointer;
+
+        @include max(mobile) {
+            padding: 8px 10px;
+            font-size: 12px;
+            min-height: 30px;
+        }
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white;
+            border-color: $c-accent;
+        }
     }
 
     &__num {
