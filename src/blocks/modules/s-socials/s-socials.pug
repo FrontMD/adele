@@ -1,0 +1,15 @@
+-
+	const defaultSSocialsProps = {
+		classes: '',
+	}
+
+mixin s-socials(props = defaultSSocialsProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSSocialsProps.classes,
+		}
+
+	section.s-socials(class=checkProps.classes)&attributes(attributes)
+		.m-container
+			.section-flex
+				block
