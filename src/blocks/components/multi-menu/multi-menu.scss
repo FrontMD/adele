@@ -11,7 +11,7 @@
             align-items: center;
             align-self: flex-start;
             gap: 10px;
-            color: $c-white;
+            color: $c-accent;
             font-size: 14px;
             font-weight: 500;
             line-height: 1.02em;
@@ -166,15 +166,20 @@
         }
     }
 
-    &__item.active,
-    &__item:hover {
-        border-color: transparent;
+
+    @include min(mobile) {
+
+        &__item.active,
+        &__item:hover {
+            border-color: transparent;
+        }
+
+        &__item.active &__inner,
+        &__item:hover &__inner {
+            background-color: $c-accent-light;
+        }
     }
 
-    &__item.active &__inner,
-    &__item:hover &__inner {
-        background-color: $c-accent-light;
-    }
 
     &__item.active &__inner &__icon {
         opacity: 1;
@@ -205,6 +210,12 @@
         @include max(1200) {
             font-size: 16px;
             min-height: 44px;
+        }
+
+        @include max(mobile) {
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 0;
         }
     }
 
