@@ -30,7 +30,7 @@ mixin people-intro(props = defaultPeopleIntroProps)
                     .title.title--h2.people-intro__title!= checkProps.title
                 .people-intro__flex
                     .people-intro__intro
-                        .people-intro__img(data-js='peopleDetailImg')
+                        .people-intro__img
                             img(src= checkProps.photo)
                         .people-intro__info
                             - if(checkProps.inner !== false)
@@ -71,6 +71,6 @@ mixin people-intro(props = defaultPeopleIntroProps)
                                     sMode: 'full'
                                 })(data-modal='#requestModal')
 
-                    .people-intro__content(data-js='peopleDetailContent')
-                        .title.title--h2.people-intro__name(data-js='peopleDetailTitle')!= checkProps.name
+                    .people-intro__content
+                        .title.title--h2.people-intro__name!= checkProps.name
                         block

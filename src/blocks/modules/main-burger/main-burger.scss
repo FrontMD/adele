@@ -24,6 +24,9 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         width: 100%;
         max-width: 400px;
         height: 100%;
@@ -37,18 +40,33 @@
         transform: translateX(0);
     }
 
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $c-border;
+        flex: 0 0 auto;
+    }
+
+    .multi-menu {
+        flex: 0 1 auto;
+    }
+
     &__close {
         cursor: pointer;
         color: $c-accent;
         transition: all $tr;
+        width: fit-content;
+        margin-left: 10px;
 
         &:hover {
             color: $c-accent-dark;
         }
 
         svg {
-            width: 24px;
-            height: 24px;
+            width: 40px;
+            height: 40px;
         }
     }
 }

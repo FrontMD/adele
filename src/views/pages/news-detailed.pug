@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Новость"
+    - const greenBg = true
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +news-detailed
+            +news-list({
+                titleMode: true,
+                classes: 'p-default pb-100',
+                title: 'Популярные статьи автора'
+            })

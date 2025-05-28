@@ -976,81 +976,30 @@ mixin multi-menu(props= defaultmultiMenuProps)
                                 svg
                                     use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-    //- else
+    - else
         .multi-menu(class= checkProps.classes + isHeaderClass data-js="multiMenu")&attributes(attributes)
             .multi-menu__list.multi-menu__list--1.active(data-js='multiMenuList' data-level="1")
                 .multi-menu__items
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                        span.multi-menu__text Поступающим
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text О гимназии
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2')
+                        .multi-menu__inner
+                            span.multi-menu__text Учащимся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4')
-                        span.multi-menu__text Об университете
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5')
-                        span.multi-menu__text Кафедры
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6')
-                        span.multi-menu__text Довузовское образование
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7')
-                        span.multi-menu__text Наука
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8')
-                        span.multi-menu__text Международная деятельность
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                        span.multi-menu__text Общие сведения
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                        span.multi-menu__text Сведения об образовательной организации
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                        span.multi-menu__text Противодействие коррупции
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                        span.multi-menu__text Новости
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Будущим ученикам и их родителям
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
             .multi-menu__list.multi-menu__list--2(data-js='multiMenuList' data-level="2" data-index="1")
                 .multi-menu__back(data-js="multiMenuBack")
@@ -1058,78 +1007,96 @@ mixin multi-menu(props= defaultmultiMenuProps)
                         use(xlink:href="img/sprites/sprite.svg#link_angle")
                     | Назад
                 .multi-menu__items
-
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                        span.multi-menu__text Уровень 2-1
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Основные сведения 1
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2')
+                        .multi-menu__inner
+                            span.multi-menu__text Структура и органы управления образовательной организацией
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Документы
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
-                        span.multi-menu__text Об университете
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4')
+                        .multi-menu__inner
+                            span.multi-menu__text Образование
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
-                        span.multi-menu__text Кафедры
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5')
+                        .multi-menu__inner
+                            span.multi-menu__text Руководство. Педагогический состав
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
-                        span.multi-menu__text Довузовское образование
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6')
+                        .multi-menu__inner
+                            span.multi-menu__text Материально-техническое обеспечение и оснащенность образовательного процесса
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
-                        span.multi-menu__text Наука
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7')
+                        .multi-menu__inner
+                            span.multi-menu__text Доступная среда
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
-                        span.multi-menu__text Международная деятельность
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8')
+                        .multi-menu__inner
+                            span.multi-menu__text Платные образовательные услуги
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                        span.multi-menu__text Общие сведения
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Финансово-хозяйственная деятельность
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                        span.multi-menu__text Сведения об образовательной организации
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Вакантные места для приема (перевода) обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                        span.multi-menu__text Противодействие коррупции
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Стипендии и меры поддержки обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                        span.multi-menu__text Новости
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Международное сотрудничество
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='13') 
+                        .multi-menu__inner
+                            span.multi-menu__text Организация питания в образовательной организации
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
             .multi-menu__list.multi-menu__list--2(data-js='multiMenuList' data-level="2" data-index="2")
                 .multi-menu__back(data-js="multiMenuBack")
@@ -1137,77 +1104,96 @@ mixin multi-menu(props= defaultmultiMenuProps)
                         use(xlink:href="img/sprites/sprite.svg#link_angle")
                     | Назад
                 .multi-menu__items
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='13')
-                        span.multi-menu__text Уровень 2-2
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='14')
+                        .multi-menu__inner
+                            span.multi-menu__text Основные сведения 2
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='14') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='15') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='15')
+                        .multi-menu__inner
+                            span.multi-menu__text Структура и органы управления образовательной организацией
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='16') 
-                        span.multi-menu__text Об университете
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Документы
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='17') 
-                        span.multi-menu__text Кафедры
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='17')
+                        .multi-menu__inner
+                            span.multi-menu__text Образование
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='18') 
-                        span.multi-menu__text Довузовское образование
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='18')
+                        .multi-menu__inner
+                            span.multi-menu__text Руководство. Педагогический состав
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='19') 
-                        span.multi-menu__text Наука
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='19')
+                        .multi-menu__inner
+                            span.multi-menu__text Материально-техническое обеспечение и оснащенность образовательного процесса
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='20') 
-                        span.multi-menu__text Международная деятельность
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='20')
+                        .multi-menu__inner
+                            span.multi-menu__text Доступная среда
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='21') 
-                        span.multi-menu__text Общие сведения
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='21')
+                        .multi-menu__inner
+                            span.multi-menu__text Платные образовательные услуги
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='22') 
-                        span.multi-menu__text Сведения об образовательной организации
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Финансово-хозяйственная деятельность
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='23') 
-                        span.multi-menu__text Противодействие коррупции
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Вакантные места для приема (перевода) обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
                     a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='24') 
-                        span.multi-menu__text Новости
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                        .multi-menu__inner
+                            span.multi-menu__text Стипендии и меры поддержки обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='25') 
+                        .multi-menu__inner
+                            span.multi-menu__text Международное сотрудничество
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='26') 
+                        .multi-menu__inner
+                            span.multi-menu__text Организация питания в образовательной организации
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
             .multi-menu__list.multi-menu__list--2(data-js='multiMenuList' data-level="2" data-index="3")
                 .multi-menu__back(data-js="multiMenuBack")
@@ -1215,77 +1201,96 @@ mixin multi-menu(props= defaultmultiMenuProps)
                         use(xlink:href="img/sprites/sprite.svg#link_angle")
                     | Назад
                 .multi-menu__items
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                        span.multi-menu__text Уровень 2-3
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='27')
+                        .multi-menu__inner
+                            span.multi-menu__text Основные сведения 3
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='28')
+                        .multi-menu__inner
+                            span.multi-menu__text Структура и органы управления образовательной организацией
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='29') 
+                        .multi-menu__inner
+                            span.multi-menu__text Документы
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='4') 
-                        span.multi-menu__text Об университете
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='30')
+                        .multi-menu__inner
+                            span.multi-menu__text Образование
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='5') 
-                        span.multi-menu__text Кафедры
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='31')
+                        .multi-menu__inner
+                            span.multi-menu__text Руководство. Педагогический состав
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='6') 
-                        span.multi-menu__text Довузовское образование
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='32')
+                        .multi-menu__inner
+                            span.multi-menu__text Материально-техническое обеспечение и оснащенность образовательного процесса
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='7') 
-                        span.multi-menu__text Наука
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='33')
+                        .multi-menu__inner
+                            span.multi-menu__text Доступная среда
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='8') 
-                        span.multi-menu__text Международная деятельность
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='34')
+                        .multi-menu__inner
+                            span.multi-menu__text Платные образовательные услуги
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='9') 
-                        span.multi-menu__text Общие сведения
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='35') 
+                        .multi-menu__inner
+                            span.multi-menu__text Финансово-хозяйственная деятельность
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='10') 
-                        span.multi-menu__text Сведения об образовательной организации
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='36') 
+                        .multi-menu__inner
+                            span.multi-menu__text Вакантные места для приема (перевода) обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='11') 
-                        span.multi-menu__text Противодействие коррупции
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='37') 
+                        .multi-menu__inner
+                            span.multi-menu__text Стипендии и меры поддержки обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='12') 
-                        span.multi-menu__text Новости
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='38') 
+                        .multi-menu__inner
+                            span.multi-menu__text Международное сотрудничество
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='39') 
+                        .multi-menu__inner
+                            span.multi-menu__text Организация питания в образовательной организации
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
             .multi-menu__list.multi-menu__list--3(data-js='multiMenuList' data-level="3" data-index="1")
                 .multi-menu__back(data-js="multiMenuBack")
@@ -1293,21 +1298,96 @@ mixin multi-menu(props= defaultmultiMenuProps)
                         use(xlink:href="img/sprites/sprite.svg#link_angle")
                     | Назад
                 .multi-menu__items
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                        span.multi-menu__text Уровень 3-1
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Основные сведения 1-1
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Структура и органы управления образовательной организацией
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Документы
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Образование
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Руководство. Педагогический состав
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Материально-техническое обеспечение и оснащенность образовательного процесса
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Доступная среда
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Платные образовательные услуги
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Финансово-хозяйственная деятельность
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Вакантные места для приема (перевода) обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Стипендии и меры поддержки обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Международное сотрудничество
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Организация питания в образовательной организации
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
             .multi-menu__list.multi-menu__list--3(data-js='multiMenuList' data-level="3" data-index="2")
                 .multi-menu__back(data-js="multiMenuBack")
@@ -1315,40 +1395,94 @@ mixin multi-menu(props= defaultmultiMenuProps)
                         use(xlink:href="img/sprites/sprite.svg#link_angle")
                     | Назад
                 .multi-menu__items
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                        span.multi-menu__text Уровень 3-2
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Основные сведения 1-2
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
 
-            .multi-menu__list.multi-menu__list--3(data-js='multiMenuList' data-level="3" data-index="13")
-                .multi-menu__back(data-js="multiMenuBack")
-                    svg 
-                        use(xlink:href="img/sprites/sprite.svg#link_angle")
-                    | Назад
-                .multi-menu__items
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='1')
-                        span.multi-menu__text Уровень 3-13
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='2') 
-                        span.multi-menu__text Обучающимся
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
-                    a.multi-menu__item(href="index.html" data-js="multiMenuItem" data-index='3') 
-                        span.multi-menu__text Структура
-                        span.multi-menu__icon(data-js="multiMenuIcon")
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Структура и органы управления образовательной организацией
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Документы
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Образование
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Руководство. Педагогический состав
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Материально-техническое обеспечение и оснащенность образовательного процесса
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Доступная среда
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem")
+                        .multi-menu__inner
+                            span.multi-menu__text Платные образовательные услуги
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Финансово-хозяйственная деятельность
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Вакантные места для приема (перевода) обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Стипендии и меры поддержки обучающихся
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Международное сотрудничество
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+
+                    a.multi-menu__item(href="index.html" data-js="multiMenuItem") 
+                        .multi-menu__inner
+                            span.multi-menu__text Организация питания в образовательной организации
+                            span.multi-menu__icon(data-js="multiMenuIcon")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_right`)
+

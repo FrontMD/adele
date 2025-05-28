@@ -38,7 +38,6 @@
         @include max(mobile) {
             width: 100%;
             left: -110%;
-            background-color: $c-accent;
             z-index: -1;
             opacity: 1;
             visibility: visible;
@@ -101,7 +100,7 @@
             }
         }
 
-        /*&--3 {
+        &--3 {
             left: calc((100% / 3 * 2) + 20px);
             width: calc((100% / 3) - 20px);
 
@@ -118,7 +117,7 @@
                     display: none;
                 }
             }
-        }*/
+        }
     }
 
     &__items {

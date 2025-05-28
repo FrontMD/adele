@@ -34,6 +34,7 @@ const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLA
 document.addEventListener('DOMContentLoaded', () => {
     headerBannerControll();
     fancyboxInit();
+    anchorsInit();
 })
 
 // Показ баннера
@@ -88,5 +89,45 @@ function fancyboxInit() {
             },
         }
 
+    });
+}
+
+// якорные ссылки
+function anchorsInit() {
+
+    const anchors = document.querySelectorAll('a[href^="#"]');
+
+    if(anchors.length < 1) return
+
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const anchorName = this.getAttribute('href').replace('#', '');
+            const targetEl = document.getElementById(anchorName);
+            const targetTabs = targetEl.closest('[data-js="tabsBlock"]');
+            let scrollTopOffset = document.querySelector('[data-js="siteHeader"]') ? document.querySelector('[data-js="siteHeader"]').offsetHeight : '0'
+
+            if(targetTabs) {
+                const targetTabsSlide = targetEl.closest('[data-js="tabsBlockSlide"]')
+                const targetTabIndex = $(targetTabsSlide).index()
+                const targetTab = targetTabs.querySelector(`[data-js="tabsBlockTab"][data-index="${targetTabIndex}"]`)
+
+                if(targetTab) {
+                    targetTab.click()
+                }
+
+                scrollTopOffset = scrollTopOffset + targetTabs.querySelector('[data-js="tabsBlockList"]').offsetHeight + 32
+
+            }
+
+            const targetElPos = Math.ceil($(targetEl).offset().top - scrollTopOffset)
+
+            window.scrollTo({
+                top: targetElPos,
+                behavior: 'smooth'
+            })
+    
+        });
     });
 }
