@@ -44,7 +44,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 10px;
+        padding: 8px 0 10px;
         border-bottom: 1px solid $c-border;
         flex: 0 0 auto;
     }
@@ -65,8 +65,8 @@
         }
 
         svg {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
         }
     }
 }
