@@ -170,6 +170,10 @@
                 font-size: 14px;
             }
         }
+
+        .text-editor h2+h3 {
+            margin-top: 2.857em;
+        }
     }
 
     &__block-title {
@@ -185,6 +189,10 @@
 
         @include max(mobile) {
             padding: 15px 10px;
+        }
+
+        .info-tag {
+            margin-top: 16px;
         }
 
     }
