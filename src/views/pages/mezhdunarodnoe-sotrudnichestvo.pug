@@ -21,7 +21,7 @@ block content
                 }
             )
                 .sidebar-layout__block
-                    .sidebar-layout__block-title.title.title--h3 <span>Международное</span> <br>сотрудничество
+                    .sidebar-layout__block-title.title.title--h2 <span>Международное</span> <br>сотрудничество
                     .sidebar-layout__content
                         .gost-section.gost-section--bordered.text-editor
                             h2 Сведения об интеграции российского образования с мировым образовательным пространством
@@ -36,9 +36,6 @@ block content
 
                         .gost-section.gost-section--bordered.text-editor
                             h3 Информация о заключённых и планируемых к заключению договорах с иностранными и (или) международными организациями по вопросам образования и науки (при наличии)
-
-                            +info-tag
-
                             +m-table({
                                 hasLinks: 'true',
                                 header: [								
@@ -90,7 +87,8 @@ block content
 
 
                         +m-columns({
-                            title: '<h3>Численность иностранных педагогических и научных работников</h3>'
+                            title: '<h3>Численность иностранных педагогических и научных работников</h3>',
+                            mainIsText: true
                             })
                                 .text-items-list
                                     +count-block({

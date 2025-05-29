@@ -24,7 +24,7 @@ block content
                 .sidebar-layout__content
                     .gost-section.gost-section--bordered.text-editor
                         .gost-section__title!= '<h3>Информация о&nbsp;руководителе образовательной организации</h3>'
-                        +info-tag
+
                         +m-table({
                             header: [								
                                 "№",
@@ -47,7 +47,7 @@ block content
 
                     .gost-section.gost-section--bordered.text-editor
                         .gost-section__title!= '<h3>Информация о&nbsp;заместителях руководителя образовательной организации</h3>'
-                        +info-tag
+
                         +m-table({
                             header: [								
                                 "№",
@@ -119,7 +119,7 @@ block content
 
                     .gost-section.gost-section--bordered.text-editor
                         .gost-section__title!= '<h3>Информация о&nbsp;персональном составе педагогических работников каждой реализуемой образовательной программы</h3>'
-                        +info-tag
+
                         +m-table({
                             hasLinks: 'true',
                             header: [								
@@ -326,7 +326,8 @@ block content
                         })  
 
                     +m-columns({
-                        title: '<h3>Численность иностранных педагогических и научных работников</h3>'
+                        title: '<h3>Численность иностранных педагогических и научных работников</h3>',
+                            mainIsText: true
                         })
                             .text-items-list
                                 +count-block({

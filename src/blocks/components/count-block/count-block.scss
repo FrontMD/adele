@@ -4,7 +4,7 @@
 
     &--row {
         align-items: center;
-        background-color: $c-bg-main;
+        background-color: $c-accent-light;
         padding: 20px 25px;
         margin-top: 18px;
         gap: 50px;
@@ -24,9 +24,9 @@
         flex: 1 1 auto;
         color: $c-accent;
         font-size: 16px;
-        font-weight: 400;
-        line-height: 1.17em;
-        opacity: 0.6;
+        font-weight: 500;
+        line-height: 1.2em;
+        opacity: 0.4;
 
         @include max(mobile) {
             font-size: 14px;
@@ -34,7 +34,7 @@
     }
 
     &__num {
-        color: $c-accent-middle;
+        color: $c-accent-title;
 
         a {
             font-size: inherit;

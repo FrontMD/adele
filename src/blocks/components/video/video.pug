@@ -1,8 +1,9 @@
 -
     const defaultVideoProps = {
         classes: '',
-        video: '',
-        poster: '',
+        poster: 'img/lp/lp_sec_3.webp',
+        video: 'public/video/review.mp4',
+        iframe: false
     }
 
 mixin video(props = defaultVideoProps)
@@ -10,20 +11,29 @@ mixin video(props = defaultVideoProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultVideoProps.classes,
             video: props.video ? props.video : defaultVideoProps.video,
-            poster: props.poster ? props.poster : defaultVideoProps.poster
+            poster: props.poster ? props.poster : defaultVideoProps.poster,
+            iframe: props.iframe ? props.iframe : defaultVideoProps.iframe
         }
 
-    .video(data-js='video')
-        .video__video
-            .video__img(data-js='videoPoster')
-                img(src=checkProps.poster alt="")
-            .video__frame(data-js='videoFrame' data-video=checkProps.video)
-        +btn({
-            classes: 'video__btn',
-            sMode: 'icon',
-            cMode: 'white',
-            type: 'button',
-            icon: 'play'
+    .video(class= checkProps.classes)&attributes(attributes)
+        .video__poster
+            img(src=checkProps.poster)
+        - if(checkProps.iframe === true)
+            +btn({
+                classes: 'video__play',
+                sMode:'icon',
+                icon:'play',
+                cMode: 'white',
+                link: checkProps.video
+            })(data-fancybox data-type="iframe")
+        - else
+            +btn({
+                classes: 'video__play',
+                sMode:'icon',
+                icon:'play',
+                cMode: 'white',
+                link: checkProps.video
+            })(data-fancybox)
 
-        })(data-js="videoBtnPlay")
+
 

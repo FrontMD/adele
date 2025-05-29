@@ -41,6 +41,7 @@
         margin-bottom: 0;
         border-radius: 50px;
         border: solid 1px $c-border-2;
+        transition: all $tr;
 
         @include max(mobile) {
             font-size: 14px;
@@ -56,11 +57,7 @@
         transition: all $tr;
         display: flex;
         margin-bottom: 0;
-
-        @include max(tablet) {
-            margin-bottom: 0;
-            font-size: 16px;
-        }
+        background-color: $c-white;
 
         &:hover {
             background-color: $c-accent;
@@ -68,8 +65,13 @@
             color: $c-white;
         }
 
-        &:hover>* {
+        &:hover * {
             color: $c-white;
+        }
+
+        @include max(tablet) {
+            margin-bottom: 0;
+            font-size: 16px;
         }
 
     }
@@ -80,6 +82,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all $tr;
 
         @include max(mobile) {
             flex-basis: 16px;
@@ -118,19 +121,46 @@
         }
     }
 
-    /* Link */
+    /* Table */
+    /*&--table {
+        padding: 0 0 22px;
+        margin-top: 22px;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+        border-radius: 0;
 
-    &.link-block--arrow_up_right a.link-block__link {
-        flex-direction: row-reverse;
-        background-color: $c-white;
+        @include max(mobile) {
+            padding-bottom: 15px;
+            margin-top: 15px;
+        }
+    }
+
+    &--table &__link {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        min-width: fit-content;
 
         &:hover {
-            background-color: $c-accent;
-            border-color: $c-accent;
-            color: $c-white;
+            background-color: transparent;
+            color: $c-accent-title;
         }
 
+        &:hover .link-block__icon {
+            background-color: $c-accent-title;
+            color: $c-white;
+        }
     }
+
+    &--table &__icon {
+        flex: 0 0 54px;
+        height: 54px;
+        background-color: $c-accent;
+        color: $c-white;
+        border-radius: 100%;
+    }
+
+    /* Nolink */
 
     &__link--nolink {
 
@@ -154,32 +184,6 @@
 
         @include max(mobile) {
             display: none;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    &--table {
-        padding-bottom: 22px;
-        margin-top: 22px;
-        border-bottom: 1px solid rgb(0, 0, 0, 0.2);
-
-        @include max(mobile) {
-            padding-bottom: 15px;
-            margin-top: 15px;
         }
     }
 

@@ -173,6 +173,10 @@
 
         .text-editor h2+h3 {
             margin-top: 2.857em;
+
+            @include max(mobile) {
+                margin-top: 2em;
+            }
         }
     }
 
@@ -191,9 +195,6 @@
             padding: 15px 10px;
         }
 
-        .info-tag {
-            margin-top: 16px;
-        }
 
     }
 
