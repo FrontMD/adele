@@ -96,8 +96,25 @@
         }
 
         &:last-child::after,
-        &.active::after {
+        &.active::after,
+        &:hover::after {
             display: none;
+        }
+
+        &:hover::before {
+            content: '';
+            position: absolute;
+            right: calc(100% + 9px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 66.667%;
+            background-color: $c-white;
+
+            @include max(mobile) {
+                right: calc(100% + 7px);
+            }
+
         }
 
         &:last-child {

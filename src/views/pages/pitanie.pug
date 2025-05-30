@@ -1,0 +1,28 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Организация питания в образовательной организации"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +sidebar-layout(
+                {
+                items: [
+                    {
+                        name: 'Главная',
+                        link: 'javascript:void(0);'
+                    },
+                    {
+                        name: 'Организация питания в образовательной организации',
+                        link: 'javascript:void(0);'
+                    }
+                ],
+                }
+            )
+                .sidebar-layout__block
+                    .sidebar-layout__block-title.title.title--h2 <span>Организация питания</span><br>в образовательной организации
+                    .sidebar-layout__content
+                        .gost-section.gost-section--bordered.text-editor
+                            h3 ООО «Онлайн-Гимназия Адель» осуществляет образовательную деятельность исключительно с применением дистанционных образовательных технологий и (или) электронного обучения.
+                            h3 Организация питания в ООО «Онлайн-Гимназия Адель» не предусмотрена.

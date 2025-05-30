@@ -25,7 +25,7 @@ mixin video(props = defaultVideoProps)
                 icon:'play',
                 cMode: 'white',
                 link: checkProps.video
-            })(data-fancybox data-type="iframe")
+            })(data-fancybox data-type="iframe" data-thumb=checkProps.poster)
         - else
             +btn({
                 classes: 'video__play',
@@ -33,7 +33,7 @@ mixin video(props = defaultVideoProps)
                 icon:'play',
                 cMode: 'white',
                 link: checkProps.video
-            })(data-fancybox)
+            })(data-fancybox data-thumb=checkProps.poster)
 
 
 

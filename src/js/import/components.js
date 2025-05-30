@@ -1,4 +1,3 @@
-@@include("../../blocks/components/tabs-block/tabs-block.js")
 @@include("../../blocks/components/multi-menu/multi-menu.js")
 @@include("../../blocks/components/form/form.js")
 @@include("../../blocks/components/field-file/field-file.js")
@@ -7,7 +6,6 @@
 @@include("../../blocks/components/s-filter/s-filter.js")
 
 document.addEventListener('DOMContentLoaded', () => {
-    tabsBlockInit()
     multiMenu()
     fileFieldInit()
     validation()

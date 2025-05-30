@@ -157,9 +157,9 @@
         }
 
         .text-editor,
-        .text-editor>p,
-        .text-editor>ul,
-        .text-editor>li {
+        .text-editor p,
+        .text-editor ul,
+        .text-editor li {
             font-size: 18px;
 
             @include max(tablet) {
@@ -217,9 +217,12 @@
             gap: 16px;
         }
 
-        &__header,
-        &__main {
+        &__header {
             flex: 0 1 50%;
+        }
+
+        &__main {
+            flex: 0 0 50%;
         }
     }
 

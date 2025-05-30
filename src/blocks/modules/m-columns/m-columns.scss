@@ -38,6 +38,20 @@
         @include max(laptop) {
             flex-basis: auto;
         }
+
+        &.text-editor {
+            h3 {
+                font-size: 24px;
+
+                @include max(laptop) {
+                    font-size: 20px;
+                }
+
+                @include max(mobile) {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
     &__main {
