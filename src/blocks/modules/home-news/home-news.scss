@@ -58,7 +58,7 @@
         }
 
         &__title {
-            transition: color $tr-time;
+            transition: color $tr;
 
             @include max(mobile) {
                 order: 2;

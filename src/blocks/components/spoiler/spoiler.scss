@@ -50,12 +50,12 @@
         color: $c-accent;
         flex-shrink: 0;
         flex-grow: 0;
-        transition: all $tr-time;
+        transition: all $tr;
 
         svg {
             width: 24px;
             height: 24px;
-            transition: all $tr-time;
+            transition: all $tr;
         }
 
         @include max(tablet) {

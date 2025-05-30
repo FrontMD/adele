@@ -60,7 +60,7 @@
         text-align: center;
         color: $c-accent;
         border-radius: 50px;
-        transition: all $tr-time;
+        transition: all $tr;
 
         @include max(laptop) {
             min-height: 50px;

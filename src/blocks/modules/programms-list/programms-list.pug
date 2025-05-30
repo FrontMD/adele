@@ -110,9 +110,6 @@ mixin programms-list(props = defaultProgrammsListProps)
             - if(checkProps.title.length > 0)
                 .programms-list__header
                     .title.title--h2.programms-list__title!= checkProps.title
-                //-+visual-toggle({
-                    active: checkProps.vMode
-                //-})(data-js="programmsListToggle")
 
             - if(checkProps.hasFilters === true)
                 .programms-list__filter

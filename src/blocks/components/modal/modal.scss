@@ -36,7 +36,7 @@
         cursor: pointer;
         z-index: 20;
         color: $c-accent;
-        transition: color $tr-time;
+        transition: color $tr;
 
         &:hover {
             color: $c-accent-dark;

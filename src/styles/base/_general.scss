@@ -460,7 +460,7 @@ iframe {
 
 	a:not(.btn, .m-table-link),
 	a:not(.btn, .m-table-link)>* {
-		transition: color $tr-time;
+		transition: color $tr;
 	}
 
 	ul {
@@ -508,6 +508,9 @@ iframe {
 	}
 
 	ol {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7em;
 		list-style: none;
 		counter-reset: num;
 		color: $c-accent;
@@ -868,7 +871,7 @@ iframe {
 					right: 0;
 					height: auto;
 					bottom: 0;
-					border: 2px solid $c-bg-light;
+					border: 2px solid $c-accent-title;
 					border-radius: 5px;
 					animation: f-fadeIn 0.2s ease-out;
 					z-index: 10;
@@ -960,7 +963,7 @@ iframe {
 
 	.fancybox__nav {
 		.f-button {
-			background-color: $c-bg-light;
+			background-color: $c-accent-light;
 			width: 50px;
 			height: 50px;
 			border: none;

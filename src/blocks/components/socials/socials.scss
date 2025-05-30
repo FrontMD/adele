@@ -17,7 +17,7 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
-        transition: all $tr-time linear;
+        transition: all $tr linear;
 
         &:hover {
             border-color: $c-accent;

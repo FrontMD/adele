@@ -76,7 +76,7 @@
     }
 
     &__title {
-        transition: color $tr-time;
+        transition: color $tr;
 
         &:hover {
             color: $c-accent-dark;

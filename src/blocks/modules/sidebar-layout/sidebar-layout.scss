@@ -73,7 +73,7 @@
         .side-menu {
             @include max(large) {
                 opacity: 0;
-                transition: opacity $tr-time;
+                transition: opacity $tr;
             }
         }
 
@@ -379,12 +379,12 @@
 
             &--open {
                 opacity: 1;
-                transition: opacity $tr-time;
+                transition: opacity $tr;
             }
 
             &--close {
                 opacity: 0;
-                transition: opacity $tr-time;
+                transition: opacity $tr;
             }
         }
     }

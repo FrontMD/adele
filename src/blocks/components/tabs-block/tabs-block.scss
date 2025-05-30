@@ -43,7 +43,7 @@
         line-height: 1.366em;
         color: $c-accent;
         background-color: #D8E8DE;
-        transition: color $tr-time, background-color $tr-time;
+        transition: color $tr, background-color $tr;
 
         @include max(laptop) {
             min-height: 70px;
@@ -115,8 +115,8 @@
         }
     }
 
-    &--white-tabs{
-        .tabs-block__tabs{
+    &--white-tabs {
+        .tabs-block__tabs {
             background: #fff;
             padding-bottom: 45px;
         }

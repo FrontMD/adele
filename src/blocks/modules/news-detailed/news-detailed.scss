@@ -338,7 +338,7 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        transition: color $tr-time;
+        transition: color $tr;
 
         &:hover {
             color: $c-accent-dark;

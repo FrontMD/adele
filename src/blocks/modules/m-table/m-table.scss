@@ -47,7 +47,7 @@
         }
 
         a {
-            transition: color $tr-time;
+            transition: color $tr;
             font-size: 16px;
             margin: 0;
             line-height: 1.02em;
@@ -252,7 +252,7 @@
 
     &__cell-content {
         overflow: hidden;
-        transition: max-height $tr-time;
+        transition: max-height $tr;
     }
 
     .collapsed &__cell-content {
