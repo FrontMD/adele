@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block variables
+    - const title = "404"
+
+block content
+    .page(data-js="page")
+        .page-layout
+            .status-page.p-default
+                .m-container
+                    .status-page__container
+                        .status-page__header
+                            .title.title--h1
+                                h1 Такой страницы не <br>существует
+                            .status-page__text.title.title--h5 Возможно ошибка в адресе
+                        .status-page__footer
+                            +btn({
+                                name: 'На главную',
+                                sMode: 'full'
+                            })

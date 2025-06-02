@@ -636,6 +636,24 @@ iframe {
 
 }
 
+.status-page {
+	&__container {
+		min-height: 60vh;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		justify-content: space-between;
+	}
+
+	&__text {
+		margin-top: 24px;
+	}
+
+	&__footer {
+		max-width: 300px;
+	}
+}
+
 .my-fancybox {
 	.fancybox__viewport {
 		.fancybox__slide {
