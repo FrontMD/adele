@@ -45,7 +45,6 @@
         border-radius: 50px;
         padding: 9.5px 30px;
         border: 1px solid #C9D4CA;
-        //transition: all $tr;
 
         @include max(laptop) {
             gap: 20px;
@@ -96,8 +95,8 @@
     }
 
     &__logo {
-        flex: 0 0 110px;
-        max-width: 110px;
+        flex: 0 0 132px;
+        max-width: 132px;
         transition: max-width $tr linear;
 
         @include max(laptop) {
