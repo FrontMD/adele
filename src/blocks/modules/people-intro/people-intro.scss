@@ -10,7 +10,7 @@
         padding: 25px 30px 30px;
 
         @include max(tablet) {
-            padding: 20px;
+            padding: 20px 15px;
             border-radius: 24px;
         }
 
@@ -45,14 +45,20 @@
     &__flex {
         display: flex;
         align-items: flex-start;
-        gap: 30px;
+        gap: 20px;
 
         @include max(laptop) {
-            flex-direction: column;
+            flex-wrap: wrap;
             align-items: stretch;
         }
 
+        @include max(tablet) {
+            gap: 10px;
+        }
+
         @include max(mobile) {
+            flex-direction: column;
+            align-items: stretch;
             gap: 20px;
         }
     }
@@ -64,10 +70,18 @@
         gap: 10px;
 
         @include max(laptop) {
+            flex: 0 0 38%;
+        }
+
+        @include max(tablet) {
+            flex: 0 0 45%;
+        }
+
+        /*@include max(mobile) {
             flex-basis: auto;
             flex-direction: row;
             align-items: stretch;
-        }
+        }*/
 
         @include max(mobile) {
             flex-direction: column;
@@ -81,13 +95,13 @@
         border-radius: 24px;
         overflow: hidden;
 
-        @include max(laptop) {
+        /*@include max(tablet) {
             width: 50%;
         }
 
         @include max(tablet) {
             width: 35%;
-        }
+        }*/
 
         @include max(mobile) {
             width: 100%;
@@ -109,12 +123,12 @@
         border-radius: 24px;
 
         @include max(laptop) {
-            width: 50%;
+            padding: 16px;
         }
 
-        @include max(tablet) {
+        /*@include max(tablet) {
             width: 65%;
-        }
+        }*/
 
         @include max(mobile) {
             width: 100%;
@@ -129,6 +143,13 @@
 
         @include max(laptop) {
             margin: auto 0;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 15px;
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+            gap: 15px;
         }
     }
 
@@ -164,6 +185,14 @@
         background-color: $c-white;
         border-radius: 16px;
 
+        @include max(laptop) {
+            display: contents;
+        }
+
+        @include max(mobile) {
+            display: flex;
+        }
+
         .text-editor {
 
             ol,
@@ -175,8 +204,48 @@
         }
     }
 
+    &__block {
+        @include max(laptop) {
+            background-color: $c-white;
+            border-radius: 16px;
+
+            &--top {
+                flex: 0 0 calc(100% - 38% - 20px);
+            }
+
+            &--bottom {
+                flex: 0 0 100%;
+            }
+        }
+
+        @include max(tablet) {
+
+            &--top {
+                flex: 0 0 calc(100% - 45% - 10px);
+            }
+        }
+
+        @include max(mobile) {
+            border-radius: 0;
+            background-color: transparent;
+
+            &--top {
+                flex: 0 0 auto;
+            }
+
+            &--bottom {
+                flex: 0 0 auto;
+            }
+        }
+
+    }
+
     &__name {
         padding: 30px 40px;
+
+        @include max(tablet) {
+            padding: 20px 12px;
+        }
 
         @include max(mobile) {
             padding: 10px 10px 20px;
@@ -194,8 +263,12 @@
         padding: 14px 40px;
         border-top: 1px solid $c-border;
 
-        @include max(mobile) {
+        @include max(tablet) {
             font-size: 14px;
+            padding: 12px;
+        }
+
+        @include max(mobile) {
             padding: 10px;
         }
     }
@@ -205,7 +278,7 @@
         flex: 0 0 54%;
         padding-right: 24px;
 
-        @include max(mobile) {
+        @include max(tablet) {
             flex-basis: 48%;
             padding-right: 10px;
         }
@@ -215,53 +288,29 @@
         padding: 34px 40px;
         border-top: 1px solid $c-border;
 
+        @include max(laptop) {
+            border-top: none;
+        }
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
         @include max(mobile) {
+            border-top: 1px solid $c-border;
             padding: 20px 10px;
         }
 
     }
 
-    /*&__showmore {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
-        min-height: 44px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.02em;
-        text-align: left;
-        color: $c-accent;
-        cursor: pointer;
+    &__desc+&__desc {
 
-        .show-more {
-            display: none;
+        @include max(laptop) {
+            border-top: 1px solid $c-border;
         }
 
-        .show-less {
-            display: block;
-        }
-
-        svg {
-            margin-top: 3px;
-            flex: 0 0 10px;
-            transform: rotate(-90deg);
-        }
     }
 
-    .collapsed &__showmore {
-        .show-more {
-            display: block;
-        }
-
-        .show-less {
-            display: none;
-        }
-
-        svg {
-            transform: rotate(90deg);
-        }
-    }*/
 }
 
 .people-intro {
@@ -292,6 +341,18 @@
 
     &--inner &__flex {
         gap: 50px;
+
+        @include max(laptop) {
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            gap: 10px;
+        }
+
+        @include max(mobile) {
+            gap: 20px;
+        }
     }
 
     &--inner &__intro {
@@ -299,23 +360,31 @@
         max-width: 45%;
 
         @include max(laptop) {
-            max-width: 100%;
-            flex-basis: auto;
-            width: 100%;
+            max-width: 38%;
+            flex-basis: 38%;
+        }
+
+        @include max(tablet) {
+            max-width: 45%;
+            flex-basis: 45%;
+        }
+
+        @include max(mobile) {
+            max-width: none;
         }
     }
 
     &--inner &__info {
-        @include max(laptop) {
+        /*@include max(laptop) {
             justify-content: space-between;
-        }
+        }*/
     }
 
     &--inner &__content {
         flex: 1 1 55%;
         max-width: 55%;
 
-        @include max(laptop) {
+        @include max(mobile) {
             max-width: 100%;
             flex-basis: auto;
             width: 100%;

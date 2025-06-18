@@ -4,7 +4,6 @@
         inner: false,
         breadcrumbs: false,
         title: false,
-        name: '<span>Умаров</span><br>Малик Мусаевич',
         photo: 'img/peoples/people.webp'
     }
 
@@ -15,7 +14,6 @@ mixin people-intro(props = defaultPeopleIntroProps)
             inner: props.inner ? props.inner : defaultPeopleIntroProps.inner,
             breadcrumbs: props.breadcrumbs ? props.breadcrumbs : defaultPeopleIntroProps.breadcrumbs,
             title: props.title ? props.title : defaultPeopleIntroProps.title,
-            name: props.name ? props.name : defaultPeopleIntroProps.name,
             photo: props.photo ? props.photo : defaultPeopleIntroProps.photo,
         }
 
@@ -72,5 +70,5 @@ mixin people-intro(props = defaultPeopleIntroProps)
                                 })(data-modal='#requestModal')
 
                     .people-intro__content
-                        .title.title--h2.people-intro__name!= checkProps.name
                         block
+
