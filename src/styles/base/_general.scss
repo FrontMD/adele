@@ -473,13 +473,14 @@ iframe {
 		}
 
 		th {
-			text-align: left;
-			color: $c-accent-middle;
+			text-align: start;
+			color: $c-accent;
+			font-weight: 700;
 		}
 
 		td {
-			text-align: end;
-			color: $c-accent-light;
+			text-align: start;
+			color: $c-accent;
 		}
 	}
 

@@ -77,12 +77,6 @@
             flex: 0 0 45%;
         }
 
-        /*@include max(mobile) {
-            flex-basis: auto;
-            flex-direction: row;
-            align-items: stretch;
-        }*/
-
         @include max(mobile) {
             flex-direction: column;
             gap: 20px;
@@ -94,14 +88,6 @@
         aspect-ratio: 1 / 1;
         border-radius: 24px;
         overflow: hidden;
-
-        /*@include max(tablet) {
-            width: 50%;
-        }
-
-        @include max(tablet) {
-            width: 35%;
-        }*/
 
         @include max(mobile) {
             width: 100%;
@@ -125,10 +111,6 @@
         @include max(laptop) {
             padding: 16px;
         }
-
-        /*@include max(tablet) {
-            width: 65%;
-        }*/
 
         @include max(mobile) {
             width: 100%;
@@ -245,6 +227,7 @@
 
         @include max(tablet) {
             padding: 20px 12px;
+            font-size: 36px;
         }
 
         @include max(mobile) {
@@ -372,12 +355,6 @@
         @include max(mobile) {
             max-width: none;
         }
-    }
-
-    &--inner &__info {
-        /*@include max(laptop) {
-            justify-content: space-between;
-        }*/
     }
 
     &--inner &__content {
