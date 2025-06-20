@@ -342,13 +342,25 @@ iframe {
 		}
 	}
 
-	b {
-		color: rgba(1, 50, 32, 0.4);
-		font-weight: inherit;
+	h4 {
+		margin-bottom: 16px;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.2em;
+		color: $c-accent;
+		letter-spacing: 0.01em;
+
+		@include max(laptop) {
+			font-size: 18px;
+		}
+
+		@include max(mobile) {
+			font-size: 16px;
+		}
 	}
 
-	&--light b {
-		color: rgba(255, 255, 255, 0.45);
+	b {
+		font-weight: 700;
 	}
 
 	p,

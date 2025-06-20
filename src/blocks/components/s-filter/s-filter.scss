@@ -109,7 +109,7 @@
             transform: translateY(-50%);
             width: 3px;
             height: 66.667%;
-            background-color: $c-white;
+            background-color: $c-accent-light;
 
             @include max(mobile) {
                 right: calc(100% + 7px);
@@ -120,5 +120,9 @@
         &:last-child {
             margin-right: 0 !important;
         }
+    }
+
+    &--white &__item:hover::before {
+        background-color: $c-white;
     }
 }
