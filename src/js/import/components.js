@@ -4,6 +4,7 @@
 @@include("../../blocks/components/select/select.js")
 @@include("../../blocks/components/spoiler/spoiler.js")
 @@include("../../blocks/components/s-filter/s-filter.js")
+@@include("../../blocks/components/cookie/cookie.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     multiMenu()
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     selects()
     spoilers()
     sFilter()
+    cookieInit()
 })

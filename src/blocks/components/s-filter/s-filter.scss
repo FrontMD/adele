@@ -101,7 +101,8 @@
             display: none;
         }
 
-        &:hover::before {
+        &:hover::before,
+        &.active::before {
             content: '';
             position: absolute;
             right: calc(100% + 9px);
@@ -122,7 +123,8 @@
         }
     }
 
-    &--white &__item:hover::before {
+    &--white &__item:hover::before,
+    &--white &__item.active::before {
         background-color: $c-white;
     }
 }
