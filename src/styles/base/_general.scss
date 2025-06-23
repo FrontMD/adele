@@ -889,3 +889,13 @@ iframe {
 		}
 	}
 }
+
+.docs-section {
+	&__text {
+		margin-top: 32px;
+
+		@include max(mobile) {
+			margin-top: 24px;
+		}
+	}
+}
