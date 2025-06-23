@@ -447,8 +447,6 @@ iframe {
 		counter-reset: num;
 		color: $c-accent;
 		font-size: 16px;
-		font-weight: 400;
-		line-height: 1.2em;
 		margin-bottom: 20px;
 
 		@include max(tablet) {
@@ -460,6 +458,8 @@ iframe {
 	ol>li {
 		position: relative;
 		padding-left: 24px;
+		font-weight: 500;
+		line-height: 1.2em;
 
 		@include max(tablet) {
 			padding-left: 20px;
