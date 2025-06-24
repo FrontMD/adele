@@ -10,8 +10,16 @@
         display: flex;
         align-items: stretch;
         gap: 10px;
+        max-height: calc(100vh - 260px);
+        max-height: calc(100dvh - 260px);
+
+        @include max(laptop) {
+            max-height: calc(100vh - 100px);
+            max-height: calc(100dvh - 100px);
+        }
 
         @include max(tablet) {
+            max-height: none;
             flex-direction: column-reverse;
         }
     }
@@ -30,6 +38,33 @@
 
         @include max(mobile) {
             margin-bottom: 32px;
+        }
+    }
+
+    &__slider {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+
+            @include max(laptop) {
+                width: 4px;
+                height: 4px;
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #EAEDEC;
+            border-radius: 32px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #CAD3D0;
+            border-radius: 32px;
         }
     }
 
@@ -89,10 +124,11 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 24px;
 
         @include max(tablet) {
-            gap: 24px;
+            max-height: calc(100vh - 100px);
+            max-height: calc(100dvh - 100px);
         }
     }
 
@@ -146,11 +182,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 25px 20px;
+        padding: 15px 20px;
         border-bottom: 1px solid rgba(4, 65, 43, 0.2);
         font-family: $ff-second;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 150%;
         color: rgba(4, 65, 43, 0.4);
         transition: color $tr;
@@ -176,6 +212,10 @@
         &--first {
             padding: 0;
             border-bottom: none;
+
+            @include max(tablet) {
+                padding: 0;
+            }
         }
 
         &:last-child {

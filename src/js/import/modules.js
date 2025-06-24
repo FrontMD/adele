@@ -9,6 +9,7 @@
 @@include("../../blocks/modules/modals/modals.js")
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
+@@include("../../blocks/modules/programm-info/programm-info.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -23,4 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
     homeProcess()
     infoSlider()
     autoSliders()
+    programmInfo()
 })

@@ -10,9 +10,9 @@ mixin programm-info(props = defaultProgrammInfoProps)
             classes: props.classes ? props.classes : defaultProgrammInfoProps.classes,
         }
 
-    section.programm-info(class=checkProps.classes)
+    section.programm-info(class=checkProps.classes data-js="programmInfoBlock")
         .m-container.programm-info__container
-            .programm-info__left
+            .programm-info__left(data-js="programmInfoLeft")
                 .programm-info__info
                     .title.title--h4.programm-info__title Информация об образовательной программе
                     .programm-info__table
@@ -66,7 +66,7 @@ mixin programm-info(props = defaultProgrammInfoProps)
                         text: 'Учебный план'
                     })
 
-            .programm-info__right
+            .programm-info__right(data-js="programmInfoRight")
                 .programm-info__block.text-editor
                     h2 О программе
                     p В отличие от 9 ступени, в 10-ой из расписания убирают не так много предметов: пропадает только «Основы духовно-нравственной культуры народов России». А с 1 сентября 2025 года его вообще исключат из программ всех остальных ступеней
