@@ -535,6 +535,14 @@ iframe {
 		height: auto;
 	}
 
+	.quote--text {
+		margin-bottom: 20px;
+
+		@include max(tablet) {
+			margin-bottom: 18px;
+		}
+	}
+
 }
 
 .section-flex {

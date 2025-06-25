@@ -128,14 +128,25 @@
 
         &--row &__item {
             min-height: auto;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                flex: 0 1 33%;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                flex: 0 1 16.5%;
+            }
         }
 
         &--row &__items {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 2fr)) repeat(2, minmax(0, 1fr));
+            display: flex;
+            flex-direction: row;
             gap: 8px;
             flex: 1 1 auto;
             margin-top: 0;
+            justify-content: flex-end;
 
             @include max(large) {
                 margin-top: 0;
