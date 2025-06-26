@@ -25,12 +25,13 @@
         align-items: center;
         gap: 10px;
 
-        @include max(mobile) {
+        @include max(laptop) {
             width: 100%;
+            justify-content: space-between;
         }
 
         &--right {
-            @include max(mobile) {
+            @include max(laptop) {
                 display: none;
             }
         }
@@ -46,9 +47,15 @@
         padding: 9.5px 30px;
         border: 1px solid #C9D4CA;
 
-        @include max(laptop) {
-            gap: 20px;
-            padding: 7.3px 20px;
+        @include max(large) {
+            gap: 15px;
+            padding: 7.3px 15px;
+        }
+
+        @include max(tablet) {
+            flex: 0 1 100%;
+            min-height: 45px;
+            justify-content: space-between;
         }
 
         @include max(mobile) {
@@ -81,7 +88,7 @@
             height: 20px;
         }
 
-        @include max(mobile) {
+        @include max(tablet) {
             display: flex;
         }
     }
@@ -89,8 +96,10 @@
     &__vvi {
         flex: 0 0 60px;
 
-        @include max(laptop) {
+        @include max(large) {
             flex-basis: 45px;
+            width: 45px;
+            height: 45px;
         }
     }
 
@@ -99,7 +108,7 @@
         max-width: 132px;
         transition: max-width $tr linear;
 
-        @include max(laptop) {
+        @include max(large) {
             flex-basis: 80px;
             max-width: 80px;
         }
@@ -141,9 +150,14 @@
         transition: all $tr;
         cursor: pointer;
 
-        @include max(laptop) {
+        @include max(large) {
             font-size: 14px;
-            padding: 7px 10px;
+            padding: 6px 10px;
+        }
+
+        @include max(laptop) {
+            font-size: 13px;
+            padding: 6px;
             border-radius: 16px;
         }
 

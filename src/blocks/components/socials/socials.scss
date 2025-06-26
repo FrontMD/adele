@@ -5,6 +5,7 @@
 
     @include max(laptop) {
         padding: 3px 10px;
+        gap: 5px;
     }
 
     &__item {
@@ -25,7 +26,7 @@
             background-color: $c-accent;
         }
 
-        @include max(laptop) {
+        @include max(large) {
             width: 45px;
             height: 45px;
         }
@@ -34,7 +35,7 @@
             max-width: 19.47px;
             max-height: 17px;
 
-            @include max(laptop) {
+            @include max(large) {
                 max-width: 14.6px;
                 max-height: 12.75px;
             }

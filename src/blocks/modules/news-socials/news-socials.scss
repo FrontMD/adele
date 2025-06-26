@@ -68,12 +68,12 @@
         color: $c-accent;
 
         svg {
-            max-width: 51px;
-            max-height: 48px;
+            width: 51px;
+            height: 48px;
 
             @include max(mobile) {
-                max-width: 38.25px;
-                max-height: 36px;
+                width: 38.25px;
+                height: 36px;
             }
         }
     }
