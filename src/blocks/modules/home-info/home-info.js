@@ -1,12 +1,20 @@
 function homeInfo() {
-    const homeInfoSliders = document.querySelectorAll('[data-js="homeInfoSlider"]')
+    const homeInfos = document.querySelectorAll('[data-js="homeInfo"]')
 
-    if(homeInfoSliders.length < 1) return
+    if(homeInfos.length < 1) return
 
-    homeInfoSliders.forEach(homeInfoSlider => {
+    homeInfos.forEach(homeInfo => {
+        const homeInfoSlider = homeInfo.querySelector('[data-js="homeInfoSlider"]')
+        const homeInfoPagination =  homeInfo.querySelector('[data-js="homeInfoPagination"]')
+
         let homeInfoSliderEx = new Swiper(homeInfoSlider, {
             slidesPerView: 1.2,
             spaceBetween: 10,
+            pagination: {
+                el: homeInfoPagination,
+                type: 'bullets',
+                clickable: true,
+            },
             breakpoints: {
                 501: {
                     slidesPerView: 1.9,

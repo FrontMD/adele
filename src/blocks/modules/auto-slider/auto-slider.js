@@ -16,7 +16,27 @@ function autoSliders() {
                 nextEl: sliderNext,
                 prevEl: sliderPrev,
               },
+            on: {
+                init: function () {
+                    const reviewsCardsIntros = autoSlider.querySelectorAll('.c-review__intro')
+            
+                    if(reviewsCardsIntros.length > 0) {
+                        let introHeight = 0
+
+                        reviewsCardsIntros.forEach(intro => {
+                            let cIntroHeight = intro.offsetHeight
+                            
+                            introHeight = introHeight < cIntroHeight ? cIntroHeight : introHeight
+                        })
+                        
+                        reviewsCardsIntros.forEach(intro => {
+                            intro.style.minHeight = introHeight + "px"
+                        })
+                    }
+                },
+            },
         })
+
     })
 
 }
