@@ -53,6 +53,7 @@
         svg {
             width: 24px;
             height: 24px;
+            margin-left: 3px;
 
             @include max(mobile) {
                 width: 20px;
