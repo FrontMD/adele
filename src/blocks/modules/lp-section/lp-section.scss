@@ -15,20 +15,6 @@
         @include min(full) {
             max-width: 94%;
         }
-
-        &.text-editor p,
-        &.text-editor li,
-        &.text-editor a {
-            font-size: 18px;
-
-            @include max(tablet) {
-                font-size: 16px;
-            }
-
-            @include max(mobile) {
-                font-size: 14px;
-            }
-        }
     }
 
     &__media {

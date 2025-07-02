@@ -47,7 +47,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 184px;
+        width: 130px;
         aspect-ratio: 1 / 1;
         border-radius: 20px;
         overflow: hidden;
@@ -68,7 +68,7 @@
     &__quotes {
         padding: 20px;
         border: 1px solid $c-border;
-        margin-left: 10px;
+        margin-left: -6px;
         z-index: 1;
 
         img {

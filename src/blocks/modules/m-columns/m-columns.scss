@@ -215,3 +215,30 @@
     margin-top: 30px;
 
 }
+
+[data-js="rightScroll"] .m-columns {
+    &__main {
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+
+            @include max(laptop) {
+                width: 4px;
+                height: 4px;
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #EAEDEC;
+            border-radius: 32px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #CAD3D0;
+            border-radius: 32px;
+        }
+
+    }
+}

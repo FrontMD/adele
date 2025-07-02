@@ -30,6 +30,7 @@
     }
 
     &__slide {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -44,6 +45,14 @@
             padding: 20px;
             border-radius: 24px;
         }
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .swiper-wrapper {
@@ -109,6 +118,7 @@
     &__tag {
         margin: 0 auto 24px;
     }
+
 
 }
 

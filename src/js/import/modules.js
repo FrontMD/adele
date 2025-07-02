@@ -10,11 +10,13 @@
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/programm-info/programm-info.js")
+@@include("../../blocks/modules/lp-section/lp-section.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
     headerMenu()
     sidebarLayout()
+    rightScroll()
     mTable()
     mainBurger()
     modalsInit()

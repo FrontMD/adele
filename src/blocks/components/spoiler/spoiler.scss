@@ -72,21 +72,6 @@
         display: none;
         overflow: hidden;
         padding-bottom: 30px;
-
-        .text-editor,
-        .text-editor>p,
-        .text-editor>ul,
-        .text-editor>li {
-            font-size: 18px;
-
-            @include max(tablet) {
-                font-size: 16px;
-            }
-
-            @include max(mobile) {
-                font-size: 14px;
-            }
-        }
     }
 }
 

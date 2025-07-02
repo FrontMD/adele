@@ -156,21 +156,6 @@
             }
         }
 
-        .text-editor,
-        .text-editor p,
-        .text-editor ul,
-        .text-editor li {
-            font-size: 18px;
-
-            @include max(tablet) {
-                font-size: 16px;
-            }
-
-            @include max(mobile) {
-                font-size: 14px;
-            }
-        }
-
         .text-editor h2+h3 {
             margin-top: 2.857em;
 

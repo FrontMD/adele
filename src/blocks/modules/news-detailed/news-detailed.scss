@@ -145,24 +145,6 @@
         margin-top: 1.387em;
     }
 
-    .text-editor,
-    .text-editor>p,
-    .text-editor>ol>li,
-    .text-editor>ul>li,
-    .text-editor>ol,
-    .text-editor>ul,
-    .text-editor a {
-        font-size: 18px;
-
-        @include max(tablet) {
-            font-size: 16px;
-        }
-
-        @include max(mobile) {
-            font-size: 14px;
-        }
-    }
-
     .text-editor ul {
         display: flex;
         flex-direction: column;
