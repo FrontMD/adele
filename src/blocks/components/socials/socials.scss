@@ -32,12 +32,12 @@
         }
 
         svg {
-            max-width: 19.47px;
-            max-height: 17px;
+            max-width: 20px;
+            max-height: 20px;
 
             @include max(large) {
-                max-width: 14.6px;
-                max-height: 12.75px;
+                max-width: 15px;
+                max-height: 15px;
             }
         }
 
