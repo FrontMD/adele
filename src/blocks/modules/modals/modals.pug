@@ -1,6 +1,45 @@
 noindex
     div
         //- код модалок сюда
+        +modal({modalId:"bannerModal", classes:"form-modal"})(data-js="bannerModal")
+            +form({
+                classes: '',
+                title: 'Оставить заявку',
+                text: '',
+                btnText: 'Отправить',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'ФИО контактного лица',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'data-v-name': 'email',
+                            'required': ''
+                        },
+                    })
+
         +modal({modalId:"requestModal", classes:"form-modal"})(data-js="requestModal")
             +form({
                 classes: '',
@@ -8,6 +47,80 @@ noindex
                 text: '',
                 btnText: 'Отправить',
                 })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'ФИО контактного лица*',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон*',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'data-v-name': 'email',
+                            'required': ''
+                        },
+                    }) 
+
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Текст обращения',
+                    })
+
+                    +field-file({
+                        placeholder: 'Прикрепить файл',
+                        inputAttr: {
+                            'data-v-name': 'file',
+                            'data-size': '10485760',
+                            'accept': 'image/*, text/plain, .docx, .pdf'
+                        },
+                    })
+
+        +modal({modalId:"recommendationModal", classes:"form-modal"})(data-js="recommendationModal")
+            +form({
+                classes: '',
+                title: 'Оставить заявку',
+                text: '',
+                btnText: 'Отправить',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'ФИО учителя',
+                        inputAttr: {
+                            'disabled': '',
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Кто порекомендовал*',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
                     +field({
                         classes: '',
                         type: 'text',

@@ -44,8 +44,9 @@ mixin callback-form(props = defaultCallbackFormProps)
                             placeholder: 'Интересуют курсы подготовки',
                             selectOptions: [
                                 "",
-                                "Очно",
-                                "Онлайн",
+                                "Веб-разработка на конструкторах",
+                                "Дизайн интерфейсов",
+                                "Изучение ИИ",
                             ],
                             inputAttr: {
                                 'required': ''
@@ -66,18 +67,15 @@ mixin callback-form(props = defaultCallbackFormProps)
                             resetBtn: false
                         })
                         +field({
-                            classes: '',
-                            tag: 'select',
-                            placeholder: 'Вы планируете учиться',
-                            selectOptions: [
-                                "",
-                                "Очно",
-                                "Онлайн",
-                            ],
+                            classes: 'field--dark',
+                            type: 'text',
+                            title: '',
+                            placeholder: 'Форма обучения',
+                            resetBtn: false,
                             inputAttr: {
-                                'required': ''
+                                'disabled': '',
+                                'value': 'Обучение очно, с применением ЭО и ДОТ'
                             },
-                            selectGreen: true
                         })
                     .form__flex
                         +field({
