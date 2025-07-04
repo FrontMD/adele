@@ -1,4 +1,8 @@
 .projects {
+    &__title {
+        text-align: center;
+    }
+
     &__top {
         position: relative;
         height: 360px;
@@ -6,6 +10,10 @@
         @include max(mobile) {
             height: auto;
         }
+    }
+
+    &__slider {
+        margin-top: 50px;
     }
 
     &__slide {
@@ -83,7 +91,7 @@
         height: calc(3.3em + 20px);
     }
 
-    &__title {
+    &__subtitle {
         position: absolute;
         left: 0;
         top: 0;
