@@ -11,6 +11,7 @@
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/programm-info/programm-info.js")
 @@include("../../blocks/modules/lp-section/lp-section.js")
+@@include("../../blocks/modules/projects/projects.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     headerHeight()
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
     infoSlider()
     autoSliders()
     programmInfo()
+    projects()
 })

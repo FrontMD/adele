@@ -92,41 +92,6 @@ function validation() {
                                     error(input, 'Необходимо ввести номер телефона').set()
                                 }
                                 break                              
-                            /*case 'date':
-                                if (valueField.length === 10 && valueField.match(dataReqexp.date)) {
-                                    error(input).remove()
-                                } else {
-                                    error(input, 'Дата введена неверно').set()
-                                }
-                                break
-                            case 'inn':
-                                if (valueField.length === 10 || valueField.length === 12) {
-                                    error(input).remove()
-                                } else {
-                                    error(input, 'ИНН введен неверно').set()
-                                }
-                                break
-                            case 'kpp':
-                                if (valueField.length === 9) {
-                                    error(input).remove()
-                                } else {
-                                    error(input, 'КПП введен неверно').set()
-                                }
-                                break
-                            case 'bik':
-                                if (valueField.length === 9) {
-                                    error(input).remove()
-                                } else {
-                                    error(input, 'БИК введен неверно').set()
-                                }
-                                break
-                            case 'account':
-                                if (valueField.length === 20) {
-                                    error(input).remove()
-                                } else {
-                                    error(input, 'Номер счёта введен неверно').set()
-                                }
-                                break*/
                             case 'file':
                                 if (valueField.length > 0) {
                                     error(input).remove()

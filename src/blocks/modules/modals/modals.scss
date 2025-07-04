@@ -92,3 +92,98 @@
         }
     }
 }
+
+.project-modal {
+
+    &__title {
+        padding-right: 42px;
+        text-align: center;
+
+        @include max(mobile) {
+            text-align: start;
+            font-size: 20px;
+        }
+    }
+
+    .lp-section {
+        .m-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__container {
+            gap: 50px;
+
+            @include max(mobile) {
+                gap: 32px;
+            }
+        }
+    }
+
+    .m-columns {
+        gap: 28px;
+
+        &__header {
+            flex: 0 0 calc(50% - 28px);
+            gap: 24px;
+
+            @include max(tablet) {
+                gap: 16px;
+            }
+        }
+
+        &__main {
+
+            .text-editor h2,
+            .text-editor h1 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .text-editor h3,
+            .text-editor h4 {
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .text-editor,
+            .text-editor p,
+            .text-editor ul,
+            .text-editor ol,
+            .text-editor li {
+                font-size: 14px;
+            }
+
+            .text-editor ul li+li,
+            .text-editor ol li+li {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .modal__content {
+        max-width: 1150px;
+    }
+
+    .modal__inner {
+        max-height: 80vh;
+        max-width: calc(100% + 8px);
+        overflow: auto;
+        margin-right: -8px;
+        padding-right: 5px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #688D80;
+            border-radius: 2px;
+        }
+    }
+}

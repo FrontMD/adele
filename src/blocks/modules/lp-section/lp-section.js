@@ -30,7 +30,7 @@ function rightScroll() {
                 left.style.alignSelf = "stretch"
                 right.style.maxHeight = maxHeight + "px"
                 
-            } else {
+            } else if(!row.closest('[data-js="projectModal"]')) {
                 right.style.maxHeight = "70vh"
             }
 

@@ -1,0 +1,151 @@
+-
+    const defaultProjectsProps = {
+        classes: '',
+    }
+
+mixin projects(props = defaultProjectsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProjectsProps.classes
+        }
+
+    section.projects(class= checkProps.classes data-js="projects")
+        .m-container
+            .projects__slider(data-js="projectsSlider")
+                .swiper-wrapper
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_1.webp")
+                            .projects__tags
+                                .projects__tag #Аналитика
+                                .projects__tag #Дизайн
+                                .projects__tag #Frontend
+                                .projects__tag #Backend
+                                .projects__tag #Тестирование
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Разработка сайта завода испытательного оборудования
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_2.webp")
+                            .projects__tags
+                                .projects__tag #Backend
+                                .projects__tag #Тестирование
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Разработка корпоративного портала для юридической компании
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_3.webp")
+                            .projects__tags
+                                .projects__tag #Frontend
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Портал Географического факультета МГУ
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_1.webp")
+                            .projects__tags
+                                .projects__tag #Аналитика
+                                .projects__tag #Дизайн
+                                .projects__tag #Frontend
+                                .projects__tag #Backend
+                                .projects__tag #Тестирование
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Разработка сайта завода испытательного оборудования
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_2.webp")
+                            .projects__tags
+                                .projects__tag #Backend
+                                .projects__tag #Тестирование
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Разработка корпоративного портала для юридической компании
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_3.webp")
+                            .projects__tags
+                                .projects__tag #Frontend
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Портал Географического факультета МГУ
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_1.webp")
+                            .projects__tags
+                                .projects__tag #Аналитика
+                                .projects__tag #Дизайн
+                                .projects__tag #Frontend
+                                .projects__tag #Backend
+                                .projects__tag #Тестирование
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Разработка сайта завода испытательного оборудования
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_2.webp")
+                            .projects__tags
+                                .projects__tag #Backend
+                                .projects__tag #Тестирование
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Разработка корпоративного портала для юридической компании
+
+                    .swiper-slide.projects__slide
+                        a.projects__link(href="javascript:void(0);" data-modal="#projectModal")
+                        .projects__top
+                            .projects__img
+                                img(src="img/projects/project_3.webp")
+                            .projects__tags
+                                .projects__tag #Frontend
+                            .projects__icon
+                                svg 
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_up_right`)
+                        .projects__text
+                            .projects__title Портал Географического факультета МГУ
+
+                .projects__pagination(data-js="projectsPagination")
+
+
+
