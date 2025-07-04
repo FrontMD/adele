@@ -23,7 +23,8 @@ function projects() {
             },
             pagination: {
                 el: pagination,
-                type: 'bullets'
+                type: 'bullets',
+                clickable: true,
             }
         })
     })
