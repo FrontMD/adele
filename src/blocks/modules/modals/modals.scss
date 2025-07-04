@@ -154,15 +154,12 @@
         gap: 28px;
 
         &__header {
-            flex: 0 0 calc(50% - 28px);
-            gap: 24px;
-
-            @include max(tablet) {
-                gap: 16px;
-            }
+            flex: 0 0 calc(35% - 28px);
+            gap: 12px;
         }
 
         &__main {
+            max-width: 65%;
 
             .text-editor h2,
             .text-editor h1 {
