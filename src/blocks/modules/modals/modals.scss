@@ -59,6 +59,10 @@
             color: $c-accent;
         }
 
+        &__fields {
+            max-width: 430px;
+        }
+
         &--sent {
             min-height: auto !important;
         }
