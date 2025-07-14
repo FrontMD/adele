@@ -32,3 +32,4 @@ jobs:
           port: 21
           security: loose
           retries: 2
+          dangerous-clean-slate: false
