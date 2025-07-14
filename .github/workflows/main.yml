@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Prepare deploy directory
         run: |
@@ -22,7 +22,7 @@ jobs:
           cp -r dist/fonts deploy/
 
       - name: FTP Deploy selected folders only
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -30,6 +30,5 @@ jobs:
           server-dir: /
           local-dir: ./deploy/
           port: 21
+          protocol: ftps
           security: loose
-          retries: 2
-          dangerous-clean-slate: false
