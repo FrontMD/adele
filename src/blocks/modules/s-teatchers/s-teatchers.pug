@@ -1,0 +1,45 @@
+-
+    const defaultSTeatchersProps = {
+        classes: '',
+        title: '<span>Учителя</span><br>на этом модуле',
+    }
+
+mixin s-teatchers(props = defaultSTeatchersProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSTeatchersProps.classes,
+            title: props.title ? props.title : defaultSTeatchersProps.title,
+        }
+
+    section.s-teatchers(class= checkProps.classes data-js="sTeatchers")
+        .m-container
+            .s-teatchers__header
+                .title.title--h2.s-teatchers__title!= checkProps.title
+                .slider-btns.s-teatchers__btns
+                    .slider-btn.slider-btn--prev(data-js="sliderPrevBtn")
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)
+                    .slider-btn.slider-btn--next(data-js="sliderNextBtn")
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)
+            .s-teatchers__cards(data-js="sTeatchersSlider")
+                .swiper-wrapper
+                    +link-unit({
+                        classes: 'swiper-slide'
+                    })
+                    +link-unit({
+                        classes: 'swiper-slide',
+                        photo: 'img/peoples/people_dm.webp',
+                        items: [
+                            {
+                                title: 'Предметы',
+                                text: '<ul><li>Арабский язык</li><li>Английский язык</li><li>Курс “Компьютерная грамотность”</li></ul>',
+                                tags: []
+                            },
+                            {
+                                title: 'Преподает в звеньях',
+                                text: '',
+                                tags: ['Начальное', 'Среднее']
+                            }
+                        ]
+                    })

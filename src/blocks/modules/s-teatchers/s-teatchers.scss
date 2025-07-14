@@ -1,0 +1,45 @@
+.s-teatchers {
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 64px;
+
+        @include max(mobile) {
+            gap: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        color: $c-accent;
+        flex: 1 1 auto;
+    }
+
+    &__btns {
+        flex: 0 0 auto;
+    }
+
+    &__cards {
+        margin-top: 50px;
+
+        @include max(mobile) {
+            margin-top: 32px;
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+
+        &.centered {
+            justify-content: center;
+        }
+    }
+
+    .swiper-slide {
+        height: auto;
+        width: 450px;
+    }
+
+}

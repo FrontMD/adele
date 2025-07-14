@@ -8,6 +8,7 @@
 @@include("../../blocks/modules/m-table/m-table.js")
 @@include("../../blocks/modules/modals/modals.js")
 @@include("../../blocks/modules/s-vacancy/s-vacancy.js")
+@@include("../../blocks/modules/s-teatchers/s-teatchers.js")
 @@include("../../blocks/modules/s-partners/s-partners.js")
 @@include("../../blocks/modules/programm-info/programm-info.js")
 @@include("../../blocks/modules/lp-section/lp-section.js")
@@ -29,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
     autoSliders()
     programmInfo()
     projects()
+    sTeatchersSliders()
 })

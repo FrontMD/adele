@@ -6,31 +6,41 @@ block variables
 block content
     .page(data-js="page")
         .page-layout.page-layout--home
-            +i-intro({
-                classes: 'home-intro',
-                title: 'Онлайн-гимназия Адель',
-                titleMode: 'light',
-                desc: 'Современное онлайн-обучение для вашего ребенка с лицензией и качественным образованием',
-                img: 'img/home/home_intro.webp',
-                isFull: true
-            })
-                .i-intro__corner
-                    .home-intro__content
-                        ul.home-intro__list
-                            li.home-intro__item Полный возврат оплаты за обучение в первые 15 дней
-                            li.home-intro__item Зачисление в любое время учебного года
-                            li.home-intro__item Форма обучения: Семейное обучение 
-                            li.home-intro__item Группы до 15 человек
-                            li.home-intro__item Раздельные классы для мальчиков и девочек
-                            li.home-intro__item Промежуточные аттестации проходят онлайн
-                            li.home-intro__item Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах
-                        .home-intro__note *Аттестат государственного образца
-                            +tooltip
-                    +btn({
-                        cMode: 'green',
-                        name: 'Получить консультацию',
-                        sMode: 'full'
-                    })(data-modal='#requestModal')
+            section.i-intro.home-intro.i-intro--full
+                .m-container
+                    .i-intro__container
+                        .i-intro__img
+                            .i-intro__overlay
+                            <picture>
+                            <source srcset='img/home/home_intro_mob.webp' media="(max-width: 1023px)">
+                            <img src='img/home/home_intro.webp'>
+                            </picture>
+                        .i-intro__left
+                            +title({
+                                classes: 'i-intro__title',
+                                tag: 'h1',
+                                text: 'Онлайн-гимназия Адель',
+                                cMode: 'light',
+                            })
+                            .i-intro__desc 'Современное онлайн-обучение для вашего ребенка с лицензией и качественным образованием'
+                        .i-intro__right
+                            .i-intro__corner
+                                .home-intro__content
+                                    ul.home-intro__list
+                                        li.home-intro__item Полный возврат оплаты за обучение в первые 15 дней
+                                        li.home-intro__item Зачисление в любое время учебного года
+                                        li.home-intro__item Форма обучения: Семейное обучение 
+                                        li.home-intro__item Группы до 15 человек
+                                        li.home-intro__item Раздельные классы для мальчиков и девочек
+                                        li.home-intro__item Промежуточные аттестации проходят онлайн
+                                        li.home-intro__item Итоговые ОГЭ и ЕГЭ сдаются офлайн в прикрепленных школах
+                                    .home-intro__note *Аттестат государственного образца
+                                        +tooltip
+                                +btn({
+                                    cMode: 'green',
+                                    name: 'Получить консультацию',
+                                    sMode: 'full'
+                                })(data-modal='#requestModal')
 
             +s-numbers({
                 classes: 'p-default pt-100',
