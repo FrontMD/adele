@@ -12,19 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+  
 
-      # 1: img/
-      - name: Upload img
-        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /img/
-          local-dir: dist/img/
-          port: 21
-
-      # 2: styles/
       - name: Upload styles
         uses: SamKirkland/FTP-Deploy-Action@v4.0.0
         with:
@@ -34,8 +23,9 @@ jobs:
           server-dir: /styles/
           local-dir: dist/styles/
           port: 21
+          security: loose
 
-      # 3: js/
+ 
       - name: Upload js
         uses: SamKirkland/FTP-Deploy-Action@v4.0.0
         with:
@@ -45,8 +35,20 @@ jobs:
           server-dir: /js/
           local-dir: dist/js/
           port: 21
+          security: loose
 
-      # 4: fonts/
+
+      - name: Upload img
+        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /img/
+          local-dir: dist/img/
+          port: 21
+          security: loose
+  
       - name: Upload fonts
         uses: SamKirkland/FTP-Deploy-Action@v4.0.0
         with:
@@ -56,3 +58,4 @@ jobs:
           server-dir: /fonts/
           local-dir: dist/fonts/
           port: 21
+          security: loose
