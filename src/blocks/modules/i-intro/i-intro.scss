@@ -317,11 +317,13 @@
 
         @include max(tablet) {
             max-width: 380px;
+            min-width: 355px;
             flex-shrink: 1;
         }
 
         @include max(mobile) {
             max-width: 100%;
+            min-width: auto;
         }
     }
 
