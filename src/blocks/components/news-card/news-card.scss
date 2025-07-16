@@ -7,6 +7,10 @@
     border-radius: 32px;
     gap: 30px;
 
+    @include max(tablet) {
+        min-height: 190px;
+    }
+
     @include max(mobile) {
         flex-direction: column;
         border-radius: 24px;
@@ -96,6 +100,16 @@
         @include max(mobile) {
             margin-top: 0;
             align-self: auto;
+        }
+    }
+
+    &__desc {
+        @include max(tablet) {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
